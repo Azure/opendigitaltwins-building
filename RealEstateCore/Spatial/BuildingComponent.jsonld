@@ -1,0 +1,57 @@
+{
+  "@id": "dtmi:core:BuildingComponent,1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates which Building a certain Building Component is part of."
+      },
+      "displayName": {
+        "en": "is part of building"
+      },
+      "name": "isPartOfBuilding",
+      "target": "dtmi:core:Building,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc."
+      },
+      "displayName": {
+        "en": "has super-BuildingComponent"
+      },
+      "name": "hasSuperBuildingComponent",
+      "target": "dtmi:core:BuildingComponent,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Parthood traversal property linking BuildingComponents to their constituent sub-components."
+      },
+      "displayName": {
+        "en": "has sub-BuildingComponent"
+      },
+      "name": "hasSubBuildingComponent",
+      "target": "dtmi:core:BuildingComponent,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Parthood traversal property linking BuildingComponents to Devices mounted within them."
+      },
+      "displayName": {
+        "en": "contains mounted device"
+      },
+      "name": "containsMountedDevice",
+      "target": "dtmi:core:Device,1"
+    }
+  ],
+  "description": {
+    "en": "The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc."
+  },
+  "displayName": {
+    "en": "Building component"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

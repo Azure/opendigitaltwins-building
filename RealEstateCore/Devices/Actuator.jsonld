@@ -1,0 +1,71 @@
+{
+  "@id": "dtmi:device:Actuator,1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The Quantity Kind that a device measures or affects."
+      },
+      "displayName": {
+        "en": "device quantity kind"
+      },
+      "maxMultiplicity": "1",
+      "minMultiplicity": "1",
+      "name": "deviceQuantityKind"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."
+      },
+      "displayName": {
+        "en": "observed by"
+      },
+      "name": "observedBy",
+      "target": "dtmi:device:Sensor,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has actuation interface"
+      },
+      "name": "hasActuationInterface",
+      "target": "dtmi:device:ActuationInterface,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "executes actuation"
+      },
+      "name": "executesActuation",
+      "target": "dtmi:device:Actuation,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has default actuation interface"
+      },
+      "maxMultiplicity": "1",
+      "minMultiplicity": "1",
+      "name": "hasDefaultActuationInterface",
+      "target": "dtmi:actuation:ActuationInterface,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has actuation interface"
+      },
+      "name": "hasActuationInterface",
+      "target": "dtmi:actuation:ActuationInterface,1"
+    }
+  ],
+  "description": {
+    "en": "An actuator is a component that is responsible for moving and controlling a mechanism or system."
+  },
+  "displayName": {
+    "en": "Actuator"
+  },
+  "extends": "dtmi:core:Device,1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,30 @@
+{
+  "@id": "dtmi:core:Room,1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "room is part of premises"
+      },
+      "name": "roomIsPartOfPremises",
+      "target": "dtmi:lease:Premises,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "room type"
+      },
+      "name": "roomType",
+      "target": "dtmi:building:RoomType,1"
+    }
+  ],
+  "description": {
+    "en": "Base class for all more specific room types."
+  },
+  "displayName": {
+    "en": "Room"
+  },
+  "extends": "dtmi:core:BuildingComponent,1",
+  "@context": "dtmi:dtdl:context;2"
+}

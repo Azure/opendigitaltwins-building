@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:device:CommunicationsBus,1",
+  "@type": "Interface",
+  "description": {
+    "en": "Type of communications bus for the Device."
+  },
+  "displayName": {
+    "en": "Communications bus"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

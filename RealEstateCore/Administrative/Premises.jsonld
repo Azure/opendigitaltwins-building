@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:lease:Premises,1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "premises type"
+      },
+      "name": "premisesType",
+      "target": "dtmi:lease:PremisesType,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "premises includes room"
+      },
+      "name": "premisesIncludesRoom",
+      "target": "dtmi:core:Room,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "premises includes building"
+      },
+      "name": "premisesIncludesBuilding",
+      "target": "dtmi:core:Building,1"
+    }
+  ],
+  "description": {
+    "en": "Premises are a set of buildings or rooms that are leased out to tenants, typically for a defined purpose."
+  },
+  "displayName": {
+    "en": "Premises"
+  },
+  "extends": "dtmi:lease:Leasable,1",
+  "@context": "dtmi:dtdl:context;2"
+}

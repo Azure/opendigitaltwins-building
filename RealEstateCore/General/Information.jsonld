@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:core:Information,1",
+  "@type": "Interface",
+  "description": {
+    "en": "A generic catch-all superclass for all kinds of intangible data types used in a broad variety of contexts, e.g., measurement scales or units, response codes, currency identifiers, etc."
+  },
+  "displayName": {
+    "en": "Information"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

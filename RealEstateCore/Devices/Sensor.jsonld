@@ -1,0 +1,64 @@
+{
+  "@id": "dtmi:device:Sensor,1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The Quantity Kind that a device measures or affects."
+      },
+      "displayName": {
+        "en": "device quantity kind"
+      },
+      "maxMultiplicity": "1",
+      "minMultiplicity": "1",
+      "name": "deviceQuantityKind"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The measurement unit used by some Device."
+      },
+      "displayName": {
+        "en": "device measurement unit"
+      },
+      "minMultiplicity": "1",
+      "name": "deviceMeasurementUnit"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The actuator that a sensor is configured or designed to observe."
+      },
+      "displayName": {
+        "en": "observes actuator"
+      },
+      "name": "observesActuator",
+      "target": "dtmi:device:Actuator,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "generated observation"
+      },
+      "name": "generatedObservation",
+      "target": "dtmi:device:Observation,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "generated exception"
+      },
+      "name": "generatedException",
+      "target": "dtmi:device:Exception,1"
+    }
+  ],
+  "description": {
+    "en": "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it."
+  },
+  "displayName": {
+    "en": "Sensor"
+  },
+  "extends": "dtmi:core:Device,1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:device:ModbusTCPConfiguration,1",
+  "@type": "Interface",
+  "description": {
+    "en": "Specific classes and properties to be extended in upcoming version."
+  },
+  "displayName": {
+    "en": "ModbusTCPConfiguration"
+  },
+  "extends": "dtmi:device:CommunicationConfiguration,1",
+  "@context": "dtmi:dtdl:context;2"
+}

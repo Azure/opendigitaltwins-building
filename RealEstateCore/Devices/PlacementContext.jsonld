@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:device:PlacementContext,1",
+  "@type": "Interface",
+  "description": {
+    "en": "Description of the context or media that a sensor or actuator is operating within."
+  },
+  "displayName": {
+    "en": "Placement context"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

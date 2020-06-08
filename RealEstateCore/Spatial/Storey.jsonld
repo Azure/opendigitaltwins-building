@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:building:Storey,1",
+  "@type": "Interface",
+  "description": {
+    "en": "The level of storey, a.k.a. floorplan"
+  },
+  "displayName": {
+    "en": "Storey"
+  },
+  "extends": "dtmi:core:BuildingComponent,1",
+  "@context": "dtmi:dtdl:context;2"
+}

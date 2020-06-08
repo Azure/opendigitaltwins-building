@@ -1,0 +1,129 @@
+{
+  "@id": "dtmi:core:Event,1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has updated time"
+      },
+      "name": "hasUpdatedTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has stop time"
+      },
+      "name": "hasStopTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has start time"
+      },
+      "name": "hasStartTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has read time"
+      },
+      "name": "hasReadTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has point in time"
+      },
+      "name": "hasPointInTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has observation time"
+      },
+      "name": "hasObservationTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Measured in ms (milliseconds). Duration is defined as the length of time that something lasts."
+      },
+      "displayName": {
+        "en": "has duration"
+      },
+      "name": "hasDuration",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has deleted time"
+      },
+      "name": "hasDeletedTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has created time"
+      },
+      "name": "hasCreatedTime",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The Quantity Kind that an event measures or affects."
+      },
+      "displayName": {
+        "en": "event quantity kind"
+      },
+      "name": "eventQuantityKind",
+      "target": "dtmi:core:QuantityKind,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "A unit used to measure some aspect of some Event."
+      },
+      "displayName": {
+        "en": "event measurement unit"
+      },
+      "name": "eventMeasurementUnit",
+      "target": "dtmi:core:MeasurementUnit,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Links an Event of some sort to a Device that generated, detected, or executes that Event."
+      },
+      "displayName": {
+        "en": "associated with device"
+      },
+      "name": "associatedWithDevice",
+      "target": "dtmi:core:Device,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "event placement context"
+      },
+      "name": "eventPlacementContext",
+      "target": "dtmi:device:PlacementContext,1"
+    }
+  ],
+  "description": {
+    "en": "A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive."
+  },
+  "displayName": {
+    "en": "Event"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,44 @@
+{
+  "@id": "dtmi:core:Building,1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "building is part of premises"
+      },
+      "name": "buildingIsPartOfPremises",
+      "target": "dtmi:lease:Premises,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Associates a building with a point in some coordinate reference system which can be used to resolve local (building-specific) coordinates against this outer coordinate reference system."
+      },
+      "displayName": {
+        "en": "has geo-reference origo"
+      },
+      "name": "hasGeoReferenceOrigo",
+      "target": "dtmi:core:GeoReferenceOrigo,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Parthood traversal property linking Buildings to the Building Components that they are made up of."
+      },
+      "displayName": {
+        "en": "has building component"
+      },
+      "name": "hasBuildingComponent",
+      "target": "dtmi:core:BuildingComponent,1"
+    }
+  ],
+  "description": {
+    "en": "A confined building structure."
+  },
+  "displayName": {
+    "en": "Building"
+  },
+  "extends": "dtmi:core:RealEstateComponent,1",
+  "@context": "dtmi:dtdl:context;2"
+}

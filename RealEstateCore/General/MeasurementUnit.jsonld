@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:core:MeasurementUnit,1",
+  "@type": "Interface",
+  "description": {
+    "en": "The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.\n\nExceptions to SI:\nExpress temperature in Celsius,\nEnergy in Watt hour (Wh),\nAngle i degrees (360 degress = 1 revolution)\nMillimeterPerHour for Precipation"
+  },
+  "displayName": {
+    "en": "Measurement unit"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

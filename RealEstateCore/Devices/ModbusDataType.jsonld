@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:device:ModbusDataType,1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "ModbusDataType"
+  },
+  "extends": "dtmi:device:ModbusConfiguration,1",
+  "@context": "dtmi:dtdl:context;2"
+}

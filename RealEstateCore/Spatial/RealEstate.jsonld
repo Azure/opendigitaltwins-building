@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:core:RealEstate,1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Parthood traversal property linking a piece of RealEstate to its constituent components (i.e., Buildings and Land)."
+    },
+    "displayName": {
+      "en": "has real estate component"
+    },
+    "name": "hasRealEstateComponent",
+    "target": "dtmi:core:RealEstateComponent,1"
+  },
+  "description": {
+    "en": "The legal/administrative representation of some lands and/or buildings."
+  },
+  "displayName": {
+    "en": "Real estate"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

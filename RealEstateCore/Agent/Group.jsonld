@@ -1,0 +1,23 @@
+{
+  "@id": "dtmi:agents:Group,1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Indicates the member Agents that are part of a certain Group."
+    },
+    "displayName": {
+      "en": "has member"
+    },
+    "name": "hasMember",
+    "target": "dtmi:core:Agent,1"
+  },
+  "description": {
+    "en": "A collection of individual Agents (included in the Group via the object property hasMember)."
+  },
+  "displayName": {
+    "en": "Group"
+  },
+  "extends": "dtmi:core:Agent,1",
+  "@context": "dtmi:dtdl:context;2"
+}

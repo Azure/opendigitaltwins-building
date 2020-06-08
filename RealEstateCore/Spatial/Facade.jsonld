@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:building:Facade,1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Facade"
+  },
+  "extends": "dtmi:core:BuildingComponent,1",
+  "@context": "dtmi:dtdl:context;2"
+}

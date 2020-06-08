@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:core:Agent,1",
+  "@type": "Interface",
+  "description": {
+    "en": "The human or machine that consumes or acts upon an object or data."
+  },
+  "displayName": {
+    "en": "Agent"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:device:DeviceFunctionType,1",
+  "@type": "Interface",
+  "description": {
+    "en": "The main function or purpose of a Device."
+  },
+  "displayName": {
+    "en": "Device function type"
+  },
+  "extends": "dtmi:core:Type,1",
+  "@context": "dtmi:dtdl:context;2"
+}

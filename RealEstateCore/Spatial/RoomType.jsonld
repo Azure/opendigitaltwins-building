@@ -1,0 +1,8 @@
+{
+  "@id": "dtmi:building:RoomType,1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Room type"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}
