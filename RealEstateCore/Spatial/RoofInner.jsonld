@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:building:RoofInner,1",
+  "@id": "dtmi:rec:building:RoofInner,1",
   "@type": "Interface",
   "displayName": {
     "en": "Roof, inner"
   },
-  "extends": "dtmi:core:BuildingComponent,1",
+  "extends": "dtmi:rec:core:BuildingComponent,1",
   "@context": "dtmi:dtdl:context;2"
 }

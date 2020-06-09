@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:rec:analytics:AnalysisConfiguration,1",
+  "@type": "Interface",
+  "description": {
+    "en": "The configuration of a given analysis process."
+  },
+  "displayName": {
+    "en": "Analysis configuration"
+  },
+  "extends": "dtmi:rec:core:Information,1",
+  "@context": "dtmi:dtdl:context;2"
+}

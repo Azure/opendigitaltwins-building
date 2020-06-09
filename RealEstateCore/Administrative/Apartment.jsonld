@@ -1,0 +1,17 @@
+{
+  "@id": "dtmi:rec:core:Apartment,1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "has member"
+    },
+    "name": "hasMember",
+    "target": "dtmi:rec:core:Room,1"
+  },
+  "displayName": {
+    "en": "Apartment"
+  },
+  "extends": "dtmi:rec:core:Collection,1",
+  "@context": "dtmi:dtdl:context;2"
+}

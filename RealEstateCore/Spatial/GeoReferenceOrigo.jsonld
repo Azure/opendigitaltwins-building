@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:core:GeoReferenceOrigo,1",
+  "@id": "dtmi:rec:core:GeoReferenceOrigo,1",
   "@type": "Interface",
   "contents": {
     "@type": "Property",
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Geo-reference origo"
   },
-  "extends": "dtmi:geosparql:Geometry,1",
+  "extends": "dtmi:net:opengis:www:ont:geosparql:Geometry,1",
   "@context": "dtmi:dtdl:context;2"
 }

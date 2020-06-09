@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:core:Event,1",
+  "@id": "dtmi:rec:core:Event,1",
   "@type": "Interface",
   "contents": [
     {
@@ -80,35 +80,13 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "The Quantity Kind that an event measures or affects."
-      },
-      "displayName": {
-        "en": "event quantity kind"
-      },
-      "name": "eventQuantityKind",
-      "target": "dtmi:core:QuantityKind,1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "A unit used to measure some aspect of some Event."
-      },
-      "displayName": {
-        "en": "event measurement unit"
-      },
-      "name": "eventMeasurementUnit",
-      "target": "dtmi:core:MeasurementUnit,1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
         "en": "Links an Event of some sort to a Device that generated, detected, or executes that Event."
       },
       "displayName": {
         "en": "associated with device"
       },
       "name": "associatedWithDevice",
-      "target": "dtmi:core:Device,1"
+      "target": "dtmi:rec:core:Device,1"
     },
     {
       "@type": "Relationship",
@@ -116,7 +94,7 @@
         "en": "event placement context"
       },
       "name": "eventPlacementContext",
-      "target": "dtmi:device:PlacementContext,1"
+      "target": "dtmi:rec:device:PlacementContext,1"
     }
   ],
   "description": {

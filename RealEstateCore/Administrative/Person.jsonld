@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:agents:Person,1",
+  "@id": "dtmi:rec:agents:Person,1",
   "@type": "Interface",
   "description": {
     "en": "A natural person (i.e., an individual human being)."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "Person"
   },
-  "extends": "dtmi:core:Agent,1",
+  "extends": "dtmi:rec:core:Agent,1",
   "@context": "dtmi:dtdl:context;2"
 }

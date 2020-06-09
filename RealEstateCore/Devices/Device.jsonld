@@ -1,17 +1,64 @@
 {
-  "@id": "dtmi:core:Device,1",
+  "@id": "dtmi:rec:core:Device,1",
   "@type": "Interface",
   "contents": [
     {
       "@type": "Relationship",
-      "description": {
-        "en": "The measurement unit used by some Device."
-      },
       "displayName": {
-        "en": "device measurement unit"
+        "en": "hsKNXDataPointType"
       },
-      "name": "deviceMeasurementUnit",
-      "target": "dtmi:core:MeasurementUnit,1"
+      "name": "hasKNXDataPointType",
+      "target": "dtmi:rec:device:KNXDataPointType,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has device function type"
+      },
+      "name": "hasDeviceFunctionType",
+      "target": "dtmi:rec:device:DeviceFunctionType,1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "has communications bus"
+      },
+      "name": "hasCommunicationsBus",
+      "target": "dtmi:rec:device:CommunicationsBus,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "device placement context"
+      },
+      "name": "devicePlacementContext",
+      "target": "dtmi:rec:device:PlacementContext,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "hasModbusDataType"
+      },
+      "name": "hasModbusDataType",
+      "target": "dtmi:rec:device:ModbusDataType,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "hasModbusFunctionCode"
+      },
+      "name": "hasModbusFunctionCode",
+      "target": "dtmi:rec:device:ModbusFunctionCode,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "placement context"
+      },
+      "maxMultiplicity": "1",
+      "minMultiplicity": "1",
+      "name": "placementContext",
+      "target": "dtmi:rec:device:PlacementContext,1"
     },
     {
       "@type": "Relationship",
@@ -22,66 +69,7 @@
         "en": "associated with event"
       },
       "name": "associatedWithEvent",
-      "target": "dtmi:core:Event,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "hasModbusFunctionCode"
-      },
-      "name": "hasModbusFunctionCode",
-      "target": "dtmi:device:ModbusFunctionCode,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "hasModbusDataType"
-      },
-      "name": "hasModbusDataType",
-      "target": "dtmi:device:ModbusDataType,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "hsKNXDataPointType"
-      },
-      "name": "hasKNXDataPointType",
-      "target": "dtmi:device:KNXDataPointType,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "has device function type"
-      },
-      "name": "hasDeviceFunctionType",
-      "target": "dtmi:device:DeviceFunctionType,1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "has communications bus"
-      },
-      "name": "hasCommunicationsBus",
-      "target": "dtmi:device:CommunicationsBus,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "device placement context"
-      },
-      "name": "devicePlacementContext",
-      "target": "dtmi:device:PlacementContext,1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "The Quantity Kind that a device measures or affects."
-      },
-      "displayName": {
-        "en": "device quantity kind"
-      },
-      "name": "deviceQuantityKind",
-      "target": "dtmi:core:QuantityKind,1"
+      "target": "dtmi:rec:core:Event,1"
     },
     {
       "@type": "Relationship",
@@ -92,7 +80,7 @@
         "en": "has sub-device"
       },
       "name": "hasSubDevice",
-      "target": "dtmi:core:Device,1"
+      "target": "dtmi:rec:core:Device,1"
     },
     {
       "@type": "Relationship",
@@ -103,7 +91,7 @@
         "en": "has super-Device"
       },
       "name": "hasSuperDevice",
-      "target": "dtmi:core:Device,1"
+      "target": "dtmi:rec:core:Device,1"
     },
     {
       "@type": "Relationship",
@@ -114,7 +102,7 @@
         "en": "is mounted in Building Component"
       },
       "name": "isMountedInBuildingComponent",
-      "target": "dtmi:core:BuildingComponent,1"
+      "target": "dtmi:rec:core:BuildingComponent,1"
     },
     {
       "@type": "Relationship",
@@ -125,7 +113,7 @@
         "en": "serves building"
       },
       "name": "servesBuilding",
-      "target": "dtmi:core:Building,1"
+      "target": "dtmi:rec:core:Building,1"
     },
     {
       "@type": "Relationship",
@@ -136,7 +124,7 @@
         "en": "serves building component"
       },
       "name": "servesBuildingComponent",
-      "target": "dtmi:core:BuildingComponent,1"
+      "target": "dtmi:rec:core:BuildingComponent,1"
     },
     {
       "@type": "Relationship",
@@ -147,7 +135,7 @@
         "en": "serves device"
       },
       "name": "servesDevice",
-      "target": "dtmi:core:Device,1"
+      "target": "dtmi:rec:core:Device,1"
     },
     {
       "@type": "Property",

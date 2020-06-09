@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:rec:analytics:AnalysisProcess,1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "The configuration for a given analysis process."
+    },
+    "displayName": {
+      "en": "analysis configuration"
+    },
+    "name": "analysisConfiguration",
+    "target": "dtmi:rec:analytics:AnalysisConfiguration,1"
+  },
+  "description": {
+    "en": "Some process that generates analysis results, e.g., predictions, aggregates, series, etc."
+  },
+  "displayName": {
+    "en": "Analysis process"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

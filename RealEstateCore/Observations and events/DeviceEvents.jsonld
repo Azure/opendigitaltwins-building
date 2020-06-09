@@ -1,13 +1,13 @@
 {
-  "@id": "dtmi:device:DeviceEvents,1",
+  "@id": "dtmi:rec:device:DeviceEvents,1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
     "displayName": {
-      "en": "event placement context"
+      "en": "placement context"
     },
     "maxMultiplicity": "1",
-    "name": "eventPlacementContext"
+    "name": "placementContext"
   },
   "description": {
     "en": "Events that are relevant in a Device context; initially observations, actuations, and exceptions."
@@ -15,6 +15,6 @@
   "displayName": {
     "en": "Device events"
   },
-  "extends": "dtmi:core:Event,1",
+  "extends": "dtmi:rec:core:Event,1",
   "@context": "dtmi:dtdl:context;2"
 }

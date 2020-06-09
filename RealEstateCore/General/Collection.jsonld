@@ -1,0 +1,8 @@
+{
+  "@id": "dtmi:rec:core:Collection,1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Collection"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

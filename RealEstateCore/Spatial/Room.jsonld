@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:core:Room,1",
+  "@id": "dtmi:rec:core:Room,1",
   "@type": "Interface",
   "contents": [
     {
@@ -8,7 +8,7 @@
         "en": "room is part of premises"
       },
       "name": "roomIsPartOfPremises",
-      "target": "dtmi:lease:Premises,1"
+      "target": "dtmi:rec:lease:Premises,1"
     },
     {
       "@type": "Relationship",
@@ -16,7 +16,7 @@
         "en": "room type"
       },
       "name": "roomType",
-      "target": "dtmi:building:RoomType,1"
+      "target": "dtmi:rec:building:RoomType,1"
     }
   ],
   "description": {
@@ -25,6 +25,6 @@
   "displayName": {
     "en": "Room"
   },
-  "extends": "dtmi:core:BuildingComponent,1",
+  "extends": "dtmi:rec:core:BuildingComponent,1",
   "@context": "dtmi:dtdl:context;2"
 }

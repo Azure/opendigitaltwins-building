@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:agents:Organization,1",
+  "@id": "dtmi:rec:agents:Organization,1",
   "@type": "Interface",
   "description": {
     "en": "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "Organization"
   },
-  "extends": "dtmi:core:Agent,1",
+  "extends": "dtmi:rec:core:Agent,1",
   "@context": "dtmi:dtdl:context;2"
 }

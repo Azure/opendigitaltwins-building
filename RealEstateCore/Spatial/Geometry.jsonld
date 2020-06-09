@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:geosparql:Geometry,1",
+  "@id": "dtmi:net:opengis:www:ont:geosparql:Geometry,1",
   "@type": "Interface",
   "contents": [
     {

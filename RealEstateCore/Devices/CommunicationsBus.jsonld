@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:device:CommunicationsBus,1",
+  "@id": "dtmi:rec:device:CommunicationsBus,1",
   "@type": "Interface",
   "description": {
     "en": "Type of communications bus for the Device."

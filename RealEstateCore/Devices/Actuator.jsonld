@@ -1,18 +1,22 @@
 {
-  "@id": "dtmi:device:Actuator,1",
+  "@id": "dtmi:rec:device:Actuator,1",
   "@type": "Interface",
   "contents": [
     {
       "@type": "Relationship",
-      "description": {
-        "en": "The Quantity Kind that a device measures or affects."
-      },
       "displayName": {
-        "en": "device quantity kind"
+        "en": "executes actuation"
       },
-      "maxMultiplicity": "1",
-      "minMultiplicity": "1",
-      "name": "deviceQuantityKind"
+      "name": "executesActuation",
+      "target": "dtmi:rec:device:Actuation,1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has actuation interface"
+      },
+      "name": "hasActuationInterface",
+      "target": "dtmi:rec:device:ActuationInterface,1"
     },
     {
       "@type": "Relationship",
@@ -23,41 +27,7 @@
         "en": "observed by"
       },
       "name": "observedBy",
-      "target": "dtmi:device:Sensor,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "has actuation interface"
-      },
-      "name": "hasActuationInterface",
-      "target": "dtmi:device:ActuationInterface,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "executes actuation"
-      },
-      "name": "executesActuation",
-      "target": "dtmi:device:Actuation,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "has default actuation interface"
-      },
-      "maxMultiplicity": "1",
-      "minMultiplicity": "1",
-      "name": "hasDefaultActuationInterface",
-      "target": "dtmi:actuation:ActuationInterface,1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "has actuation interface"
-      },
-      "name": "hasActuationInterface",
-      "target": "dtmi:actuation:ActuationInterface,1"
+      "target": "dtmi:rec:core:Sensor,1"
     }
   ],
   "description": {
@@ -66,6 +36,6 @@
   "displayName": {
     "en": "Actuator"
   },
-  "extends": "dtmi:core:Device,1",
+  "extends": "dtmi:rec:core:Device,1",
   "@context": "dtmi:dtdl:context;2"
 }

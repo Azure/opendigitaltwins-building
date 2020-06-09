@@ -1,29 +1,14 @@
 {
-  "@id": "dtmi:device:Sensor,1",
+  "@id": "dtmi:rec:core:Sensor,1",
   "@type": "Interface",
   "contents": [
     {
       "@type": "Relationship",
-      "description": {
-        "en": "The Quantity Kind that a device measures or affects."
-      },
       "displayName": {
-        "en": "device quantity kind"
+        "en": "generated observation"
       },
-      "maxMultiplicity": "1",
-      "minMultiplicity": "1",
-      "name": "deviceQuantityKind"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "The measurement unit used by some Device."
-      },
-      "displayName": {
-        "en": "device measurement unit"
-      },
-      "minMultiplicity": "1",
-      "name": "deviceMeasurementUnit"
+      "name": "generatedObservation",
+      "target": "dtmi:rec:core:Observation,1"
     },
     {
       "@type": "Relationship",
@@ -34,15 +19,18 @@
         "en": "observes actuator"
       },
       "name": "observesActuator",
-      "target": "dtmi:device:Actuator,1"
+      "target": "dtmi:rec:device:Actuator,1"
     },
     {
       "@type": "Relationship",
+      "description": {
+        "en": "Deprecated in favour of core:generatedObservation"
+      },
       "displayName": {
         "en": "generated observation"
       },
       "name": "generatedObservation",
-      "target": "dtmi:device:Observation,1"
+      "target": "dtmi:rec:device:Observation,1"
     },
     {
       "@type": "Relationship",
@@ -50,7 +38,7 @@
         "en": "generated exception"
       },
       "name": "generatedException",
-      "target": "dtmi:device:Exception,1"
+      "target": "dtmi:rec:device:Exception,1"
     }
   ],
   "description": {
@@ -59,6 +47,6 @@
   "displayName": {
     "en": "Sensor"
   },
-  "extends": "dtmi:core:Device,1",
+  "extends": "dtmi:rec:core:Device,1",
   "@context": "dtmi:dtdl:context;2"
 }
