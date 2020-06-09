@@ -87,14 +87,6 @@
       },
       "name": "associatedWithDevice",
       "target": "dtmi:rec:core:Device;1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "event placement context"
-      },
-      "name": "eventPlacementContext",
-      "target": "dtmi:rec:device:PlacementContext;1"
     }
   ],
   "description": {

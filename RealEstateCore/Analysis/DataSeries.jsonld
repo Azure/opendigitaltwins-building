@@ -27,7 +27,7 @@
       },
       "minMultiplicity": {
         "@type": "xsd:integer",
-        "@value": "1"
+        "@value": "0"
       },
       "name": "seriesMembers",
       "target": "dtmi:rec:core:Observation;1"

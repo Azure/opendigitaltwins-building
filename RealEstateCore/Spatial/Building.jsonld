@@ -4,14 +4,6 @@
   "contents": [
     {
       "@type": "Relationship",
-      "displayName": {
-        "en": "building is part of premises"
-      },
-      "name": "buildingIsPartOfPremises",
-      "target": "dtmi:rec:lease:Premises;1"
-    },
-    {
-      "@type": "Relationship",
       "description": {
         "en": "Associates a building with a point in some coordinate reference system which can be used to resolve local (building-specific) coordinates against this outer coordinate reference system."
       },

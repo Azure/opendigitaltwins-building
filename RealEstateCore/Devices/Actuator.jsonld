@@ -1,35 +1,17 @@
 {
   "@id": "dtmi:rec:device:Actuator;1",
   "@type": "Interface",
-  "contents": [
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "executes actuation"
-      },
-      "name": "executesActuation",
-      "target": "dtmi:rec:device:Actuation;1"
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."
     },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "has actuation interface"
-      },
-      "name": "hasActuationInterface",
-      "target": "dtmi:rec:device:ActuationInterface;1"
+    "displayName": {
+      "en": "observed by"
     },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."
-      },
-      "displayName": {
-        "en": "observed by"
-      },
-      "name": "observedBy",
-      "target": "dtmi:rec:core:Sensor;1"
-    }
-  ],
+    "name": "observedBy",
+    "target": "dtmi:rec:core:Sensor;1"
+  },
   "description": {
     "en": "An actuator is a component that is responsible for moving and controlling a mechanism or system."
   },

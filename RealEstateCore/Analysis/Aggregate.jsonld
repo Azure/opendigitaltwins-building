@@ -15,7 +15,7 @@
     },
     "minMultiplicity": {
       "@type": "xsd:integer",
-      "@value": "1"
+      "@value": "0"
     },
     "name": "generatedBy",
     "target": "dtmi:rec:analytics:AnalysisProcess;1"

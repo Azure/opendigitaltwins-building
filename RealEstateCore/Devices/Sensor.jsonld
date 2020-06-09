@@ -23,17 +23,6 @@
     },
     {
       "@type": "Relationship",
-      "description": {
-        "en": "Deprecated in favour of core:generatedObservation"
-      },
-      "displayName": {
-        "en": "generated observation"
-      },
-      "name": "generatedObservation",
-      "target": "dtmi:rec:device:Observation;1"
-    },
-    {
-      "@type": "Relationship",
       "displayName": {
         "en": "generated exception"
       },

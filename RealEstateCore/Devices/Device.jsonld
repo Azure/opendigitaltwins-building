@@ -5,6 +5,14 @@
     {
       "@type": "Relationship",
       "displayName": {
+        "en": "hasModbusDataType"
+      },
+      "name": "hasModbusDataType",
+      "target": "dtmi:rec:device:ModbusDataType;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
         "en": "hsKNXDataPointType"
       },
       "name": "hasKNXDataPointType",
@@ -29,22 +37,6 @@
     {
       "@type": "Relationship",
       "displayName": {
-        "en": "device placement context"
-      },
-      "name": "devicePlacementContext",
-      "target": "dtmi:rec:device:PlacementContext;1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "hasModbusDataType"
-      },
-      "name": "hasModbusDataType",
-      "target": "dtmi:rec:device:ModbusDataType;1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
         "en": "hasModbusFunctionCode"
       },
       "name": "hasModbusFunctionCode",
@@ -61,7 +53,7 @@
       },
       "minMultiplicity": {
         "@type": "xsd:integer",
-        "@value": "1"
+        "@value": "0"
       },
       "name": "placementContext",
       "target": "dtmi:rec:device:PlacementContext;1"
