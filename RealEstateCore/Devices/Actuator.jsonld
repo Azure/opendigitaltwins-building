@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:device:Actuator,1",
+  "@id": "dtmi:rec:device:Actuator;1",
   "@type": "Interface",
   "contents": [
     {
@@ -8,7 +8,7 @@
         "en": "executes actuation"
       },
       "name": "executesActuation",
-      "target": "dtmi:rec:device:Actuation,1"
+      "target": "dtmi:rec:device:Actuation;1"
     },
     {
       "@type": "Relationship",
@@ -16,7 +16,7 @@
         "en": "has actuation interface"
       },
       "name": "hasActuationInterface",
-      "target": "dtmi:rec:device:ActuationInterface,1"
+      "target": "dtmi:rec:device:ActuationInterface;1"
     },
     {
       "@type": "Relationship",
@@ -27,7 +27,7 @@
         "en": "observed by"
       },
       "name": "observedBy",
-      "target": "dtmi:rec:core:Sensor,1"
+      "target": "dtmi:rec:core:Sensor;1"
     }
   ],
   "description": {
@@ -36,6 +36,6 @@
   "displayName": {
     "en": "Actuator"
   },
-  "extends": "dtmi:rec:core:Device,1",
+  "extends": "dtmi:rec:core:Device;1",
   "@context": "dtmi:dtdl:context;2"
 }

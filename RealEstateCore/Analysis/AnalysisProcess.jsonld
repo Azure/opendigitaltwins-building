@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:analytics:AnalysisProcess,1",
+  "@id": "dtmi:rec:analytics:AnalysisProcess;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -10,7 +10,7 @@
       "en": "analysis configuration"
     },
     "name": "analysisConfiguration",
-    "target": "dtmi:rec:analytics:AnalysisConfiguration,1"
+    "target": "dtmi:rec:analytics:AnalysisConfiguration;1"
   },
   "description": {
     "en": "Some process that generates analysis results, e.g., predictions, aggregates, series, etc."

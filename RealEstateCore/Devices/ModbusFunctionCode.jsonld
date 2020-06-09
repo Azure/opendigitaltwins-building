@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:rec:device:ModbusFunctionCode,1",
+  "@id": "dtmi:rec:device:ModbusFunctionCode;1",
   "@type": "Interface",
   "displayName": {
     "en": "ModbusTCPFunctionCode"
   },
-  "extends": "dtmi:rec:device:ModbusConfiguration,1",
+  "extends": "dtmi:rec:device:ModbusConfiguration;1",
   "@context": "dtmi:dtdl:context;2"
 }

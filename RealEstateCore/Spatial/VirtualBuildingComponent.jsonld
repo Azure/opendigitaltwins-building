@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:building:VirtualBuildingComponent,1",
+  "@id": "dtmi:rec:building:VirtualBuildingComponent;1",
   "@type": "Interface",
   "description": {
     "en": "A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "Virtual building component"
   },
-  "extends": "dtmi:rec:core:BuildingComponent,1",
+  "extends": "dtmi:rec:core:BuildingComponent;1",
   "@context": "dtmi:dtdl:context;2"
 }

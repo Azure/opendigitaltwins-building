@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:rec:device:ModbusConfiguration,1",
+  "@id": "dtmi:rec:device:ModbusConfiguration;1",
   "@type": "Interface",
   "displayName": {
     "en": "ModbusConfiguration"
   },
-  "extends": "dtmi:rec:device:CommunicationConfiguration,1",
+  "extends": "dtmi:rec:device:CommunicationConfiguration;1",
   "@context": "dtmi:dtdl:context;2"
 }

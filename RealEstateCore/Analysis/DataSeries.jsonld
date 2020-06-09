@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:analytics:DataSeries,1",
+  "@id": "dtmi:rec:analytics:DataSeries;1",
   "@type": "Interface",
   "contents": [
     {
@@ -12,7 +12,7 @@
       },
       "maxMultiplicity": "1",
       "name": "generatedBy",
-      "target": "dtmi:rec:analytics:AnalysisProcess,1"
+      "target": "dtmi:rec:analytics:AnalysisProcess;1"
     },
     {
       "@type": "Relationship",
@@ -24,7 +24,7 @@
       },
       "minMultiplicity": "1",
       "name": "seriesMembers",
-      "target": "dtmi:rec:core:Observation,1"
+      "target": "dtmi:rec:core:Observation;1"
     }
   ],
   "description": {
@@ -33,6 +33,6 @@
   "displayName": {
     "en": "Data series"
   },
-  "extends": "dtmi:rec:core:Information,1",
+  "extends": "dtmi:rec:core:Information;1",
   "@context": "dtmi:dtdl:context;2"
 }

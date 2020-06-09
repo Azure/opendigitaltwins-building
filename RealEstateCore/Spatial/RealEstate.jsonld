@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:RealEstate,1",
+  "@id": "dtmi:rec:core:RealEstate;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -10,7 +10,7 @@
       "en": "has real estate component"
     },
     "name": "hasRealEstateComponent",
-    "target": "dtmi:rec:core:RealEstateComponent,1"
+    "target": "dtmi:rec:core:RealEstateComponent;1"
   },
   "description": {
     "en": "The legal/administrative representation of some lands and/or buildings."

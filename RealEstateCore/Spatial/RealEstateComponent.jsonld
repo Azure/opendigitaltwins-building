@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:RealEstateComponent,1",
+  "@id": "dtmi:rec:core:RealEstateComponent;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -7,7 +7,7 @@
       "en": "Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate."
     },
     "name": "isPartOfRealEstate",
-    "target": "dtmi:rec:core:RealEstate,1"
+    "target": "dtmi:rec:core:RealEstate;1"
   },
   "description": {
     "en": "Types of objects that can make up a piece of real estate, e.g., land and buildings."

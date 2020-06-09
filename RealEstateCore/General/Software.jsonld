@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Software,1",
+  "@id": "dtmi:rec:core:Software;1",
   "@type": "Interface",
   "description": {
     "en": "Any piece of software or similar digital resource (including data schemas, etc) that executes or can be loaded on some or many parts of a RealEstateCore-enabled distributed system."

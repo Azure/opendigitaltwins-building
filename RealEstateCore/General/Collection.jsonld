@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Collection,1",
+  "@id": "dtmi:rec:core:Collection;1",
   "@type": "Interface",
   "displayName": {
     "en": "Collection"

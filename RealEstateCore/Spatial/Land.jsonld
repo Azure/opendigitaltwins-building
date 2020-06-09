@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Land,1",
+  "@id": "dtmi:rec:core:Land;1",
   "@type": "Interface",
   "description": {
     "en": "A piece of land upon which one or more buildings may be situated."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "Land"
   },
-  "extends": "dtmi:rec:core:RealEstateComponent,1",
+  "extends": "dtmi:rec:core:RealEstateComponent;1",
   "@context": "dtmi:dtdl:context;2"
 }

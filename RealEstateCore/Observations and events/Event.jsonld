@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Event,1",
+  "@id": "dtmi:rec:core:Event;1",
   "@type": "Interface",
   "contents": [
     {
@@ -86,7 +86,7 @@
         "en": "associated with device"
       },
       "name": "associatedWithDevice",
-      "target": "dtmi:rec:core:Device,1"
+      "target": "dtmi:rec:core:Device;1"
     },
     {
       "@type": "Relationship",
@@ -94,7 +94,7 @@
         "en": "event placement context"
       },
       "name": "eventPlacementContext",
-      "target": "dtmi:rec:device:PlacementContext,1"
+      "target": "dtmi:rec:device:PlacementContext;1"
     }
   ],
   "description": {

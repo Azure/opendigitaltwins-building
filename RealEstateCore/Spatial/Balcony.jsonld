@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:rec:building:Balcony,1",
+  "@id": "dtmi:rec:building:Balcony;1",
   "@type": "Interface",
   "displayName": {
     "en": "Balcony"
   },
-  "extends": "dtmi:rec:core:BuildingComponent,1",
+  "extends": "dtmi:rec:core:BuildingComponent;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:analytics:Aggregate,1",
+  "@id": "dtmi:rec:analytics:Aggregate;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -12,8 +12,8 @@
     "maxMultiplicity": "1",
     "minMultiplicity": "1",
     "name": "generatedBy",
-    "target": "dtmi:rec:analytics:AnalysisProcess,1"
+    "target": "dtmi:rec:analytics:AnalysisProcess;1"
   },
-  "extends": "dtmi:rec:core:Observation,1",
+  "extends": "dtmi:rec:core:Observation;1",
   "@context": "dtmi:dtdl:context;2"
 }

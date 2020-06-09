@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Agent,1",
+  "@id": "dtmi:rec:core:Agent;1",
   "@type": "Interface",
   "description": {
     "en": "The human or machine that consumes or acts upon an object or data."

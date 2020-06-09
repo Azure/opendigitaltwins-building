@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:device:CommunicationConfiguration,1",
+  "@id": "dtmi:rec:device:CommunicationConfiguration;1",
   "@type": "Interface",
   "description": {
     "en": "Instances of this class and its subclasses represent configuration fields and values in the various old-world non-IoT building system standards."

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:device:ModbusRTUConfiguration,1",
+  "@id": "dtmi:rec:device:ModbusRTUConfiguration;1",
   "@type": "Interface",
   "description": {
     "en": "Specific classes and properties to be extended in upcoming version."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "ModbusRTUConfiguration"
   },
-  "extends": "dtmi:rec:device:CommunicationConfiguration,1",
+  "extends": "dtmi:rec:device:CommunicationConfiguration;1",
   "@context": "dtmi:dtdl:context;2"
 }
