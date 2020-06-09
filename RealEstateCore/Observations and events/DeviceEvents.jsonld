@@ -6,7 +6,10 @@
     "displayName": {
       "en": "placement context"
     },
-    "maxMultiplicity": "1",
+    "maxMultiplicity": {
+      "@type": "xsd:integer",
+      "@value": "1"
+    },
     "name": "placementContext"
   },
   "description": {
