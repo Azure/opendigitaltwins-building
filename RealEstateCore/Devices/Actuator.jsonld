@@ -13,7 +13,7 @@
     "target": "dtmi:rec:core:Sensor;1"
   },
   "description": {
-    "en": "An actuator is a component that takes some control input and executes some real-world action based on this input. Examples include setting dampers/valvaes in heating/cooling systems at certain configurations, opening or closing a smart lock, turning on or off an electric radiator, etc. REC does not provide semantics for every type of actuator you might find in a building; rather we here provide classes and properties that allows users to define their own actuator models, based on the systems they have, whil"
+    "en": "An actuator takes some control input and executes some real-world action based on this input. Examples include setting dampers/valves in heating/cooling systems at certain configurations, opening or closing a smart lock, turning on or off an electric radiator, etc. REC does not provide semantics for every type of actuator you might find in a building; rather we here provide classes and properties that allows users to define their own actuator models, based on the systems they have, adhering to REC."
   },
   "displayName": {
     "en": "Actuator"
