@@ -4,7 +4,7 @@
   "contents": {
     "@type": "Relationship",
     "description": {
-      "en": "The configuration for a given analysis process."
+      "en": "The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done."
     },
     "displayName": {
       "en": "analysis configuration"
@@ -13,7 +13,7 @@
     "target": "dtmi:rec:analytics:AnalysisConfiguration;1"
   },
   "description": {
-    "en": "Some process that generates analysis results, e.g., predictions, aggregates, series, etc."
+    "en": "Some process that generates analysis results, e.g., predictions, aggregates, series, etc. This could be anything from the execution of a machine learning classifier to a simple mathematical averaging operation. The modelling of specific analysis processes and their semantics remains to be done."
   },
   "displayName": {
     "en": "Analysis process"

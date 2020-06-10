@@ -2,7 +2,7 @@
   "@id": "dtmi:rec:analytics:AnalysisConfiguration;1",
   "@type": "Interface",
   "description": {
-    "en": "The configuration of a given analysis process."
+    "en": "The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done."
   },
   "displayName": {
     "en": "Analysis configuration"

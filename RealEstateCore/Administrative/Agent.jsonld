@@ -2,7 +2,7 @@
   "@id": "dtmi:rec:core:Agent;1",
   "@type": "Interface",
   "description": {
-    "en": "The human or machine that consumes or acts upon an object or data."
+    "en": "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchord in one joint place, on the Agent class. Conceptually this mimics the Agent class from the well-known FOAF vocabulary, see http://xmlns.com/foaf/spec/#term_Agent."
   },
   "displayName": {
     "en": "Agent"
