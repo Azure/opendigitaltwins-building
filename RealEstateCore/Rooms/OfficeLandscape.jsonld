@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:OfficeLandscape;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "OfficeLandscape"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

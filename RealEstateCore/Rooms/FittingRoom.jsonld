@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:FittingRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "FittingRoom"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

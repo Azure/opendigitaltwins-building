@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:Laboratory;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Laboratory"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

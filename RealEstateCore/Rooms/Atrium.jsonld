@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:Atrium;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Atrium"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:Classroom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Classroom"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

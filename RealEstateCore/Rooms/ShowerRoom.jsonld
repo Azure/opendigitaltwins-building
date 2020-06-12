@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:ShowerRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "ShowerRoom"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

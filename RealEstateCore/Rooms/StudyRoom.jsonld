@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:rec:building:StudyRoom;1",
+  "@type": "Interface",
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

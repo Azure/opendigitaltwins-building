@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:PersonalHygiene;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "PersonalHygiene"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

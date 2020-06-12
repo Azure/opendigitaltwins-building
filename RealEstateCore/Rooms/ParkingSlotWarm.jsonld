@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:ParkingSlotWarm;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "ParkingSlotWarm"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

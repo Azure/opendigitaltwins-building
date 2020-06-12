@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:building:Shelter;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Shelter"
+  },
+  "extends": "dtmi:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}
