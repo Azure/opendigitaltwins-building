@@ -5,6 +5,18 @@
     {
       "@type": "Relationship",
       "displayName": {
+        "en": "hasModbusDataType"
+      },
+      "name": "hasModbusDataType",
+      "target": "dtmi:rec:device:ModbusDataType;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasModbusConfiguration"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
         "en": "hsKNXDataPointType"
       },
       "name": "hasKNXDataPointType",
@@ -16,31 +28,11 @@
     },
     {
       "@type": "Relationship",
-      "displayName": {
-        "en": "has device function type"
-      },
-      "name": "hasDeviceFunctionType",
-      "target": "dtmi:rec:device:DeviceFunctionType;1"
-    },
-    {
-      "@type": "Relationship",
       "description": {
         "en": "has communications bus"
       },
       "name": "hasCommunicationsBus",
       "target": "dtmi:rec:device:CommunicationsBus;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "hasModbusConfiguration"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "hasModbusDataType"
-      },
-      "name": "hasModbusDataType",
-      "target": "dtmi:rec:device:ModbusDataType;1"
     },
     {
       "@type": "Relationship",
@@ -301,6 +293,92 @@
       },
       "name": "hasScaleFactor",
       "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "hasDeviceFunctionType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "AirDiffuser",
+            "name": "AirDiffuser"
+          },
+          {
+            "enumValue": "AirHandlingUnit",
+            "name": "AirHandlingUnit"
+          },
+          {
+            "enumValue": "Boiler",
+            "name": "Boiler"
+          },
+          {
+            "enumValue": "Chiller",
+            "name": "Chiller"
+          },
+          {
+            "enumValue": "Coil",
+            "name": "Coil"
+          },
+          {
+            "enumValue": "Compressor",
+            "name": "Compressor"
+          },
+          {
+            "enumValue": "Condenser",
+            "name": "Condenser"
+          },
+          {
+            "enumValue": "Control",
+            "name": "Control"
+          },
+          {
+            "enumValue": "Damper",
+            "name": "Damper"
+          },
+          {
+            "enumValue": "DataAcquisition",
+            "name": "DataAcquisition"
+          },
+          {
+            "enumValue": "DataCommunicationGateway",
+            "name": "DataCommunicationGateway"
+          },
+          {
+            "enumValue": "Elevator",
+            "name": "Elevator"
+          },
+          {
+            "enumValue": "Escalator",
+            "name": "Escalator"
+          },
+          {
+            "enumValue": "Fan",
+            "name": "Fan"
+          },
+          {
+            "enumValue": "Filter",
+            "name": "Filter"
+          },
+          {
+            "enumValue": "Heater",
+            "name": "Heater"
+          },
+          {
+            "enumValue": "Pump",
+            "name": "Pump"
+          },
+          {
+            "enumValue": "Thermostat",
+            "name": "Thermostat"
+          },
+          {
+            "enumValue": "Valve",
+            "name": "Valve"
+          }
+        ],
+        "dtmi:dtdl:property:valueSchema;2": "string"
+      }
     }
   ],
   "description": {
