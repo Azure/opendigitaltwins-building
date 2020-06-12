@@ -1,14 +1,6 @@
 {
   "@id": "dtmi:rec:core:Room;1",
   "@type": "Interface",
-  "contents": {
-    "@type": "Relationship",
-    "displayName": {
-      "en": "room type"
-    },
-    "name": "roomType",
-    "target": "dtmi:rec:building:RoomType;1"
-  },
   "description": {
     "en": "Base class for all more specific room types."
   },
