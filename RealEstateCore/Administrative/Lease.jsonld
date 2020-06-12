@@ -56,6 +56,16 @@
       },
       "name": "leasee",
       "target": "dtmi:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The object (e.g., property, equipment, etc) that this a lease of."
+      },
+      "displayName": {
+        "en": "lease of"
+      },
+      "name": "leaseOf"
     }
   ],
   "extends": "dtmi:rec:core:Event;1",

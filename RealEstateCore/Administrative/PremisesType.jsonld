@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec:core:PremisesType;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Premises type"
+  },
+  "extends": "dtmi:rec:core:Type;1",
+  "@context": "dtmi:dtdl:context;2"
+}

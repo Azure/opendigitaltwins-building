@@ -1,6 +1,73 @@
 {
   "@id": "dtmi:rec:agents:Person;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's last name (if they have one; this varies across cultural contexts)."
+      },
+      "displayName": {
+        "en": "last name"
+      },
+      "name": "lastName",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's personal, individual name."
+      },
+      "displayName": {
+        "en": "given name"
+      },
+      "name": "givenName",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A gender designation for a Person. Stricter than FOAF, which allows all Agents to have gender."
+      },
+      "displayName": {
+        "en": "gender"
+      },
+      "name": "gender",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's first name (if they have one; this varies across cultural contexts)."
+      },
+      "displayName": {
+        "en": "first name"
+      },
+      "name": "firstName",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's family name."
+      },
+      "displayName": {
+        "en": "family name"
+      },
+      "name": "familyName",
+      "schema": "string"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Property that links a Person to an image that represents them."
+      },
+      "displayName": {
+        "en": "image"
+      },
+      "name": "image"
+    }
+  ],
   "description": {
     "en": "A natural person (i.e., an individual human being)."
   },
