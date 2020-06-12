@@ -1,11 +1,6 @@
 {
   "@id": "dtmi:rec:core:Premises;1",
   "@type": "Interface",
-  "contents": {
-    "@type": "Relationship",
-    "name": "premisesType",
-    "target": "dtmi:rec:core:PremisesType;1"
-  },
   "description": {
     "en": "A premises is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant."
   },

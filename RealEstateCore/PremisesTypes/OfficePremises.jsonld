@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:rec:core:OfficePremises;1",
+  "@type": "Interface",
+  "extends": "dtmi:rec:core:Premises;1",
+  "@context": "dtmi:dtdl:context;2"
+}
