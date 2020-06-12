@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:analytics:Aggregate;1",
+  "@id": "dtmi:rec3_2:analytics:Aggregate;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -18,8 +18,8 @@
       "@value": "0"
     },
     "name": "generatedBy",
-    "target": "dtmi:rec:analytics:AnalysisProcess;1"
+    "target": "dtmi:rec3_2:analytics:AnalysisProcess;1"
   },
-  "extends": "dtmi:rec:core:Observation;1",
+  "extends": "dtmi:rec3_2:core:Observation;1",
   "@context": "dtmi:dtdl:context;2"
 }

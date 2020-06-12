@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Agent;1",
+  "@id": "dtmi:rec3_2:core:Agent;1",
   "@type": "Interface",
   "contents": [
     {

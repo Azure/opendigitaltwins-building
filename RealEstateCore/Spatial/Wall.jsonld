@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:rec:building:Wall;1",
+  "@id": "dtmi:rec3_2:building:Wall;1",
   "@type": "Interface",
   "displayName": {
     "en": "Wall"
   },
-  "extends": "dtmi:rec:core:BuildingComponent;1",
+  "extends": "dtmi:rec3_2:core:BuildingComponent;1",
   "@context": "dtmi:dtdl:context;2"
 }

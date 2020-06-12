@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Device;1",
+  "@id": "dtmi:rec3_2:core:Device;1",
   "@type": "Interface",
   "contents": [
     {
@@ -8,7 +8,7 @@
         "en": "hasModbusDataType"
       },
       "name": "hasModbusDataType",
-      "target": "dtmi:rec:device:ModbusDataType;1"
+      "target": "dtmi:rec3_2:device:ModbusDataType;1"
     },
     {
       "@type": "Relationship",
@@ -20,7 +20,7 @@
         "en": "hsKNXDataPointType"
       },
       "name": "hasKNXDataPointType",
-      "target": "dtmi:rec:device:KNXDataPointType;1"
+      "target": "dtmi:rec3_2:device:KNXDataPointType;1"
     },
     {
       "@type": "Relationship",
@@ -32,7 +32,7 @@
         "en": "has communications bus"
       },
       "name": "hasCommunicationsBus",
-      "target": "dtmi:rec:device:CommunicationsBus;1"
+      "target": "dtmi:rec3_2:device:CommunicationsBus;1"
     },
     {
       "@type": "Relationship",
@@ -40,7 +40,7 @@
         "en": "hasModbusFunctionCode"
       },
       "name": "hasModbusFunctionCode",
-      "target": "dtmi:rec:device:ModbusFunctionCode;1"
+      "target": "dtmi:rec3_2:device:ModbusFunctionCode;1"
     },
     {
       "@type": "Relationship",
@@ -56,7 +56,7 @@
         "@value": "0"
       },
       "name": "placementContext",
-      "target": "dtmi:rec:device:PlacementContext;1"
+      "target": "dtmi:rec3_2:device:PlacementContext;1"
     },
     {
       "@type": "Relationship",
@@ -67,7 +67,7 @@
         "en": "associated with event"
       },
       "name": "associatedWithEvent",
-      "target": "dtmi:rec:core:Event;1"
+      "target": "dtmi:rec3_2:core:Event;1"
     },
     {
       "@type": "Relationship",
@@ -78,7 +78,7 @@
         "en": "has sub-device"
       },
       "name": "hasSubDevice",
-      "target": "dtmi:rec:core:Device;1"
+      "target": "dtmi:rec3_2:core:Device;1"
     },
     {
       "@type": "Relationship",
@@ -89,7 +89,7 @@
         "en": "has super-Device"
       },
       "name": "hasSuperDevice",
-      "target": "dtmi:rec:core:Device;1"
+      "target": "dtmi:rec3_2:core:Device;1"
     },
     {
       "@type": "Relationship",
@@ -110,7 +110,7 @@
         "en": "is mounted in Building Component"
       },
       "name": "isMountedInBuildingComponent",
-      "target": "dtmi:rec:core:BuildingComponent;1"
+      "target": "dtmi:rec3_2:core:BuildingComponent;1"
     },
     {
       "@type": "Relationship",
@@ -131,7 +131,7 @@
         "en": "serves building"
       },
       "name": "servesBuilding",
-      "target": "dtmi:rec:core:Building;1"
+      "target": "dtmi:rec3_2:core:Building;1"
     },
     {
       "@type": "Relationship",
@@ -142,7 +142,7 @@
         "en": "serves building component"
       },
       "name": "servesBuildingComponent",
-      "target": "dtmi:rec:core:BuildingComponent;1"
+      "target": "dtmi:rec3_2:core:BuildingComponent;1"
     },
     {
       "@type": "Relationship",
@@ -153,7 +153,7 @@
         "en": "serves device"
       },
       "name": "servesDevice",
-      "target": "dtmi:rec:core:Device;1"
+      "target": "dtmi:rec3_2:core:Device;1"
     },
     {
       "@type": "Property",
@@ -377,7 +377,7 @@
             "name": "Valve"
           }
         ],
-        "dtmi:dtdl:property:valueSchema;2": "string"
+        "valueSchema": "string"
       }
     }
   ],

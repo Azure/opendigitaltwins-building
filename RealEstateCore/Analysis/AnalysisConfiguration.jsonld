@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:analytics:AnalysisConfiguration;1",
+  "@id": "dtmi:rec3_2:analytics:AnalysisConfiguration;1",
   "@type": "Interface",
   "description": {
     "en": "The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "Analysis configuration"
   },
-  "extends": "dtmi:rec:core:Information;1",
+  "extends": "dtmi:rec3_2:core:Information;1",
   "@context": "dtmi:dtdl:context;2"
 }

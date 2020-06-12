@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:device:DeviceEvents;1",
+  "@id": "dtmi:rec3_2:device:DeviceEvents;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Device events"
   },
-  "extends": "dtmi:rec:core:Event;1",
+  "extends": "dtmi:rec3_2:core:Event;1",
   "@context": "dtmi:dtdl:context;2"
 }

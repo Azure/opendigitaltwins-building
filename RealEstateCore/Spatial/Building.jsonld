@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Building;1",
+  "@id": "dtmi:rec3_2:core:Building;1",
   "@type": "Interface",
   "contents": [
     {
@@ -11,7 +11,7 @@
         "en": "has geo-reference origo"
       },
       "name": "hasGeoReferenceOrigo",
-      "target": "dtmi:rec:core:GeoReferenceOrigo;1"
+      "target": "dtmi:rec3_2:core:GeoReferenceOrigo;1"
     },
     {
       "@type": "Relationship",
@@ -22,7 +22,7 @@
         "en": "has building component"
       },
       "name": "hasBuildingComponent",
-      "target": "dtmi:rec:core:BuildingComponent;1"
+      "target": "dtmi:rec3_2:core:BuildingComponent;1"
     }
   ],
   "description": {
@@ -31,6 +31,6 @@
   "displayName": {
     "en": "Building"
   },
-  "extends": "dtmi:rec:core:RealEstateComponent;1",
+  "extends": "dtmi:rec3_2:core:RealEstateComponent;1",
   "@context": "dtmi:dtdl:context;2"
 }

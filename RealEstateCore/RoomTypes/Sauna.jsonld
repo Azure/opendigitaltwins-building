@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:rec:building:Sauna;1",
+  "@id": "dtmi:rec3_2:building:Sauna;1",
   "@type": "Interface",
   "displayName": {
     "en": "Sauna"
   },
-  "extends": "dtmi:rec:core:Room;1",
+  "extends": "dtmi:rec3_2:core:Room;1",
   "@context": "dtmi:dtdl:context;2"
 }

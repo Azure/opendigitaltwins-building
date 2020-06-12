@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:building:VirtualBuilding;1",
+  "@id": "dtmi:rec3_2:building:VirtualBuilding;1",
   "@type": "Interface",
   "description": {
     "en": "A non-physical Building. Belongs to a RealEstate."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "Virtual building"
   },
-  "extends": "dtmi:rec:core:Building;1",
+  "extends": "dtmi:rec3_2:core:Building;1",
   "@context": "dtmi:dtdl:context;2"
 }

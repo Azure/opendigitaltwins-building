@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:analytics:DataSeries;1",
+  "@id": "dtmi:rec3_2:analytics:DataSeries;1",
   "@type": "Interface",
   "contents": [
     {
@@ -15,7 +15,7 @@
         "@value": "1"
       },
       "name": "generatedBy",
-      "target": "dtmi:rec:analytics:AnalysisProcess;1"
+      "target": "dtmi:rec3_2:analytics:AnalysisProcess;1"
     },
     {
       "@type": "Relationship",
@@ -30,7 +30,7 @@
         "@value": "0"
       },
       "name": "seriesMembers",
-      "target": "dtmi:rec:core:Observation;1"
+      "target": "dtmi:rec3_2:core:Observation;1"
     }
   ],
   "description": {
@@ -39,6 +39,6 @@
   "displayName": {
     "en": "Data series"
   },
-  "extends": "dtmi:rec:core:Information;1",
+  "extends": "dtmi:rec3_2:core:Information;1",
   "@context": "dtmi:dtdl:context;2"
 }

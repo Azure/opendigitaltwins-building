@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:BuildingComponent;1",
+  "@id": "dtmi:rec3_2:core:BuildingComponent;1",
   "@type": "Interface",
   "contents": [
     {
@@ -11,7 +11,7 @@
         "en": "is part of building"
       },
       "name": "isPartOfBuilding",
-      "target": "dtmi:rec:core:Building;1"
+      "target": "dtmi:rec3_2:core:Building;1"
     },
     {
       "@type": "Relationship",
@@ -22,7 +22,7 @@
         "en": "has super-BuildingComponent"
       },
       "name": "hasSuperBuildingComponent",
-      "target": "dtmi:rec:core:BuildingComponent;1"
+      "target": "dtmi:rec3_2:core:BuildingComponent;1"
     },
     {
       "@type": "Relationship",
@@ -33,7 +33,7 @@
         "en": "has sub-BuildingComponent"
       },
       "name": "hasSubBuildingComponent",
-      "target": "dtmi:rec:core:BuildingComponent;1"
+      "target": "dtmi:rec3_2:core:BuildingComponent;1"
     }
   ],
   "description": {

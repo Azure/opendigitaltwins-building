@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:device:Actuator;1",
+  "@id": "dtmi:rec3_2:device:Actuator;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -10,7 +10,7 @@
       "en": "observed by"
     },
     "name": "observedBy",
-    "target": "dtmi:rec:core:Sensor;1"
+    "target": "dtmi:rec3_2:core:Sensor;1"
   },
   "description": {
     "en": "An actuator takes some control input and executes some real-world action based on this input. Examples include setting dampers/valves in heating/cooling systems at certain configurations, opening or closing a smart lock, turning on or off an electric radiator, etc. REC does not provide semantics for every type of actuator you might find in a building; rather we here provide classes and properties that allows users to define their own actuator models, based on the systems they have, adhering to REC."
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Actuator"
   },
-  "extends": "dtmi:rec:core:Device;1",
+  "extends": "dtmi:rec3_2:core:Device;1",
   "@context": "dtmi:dtdl:context;2"
 }

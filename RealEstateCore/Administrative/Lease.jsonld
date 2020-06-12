@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:lease:Lease;1",
+  "@id": "dtmi:rec3_2:lease:Lease;1",
   "@type": "Interface",
   "contents": [
     {
@@ -33,7 +33,7 @@
         "en": "regulated by"
       },
       "name": "regulatedBy",
-      "target": "dtmi:rec:lease:LeaseContract;1"
+      "target": "dtmi:rec3_2:lease:LeaseContract;1"
     },
     {
       "@type": "Relationship",
@@ -44,7 +44,7 @@
         "en": "leasor"
       },
       "name": "leasor",
-      "target": "dtmi:rec:core:Agent;1"
+      "target": "dtmi:rec3_2:core:Agent;1"
     },
     {
       "@type": "Relationship",
@@ -55,7 +55,7 @@
         "en": "leasee"
       },
       "name": "leasee",
-      "target": "dtmi:rec:core:Agent;1"
+      "target": "dtmi:rec3_2:core:Agent;1"
     },
     {
       "@type": "Relationship",
@@ -68,6 +68,6 @@
       "name": "leaseOf"
     }
   ],
-  "extends": "dtmi:rec:core:Event;1",
+  "extends": "dtmi:rec3_2:core:Event;1",
   "@context": "dtmi:dtdl:context;2"
 }

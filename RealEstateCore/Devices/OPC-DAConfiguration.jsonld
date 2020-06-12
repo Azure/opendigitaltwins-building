@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:device:OPCDAConfiguration;1",
+  "@id": "dtmi:rec3_2:device:OPCDAConfiguration;1",
   "@type": "Interface",
   "description": {
     "en": "Specific classes and properties to be extended in upcoming version."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "OPC-DAConfiguration"
   },
-  "extends": "dtmi:rec:device:CommunicationConfiguration;1",
+  "extends": "dtmi:rec3_2:device:CommunicationConfiguration;1",
   "@context": "dtmi:dtdl:context;2"
 }

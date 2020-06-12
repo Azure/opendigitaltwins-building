@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:GeoReferenceOrigo;1",
+  "@id": "dtmi:rec3_2:core:GeoReferenceOrigo;1",
   "@type": "Interface",
   "contents": {
     "@type": "Property",

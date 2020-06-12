@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:device:PlacementContext;1",
+  "@id": "dtmi:rec3_2:device:PlacementContext;1",
   "@type": "Interface",
   "description": {
     "en": "Description of the context or media that a sensor or actuator is operating within."

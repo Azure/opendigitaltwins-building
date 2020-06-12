@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:agents:Organization;1",
+  "@id": "dtmi:rec3_2:agents:Organization;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",
@@ -17,6 +17,6 @@
   "displayName": {
     "en": "Organization"
   },
-  "extends": "dtmi:rec:core:Agent;1",
+  "extends": "dtmi:rec3_2:core:Agent;1",
   "@context": "dtmi:dtdl:context;2"
 }

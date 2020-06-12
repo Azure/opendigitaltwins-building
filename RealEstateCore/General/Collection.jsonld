@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Collection;1",
+  "@id": "dtmi:rec3_2:core:Collection;1",
   "@type": "Interface",
   "contents": {
     "@type": "Relationship",

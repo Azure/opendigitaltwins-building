@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:building:RecordingRoom;1",
+  "@id": "dtmi:rec3_2:building:RecordingRoom;1",
   "@type": "Interface",
   "description": {
     "en": "Room for making audio and/or video recordings. A.ka. studio."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "RecordingRoom"
   },
-  "extends": "dtmi:rec:core:Room;1",
+  "extends": "dtmi:rec3_2:core:Room;1",
   "@context": "dtmi:dtdl:context;2"
 }

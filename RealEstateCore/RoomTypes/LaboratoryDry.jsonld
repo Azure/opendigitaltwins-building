@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:building:LaboratoryDry;1",
+  "@id": "dtmi:rec3_2:building:LaboratoryDry;1",
   "@type": "Interface",
   "description": {
     "en": "A LaboratoryDry is a laboratory where computational or applied mathematical analyses are done on a computer-generated model to simulate a phenomenon in the physical realm."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "LaboratoryDry"
   },
-  "extends": "dtmi:rec:core:Room;1",
+  "extends": "dtmi:rec3_2:core:Room;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:building:StaffRoom;1",
+  "@id": "dtmi:rec3_2:building:StaffRoom;1",
   "@type": "Interface",
   "description": {
     "en": "Room for staff to take breaks."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "StaffRoom"
   },
-  "extends": "dtmi:rec:core:Room;1",
+  "extends": "dtmi:rec3_2:core:Room;1",
   "@context": "dtmi:dtdl:context;2"
 }

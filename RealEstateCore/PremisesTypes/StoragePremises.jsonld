@@ -1,6 +1,6 @@
 {
-  "@id": "dtmi:rec:core:StoragePremises;1",
+  "@id": "dtmi:rec3_2:core:StoragePremises;1",
   "@type": "Interface",
-  "extends": "dtmi:rec:core:Premises;1",
+  "extends": "dtmi:rec3_2:core:Premises;1",
   "@context": "dtmi:dtdl:context;2"
 }

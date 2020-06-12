@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Premises;1",
+  "@id": "dtmi:rec3_2:core:Premises;1",
   "@type": "Interface",
   "description": {
     "en": "A premises is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant."
@@ -7,6 +7,6 @@
   "displayName": {
     "en": "Premises"
   },
-  "extends": "dtmi:rec:core:Collection;1",
+  "extends": "dtmi:rec3_2:core:Collection;1",
   "@context": "dtmi:dtdl:context;2"
 }

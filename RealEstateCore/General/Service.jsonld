@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:rec:core:Service;1",
+  "@id": "dtmi:rec3_2:core:Service;1",
   "@type": "Interface",
   "displayName": {
     "en": "Service"
