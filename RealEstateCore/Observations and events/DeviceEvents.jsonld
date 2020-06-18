@@ -4,13 +4,13 @@
   "contents": {
     "@type": "Relationship",
     "displayName": {
-      "en": "placement context"
+      "en": "event placement context"
     },
     "maxMultiplicity": {
       "@type": "xsd:integer",
       "@value": "1"
     },
-    "name": "placementContext"
+    "name": "eventPlacementContext"
   },
   "description": {
     "en": "Events that are relevant in a Device context; initially observations, actuations, and exceptions."

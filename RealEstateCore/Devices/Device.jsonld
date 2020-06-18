@@ -5,18 +5,6 @@
     {
       "@type": "Relationship",
       "displayName": {
-        "en": "hasModbusDataType"
-      },
-      "name": "hasModbusDataType",
-      "target": "dtmi:rec3_2:device:ModbusDataType;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "hasModbusConfiguration"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
         "en": "hsKNXDataPointType"
       },
       "name": "hasKNXDataPointType",
@@ -37,26 +25,30 @@
     {
       "@type": "Relationship",
       "displayName": {
-        "en": "hasModbusFunctionCode"
+        "en": "device placement context"
       },
-      "name": "hasModbusFunctionCode",
-      "target": "dtmi:rec3_2:device:ModbusFunctionCode;1"
+      "name": "devicePlacementContext",
+      "target": "dtmi:rec3_2:device:PlacementContext;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasModbusConfiguration"
     },
     {
       "@type": "Relationship",
       "displayName": {
-        "en": "placement context"
+        "en": "hasModbusDataType"
       },
-      "maxMultiplicity": {
-        "@type": "xsd:integer",
-        "@value": "1"
+      "name": "hasModbusDataType",
+      "target": "dtmi:rec3_2:device:ModbusDataType;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "hasModbusFunctionCode"
       },
-      "minMultiplicity": {
-        "@type": "xsd:integer",
-        "@value": "0"
-      },
-      "name": "placementContext",
-      "target": "dtmi:rec3_2:device:PlacementContext;1"
+      "name": "hasModbusFunctionCode",
+      "target": "dtmi:rec3_2:device:ModbusFunctionCode;1"
     },
     {
       "@type": "Relationship",
@@ -157,22 +149,6 @@
     },
     {
       "@type": "Property",
-      "displayName": {
-        "en": "has MAC address"
-      },
-      "name": "hasMACAddress",
-      "schema": "string"
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "has serial number"
-      },
-      "name": "hasSerialNumber",
-      "schema": "string"
-    },
-    {
-      "@type": "Property",
       "description": {
         "en": "Groups the subset of device configuration attributes that are expressed using datatype properties (for configuration attributes that are modelled with named individuals, see object property hasCommunicationConfiguration)."
       },
@@ -249,6 +225,14 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "has MAC address"
+      },
+      "name": "hasMACAddress",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "has Modbus attribute"
       },
       "name": "hasModbusAttribute",
@@ -296,89 +280,11 @@
     },
     {
       "@type": "Property",
-      "name": "hasDeviceFunctionType",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "AirDiffuser",
-            "name": "AirDiffuser"
-          },
-          {
-            "enumValue": "AirHandlingUnit",
-            "name": "AirHandlingUnit"
-          },
-          {
-            "enumValue": "Boiler",
-            "name": "Boiler"
-          },
-          {
-            "enumValue": "Chiller",
-            "name": "Chiller"
-          },
-          {
-            "enumValue": "Coil",
-            "name": "Coil"
-          },
-          {
-            "enumValue": "Compressor",
-            "name": "Compressor"
-          },
-          {
-            "enumValue": "Condenser",
-            "name": "Condenser"
-          },
-          {
-            "enumValue": "Control",
-            "name": "Control"
-          },
-          {
-            "enumValue": "Damper",
-            "name": "Damper"
-          },
-          {
-            "enumValue": "DataAcquisition",
-            "name": "DataAcquisition"
-          },
-          {
-            "enumValue": "DataCommunicationGateway",
-            "name": "DataCommunicationGateway"
-          },
-          {
-            "enumValue": "Elevator",
-            "name": "Elevator"
-          },
-          {
-            "enumValue": "Escalator",
-            "name": "Escalator"
-          },
-          {
-            "enumValue": "Fan",
-            "name": "Fan"
-          },
-          {
-            "enumValue": "Filter",
-            "name": "Filter"
-          },
-          {
-            "enumValue": "Heater",
-            "name": "Heater"
-          },
-          {
-            "enumValue": "Pump",
-            "name": "Pump"
-          },
-          {
-            "enumValue": "Thermostat",
-            "name": "Thermostat"
-          },
-          {
-            "enumValue": "Valve",
-            "name": "Valve"
-          }
-        ],
-        "valueSchema": "string"
-      }
+      "displayName": {
+        "en": "has serial number"
+      },
+      "name": "hasSerialNumber",
+      "schema": "string"
     }
   ],
   "description": {

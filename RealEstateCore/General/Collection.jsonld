@@ -1,13 +1,6 @@
 {
   "@id": "dtmi:rec3_2:core:Collection;1",
   "@type": "Interface",
-  "contents": {
-    "@type": "Relationship",
-    "description": {
-      "en": "has member"
-    },
-    "name": "hasMember"
-  },
   "displayName": {
     "en": "Collection"
   },

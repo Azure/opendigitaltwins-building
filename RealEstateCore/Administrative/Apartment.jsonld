@@ -1,6 +1,14 @@
 {
   "@id": "dtmi:rec3_2:core:Apartment;1",
   "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "has member"
+    },
+    "name": "hasMember",
+    "target": "dtmi:rec3_2:core:Room;1"
+  },
   "displayName": {
     "en": "Apartment"
   },

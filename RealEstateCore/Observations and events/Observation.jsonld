@@ -8,9 +8,9 @@
         "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
       },
       "displayName": {
-        "en": "value"
+        "en": "has value"
       },
-      "name": "value",
+      "name": "hasValue",
       "schema": "string"
     },
     {

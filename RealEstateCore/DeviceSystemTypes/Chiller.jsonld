@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:rec3_2:device:Chiller;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Chiller"
+  },
+  "extends": "dtmi:rec3_2:device:DeviceSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

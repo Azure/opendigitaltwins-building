@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:rec3_2:device:Control;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Device that controls Actuators (can also collect data)."
+  },
+  "displayName": {
+    "en": "Control"
+  },
+  "extends": "dtmi:rec3_2:device:DeviceSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}
