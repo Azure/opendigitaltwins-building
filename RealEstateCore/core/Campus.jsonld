@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Campus;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+      },
+      "displayName": {
+        "en": "hasGeometry"
+      },
+      "name": "hasGeometry",
+      "target": "dtmi:net:opengis:www:ont:geosparql:Geometry;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "has member"
+      },
+      "minMultiplicity": {
+        "@type": "xsd:integer",
+        "@value": "0"
+      },
+      "name": "hasMember",
+      "target": "dtmi:org:w3id:rec:core:Location;1"
+    }
+  ],
+  "description": {
+    "en": "A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc."
+  },
+  "displayName": {
+    "en": "Campus"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Collection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

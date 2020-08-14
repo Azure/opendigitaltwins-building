@@ -1,0 +1,15 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:UrinalFlushometer;1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Property",
+    "comment": "liter",
+    "name": "waterPerFlush",
+    "schema": "integer"
+  },
+  "displayName": {
+    "en": "Urinal with Flushometer"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:Urinal;1",
+  "@context": "dtmi:dtdl:context;2"
+}

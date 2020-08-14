@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:rec3_2:building:DishingRoom;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "DishingRoom"
-  },
-  "extends": "dtmi:rec3_2:core:Room;1",
-  "@context": "dtmi:dtdl:context;2"
-}

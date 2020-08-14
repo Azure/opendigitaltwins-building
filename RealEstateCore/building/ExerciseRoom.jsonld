@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:ExerciseRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "ExerciseRoom"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

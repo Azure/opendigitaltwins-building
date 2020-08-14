@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:rec3_2:building:Terrace;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Terrace"
-  },
-  "extends": "dtmi:rec3_2:core:BuildingComponent;1",
-  "@context": "dtmi:dtdl:context;2"
-}

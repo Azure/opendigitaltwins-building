@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:OfficeLandscape;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "OfficeLandscape"
+  },
+  "extends": "dtmi:org:w3id:rec:building:Office;1",
+  "@context": "dtmi:dtdl:context;2"
+}

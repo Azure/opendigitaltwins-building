@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:TelecommunicationRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "TelecommunicationRoom"
+  },
+  "extends": "dtmi:org:w3id:rec:building:CableRoom;1",
+  "@context": "dtmi:dtdl:context;2"
+}

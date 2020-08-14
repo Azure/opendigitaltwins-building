@@ -1,0 +1,51 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:PlumbingPump;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "pumpingMedia",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "comment": "PSI",
+      "displayName": {
+        "en": "pressure capacity"
+      },
+      "name": "pressureCapacity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "comment": "foot of head",
+      "displayName": {
+        "en": "head capacity"
+      },
+      "name": "headCapacity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "comment": "liters/minute",
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "integer"
+    }
+  ],
+  "extends": "dtmi:org:w3id:rec:equipment:PlumbingEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

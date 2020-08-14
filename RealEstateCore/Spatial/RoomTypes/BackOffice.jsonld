@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:rec3_2:building:BackOffice;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "BackOffice"
-  },
-  "extends": "dtmi:rec3_2:core:Room;1",
-  "@context": "dtmi:dtdl:context;2"
-}

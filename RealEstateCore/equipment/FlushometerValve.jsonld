@@ -1,0 +1,66 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:FlushometerValve;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "comment": "liter",
+      "name": "waterPerFlush",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Touchless",
+            "name": "Touchless"
+          },
+          {
+            "enumValue": "ManualOnly",
+            "name": "ManualOnly"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "technology"
+      },
+      "name": "technology",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Piston",
+            "name": "Piston"
+          },
+          {
+            "enumValue": "Diaphragm",
+            "name": "Diaphragm"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    },
+    {
+      "@type": "Relationship",
+      "name": "mountedOn"
+    }
+  ],
+  "displayName": {
+    "en": "Flushometer-Valve"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:PlumbingFixture;1",
+  "@context": "dtmi:dtdl:context;2"
+}

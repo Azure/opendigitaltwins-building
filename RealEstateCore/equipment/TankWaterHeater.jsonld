@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:TankWaterHeater;1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Property",
+    "displayName": {
+      "en": "tank capacity"
+    },
+    "name": "tankCapacity",
+    "schema": "integer"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:WaterHeater;1",
+  "@context": "dtmi:dtdl:context;2"
+}

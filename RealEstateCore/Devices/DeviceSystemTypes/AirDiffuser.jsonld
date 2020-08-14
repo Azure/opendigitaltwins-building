@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:rec3_2:device:AirDiffuser;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "AirDiffuser"
-  },
-  "extends": "dtmi:rec3_2:device:DeviceSystem;1",
-  "@context": "dtmi:dtdl:context;2"
-}

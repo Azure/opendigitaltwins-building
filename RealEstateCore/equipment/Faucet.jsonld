@@ -1,0 +1,51 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:Faucet;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Touchless",
+            "name": "Touchless"
+          },
+          {
+            "enumValue": "ManualOnly",
+            "name": "ManualOnly"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    },
+    {
+      "@type": "Property",
+      "comment": "liters/minute",
+      "displayName": {
+        "en": "maximum flow rate"
+      },
+      "name": "maxFlowRate",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "numberOfHandles",
+      "schema": "integer"
+    },
+    {
+      "@type": "Relationship",
+      "name": "mountedOn",
+      "target": "dtmi:org:w3id:rec:equipment:Sink;1"
+    }
+  ],
+  "extends": "dtmi:org:w3id:rec:equipment:PlumbingFixture;1",
+  "@context": "dtmi:dtdl:context;2"
+}

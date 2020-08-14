@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:UtilitiesRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "UtilitiesRoom"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

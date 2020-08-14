@@ -1,0 +1,21 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Apartment;1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "has member"
+    },
+    "minMultiplicity": {
+      "@type": "xsd:integer",
+      "@value": "0"
+    },
+    "name": "hasMember",
+    "target": "dtmi:org:w3id:rec:core:Room;1"
+  },
+  "displayName": {
+    "en": "Apartment"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Collection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

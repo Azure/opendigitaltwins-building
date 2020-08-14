@@ -1,0 +1,51 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Sensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "generated observation"
+      },
+      "name": "generatedObservation",
+      "target": "dtmi:org:w3id:rec:core:Observation;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The actuator that a sensor is configured or designed to observe."
+      },
+      "displayName": {
+        "en": "observes actuator"
+      },
+      "name": "observesActuator",
+      "target": "dtmi:org:w3id:rec:device:Actuator;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for."
+      },
+      "displayName": {
+        "en": "observes"
+      },
+      "name": "observes"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "generated exception"
+      },
+      "name": "generatedException",
+      "target": "dtmi:org:w3id:rec:device:Exception;1"
+    }
+  ],
+  "description": {
+    "en": "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it."
+  },
+  "displayName": {
+    "en": "Sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Device;1",
+  "@context": "dtmi:dtdl:context;2"
+}

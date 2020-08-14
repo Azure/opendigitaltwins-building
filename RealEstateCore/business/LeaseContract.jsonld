@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:org:w3id:rec:business:LeaseContract;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."
+  },
+  "displayName": {
+    "en": "Lease contract"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

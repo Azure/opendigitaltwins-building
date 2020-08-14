@@ -1,0 +1,53 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:PlumbingStorageTank;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "arrangement"
+      },
+      "name": "arrangement",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Vertical",
+            "name": "Vertical"
+          },
+          {
+            "enumValue": "Horizontal",
+            "name": "Horizontal"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    }
+  ],
+  "extends": "dtmi:org:w3id:rec:equipment:Tank;1",
+  "@context": "dtmi:dtdl:context;2"
+}

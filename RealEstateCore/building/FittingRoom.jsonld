@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:FittingRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "FittingRoom"
+  },
+  "extends": "dtmi:org:w3id:rec:building:RetailRoom;1",
+  "@context": "dtmi:dtdl:context;2"
+}

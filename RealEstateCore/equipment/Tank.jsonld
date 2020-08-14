@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:Tank;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "tank capacity"
+      },
+      "name": "tankCapacity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "system pressure"
+      },
+      "name": "systemPressure",
+      "schema": "integer"
+    }
+  ],
+  "extends": "dtmi:org:w3id:rec:equipment:PlumbingEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

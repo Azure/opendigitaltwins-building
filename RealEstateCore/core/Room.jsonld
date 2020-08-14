@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Room;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Base class for all more specific room types."
+  },
+  "displayName": {
+    "en": "Room"
+  },
+  "extends": "dtmi:org:w3id:rec:core:BuildingComponent;1",
+  "@context": "dtmi:dtdl:context;2"
+}

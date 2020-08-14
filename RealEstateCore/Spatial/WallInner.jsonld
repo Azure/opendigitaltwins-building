@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:rec3_2:building:WallInner;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Inner wall"
-  },
-  "extends": "dtmi:rec3_2:building:Wall;1",
-  "@context": "dtmi:dtdl:context;2"
-}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:device:PowerSource;1",
+  "@type": "Interface",
+  "description": {
+    "en": "The power source for the device."
+  },
+  "displayName": {
+    "en": "Power source"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Device;1",
+  "@context": "dtmi:dtdl:context;2"
+}

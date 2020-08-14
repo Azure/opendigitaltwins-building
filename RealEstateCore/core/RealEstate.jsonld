@@ -1,0 +1,39 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:RealEstate;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Property that defines the legal owner(s) of a given REC entity."
+      },
+      "displayName": {
+        "en": "owned by"
+      },
+      "minMultiplicity": {
+        "@type": "xsd:integer",
+        "@value": "0"
+      },
+      "name": "ownedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Parthood traversal property linking a piece of RealEstate to its constituent components (i.e., Buildings and Land)."
+      },
+      "displayName": {
+        "en": "has real estate component"
+      },
+      "name": "hasRealEstateComponent",
+      "target": "dtmi:org:w3id:rec:core:RealEstateComponent;1"
+    }
+  ],
+  "description": {
+    "en": "The legal/administrative representation of some lands and/or buildings."
+  },
+  "displayName": {
+    "en": "Real estate"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:Toilet;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Toilet"
+  },
+  "extends": "dtmi:org:w3id:rec:building:PersonalHygiene;1",
+  "@context": "dtmi:dtdl:context;2"
+}

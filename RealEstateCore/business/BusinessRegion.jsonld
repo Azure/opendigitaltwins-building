@@ -1,0 +1,18 @@
+{
+  "@id": "dtmi:org:w3id:rec:business:BusinessRegion;1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "has member"
+    },
+    "minMultiplicity": {
+      "@type": "xsd:integer",
+      "@value": "0"
+    },
+    "name": "hasMember",
+    "target": "dtmi:org:w3id:rec:core:Location;1"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Collection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

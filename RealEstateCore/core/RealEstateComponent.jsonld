@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:RealEstateComponent;1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate."
+    },
+    "name": "isPartOfRealEstate",
+    "target": "dtmi:org:w3id:rec:core:RealEstate;1"
+  },
+  "description": {
+    "en": "Types of objects that can make up a piece of real estate, e.g., land and buildings."
+  },
+  "displayName": {
+    "en": "Real estate component"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Location;1",
+  "@context": "dtmi:dtdl:context;2"
+}

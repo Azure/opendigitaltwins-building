@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:Stairwell;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Stairwell"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

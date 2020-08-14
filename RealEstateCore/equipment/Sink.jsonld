@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:Sink;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:equipment:PlumbingFixture;1",
+  "@context": "dtmi:dtdl:context;2"
+}

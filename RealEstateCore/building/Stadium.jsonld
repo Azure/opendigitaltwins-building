@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:Stadium;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Stadium"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Building;1",
+  "@context": "dtmi:dtdl:context;2"
+}

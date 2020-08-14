@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:RoofDrain;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:equipment:Drain;1",
+  "@context": "dtmi:dtdl:context;2"
+}

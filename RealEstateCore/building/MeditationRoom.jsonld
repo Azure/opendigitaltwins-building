@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:MeditationRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Meditation room"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

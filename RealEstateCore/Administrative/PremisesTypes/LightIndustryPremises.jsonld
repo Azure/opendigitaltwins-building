@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:rec3_2:core:LightIndustryPremises;1",
-  "@type": "Interface",
-  "extends": "dtmi:rec3_2:core:Premises;1",
-  "@context": "dtmi:dtdl:context;2"
-}

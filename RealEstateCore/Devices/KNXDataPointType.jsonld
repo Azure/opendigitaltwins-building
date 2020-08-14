@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:rec3_2:device:KNXDataPointType;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "KNXDataPointType"
-  },
-  "extends": "dtmi:rec3_2:device:KNXConfiguration;1",
-  "@context": "dtmi:dtdl:context;2"
-}

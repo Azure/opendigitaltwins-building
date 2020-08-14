@@ -1,0 +1,91 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:Boiler;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WaterTube",
+            "name": "WaterTube"
+          },
+          {
+            "enumValue": "FireTube",
+            "name": "FireTube"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "tank capacity"
+      },
+      "name": "tankCapacity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "comment": "kilowatt",
+      "displayName": {
+        "en": "power output"
+      },
+      "name": "powerOutput",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "comment": "kilowatt",
+      "displayName": {
+        "en": "power input"
+      },
+      "name": "powerInput",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "medium"
+      },
+      "name": "medium",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Steam",
+            "name": "Steam"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    },
+    {
+      "@type": "Property",
+      "comment": "Gallons/hour",
+      "description": {
+        "en": "Imperial measure for the recovery rate of a boiler."
+      },
+      "displayName": {
+        "en": "Recovery @ 100F Rise"
+      },
+      "name": "recovery100FRise",
+      "schema": "integer"
+    }
+  ],
+  "extends": "dtmi:org:w3id:rec:equipment:PlumbingEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

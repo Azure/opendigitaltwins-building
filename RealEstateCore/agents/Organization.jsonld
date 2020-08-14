@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:org:w3id:rec:agents:Organization;1",
+  "@type": "Interface",
+  "contents": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Links an Organization to an image/logo that represents them."
+    },
+    "displayName": {
+      "en": "logo"
+    },
+    "name": "logo"
+  },
+  "description": {
+    "en": "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"
+  },
+  "displayName": {
+    "en": "Organization"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Agent;1",
+  "@context": "dtmi:dtdl:context;2"
+}
