@@ -1,0 +1,6 @@
+https://w3id.org/rec/actuation/;Actuations are handled through creating Command objects from instance graphs
+https://w3id.org/rec/dataschemas/;Data schema logic is handled when creating Command and Telemetry objects
+https://w3id.org/rec/device/SensorInterface;Sensor interfaces are handled through creating Telemetry objects from instance graphs
+https://w3id.org/rec/core/MeasurementUnit;Measurement units and quantity kinds are handled through mapping to DTDL semantic types when creating Telemetry objects
+https://w3id.org/rec/core/QuantityKind;
+https://w3id.org/rec/core/DataSchema;Data schemas will be handled through Telemetry and Command generation

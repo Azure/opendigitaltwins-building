@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OWL2DTDL": {
+      "commandName": "Project",
+      "commandLineArgs": "-u https://w3id.org/rec/full/3.2/ -o C:\\Users\\karlh\\OneDrive\\Skrivbord\\DTDL\\"
+    }
+  }
+}
