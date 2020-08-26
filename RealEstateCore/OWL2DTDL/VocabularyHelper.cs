@@ -75,7 +75,7 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri enumValue = new Uri("dtmi:dtdl:property:enumValue;2");
         public static readonly Uri enumValues = new Uri("dtmi:dtdl:property:enumValues;2");
         public static readonly Uri comment = new Uri("dtmi:dtdl:property:comment;2");
-
+        public static readonly Uri writable = new Uri("dtmi:dtdl:property:writable;2");
 
         public static readonly Uri properties = new Uri("dtmi:dtdl:property:properties;2");
 

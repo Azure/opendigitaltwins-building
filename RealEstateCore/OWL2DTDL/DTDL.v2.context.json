@@ -259,7 +259,10 @@
     "@id": "dtmi:dtdl:property:valueSchema;2",
     "@type": "@vocab"
   },
-  "writable": { "@id": "dtmi:dtdl:property:writable;2" },
+  "writable": {
+    "@id": "dtmi:dtdl:property:writable;2",
+    "@type": "xsd:boolean"
+  },
 
   "asynchronous": { "@id": "dtmi:dtdl:instance:CommandType:asynchronous;2" },
   "synchronous": { "@id": "dtmi:dtdl:instance:CommandType:synchronous;2" },

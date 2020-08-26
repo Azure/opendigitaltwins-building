@@ -217,6 +217,7 @@ namespace OWL2DTDL
             IUriNode dtdl_target = dtdlModel.CreateUriNode(DTDL.target);
             IUriNode dtdl_schema = dtdlModel.CreateUriNode(DTDL.schema);
             IUriNode dtdl_valueSchema = dtdlModel.CreateUriNode(DTDL.valueSchema);
+            IUriNode dtdl_writable = dtdlModel.CreateUriNode(DTDL.writable);
 
             IUriNode dtdl_enumValue = dtdlModel.CreateUriNode(DTDL.enumValue);
             IUriNode dtdl_enumValues = dtdlModel.CreateUriNode(DTDL.enumValues);
@@ -334,6 +335,10 @@ namespace OWL2DTDL
                         ILiteralNode nestedPropertyNameNode = dtdlModel.CreateLiteralNode(nestedPropertyName);
                         dtdlModel.Assert(new Triple(nestedPropertyNode, dtdl_name, nestedPropertyNameNode));
 
+                        // Assert that the nested property is writable
+                        ILiteralNode trueNode = dtdlModel.CreateLiteralNode("true", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean));
+                        dtdlModel.Assert(new Triple(nestedPropertyNode, dtdl_writable, trueNode));
+
                         // If there are rdfs:labels, use them for DTDL displayName
                         if (annotationProperty.Label.Any())
                         {
@@ -379,6 +384,10 @@ namespace OWL2DTDL
                     dtdlModel.Assert(new Triple(propertyNode, rdfType, dtdl_Property));
                     ILiteralNode propertyNameNode = dtdlModel.CreateLiteralNode(propertyName);
                     dtdlModel.Assert(new Triple(propertyNode, dtdl_name, propertyNameNode));
+
+                    // Assert that the property is writable
+                    ILiteralNode trueNode = dtdlModel.CreateLiteralNode("true", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean));
+                    dtdlModel.Assert(new Triple(propertyNode, dtdl_writable, trueNode));
 
                     // Extract and populate schema
                     HashSet<Triple> propertySchemaTriples = GetDtdlSchemaTriplesForRange(relationship.Target, propertyNode);
