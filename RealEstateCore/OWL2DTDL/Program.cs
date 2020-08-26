@@ -730,13 +730,16 @@ namespace OWL2DTDL
             using (TripleStore entitiesStore = new TripleStore())
             {
                 entitiesStore.Add(dtdlModel);
-                JsonLdWriter jsonLdWriter = new JsonLdWriter();
+                JsonLdWriterOptions writerOptions = new JsonLdWriterOptions();
+                writerOptions.UseNativeTypes = true;
+                JsonLdWriter jsonLdWriter = new JsonLdWriter(writerOptions);
                 initialJsonLd = jsonLdWriter.SerializeStore(entitiesStore);
             }
 
             // Configure and run JSON-LD framing and compacting
             JsonLdProcessorOptions options = new JsonLdProcessorOptions();
-            options.PruneBlankNodeIdentifiers = true;
+            options.UseNativeTypes = true;
+            options.Base = new Uri("https://example.org"); // Throwaway base, not actually used
 
             JObject frame = new JObject(
                 new JProperty("@type", DTDL.Interface.AbsoluteUri)

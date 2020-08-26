@@ -260,8 +260,7 @@
     "@type": "@vocab"
   },
   "writable": {
-    "@id": "dtmi:dtdl:property:writable;2",
-    "@type": "xsd:boolean"
+    "@id": "dtmi:dtdl:property:writable;2"
   },
 
   "asynchronous": { "@id": "dtmi:dtdl:instance:CommandType:asynchronous;2" },

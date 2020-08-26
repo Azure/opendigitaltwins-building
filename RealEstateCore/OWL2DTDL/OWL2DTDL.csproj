@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -14,7 +14,7 @@
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="Microsoft.Azure.DigitalTwins.Parser" Version="3.8.0" />
     <PackageReference Include="Azure.DigitalTwins.Core" Version="1.0.0-preview.3" />
-    <PackageReference Include="dotNetRDF" Version="2.5.1" />
+    <PackageReference Include="dotNetRDF" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>
