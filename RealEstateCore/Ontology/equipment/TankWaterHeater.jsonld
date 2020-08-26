@@ -7,7 +7,8 @@
       "en": "tank capacity"
     },
     "name": "tankCapacity",
-    "schema": "integer"
+    "schema": "integer",
+    "writable": true
   },
   "extends": "dtmi:org:w3id:rec:equipment:WaterHeater;1",
   "@context": "dtmi:dtdl:context;2"

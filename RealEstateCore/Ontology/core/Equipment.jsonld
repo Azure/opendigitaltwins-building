@@ -5,10 +5,26 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "installation date"
+      },
+      "name": "installationDate",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "initialCost",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "expected replacement cost"
       },
       "name": "expectedReplacementCost",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -17,7 +33,8 @@
         "en": "expected life"
       },
       "name": "expectedLife",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -25,7 +42,8 @@
         "en": "expected end-of-life"
       },
       "name": "expectedEndOfLife",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -33,7 +51,8 @@
         "en": "commission date"
       },
       "name": "commissionDate",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Relationship",
@@ -51,10 +70,7 @@
       "displayName": {
         "en": "located in"
       },
-      "minMultiplicity": {
-        "@type": "xsd:integer",
-        "@value": "0"
-      },
+      "minMultiplicity": 0,
       "name": "locatedIn",
       "target": "dtmi:org:w3id:rec:core:Location;1"
     },
@@ -223,7 +239,8 @@
             }
           ],
           "valueSchema": "string"
-        }
+        },
+        "writable": true
       }
     },
     {
@@ -260,25 +277,13 @@
     },
     {
       "@type": "Property",
-      "name": "initialCost",
-      "schema": "string"
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "installation date"
-      },
-      "name": "installationDate",
-      "schema": "dateTime"
-    },
-    {
-      "@type": "Property",
       "comment": "A duration in ISO 8601 format.",
       "displayName": {
         "en": "maintenance interval"
       },
       "name": "maintenanceInterval",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -286,7 +291,8 @@
         "en": "turnover date"
       },
       "name": "turnoverDate",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -297,7 +303,8 @@
         "en": "has comment"
       },
       "name": "hasComment",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -305,7 +312,8 @@
         "en": "model number"
       },
       "name": "modelNumber",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -313,7 +321,8 @@
         "en": "physical tag number"
       },
       "name": "physicalTagNumber",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -321,7 +330,8 @@
         "en": "serial number"
       },
       "name": "serialNumber",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {

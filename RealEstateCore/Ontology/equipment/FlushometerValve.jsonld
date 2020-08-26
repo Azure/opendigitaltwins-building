@@ -6,7 +6,8 @@
       "@type": "Property",
       "comment": "liter",
       "name": "waterPerFlush",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -30,7 +31,8 @@
           }
         ],
         "valueSchema": "string"
-      }
+      },
+      "writable": true
     },
     {
       "@type": "Property",
@@ -51,7 +53,8 @@
           }
         ],
         "valueSchema": "string"
-      }
+      },
+      "writable": true
     },
     {
       "@type": "Relationship",

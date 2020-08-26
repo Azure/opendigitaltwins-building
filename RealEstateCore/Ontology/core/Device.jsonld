@@ -164,7 +164,8 @@
         "en": "has communication attribute"
       },
       "name": "hasCommunicationAttribute",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -172,7 +173,8 @@
         "en": "has IP address"
       },
       "name": "hasIPAddress",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -180,7 +182,8 @@
         "en": "has IP address port"
       },
       "name": "hasIPAddressPort",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -188,7 +191,8 @@
         "en": "has KNX attribute"
       },
       "name": "hasKNXAttribute",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -196,7 +200,8 @@
         "en": "has KNX device ID"
       },
       "name": "hasKNXDeviceId",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -204,7 +209,8 @@
         "en": "has KNX device port"
       },
       "name": "hasKNXDevicePort",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -212,7 +218,8 @@
         "en": "has local endpoint ID"
       },
       "name": "hasLocalEndpointId",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -220,7 +227,8 @@
         "en": "has Lora attribute"
       },
       "name": "hasLoraAttribute",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -228,7 +236,8 @@
         "en": "has Lora DevEUI"
       },
       "name": "hasLoraDevEUI",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -236,7 +245,8 @@
         "en": "has MAC address"
       },
       "name": "hasMACAddress",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -244,7 +254,8 @@
         "en": "has Modbus attribute"
       },
       "name": "hasModbusAttribute",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -252,7 +263,8 @@
         "en": "has Modbus node ID"
       },
       "name": "hasModbusNodeId",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -260,7 +272,8 @@
         "en": "has Modbus register"
       },
       "name": "hasModbusRegister",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -268,7 +281,8 @@
         "en": "has Modbus register length"
       },
       "name": "hasModbusRegisterLength",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -276,7 +290,8 @@
         "en": "has offset"
       },
       "name": "hasOffset",
-      "schema": "double"
+      "schema": "double",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -284,7 +299,8 @@
         "en": "has scale factor"
       },
       "name": "hasScaleFactor",
-      "schema": "double"
+      "schema": "double",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -292,7 +308,8 @@
         "en": "has serial number"
       },
       "name": "hasSerialNumber",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {

@@ -20,7 +20,8 @@
         }
       ],
       "valueSchema": "string"
-    }
+    },
+    "writable": true
   },
   "displayName": {
     "en": "Toilet with Tank"

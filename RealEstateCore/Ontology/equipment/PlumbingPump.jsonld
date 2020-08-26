@@ -11,12 +11,14 @@
         "en": "type"
       },
       "name": "type",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
       "name": "pumpingMedia",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -25,7 +27,8 @@
         "en": "pressure capacity"
       },
       "name": "pressureCapacity",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -34,7 +37,8 @@
         "en": "head capacity"
       },
       "name": "headCapacity",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -43,7 +47,8 @@
         "en": "flow capacity"
       },
       "name": "flowCapacity",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     }
   ],
   "extends": "dtmi:org:w3id:rec:equipment:PlumbingEquipment;1",

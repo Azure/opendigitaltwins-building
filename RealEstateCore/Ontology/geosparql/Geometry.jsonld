@@ -5,24 +5,26 @@
     {
       "@type": "Property",
       "description": {
-        "en": "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
-      },
-      "displayName": {
-        "en": "asWKT"
-      },
-      "name": "asWKT",
-      "schema": "string"
-    },
-    {
-      "@type": "Property",
-      "description": {
         "en": "The GML serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
       },
       "displayName": {
         "en": "asGML"
       },
       "name": "asGML",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+      },
+      "displayName": {
+        "en": "asWKT"
+      },
+      "name": "asWKT",
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -33,7 +35,8 @@
         "en": "has serialization"
       },
       "name": "hasSerialization",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {

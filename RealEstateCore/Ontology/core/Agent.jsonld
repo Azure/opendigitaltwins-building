@@ -11,7 +11,8 @@
         "en": "name"
       },
       "name": "name",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Relationship",

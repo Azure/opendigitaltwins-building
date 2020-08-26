@@ -10,7 +10,8 @@
       "en": "has geo reference bearing"
     },
     "name": "hasGeoReferenceBearing",
-    "schema": "double"
+    "schema": "double",
+    "writable": true
   },
   "description": {
     "en": "A fixed point for e.g. a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for LocalCoordinates."

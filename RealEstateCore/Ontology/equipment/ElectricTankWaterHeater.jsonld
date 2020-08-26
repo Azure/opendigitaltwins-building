@@ -8,7 +8,8 @@
       "en": "power input"
     },
     "name": "powerInput",
-    "schema": "integer"
+    "schema": "integer",
+    "writable": true
   },
   "extends": "dtmi:org:w3id:rec:equipment:TankWaterHeater;1",
   "@context": "dtmi:dtdl:context;2"

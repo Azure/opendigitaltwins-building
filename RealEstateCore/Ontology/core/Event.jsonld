@@ -8,7 +8,8 @@
         "en": "has updated time"
       },
       "name": "hasUpdatedTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -19,7 +20,8 @@
         "en": "has time"
       },
       "name": "hasTime",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -27,7 +29,8 @@
         "en": "has stop time"
       },
       "name": "hasStopTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -35,7 +38,8 @@
         "en": "has start time"
       },
       "name": "hasStartTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -43,7 +47,8 @@
         "en": "has read time"
       },
       "name": "hasReadTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -51,7 +56,8 @@
         "en": "has point in time"
       },
       "name": "hasPointInTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -59,7 +65,8 @@
         "en": "has observation time"
       },
       "name": "hasObservationTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -70,7 +77,8 @@
         "en": "has duration"
       },
       "name": "hasDuration",
-      "schema": "double"
+      "schema": "double",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -78,7 +86,8 @@
         "en": "has deleted time"
       },
       "name": "hasDeletedTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -86,7 +95,8 @@
         "en": "has created time"
       },
       "name": "hasCreatedTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Relationship",

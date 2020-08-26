@@ -10,10 +10,7 @@
       "displayName": {
         "en": "hasGeometry"
       },
-      "minMultiplicity": {
-        "@type": "xsd:integer",
-        "@value": "0"
-      },
+      "minMultiplicity": 0,
       "name": "hasGeometry",
       "target": "dtmi:net:opengis:www:ont:geosparql:Geometry;1"
     },

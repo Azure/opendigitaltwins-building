@@ -6,10 +6,7 @@
     "displayName": {
       "en": "event placement context"
     },
-    "maxMultiplicity": {
-      "@type": "xsd:integer",
-      "@value": "1"
-    },
+    "maxMultiplicity": 1,
     "name": "eventPlacementContext"
   },
   "description": {

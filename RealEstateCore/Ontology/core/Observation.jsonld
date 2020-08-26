@@ -11,7 +11,8 @@
         "en": "has value"
       },
       "name": "hasValue",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -22,7 +23,8 @@
         "en": "has processed time"
       },
       "name": "hasProcessedTime",
-      "schema": "dateTime"
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Relationship",

@@ -6,10 +6,7 @@
     "description": {
       "en": "has member"
     },
-    "minMultiplicity": {
-      "@type": "xsd:integer",
-      "@value": "0"
-    },
+    "minMultiplicity": 0,
     "name": "hasMember",
     "target": "dtmi:org:w3id:rec:core:Room;1"
   },

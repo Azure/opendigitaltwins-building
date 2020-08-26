@@ -24,7 +24,8 @@
           }
         ],
         "valueSchema": "string"
-      }
+      },
+      "writable": true
     },
     {
       "@type": "Property",
@@ -33,12 +34,14 @@
         "en": "maximum flow rate"
       },
       "name": "maxFlowRate",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Property",
       "name": "numberOfHandles",
-      "schema": "integer"
+      "schema": "integer",
+      "writable": true
     },
     {
       "@type": "Relationship",

@@ -11,7 +11,8 @@
         "en": "last name"
       },
       "name": "lastName",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -22,7 +23,8 @@
         "en": "given name"
       },
       "name": "givenName",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -33,7 +35,8 @@
         "en": "gender"
       },
       "name": "gender",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -44,7 +47,8 @@
         "en": "first name"
       },
       "name": "firstName",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -55,7 +59,8 @@
         "en": "family name"
       },
       "name": "familyName",
-      "schema": "string"
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Relationship",

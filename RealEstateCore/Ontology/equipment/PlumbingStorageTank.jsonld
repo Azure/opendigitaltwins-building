@@ -24,7 +24,8 @@
           }
         ],
         "valueSchema": "string"
-      }
+      },
+      "writable": true
     },
     {
       "@type": "Property",
@@ -45,7 +46,8 @@
           }
         ],
         "valueSchema": "string"
-      }
+      },
+      "writable": true
     }
   ],
   "extends": "dtmi:org:w3id:rec:equipment:Tank;1",
