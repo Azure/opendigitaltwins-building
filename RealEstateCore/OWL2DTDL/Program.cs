@@ -87,9 +87,9 @@ namespace OWL2DTDL
         private static readonly Dictionary<Uri, string> namespacePrefixes = new Dictionary<Uri, string>();
 
         /// <summary>
-        /// Set of transitively imported child ontologies.
+        /// Set of imported ontology URIs. Used to avoid revisiting a URI more than once in LoadImport().
         /// </summary>
-        private static readonly HashSet<Ontology> importedOntologies = new HashSet<Ontology>(new OntologyComparer());
+        private static readonly HashSet<Uri> importedOntologyUris = new HashSet<Uri>();
 
         /// <summary>
         /// URIs that will be ignored by this tool, parsed from CSV file using -i command line option
@@ -134,10 +134,11 @@ namespace OWL2DTDL
                        Environment.Exit(1);
                    });
 
-            // Clear cache from any prior runs
-            UriLoader.Cache.Clear();
+            // Turn off caching
+            UriLoader.CacheDuration = TimeSpan.MinValue;
 
             // Load ontology graph from local or remote path
+            Console.WriteLine($"Loading {_ontologyPath}.");
             if (_localOntology)
             {
                 FileLoader.Load(_ontologyGraph, _ontologyPath);
@@ -162,6 +163,9 @@ namespace OWL2DTDL
 
             // Execute the main logic that generates DTDL interfaces.
             GenerateInterfaces();
+
+            // Execute DTDL parser-based validation of generated interfaces.
+            ValidateInterfaces();
         }
 
         /// <summary>
@@ -225,11 +229,15 @@ namespace OWL2DTDL
             // Used to sort JObjects for merged array output, if selected as runtime option
             Dictionary<JObject, int> interfaceDepths = new Dictionary<JObject, int>();
 
+            Console.WriteLine();
+            Console.WriteLine("Generating DTDL Interface declarations: ");
+
             // Start looping through named, non-deprecated, non-ignored classes
             foreach (OntologyClass oClass in _ontologyGraph.OwlClasses.Where(oClass => oClass.IsNamed() && !oClass.IsDeprecated() && !IsIgnored(oClass)))
             {
                 // Create Interface
                 string interfaceDtmi = GetDTMI(oClass);
+                Console.WriteLine($"\t* {interfaceDtmi}");
                 IUriNode interfaceNode = dtdlModel.CreateUriNode(UriFactory.Create(interfaceDtmi));
                 dtdlModel.Assert(new Triple(interfaceNode, rdfType, dtdl_Interface));
 
@@ -443,6 +451,12 @@ namespace OWL2DTDL
                     interfaceArray.WriteTo(writer);
                 }
             }
+        }
+
+        private static void ValidateInterfaces()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Validating DTDL Interface declarations: ");
         }
 
         /// <summary>
@@ -774,33 +788,34 @@ namespace OWL2DTDL
                 // Parse and load ontology from the stated import URI
                 Uri importUri = importedOntology.GetUri();
 
-                //Uri importedOntologyUri = ((IUriNode)importedOntology.Resource).Uri;
-                OntologyGraph fetchedOntologyGraph = new OntologyGraph();
-
-                try
+                // Only proceed if we have not seen this fetched URI before, otherwise we risk 
+                // unecessary fetches and computation, and possibly import loops.
+                if (!importedOntologyUris.Contains(importUri))
                 {
-                    UriLoader.Load(fetchedOntologyGraph, importUri);
-                }
-                catch (RdfParseException e)
-                {
-                    Console.Write(e.Message);
-                    Console.Write(e.StackTrace);
-                }
+                    importedOntologyUris.Add(importUri);
 
-                // Set up a new ontology metadata object from the retrieved ontology graph.
-                // This is needed since this ontology's self-defined IRI or version IRI often 
-                // differs from the IRI through which it was imported (i.e., importedOntology in 
-                // this method's signature), due to .htaccess redirects, version URIs, etc.
-                Ontology importedOntologyFromFetchedGraph = fetchedOntologyGraph.GetOntology();
+                    //Uri importedOntologyUri = ((IUriNode)importedOntology.Resource).Uri;
+                    OntologyGraph fetchedOntologyGraph = new OntologyGraph();
 
-                // Only proceed if the retrieved ontology has an IRI
-                if (importedOntologyFromFetchedGraph.IsNamed())
-                {
-                    // Only proceed if we have not seen this fetched ontology before, otherwise we risk 
-                    // unecessary fetches and computation, and possibly import loops.
-                    // Note that importedOntologies uses a custom comparer from DotNetRdfExtensions, 
-                    // since the Ontology class does not implement IComparable
-                    if (!importedOntologies.Contains(importedOntologyFromFetchedGraph))
+                    try
+                    {
+                        Console.WriteLine($"Loading {importUri}.");
+                        UriLoader.Load(fetchedOntologyGraph, importUri);
+                    }
+                    catch (RdfParseException e)
+                    {
+                        Console.Write(e.Message);
+                        Console.Write(e.StackTrace);
+                    }
+
+                    // Set up a new ontology metadata object from the retrieved ontology graph.
+                    // This is needed since this ontology's self-defined IRI or version IRI often 
+                    // differs from the IRI through which it was imported (i.e., importedOntology in 
+                    // this method's signature), due to .htaccess redirects, version URIs, etc.
+                    Ontology importedOntologyFromFetchedGraph = fetchedOntologyGraph.GetOntology();
+
+                    // Only proceed if the retrieved ontology has an IRI
+                    if (importedOntologyFromFetchedGraph.IsNamed())
                     {
                         // Add the fetched ontology to the namespace prefix index
                         // (tacking on _1, _2, etc. to the shortname if it exists since before, 
@@ -817,18 +832,16 @@ namespace OWL2DTDL
                         // Merge the fetch graph with the joint ontology graph the tool operates on
                         _ontologyGraph.Merge(fetchedOntologyGraph);
 
-                        // Add imported ontology to the global imports collection and traverse its 
-                        // import hierarchy transitively
-                        importedOntologies.Add(importedOntologyFromFetchedGraph);
+                        // Traverse the imported ontology's import hierarchy transitively
                         foreach (Ontology subImport in importedOntologyFromFetchedGraph.Imports)
                         {
                             LoadImport(subImport);
                         }
                     }
-                }
 
-                // Dispose graph before returning
-                fetchedOntologyGraph.Dispose();
+                    // Dispose graph before returning
+                    fetchedOntologyGraph.Dispose();
+                }
             }
         }
     }
