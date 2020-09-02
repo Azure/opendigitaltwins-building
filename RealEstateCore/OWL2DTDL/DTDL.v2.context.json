@@ -36,8 +36,25 @@
     "@type": "@vocab",
     "@container": "@list"
   },
+  "dtmm:aka": { "@type": "@vocab" },
+  "dtmm:datatypeProperty": { "@type": "@vocab" },
   "dtmm:dictionaryKey": { "@type": "@vocab" },
   "dtmm:doppelganger": { "@type": "@vocab" },
+  "dtmm:dtmiSegment": { "@type": "@vocab" },
+  "dtmm:excludeType": { "@type": "@vocab" },
+  "dtmm:importProperties": {
+    "@type": "@vocab",
+    "@container": "@list"
+  },
+  "dtmm:properties": {
+    "@type": "@vocab",
+    "@container": "@list"
+  },
+  "dtmm:replaceWith": { "@type": "@vocab" },
+  "dtmm:uniqueProperties": {
+    "@type": "@vocab",
+    "@container": "@list"
+  },
 
   "Array": { "@id": "dtmi:dtdl:class:Array;2" },
   "Boolean": { "@id": "dtmi:dtdl:class:Boolean;2" },
@@ -180,15 +197,18 @@
   },
   "comment": { "@id": "dtmi:dtdl:property:comment;2" },
   "contents": {
-    "@id": "dtmi:dtdl:property:contents;2"
+    "@id": "dtmi:dtdl:property:contents;2",
+    "@type": "@vocab"
   },
   "description": {
     "@id": "dtmi:dtdl:property:description;2",
-    "@container": "@language"
+    "@container": "@language",
+    "@language": "en"
   },
   "displayName": {
     "@id": "dtmi:dtdl:property:displayName;2",
-    "@container": "@language"
+    "@container": "@language",
+    "@language": "en"
   },
   "elementSchema": {
     "@id": "dtmi:dtdl:property:elementSchema;2",
@@ -224,7 +244,8 @@
     "@type": "@vocab"
   },
   "properties": {
-    "@id": "dtmi:dtdl:property:properties;2"
+    "@id": "dtmi:dtdl:property:properties;2",
+    "@type": "@vocab"
   },
   "request": {
     "@id": "dtmi:dtdl:property:request;2",
@@ -259,9 +280,7 @@
     "@id": "dtmi:dtdl:property:valueSchema;2",
     "@type": "@vocab"
   },
-  "writable": {
-    "@id": "dtmi:dtdl:property:writable;2"
-  },
+  "writable": { "@id": "dtmi:dtdl:property:writable;2" },
 
   "asynchronous": { "@id": "dtmi:dtdl:instance:CommandType:asynchronous;2" },
   "synchronous": { "@id": "dtmi:dtdl:instance:CommandType:synchronous;2" },
