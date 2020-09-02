@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using Microsoft.Azure.DigitalTwins.Parser;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OWL2DTDL.VocabularyHelper;
@@ -6,7 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.JsonLd;
 using VDS.RDF.Ontology;
@@ -165,7 +168,8 @@ namespace OWL2DTDL
             GenerateInterfaces();
 
             // Execute DTDL parser-based validation of generated interfaces.
-            ValidateInterfaces();
+            // TODO commented out due to incompatible DotNetRdf in Microsoft.Azure.DigitalTwins.Parser
+            // ValidateInterfaces();
         }
 
         /// <summary>
@@ -453,10 +457,102 @@ namespace OWL2DTDL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private static void ValidateInterfaces()
         {
             Console.WriteLine();
             Console.WriteLine("Validating DTDL Interface declarations: ");
+
+            DirectoryInfo dinfo = new DirectoryInfo(_outputPath);
+            var files = dinfo.EnumerateFiles($"*.jsonld", SearchOption.AllDirectories);
+
+            if (files.Count() == 0)
+            {
+                Log.Alert("No matching files found. Exiting.");
+                return;
+            }
+            Dictionary<FileInfo, string> modelDict = new Dictionary<FileInfo, string>();
+            int count = 0;
+            string lastFile = "<none>";
+            try
+            {
+                foreach (FileInfo fi in files)
+                {
+                    StreamReader r = new StreamReader(fi.FullName);
+                    string dtdl = r.ReadToEnd(); r.Close();
+                    modelDict.Add(fi, dtdl);
+                    lastFile = fi.FullName;
+                    count++;
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Could not read files. \nLast file read: {lastFile}\nError: \n{e.Message}");
+                return;
+            }
+            Log.Ok($"Read {count} files from specified directory");
+            int errJson = 0;
+            foreach (FileInfo fi in modelDict.Keys)
+            {
+                modelDict.TryGetValue(fi, out string dtdl);
+                try
+                {
+                    JsonDocument.Parse(dtdl);
+                }
+                catch (Exception e)
+                {
+                    Log.Error($"Invalid json found in file {fi.FullName}.\nJson parser error \n{e.Message}");
+                    errJson++;
+                }
+            }
+            if (errJson > 0)
+            {
+                Log.Error($"\nFound  {errJson} Json parsing errors");
+                return;
+            }
+            Log.Ok($"Validated JSON for all files - now validating DTDL");
+            List<string> modelList = modelDict.Values.ToList<string>();
+            ModelParser parser = new ModelParser();
+            parser.DtmiResolver = delegate (IReadOnlyCollection<Dtmi> dtmis)
+            {
+                Log.Error($"*** Error parsing models. Missing:");
+                foreach (Dtmi d in dtmis)
+                {
+                    Log.Error($"  {d}");
+                }
+                return null;
+            };
+            try
+            {
+                IReadOnlyDictionary<Dtmi, DTEntityInfo> om = parser.ParseAsync(modelList).GetAwaiter().GetResult();
+                Log.Out("");
+                Log.Ok($"**********************************************");
+                Log.Ok($"** Validated all files - Your DTDL is valid **");
+                Log.Ok($"**********************************************");
+                Log.Out($"Found a total of {om.Keys.Count()} entities");
+            }
+            catch (ParsingException pe)
+            {
+                Log.Error($"*** Error parsing models");
+                int derrcount = 1;
+                foreach (ParsingError err in pe.Errors)
+                {
+                    Log.Error($"Error {derrcount}:");
+                    Log.Error($"{err.Message}");
+                    Log.Error($"Primary ID: {err.PrimaryID}");
+                    Log.Error($"Secondary ID: {err.SecondaryID}");
+                    Log.Error($"Property: {err.Property}\n");
+                    derrcount++;
+                }
+                return;
+            }
+            catch (ResolutionException rex)
+            {
+                Log.Error("Could not resolve required references");
+            }
+
         }
 
         /// <summary>
