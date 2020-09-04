@@ -1,0 +1,18 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:ElectricalPanelMLO;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "displayName": {
+      "en": "mains rating"
+    },
+    "name": "mainsRating",
+    "schema": "integer",
+    "writable": true
+  },
+  "displayName": {
+    "en": "Electrical panelboard MLO"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:ElectricalPanel;1",
+  "@context": "dtmi:dtdl:context;2"
+}

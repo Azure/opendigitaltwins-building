@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:agents:Group;1",
   "@type": "Interface",
-  "contents": {
+  "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
       "en": "Indicates the member Agents that are part of a certain Group."

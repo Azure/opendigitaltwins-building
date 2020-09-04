@@ -1,11 +1,22 @@
 {
-  "@id": "dtmi:org:w3id:rec:equipment:FlushometerValve;1",
+  "@id": "dtmi:org:w3id:rec:equipment:Transformer;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
-      "comment": "liter",
-      "name": "waterPerFlush",
+      "displayName": {
+        "en": "secondary voltage"
+      },
+      "name": "voltageSecondary",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "primary voltage"
+      },
+      "name": "voltagePrimary",
       "schema": "integer",
       "writable": true
     },
@@ -18,52 +29,44 @@
         "en": "type"
       },
       "name": "type",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Touchless",
-            "name": "Touchless"
-          },
-          {
-            "enumValue": "ManualOnly",
-            "name": "ManualOnly"
-          }
-        ],
-        "valueSchema": "string"
-      },
+      "schema": "string",
       "writable": true
     },
     {
       "@type": "Property",
       "displayName": {
-        "en": "technology"
+        "en": "size (KVA)"
       },
-      "name": "technology",
+      "name": "sizeKVA",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "phases"
+      },
+      "name": "phases",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "Piston",
-            "name": "Piston"
+            "enumValue": "three",
+            "name": "three"
           },
           {
-            "enumValue": "Diaphragm",
-            "name": "Diaphragm"
+            "enumValue": "one",
+            "name": "one"
           }
         ],
         "valueSchema": "string"
       },
       "writable": true
-    },
-    {
-      "@type": "Relationship",
-      "name": "mountedOn"
     }
   ],
   "displayName": {
-    "en": "Flushometer-Valve"
+    "en": "Transformer"
   },
-  "extends": "dtmi:org:w3id:rec:equipment:PlumbingFixture;1",
+  "extends": "dtmi:org:w3id:rec:equipment:ElectricalEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:analytics:AnalysisProcess;1",
   "@type": "Interface",
-  "contents": {
+  "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
       "en": "The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done."

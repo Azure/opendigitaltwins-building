@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:analytics:Prediction;1",
   "@type": "Interface",
-  "contents": {
+  "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
       "en": "Links some generated analysis results (predictions, aggregates, series, etc). to the process by which they were created."

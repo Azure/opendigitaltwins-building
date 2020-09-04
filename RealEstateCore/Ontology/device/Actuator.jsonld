@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:device:Actuator;1",
   "@type": "Interface",
-  "contents": {
+  "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
       "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."

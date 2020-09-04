@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:core:RealEstateComponent;1",
   "@type": "Interface",
-  "contents": {
+  "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
       "en": "Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate."

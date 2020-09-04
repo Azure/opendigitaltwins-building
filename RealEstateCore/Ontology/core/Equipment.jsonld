@@ -1,16 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:core:Equipment;1",
   "@type": "Interface",
-  "contents": [
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "installation date"
-      },
-      "name": "installationDate",
-      "schema": "dateTime",
-      "writable": true
-    },
+  "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
       "name": "initialCost",
@@ -55,6 +46,15 @@
       "writable": true
     },
     {
+      "@type": "Property",
+      "displayName": {
+        "en": "IP address"
+      },
+      "name": "IPAddress",
+      "schema": "string",
+      "writable": true
+    },
+    {
       "@type": "Relationship",
       "description": {
         "en": "Parthood traversal property linking to mounted Devices."
@@ -87,7 +87,7 @@
     {
       "@type": "Relationship",
       "name": "isFedBy",
-      "properties": {
+      "dtmi:dtdl:property:properties;2": {
         "@type": "Property",
         "name": "substance",
         "dtmi:dtdl:property:schema;2": {
@@ -274,6 +274,15 @@
       },
       "name": "subEquipments",
       "target": "dtmi:org:w3id:rec:core:Equipment;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "installation date"
+      },
+      "name": "installationDate",
+      "schema": "dateTime",
+      "writable": true
     },
     {
       "@type": "Property",

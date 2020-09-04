@@ -1,26 +1,27 @@
 {
-  "@id": "dtmi:org:w3id:rec:equipment:PlumbingStorageTank;1",
+  "@id": "dtmi:org:w3id:rec:equipment:ElectricalCircuit2Pole;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
-      "description": {
-        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
-      },
       "displayName": {
-        "en": "type"
+        "en": "phase 2"
       },
-      "name": "type",
+      "name": "phase2",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "HotWater",
-            "name": "HotWater"
+            "enumValue": "C",
+            "name": "C"
           },
           {
-            "enumValue": "ChilledWater",
-            "name": "ChilledWater"
+            "enumValue": "B",
+            "name": "B"
+          },
+          {
+            "enumValue": "A",
+            "name": "A"
           }
         ],
         "valueSchema": "string"
@@ -30,19 +31,23 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "arrangement"
+        "en": "phase 1"
       },
-      "name": "arrangement",
+      "name": "phase1",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "Vertical",
-            "name": "Vertical"
+            "enumValue": "C",
+            "name": "C"
           },
           {
-            "enumValue": "Horizontal",
-            "name": "Horizontal"
+            "enumValue": "B",
+            "name": "B"
+          },
+          {
+            "enumValue": "A",
+            "name": "A"
           }
         ],
         "valueSchema": "string"
@@ -50,6 +55,9 @@
       "writable": true
     }
   ],
-  "extends": "dtmi:org:w3id:rec:equipment:Tank;1",
+  "displayName": {
+    "en": "Electrical circuit 2-pole"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:ElectricalCircuit;1",
   "@context": "dtmi:dtdl:context;2"
 }

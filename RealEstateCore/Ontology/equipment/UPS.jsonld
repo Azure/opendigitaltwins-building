@@ -1,0 +1,102 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:UPS;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "output voltage"
+      },
+      "name": "voltageOutput",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "input voltage"
+      },
+      "name": "voltageInput",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "comment": "A duration in ISO 8601 format.",
+      "displayName": {
+        "en": "runtime"
+      },
+      "name": "runtime",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "power output (KVA)"
+      },
+      "name": "powerOutputKVA",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "comment": "Watt",
+      "displayName": {
+        "en": "power output"
+      },
+      "name": "powerOutput",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "output phases"
+      },
+      "name": "phasesOutput",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "three",
+            "name": "three"
+          },
+          {
+            "enumValue": "one",
+            "name": "one"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "input phases"
+      },
+      "name": "phasesInput",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "three",
+            "name": "three"
+          },
+          {
+            "enumValue": "one",
+            "name": "one"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "UPS"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:ElectricalEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

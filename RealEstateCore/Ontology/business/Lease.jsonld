@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:business:Lease;1",
   "@type": "Interface",
-  "contents": [
+  "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
       "description": {

@@ -1,9 +1,9 @@
 {
   "@id": "dtmi:org:w3id:rec:equipment:ElectricTanklessWaterHeater;1",
   "@type": "Interface",
-  "contents": {
+  "dtmi:dtdl:property:contents;2": {
     "@type": "Property",
-    "comment": "kilowatt",
+    "comment": "Watt",
     "displayName": {
       "en": "power input"
     },

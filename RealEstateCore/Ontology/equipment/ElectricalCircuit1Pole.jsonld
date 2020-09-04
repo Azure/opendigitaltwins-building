@@ -1,22 +1,26 @@
 {
-  "@id": "dtmi:org:w3id:rec:equipment:ToiletTank;1",
+  "@id": "dtmi:org:w3id:rec:equipment:ElectricalCircuit1Pole;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": {
     "@type": "Property",
     "displayName": {
-      "en": "flushing type"
+      "en": "phase 1"
     },
-    "name": "flushingType",
+    "name": "phase1",
     "dtmi:dtdl:property:schema;2": {
       "@type": "Enum",
       "dtmi:dtdl:property:enumValues;2": [
         {
-          "enumValue": "PressureAssisted",
-          "name": "PressureAssisted"
+          "enumValue": "C",
+          "name": "C"
         },
         {
-          "enumValue": "Gravity",
-          "name": "Gravity"
+          "enumValue": "B",
+          "name": "B"
+        },
+        {
+          "enumValue": "A",
+          "name": "A"
         }
       ],
       "valueSchema": "string"
@@ -24,8 +28,8 @@
     "writable": true
   },
   "displayName": {
-    "en": "Toilet with Tank"
+    "en": "Electrical circuit 1-pole"
   },
-  "extends": "dtmi:org:w3id:rec:equipment:Toilet;1",
+  "extends": "dtmi:org:w3id:rec:equipment:ElectricalCircuit;1",
   "@context": "dtmi:dtdl:context;2"
 }

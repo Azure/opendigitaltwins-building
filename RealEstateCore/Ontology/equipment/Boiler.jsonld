@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:org:w3id:rec:equipment:Boiler;1",
   "@type": "Interface",
-  "contents": [
+  "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
       "description": {
@@ -38,7 +38,7 @@
     },
     {
       "@type": "Property",
-      "comment": "kilowatt",
+      "comment": "Watt",
       "displayName": {
         "en": "power output"
       },
@@ -48,7 +48,7 @@
     },
     {
       "@type": "Property",
-      "comment": "kilowatt",
+      "comment": "Watt",
       "displayName": {
         "en": "power input"
       },

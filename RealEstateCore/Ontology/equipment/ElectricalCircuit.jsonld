@@ -1,0 +1,73 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:ElectricalCircuit;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "voltage"
+      },
+      "name": "voltage",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "poles"
+      },
+      "name": "poles",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Two",
+            "name": "Two"
+          },
+          {
+            "enumValue": "Three",
+            "name": "Three"
+          },
+          {
+            "enumValue": "One",
+            "name": "One"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "wire type"
+      },
+      "name": "wireType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "wire size"
+      },
+      "name": "wireSize",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "circuit breaker rating"
+      },
+      "name": "CBRating",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Electrical circuit"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:ElectricalEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
