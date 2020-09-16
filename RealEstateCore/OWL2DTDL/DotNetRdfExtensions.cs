@@ -203,6 +203,11 @@ namespace OWL2DTDL
             return false;
         }
         
+        public static bool IsQudtUnit(this OntologyClass oClass)
+        {
+            return oClass.Types.UriNodes().Any(t => t.Uri.AbsoluteUri.Equals(VocabularyHelper.QUDT.Unit.AbsoluteUri));
+        }
+
         public static IEnumerable<INode> AsEnumeration(this OntologyClass oClass)
         {
             INode oneOf = oClass.Graph.CreateUriNode(VocabularyHelper.OWL.oneOf);

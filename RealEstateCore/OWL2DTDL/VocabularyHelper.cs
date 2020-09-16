@@ -52,6 +52,26 @@ namespace OWL2DTDL.VocabularyHelper
         #endregion
     }
 
+    public static class QUDT
+    {
+        public static readonly Uri Unit = new Uri("http://qudt.org/schema/qudt/Unit");
+        public static readonly Uri hasQuantityKind = new Uri("http://qudt.org/schema/qudt/hasQuantityKind");
+
+        public static class UnitNS
+        {
+            public static readonly Uri A = new Uri("http://qudt.org/vocab/unit/A");
+            public static readonly Uri DEG = new Uri("http://qudt.org/vocab/unit/DEG");
+        }
+
+        public static class QuantityKindNS
+        {
+            public static readonly Uri ElectricCurrent = new Uri("http://qudt.org/vocab/quantitykind/ElectricCurrent");
+            public static readonly Uri PlaneAngle = new Uri("http://qudt.org/vocab/quantitykind/PlaneAngle");
+        }
+
+    }
+
+
     public static class DTDL
     {
         public static readonly string dtdlContext = "dtmi:dtdl:context;2";
@@ -76,7 +96,7 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri enumValues = new Uri("dtmi:dtdl:property:enumValues;2");
         public static readonly Uri comment = new Uri("dtmi:dtdl:property:comment;2");
         public static readonly Uri writable = new Uri("dtmi:dtdl:property:writable;2");
-
+        public static readonly Uri unit = new Uri("dtmi:dtdl:property:unit;2");
         public static readonly Uri properties = new Uri("dtmi:dtdl:property:properties;2");
 
         public static readonly Uri _string = new Uri("dtmi:dtdl:instance:Schema:string;2");
@@ -86,5 +106,10 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri _double = new Uri("dtmi:dtdl:instance:Schema:double;2");
         public static readonly Uri _float = new Uri("dtmi:dtdl:instance:Schema:float;2");
         public static readonly Uri _long = new Uri("dtmi:dtdl:instance:Schema:long;2");
+
+        public static readonly Uri degreeOfArc = new Uri("dtmi:standard:unit:degreeOfArc;2");
+        public static readonly Uri ampere = new Uri("dtmi:standard:unit:ampere;2");
+        public static readonly Uri Angle = new Uri("dtmi:standard:class:Angle;2");
+        public static readonly Uri Current = new Uri("dtmi:standard:class:Current;2");
     }
 }

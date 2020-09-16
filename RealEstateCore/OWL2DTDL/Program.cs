@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -98,6 +99,18 @@ namespace OWL2DTDL
         /// URIs that will be ignored by this tool, parsed from CSV file using -i command line option
         /// </summary>
         private static readonly HashSet<string> ignoredUris = new HashSet<string>();
+
+
+        /// <summary>
+        /// Mapping of QUDT units and quantity kinds to DTDL units and semantic types
+        /// </summary>
+        private static readonly Dictionary<Uri, Uri> semanticTypesMap = new Dictionary<Uri, Uri>()
+        {
+            { QUDT.UnitNS.A, DTDL.ampere },
+            { QUDT.UnitNS.DEG, DTDL.degreeOfArc },
+            { QUDT.QuantityKindNS.ElectricCurrent, DTDL.Current },
+            { QUDT.QuantityKindNS.PlaneAngle, DTDL.Angle }
+        };
 
         static void Main(string[] args)
         {
@@ -365,7 +378,7 @@ namespace OWL2DTDL
 
                         // Set range
                         OntologyClass annotationPropertyRange = annotationProperty.Ranges.First();
-                        HashSet<Triple> schemaTriples = GetDtdlSchemaTriplesForRange(annotationPropertyRange, nestedPropertyNode);
+                        HashSet<Triple> schemaTriples = GetDtdlTriplesForRange(annotationPropertyRange, nestedPropertyNode);
                         dtdlModel.Assert(schemaTriples);
                     }
                 }
@@ -402,7 +415,7 @@ namespace OWL2DTDL
                     dtdlModel.Assert(new Triple(propertyNode, dtdl_writable, trueNode));
 
                     // Extract and populate schema
-                    HashSet<Triple> propertySchemaTriples = GetDtdlSchemaTriplesForRange(relationship.Target, propertyNode);
+                    HashSet<Triple> propertySchemaTriples = GetDtdlTriplesForRange(relationship.Target, propertyNode);
                     dtdlModel.Assert(propertySchemaTriples);
 
                     // If there are rdfs:labels, use them for DTDL displayName
@@ -561,8 +574,11 @@ namespace OWL2DTDL
         /// <param name="owlPropertyRange">The range to translate (typically an XSD datatype or custom datatype)</param>
         /// <param name="dtdlPropertyNode">The node onto which the generated triples will be grafted</param>
         /// <returns>Set of triples representing the schema</returns>
-        private static HashSet<Triple> GetDtdlSchemaTriplesForRange(OntologyClass owlPropertyRange, INode dtdlPropertyNode)
+        private static HashSet<Triple> GetDtdlTriplesForRange(OntologyClass owlPropertyRange, INode dtdlPropertyNode)
         {
+
+            // TODO: ensure that owlPropertyRange is named!
+
             IGraph dtdlModel = dtdlPropertyNode.Graph;
             IUriNode dtdl_schema = dtdlModel.CreateUriNode(DTDL.schema);
             IUriNode rdfType = dtdlModel.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfType));
@@ -574,16 +590,17 @@ namespace OWL2DTDL
             IUriNode dtdl_enumValue = dtdlModel.CreateUriNode(DTDL.enumValue);
             IUriNode dtdl_comment = dtdlModel.CreateUriNode(DTDL.comment);
             IUriNode dtdl_string = dtdlModel.CreateUriNode(DTDL._string);
+            IUriNode dtdl_unit = dtdlModel.CreateUriNode(DTDL.unit);
 
-            HashSet<Triple> returnedSchemaTriples = new HashSet<Triple>();
+            HashSet<Triple> returnedTriples = new HashSet<Triple>();
 
             // First check for the simple XSD datatypes
             if (owlPropertyRange.IsXsdDatatype())
             {
                 Uri schemaUri = GetXsDatatypeAsDtdlEquivalent(owlPropertyRange);
                 IUriNode schemaNode = dtdlModel.CreateUriNode(schemaUri);
-                returnedSchemaTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, schemaNode));
-                return returnedSchemaTriples;
+                returnedTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, schemaNode));
+                return returnedTriples;
             }
 
             // Then check for supported custom-defined datatypes
@@ -593,18 +610,18 @@ namespace OWL2DTDL
                 if (owlPropertyRange.IsEnumerationDatatype())
                 {
                     IBlankNode enumNode = dtdlModel.CreateBlankNode();
-                    returnedSchemaTriples.Add(new Triple(enumNode, rdfType, dtdl_Enum));
-                    returnedSchemaTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, enumNode));
-                    returnedSchemaTriples.Add(new Triple(enumNode, dtdl_valueSchema, dtdl_string));
+                    returnedTriples.Add(new Triple(enumNode, rdfType, dtdl_Enum));
+                    returnedTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, enumNode));
+                    returnedTriples.Add(new Triple(enumNode, dtdl_valueSchema, dtdl_string));
                     IEnumerable<ILiteralNode> enumOptions = owlPropertyRange.AsEnumeration().LiteralNodes();
                     foreach (ILiteralNode option in enumOptions)
                     {
                         IBlankNode enumOption = dtdlModel.CreateBlankNode();
-                        returnedSchemaTriples.Add(new Triple(enumOption, dtdl_name, dtdlModel.CreateLiteralNode(option.Value)));
-                        returnedSchemaTriples.Add(new Triple(enumOption, dtdl_enumValue, dtdlModel.CreateLiteralNode(option.Value)));
-                        returnedSchemaTriples.Add(new Triple(enumNode, dtdl_enumValues, enumOption));
+                        returnedTriples.Add(new Triple(enumOption, dtdl_name, dtdlModel.CreateLiteralNode(option.Value)));
+                        returnedTriples.Add(new Triple(enumOption, dtdl_enumValue, dtdlModel.CreateLiteralNode(option.Value)));
+                        returnedTriples.Add(new Triple(enumNode, dtdl_enumValues, enumOption));
                     }
-                    return returnedSchemaTriples;
+                    return returnedTriples;
                 }
 
                 // This is a wrapper around a XSD standard datatype
@@ -612,7 +629,23 @@ namespace OWL2DTDL
                 {
                     Uri schemaUri = GetXsDatatypeAsDtdlEquivalent(owlPropertyRange.EquivalentClasses.First());
                     IUriNode schemaNode = dtdlModel.CreateUriNode(schemaUri);
-                    returnedSchemaTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, schemaNode));
+                    returnedTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, schemaNode));
+
+                    // If the wrapper is a punned QUDT unit individual, assign semantic type and unit
+                    if (owlPropertyRange.IsQudtUnit() && semanticTypesMap.ContainsKey(owlPropertyRange.GetUri()))
+                    {
+                        Uri qudtUnit = owlPropertyRange.GetUri();
+                        IUriNode hasQuantityKind = dtdlModel.CreateUriNode(QUDT.hasQuantityKind);
+                        IEnumerable<IUriNode> quantityKinds = owlPropertyRange.GetNodesViaPredicate(hasQuantityKind).UriNodes();
+                        if (quantityKinds.Count() == 1 && semanticTypesMap.ContainsKey(quantityKinds.First().Uri))
+                        {
+                            Uri qudtQuantityKind = quantityKinds.First().Uri;
+                            IUriNode dtdlSemanticType = dtdlModel.CreateUriNode(semanticTypesMap[qudtQuantityKind]);
+                            IUriNode dtdlUnit = dtdlModel.CreateUriNode(semanticTypesMap[qudtUnit]);
+                            returnedTriples.Add(new Triple(dtdlPropertyNode, rdfType, dtdlSemanticType));
+                            returnedTriples.Add(new Triple(dtdlPropertyNode, dtdl_unit, dtdlUnit));
+                        }
+                    }
 
                     // Assert comment from XSD datatype on parent DTDL property (prioritizing non-tagged, then english, then anything else)
                     if (owlPropertyRange.Comment.Any())
@@ -631,16 +664,16 @@ namespace OWL2DTDL
                         }
                         ILiteralNode dtdlCommentNode = dtdlModel.CreateLiteralNode(string.Concat(comment.Value.Take(512)));
                         Triple dtdlCommentTriple = new Triple(dtdlPropertyNode, dtdl_comment, dtdlCommentNode);
-                        returnedSchemaTriples.Add(dtdlCommentTriple);
+                        returnedTriples.Add(dtdlCommentTriple);
                     }
-                    return returnedSchemaTriples;
+                    return returnedTriples;
                 }
             }
 
             // No supported schemas found; fall back to simple string schema
             IUriNode stringSchemaNode = dtdlModel.CreateUriNode(DTDL._string);
-            returnedSchemaTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, stringSchemaNode));
-            return returnedSchemaTriples;
+            returnedTriples.Add(new Triple(dtdlPropertyNode, dtdl_schema, stringSchemaNode));
+            return returnedTriples;
         }
 
         /// <summary>
