@@ -125,7 +125,7 @@ namespace OWL2DTDL
             { QUDT.QuantityKindNS.Mass, DTDL.Mass },
             { QUDT.QuantityKindNS.Pressure, DTDL.Pressure },
             { QUDT.QuantityKindNS.Length, DTDL.Length },
-            { QUDT.QuantityKindNS.Time, DTDL.Time },
+            { QUDT.QuantityKindNS.Time, DTDL.TimeSpan },
             { QUDT.QuantityKindNS.Velocity, DTDL.Velocity },
             { QUDT.QuantityKindNS.Volume, DTDL.Volume }
 

@@ -146,7 +146,7 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri Pressure = new Uri("dtmi:standard:class:Pressure;2");
         public static readonly Uri Length = new Uri("dtmi:standard:class:Length;2");
         public static readonly Uri Mass = new Uri("dtmi:standard:class:Mass;2");
-        public static readonly Uri Time = new Uri("dtmi:standard:class:Time;2");
+        public static readonly Uri TimeSpan = new Uri("dtmi:standard:class:TimeSpan;2");
         public static readonly Uri Volume = new Uri("dtmi:standard:class:Volume;2");
         public static readonly Uri Velocity = new Uri("dtmi:standard:class:Velocity;2");
 
