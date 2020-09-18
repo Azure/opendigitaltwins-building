@@ -108,8 +108,27 @@ namespace OWL2DTDL
         {
             { QUDT.UnitNS.A, DTDL.ampere },
             { QUDT.UnitNS.DEG, DTDL.degreeOfArc },
+            { QUDT.UnitNS.HP, DTDL.horsepower },
+            { QUDT.UnitNS.KiloGM, DTDL.kilogram },
+            { QUDT.UnitNS.L, DTDL.litre },
+            { QUDT.UnitNS.M, DTDL.metre },
+            { QUDT.UnitNS.MilliM, DTDL.millimetre },
+            { QUDT.UnitNS.MIN, DTDL.minute },
+            { QUDT.UnitNS.M_PER_SEC, DTDL.metrePerSecond },
+            { QUDT.UnitNS.PSI, DTDL.poundPerSquareInch },
+            { QUDT.UnitNS.V, DTDL.volt },
+            { QUDT.UnitNS.W, DTDL.watt },
             { QUDT.QuantityKindNS.ElectricCurrent, DTDL.Current },
-            { QUDT.QuantityKindNS.PlaneAngle, DTDL.Angle }
+            { QUDT.QuantityKindNS.PlaneAngle, DTDL.Angle },
+            { QUDT.QuantityKindNS.Voltage, DTDL.Voltage },
+            { QUDT.QuantityKindNS.Power, DTDL.Power },
+            { QUDT.QuantityKindNS.Mass, DTDL.Mass },
+            { QUDT.QuantityKindNS.Pressure, DTDL.Pressure },
+            { QUDT.QuantityKindNS.Length, DTDL.Length },
+            { QUDT.QuantityKindNS.Time, DTDL.Time },
+            { QUDT.QuantityKindNS.Velocity, DTDL.Velocity },
+            { QUDT.QuantityKindNS.Volume, DTDL.Volume }
+
         };
 
         static void Main(string[] args)

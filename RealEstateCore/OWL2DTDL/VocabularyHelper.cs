@@ -61,12 +61,30 @@ namespace OWL2DTDL.VocabularyHelper
         {
             public static readonly Uri A = new Uri("http://qudt.org/vocab/unit/A");
             public static readonly Uri DEG = new Uri("http://qudt.org/vocab/unit/DEG");
+            public static readonly Uri HP = new Uri("http://qudt.org/vocab/unit/HP");
+            public static readonly Uri KiloGM = new Uri("http://qudt.org/vocab/unit/KiloGM");
+            public static readonly Uri L = new Uri("http://qudt.org/vocab/unit/L");
+            public static readonly Uri M = new Uri("http://qudt.org/vocab/unit/M");
+            public static readonly Uri MilliM = new Uri("http://qudt.org/vocab/unit/MilliM");
+            public static readonly Uri MIN = new Uri("http://qudt.org/vocab/unit/MIN");
+            public static readonly Uri M_PER_SEC = new Uri("http://qudt.org/vocab/unit/M-PER-SEC");
+            public static readonly Uri PSI = new Uri("http://qudt.org/vocab/unit/PSI");
+            public static readonly Uri V = new Uri("http://qudt.org/vocab/unit/V");
+            public static readonly Uri W = new Uri("http://qudt.org/vocab/unit/W");
         }
 
         public static class QuantityKindNS
         {
             public static readonly Uri ElectricCurrent = new Uri("http://qudt.org/vocab/quantitykind/ElectricCurrent");
             public static readonly Uri PlaneAngle = new Uri("http://qudt.org/vocab/quantitykind/PlaneAngle");
+            public static readonly Uri Power = new Uri("http://qudt.org/vocab/quantitykind/Power");
+            public static readonly Uri Length = new Uri("http://qudt.org/vocab/quantitykind/Length");
+            public static readonly Uri Mass = new Uri("http://qudt.org/vocab/quantitykind/Mass");
+            public static readonly Uri Pressure = new Uri("http://qudt.org/vocab/quantitykind/Pressure");
+            public static readonly Uri Time = new Uri("http://qudt.org/vocab/quantitykind/Time");
+            public static readonly Uri Velocity = new Uri("http://qudt.org/vocab/quantitykind/Velocity");
+            public static readonly Uri Voltage = new Uri("http://qudt.org/vocab/quantitykind/Voltage");
+            public static readonly Uri Volume = new Uri("http://qudt.org/vocab/quantitykind/Volume");
         }
 
     }
@@ -107,9 +125,30 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri _float = new Uri("dtmi:dtdl:instance:Schema:float;2");
         public static readonly Uri _long = new Uri("dtmi:dtdl:instance:Schema:long;2");
 
-        public static readonly Uri degreeOfArc = new Uri("dtmi:standard:unit:degreeOfArc;2");
+        
         public static readonly Uri ampere = new Uri("dtmi:standard:unit:ampere;2");
+        public static readonly Uri volt = new Uri("dtmi:standard:unit:volt;2");
+        public static readonly Uri degreeOfArc = new Uri("dtmi:standard:unit:degreeOfArc;2");
+        public static readonly Uri horsepower = new Uri("dtmi:standard:unit:horsepower;2");
+        public static readonly Uri kilogram = new Uri("dtmi:standard:unit:kilogram;2");
+        public static readonly Uri litre = new Uri("dtmi:standard:unit:litre;2");
+        public static readonly Uri metre = new Uri("dtmi:standard:unit:metre;2");
+        public static readonly Uri metrePerSecond = new Uri("dtmi:standard:unit:metrePerSecond;2");
+        public static readonly Uri millimetre = new Uri("dtmi:standard:unit:millimetre;2");
+        public static readonly Uri minute = new Uri("dtmi:standard:unit:minute;2");
+        public static readonly Uri poundPerSquareInch = new Uri("dtmi:standard:unit:poundPerSquareInch;2");
+        public static readonly Uri watt = new Uri("dtmi:standard:unit:watt;2");
+
         public static readonly Uri Angle = new Uri("dtmi:standard:class:Angle;2");
         public static readonly Uri Current = new Uri("dtmi:standard:class:Current;2");
+        public static readonly Uri Voltage = new Uri("dtmi:standard:class:Voltage;2");
+        public static readonly Uri Power = new Uri("dtmi:standard:class:Power;2");
+        public static readonly Uri Pressure = new Uri("dtmi:standard:class:Pressure;2");
+        public static readonly Uri Length = new Uri("dtmi:standard:class:Length;2");
+        public static readonly Uri Mass = new Uri("dtmi:standard:class:Mass;2");
+        public static readonly Uri Time = new Uri("dtmi:standard:class:Time;2");
+        public static readonly Uri Volume = new Uri("dtmi:standard:class:Volume;2");
+        public static readonly Uri Velocity = new Uri("dtmi:standard:class:Velocity;2");
+
     }
 }
