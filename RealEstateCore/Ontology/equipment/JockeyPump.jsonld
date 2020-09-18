@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:equipment:PlumbingPump;1",
+  "@id": "dtmi:org:w3id:rec:equipment:JockeyPump;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
@@ -58,6 +58,9 @@
       "writable": true
     }
   ],
-  "extends": "dtmi:org:w3id:rec:equipment:PlumbingEquipment;1",
+  "displayName": {
+    "en": "Jockey Pump"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:SprinklerEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

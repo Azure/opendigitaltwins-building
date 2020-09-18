@@ -38,26 +38,6 @@
     },
     {
       "@type": "Property",
-      "comment": "Watt",
-      "displayName": {
-        "en": "power output"
-      },
-      "name": "powerOutput",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "comment": "Watt",
-      "displayName": {
-        "en": "power input"
-      },
-      "name": "powerInput",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
       "displayName": {
         "en": "medium"
       },
@@ -79,13 +59,38 @@
       "writable": true
     },
     {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "power output"
+      },
+      "name": "powerOutput",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "power input"
+      },
+      "name": "powerInput",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
       "@type": "Property",
-      "comment": "Gallons/hour",
       "description": {
-        "en": "Imperial measure for the recovery rate of a boiler."
+        "en": "Imperial measure for the recovery rate of a boiler (gallons per hour)."
       },
       "displayName": {
-        "en": "Recovery @ 100F Rise"
+        "en": "recovery @ 100F rise"
       },
       "name": "recovery100FRise",
       "schema": "integer",

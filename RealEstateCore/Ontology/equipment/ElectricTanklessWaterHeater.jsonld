@@ -2,13 +2,16 @@
   "@id": "dtmi:org:w3id:rec:equipment:ElectricTanklessWaterHeater;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": {
-    "@type": "Property",
-    "comment": "Watt",
+    "@type": [
+      "Power",
+      "Property"
+    ],
     "displayName": {
       "en": "power input"
     },
     "name": "powerInput",
-    "schema": "integer",
+    "schema": "double",
+    "unit": "watt",
     "writable": true
   },
   "extends": "dtmi:org:w3id:rec:equipment:TanklessWaterHeater;1",

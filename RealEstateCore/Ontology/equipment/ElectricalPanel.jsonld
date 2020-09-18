@@ -5,15 +5,6 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "input voltage"
-      },
-      "name": "voltageInput",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "short circuit rating"
       },
       "name": "shortCircuitRating",
@@ -30,16 +21,29 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "three",
-            "name": "three"
+            "enumValue": "Three",
+            "name": "Three"
           },
           {
-            "enumValue": "one",
-            "name": "one"
+            "enumValue": "One",
+            "name": "One"
           }
         ],
         "valueSchema": "string"
       },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "input voltage"
+      },
+      "name": "voltageInput",
+      "schema": "double",
+      "unit": "volt",
       "writable": true
     },
     {

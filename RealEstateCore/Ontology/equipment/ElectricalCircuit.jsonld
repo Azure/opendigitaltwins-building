@@ -5,15 +5,6 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "voltage"
-      },
-      "name": "voltage",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "poles"
       },
       "name": "poles",
@@ -38,6 +29,19 @@
       "writable": true
     },
     {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "voltage"
+      },
+      "name": "voltage",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "wire type"
@@ -56,12 +60,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Current",
+        "Property"
+      ],
       "displayName": {
         "en": "circuit breaker rating"
       },
       "name": "CBRating",
-      "schema": "integer",
+      "schema": "double",
+      "unit": "ampere",
       "writable": true
     }
   ],

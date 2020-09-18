@@ -25,12 +25,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Current",
+        "Property"
+      ],
       "displayName": {
         "en": "mains rating"
       },
       "name": "mainsRating",
-      "schema": "integer",
+      "schema": "double",
+      "unit": "ampere",
       "writable": true
     }
   ],

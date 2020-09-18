@@ -4,6 +4,24 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
+      "displayName": {
+        "en": "maintenance interval"
+      },
+      "name": "maintenanceInterval",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "installation date"
+      },
+      "name": "installationDate",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
       "name": "initialCost",
       "schema": "string",
       "writable": true
@@ -19,7 +37,6 @@
     },
     {
       "@type": "Property",
-      "comment": "A duration in ISO 8601 format.",
       "displayName": {
         "en": "expected life"
       },
@@ -53,6 +70,11 @@
       "name": "IPAddress",
       "schema": "string",
       "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "name": "sensorInterface",
+      "target": "dtmi:org:w3id:rec:core:SensorInterface;1"
     },
     {
       "@type": "Relationship",
@@ -254,47 +276,6 @@
       "target": "dtmi:org:w3id:rec:core:Agent;1"
     },
     {
-      "@type": "Relationship",
-      "description": {
-        "en": "A super-equipment entity that this equipment is a part of."
-      },
-      "displayName": {
-        "en": "super-equipment"
-      },
-      "name": "superEquipment",
-      "target": "dtmi:org:w3id:rec:core:Equipment;1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Subordinate equipment entities that are part of this equipment."
-      },
-      "displayName": {
-        "en": "sub-equipments"
-      },
-      "name": "subEquipments",
-      "target": "dtmi:org:w3id:rec:core:Equipment;1"
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "installation date"
-      },
-      "name": "installationDate",
-      "schema": "dateTime",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "comment": "A duration in ISO 8601 format.",
-      "displayName": {
-        "en": "maintenance interval"
-      },
-      "name": "maintenanceInterval",
-      "schema": "string",
-      "writable": true
-    },
-    {
       "@type": "Property",
       "displayName": {
         "en": "turnover date"
@@ -349,5 +330,6 @@
   "displayName": {
     "en": "Equipment"
   },
+  "extends": "dtmi:org:w3id:rec:core:Device;1",
   "@context": "dtmi:dtdl:context;2"
 }

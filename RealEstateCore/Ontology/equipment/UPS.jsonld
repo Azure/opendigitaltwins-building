@@ -5,47 +5,9 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "output voltage"
-      },
-      "name": "voltageOutput",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "input voltage"
-      },
-      "name": "voltageInput",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "comment": "A duration in ISO 8601 format.",
-      "displayName": {
-        "en": "runtime"
-      },
-      "name": "runtime",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "power output (KVA)"
       },
       "name": "powerOutputKVA",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "comment": "Watt",
-      "displayName": {
-        "en": "power output"
-      },
-      "name": "powerOutput",
       "schema": "integer",
       "writable": true
     },
@@ -59,12 +21,12 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "three",
-            "name": "three"
+            "enumValue": "Three",
+            "name": "Three"
           },
           {
-            "enumValue": "one",
-            "name": "one"
+            "enumValue": "One",
+            "name": "One"
           }
         ],
         "valueSchema": "string"
@@ -81,16 +43,68 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "three",
-            "name": "three"
+            "enumValue": "Three",
+            "name": "Three"
           },
           {
-            "enumValue": "one",
-            "name": "one"
+            "enumValue": "One",
+            "name": "One"
           }
         ],
         "valueSchema": "string"
       },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "output voltage"
+      },
+      "name": "voltageOutput",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "input voltage"
+      },
+      "name": "voltageInput",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "TimeSpan",
+        "Property"
+      ],
+      "displayName": {
+        "en": "runtime"
+      },
+      "name": "runtime",
+      "schema": "double",
+      "unit": "minute",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "power output"
+      },
+      "name": "powerOutput",
+      "schema": "double",
+      "unit": "watt",
       "writable": true
     }
   ],

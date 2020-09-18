@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:SprinklerEquipment;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Sprinkler Equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:FireSuppressionEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

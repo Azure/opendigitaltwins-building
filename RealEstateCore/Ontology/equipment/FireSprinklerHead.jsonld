@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:equipment:Faucet;1",
+  "@id": "dtmi:org:w3id:rec:equipment:FireSprinklerHead;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
@@ -15,12 +15,20 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "Touchless",
-            "name": "Touchless"
+            "enumValue": "Upright",
+            "name": "Upright"
           },
           {
-            "enumValue": "ManualOnly",
-            "name": "ManualOnly"
+            "enumValue": "SideWall",
+            "name": "SideWall"
+          },
+          {
+            "enumValue": "Pendant",
+            "name": "Pendant"
+          },
+          {
+            "enumValue": "ConcealedPendant",
+            "name": "ConcealedPendant"
           }
         ],
         "valueSchema": "string"
@@ -29,28 +37,26 @@
     },
     {
       "@type": "Property",
-      "description": {
-        "en": "litres per minute"
-      },
       "displayName": {
-        "en": "maximum flow rate"
+        "en": "K-factor (metric)"
       },
-      "name": "maxFlowRate",
+      "name": "kFactorMetric",
       "schema": "integer",
       "writable": true
     },
     {
       "@type": "Property",
-      "name": "numberOfHandles",
+      "displayName": {
+        "en": "K-factor (imperial)"
+      },
+      "name": "kFactorImperial",
       "schema": "integer",
       "writable": true
-    },
-    {
-      "@type": "Relationship",
-      "name": "mountedOn",
-      "target": "dtmi:org:w3id:rec:equipment:Sink;1"
     }
   ],
-  "extends": "dtmi:org:w3id:rec:equipment:PlumbingFixture;1",
+  "displayName": {
+    "en": "Fire Sprinkler Head"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:SprinklerEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

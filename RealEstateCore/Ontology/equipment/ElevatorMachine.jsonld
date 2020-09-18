@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:ElevatorMachine;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": [
+        "Mass",
+        "Property"
+      ],
+      "displayName": {
+        "en": "weight capacity"
+      },
+      "name": "weightCapacity",
+      "schema": "double",
+      "unit": "kilogram",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "motor power"
+      },
+      "name": "motorPower",
+      "schema": "double",
+      "unit": "horsepower",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Elevator Machine"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:ConveyanceEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

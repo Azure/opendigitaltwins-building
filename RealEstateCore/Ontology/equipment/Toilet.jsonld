@@ -4,13 +4,6 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
-      "comment": "liter",
-      "name": "waterPerFlush",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
       "name": "installationType",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
@@ -26,6 +19,16 @@
         ],
         "valueSchema": "string"
       },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Volume",
+        "Property"
+      ],
+      "name": "waterPerFlush",
+      "schema": "double",
+      "unit": "litre",
       "writable": true
     }
   ],

@@ -4,6 +4,11 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Relationship",
+      "name": "sensorInterface",
+      "target": "dtmi:org:w3id:rec:core:SensorInterface;1"
+    },
+    {
+      "@type": "Relationship",
       "description": {
         "en": "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
       },

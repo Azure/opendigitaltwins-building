@@ -4,6 +4,12 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "sensorInterface",
+      "target": "dtmi:org:w3id:rec:core:SensorInterface;1"
+    },
+    {
+      "@type": "Relationship",
       "displayName": {
         "en": "generated observation"
       },

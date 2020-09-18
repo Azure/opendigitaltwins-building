@@ -5,15 +5,6 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "output voltage"
-      },
-      "name": "voltageOutput",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "output phases"
       },
       "name": "phasesOutput",
@@ -21,12 +12,12 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "three",
-            "name": "three"
+            "enumValue": "Three",
+            "name": "Three"
           },
           {
-            "enumValue": "one",
-            "name": "one"
+            "enumValue": "One",
+            "name": "One"
           }
         ],
         "valueSchema": "string"
@@ -47,6 +38,9 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "Hz"
+      },
       "displayName": {
         "en": "frequency"
       },
@@ -55,23 +49,42 @@
       "writable": true
     },
     {
-      "@type": "Property",
-      "comment": "liter",
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "output voltage"
+      },
+      "name": "voltageOutput",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Volume",
+        "Property"
+      ],
       "displayName": {
         "en": "day tank capacity"
       },
       "name": "dayTankCapacity",
-      "schema": "integer",
+      "schema": "double",
+      "unit": "litre",
       "writable": true
     },
     {
-      "@type": "Property",
-      "comment": "liter",
+      "@type": [
+        "Volume",
+        "Property"
+      ],
       "displayName": {
         "en": "bulk storage capacity"
       },
       "name": "bulkStorageCapacity",
-      "schema": "integer",
+      "schema": "double",
+      "unit": "litre",
       "writable": true
     },
     {
@@ -85,16 +98,6 @@
     },
     {
       "@type": "Property",
-      "comment": "Watt",
-      "displayName": {
-        "en": "standby power rating (Watt)"
-      },
-      "name": "standbyPower",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": "Property",
       "displayName": {
         "en": "prime power rating (KVA)"
       },
@@ -103,13 +106,29 @@
       "writable": true
     },
     {
-      "@type": "Property",
-      "comment": "Watt",
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "standby power rating (Watt)"
+      },
+      "name": "standbyPower",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "prime power rating (Watt)"
       },
       "name": "primePower",
-      "schema": "integer",
+      "schema": "double",
+      "unit": "watt",
       "writable": true
     }
   ],

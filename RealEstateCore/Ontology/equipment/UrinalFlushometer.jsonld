@@ -2,10 +2,13 @@
   "@id": "dtmi:org:w3id:rec:equipment:UrinalFlushometer;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": {
-    "@type": "Property",
-    "comment": "liter",
+    "@type": [
+      "Volume",
+      "Property"
+    ],
     "name": "waterPerFlush",
-    "schema": "integer",
+    "schema": "double",
+    "unit": "litre",
     "writable": true
   },
   "displayName": {

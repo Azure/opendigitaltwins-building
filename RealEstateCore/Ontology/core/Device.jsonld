@@ -80,6 +80,7 @@
       "displayName": {
         "en": "has super-Device"
       },
+      "maxMultiplicity": 1,
       "name": "hasSuperDevice",
       "target": "dtmi:org:w3id:rec:core:Device;1"
     },
@@ -101,6 +102,7 @@
       "displayName": {
         "en": "is mounted in Building Component"
       },
+      "maxMultiplicity": 1,
       "name": "isMountedInBuildingComponent",
       "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
     },
@@ -109,6 +111,7 @@
       "displayName": {
         "en": "mounted in equipment"
       },
+      "maxMultiplicity": 1,
       "name": "mountedInEquipment",
       "target": "dtmi:org:w3id:rec:core:Equipment;1"
     },
