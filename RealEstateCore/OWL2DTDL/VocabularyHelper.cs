@@ -60,21 +60,26 @@ namespace OWL2DTDL.VocabularyHelper
         public static class UnitNS
         {
             public static readonly Uri A = new Uri("http://qudt.org/vocab/unit/A");
+            public static readonly Uri CentiM = new Uri("http://qudt.org/vocab/unit/CentiM");
             public static readonly Uri DEG = new Uri("http://qudt.org/vocab/unit/DEG");
             public static readonly Uri HP = new Uri("http://qudt.org/vocab/unit/HP");
+            public static readonly Uri HR = new Uri("http://qudt.org/vocab/unit/HR");
             public static readonly Uri KiloGM = new Uri("http://qudt.org/vocab/unit/KiloGM");
             public static readonly Uri L = new Uri("http://qudt.org/vocab/unit/L");
+            public static readonly Uri L_PER_SEC = new Uri("http://qudt.org/vocab/unit/L-PER-SEC");
             public static readonly Uri M = new Uri("http://qudt.org/vocab/unit/M");
             public static readonly Uri MilliM = new Uri("http://qudt.org/vocab/unit/MilliM");
             public static readonly Uri MIN = new Uri("http://qudt.org/vocab/unit/MIN");
             public static readonly Uri M_PER_SEC = new Uri("http://qudt.org/vocab/unit/M-PER-SEC");
             public static readonly Uri PSI = new Uri("http://qudt.org/vocab/unit/PSI");
+            public static readonly Uri REV_PER_MIN = new Uri("http://qudt.org/vocab/unit/REV-PER-MIN");
             public static readonly Uri V = new Uri("http://qudt.org/vocab/unit/V");
             public static readonly Uri W = new Uri("http://qudt.org/vocab/unit/W");
         }
 
         public static class QuantityKindNS
         {
+            public static readonly Uri AngularVelocity = new Uri("http://qudt.org/vocab/quantitykind/AngularVelocity");
             public static readonly Uri ElectricCurrent = new Uri("http://qudt.org/vocab/quantitykind/ElectricCurrent");
             public static readonly Uri PlaneAngle = new Uri("http://qudt.org/vocab/quantitykind/PlaneAngle");
             public static readonly Uri Power = new Uri("http://qudt.org/vocab/quantitykind/Power");
@@ -85,6 +90,7 @@ namespace OWL2DTDL.VocabularyHelper
             public static readonly Uri Velocity = new Uri("http://qudt.org/vocab/quantitykind/Velocity");
             public static readonly Uri Voltage = new Uri("http://qudt.org/vocab/quantitykind/Voltage");
             public static readonly Uri Volume = new Uri("http://qudt.org/vocab/quantitykind/Volume");
+            public static readonly Uri VolumeFlowRate = new Uri("http://qudt.org/vocab/quantitykind/VolumeFlowRate");
         }
 
     }
@@ -128,18 +134,23 @@ namespace OWL2DTDL.VocabularyHelper
         
         public static readonly Uri ampere = new Uri("dtmi:standard:unit:ampere;2");
         public static readonly Uri volt = new Uri("dtmi:standard:unit:volt;2");
+        public static readonly Uri centimetre = new Uri("dtmi:standard:unit:centimetre;2");
         public static readonly Uri degreeOfArc = new Uri("dtmi:standard:unit:degreeOfArc;2");
         public static readonly Uri horsepower = new Uri("dtmi:standard:unit:horsepower;2");
+        public static readonly Uri hour = new Uri("dtmi:standard:unit:hour;2");
         public static readonly Uri kilogram = new Uri("dtmi:standard:unit:kilogram;2");
         public static readonly Uri litre = new Uri("dtmi:standard:unit:litre;2");
+        public static readonly Uri litrePerSecond = new Uri("dtmi:standard:unit:litrePerSecond;2");
         public static readonly Uri metre = new Uri("dtmi:standard:unit:metre;2");
         public static readonly Uri metrePerSecond = new Uri("dtmi:standard:unit:metrePerSecond;2");
         public static readonly Uri millimetre = new Uri("dtmi:standard:unit:millimetre;2");
         public static readonly Uri minute = new Uri("dtmi:standard:unit:minute;2");
         public static readonly Uri poundPerSquareInch = new Uri("dtmi:standard:unit:poundPerSquareInch;2");
+        public static readonly Uri revolutionPerMinute = new Uri("dtmi:standard:unit:revolutionPerMinute;2");
         public static readonly Uri watt = new Uri("dtmi:standard:unit:watt;2");
-
+        
         public static readonly Uri Angle = new Uri("dtmi:standard:class:Angle;2");
+        public static readonly Uri AngularVelocity = new Uri("dtmi:standard:class:AngularVelocity;2");
         public static readonly Uri Current = new Uri("dtmi:standard:class:Current;2");
         public static readonly Uri Voltage = new Uri("dtmi:standard:class:Voltage;2");
         public static readonly Uri Power = new Uri("dtmi:standard:class:Power;2");
@@ -149,6 +160,7 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri TimeSpan = new Uri("dtmi:standard:class:TimeSpan;2");
         public static readonly Uri Volume = new Uri("dtmi:standard:class:Volume;2");
         public static readonly Uri Velocity = new Uri("dtmi:standard:class:Velocity;2");
+        public static readonly Uri VolumeFlowRate = new Uri("dtmi:standard:class:VolumeFlowRate;2");
 
     }
 }

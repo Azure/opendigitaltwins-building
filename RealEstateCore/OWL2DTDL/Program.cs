@@ -107,17 +107,22 @@ namespace OWL2DTDL
         private static readonly Dictionary<Uri, Uri> semanticTypesMap = new Dictionary<Uri, Uri>()
         {
             { QUDT.UnitNS.A, DTDL.ampere },
+            { QUDT.UnitNS.CentiM, DTDL.centimetre },
             { QUDT.UnitNS.DEG, DTDL.degreeOfArc },
             { QUDT.UnitNS.HP, DTDL.horsepower },
+            { QUDT.UnitNS.HR, DTDL.hour },
             { QUDT.UnitNS.KiloGM, DTDL.kilogram },
             { QUDT.UnitNS.L, DTDL.litre },
+            { QUDT.UnitNS.L_PER_SEC, DTDL.litrePerSecond },
             { QUDT.UnitNS.M, DTDL.metre },
             { QUDT.UnitNS.MilliM, DTDL.millimetre },
             { QUDT.UnitNS.MIN, DTDL.minute },
             { QUDT.UnitNS.M_PER_SEC, DTDL.metrePerSecond },
             { QUDT.UnitNS.PSI, DTDL.poundPerSquareInch },
+            { QUDT.UnitNS.REV_PER_MIN, DTDL.revolutionPerMinute },
             { QUDT.UnitNS.V, DTDL.volt },
             { QUDT.UnitNS.W, DTDL.watt },
+            { QUDT.QuantityKindNS.AngularVelocity, DTDL.AngularVelocity },
             { QUDT.QuantityKindNS.ElectricCurrent, DTDL.Current },
             { QUDT.QuantityKindNS.PlaneAngle, DTDL.Angle },
             { QUDT.QuantityKindNS.Voltage, DTDL.Voltage },
@@ -127,8 +132,8 @@ namespace OWL2DTDL
             { QUDT.QuantityKindNS.Length, DTDL.Length },
             { QUDT.QuantityKindNS.Time, DTDL.TimeSpan },
             { QUDT.QuantityKindNS.Velocity, DTDL.Velocity },
-            { QUDT.QuantityKindNS.Volume, DTDL.Volume }
-
+            { QUDT.QuantityKindNS.Volume, DTDL.Volume },
+            { QUDT.QuantityKindNS.VolumeFlowRate, DTDL.VolumeFlowRate }
         };
 
         static void Main(string[] args)
