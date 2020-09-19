@@ -3,6 +3,19 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "voltage"
+      },
+      "name": "voltage",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "poles"
@@ -26,19 +39,6 @@
         ],
         "valueSchema": "string"
       },
-      "writable": true
-    },
-    {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
-      "displayName": {
-        "en": "voltage"
-      },
-      "name": "voltage",
-      "schema": "double",
-      "unit": "volt",
       "writable": true
     },
     {

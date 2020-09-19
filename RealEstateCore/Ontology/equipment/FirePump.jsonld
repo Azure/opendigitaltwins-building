@@ -21,6 +21,19 @@
       "writable": true
     },
     {
+      "@type": [
+        "Pressure",
+        "Property"
+      ],
+      "displayName": {
+        "en": "pressure capacity"
+      },
+      "name": "pressureCapacity",
+      "schema": "double",
+      "unit": "poundPerSquareInch",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "description": {
         "en": "foot of head"
@@ -42,19 +55,6 @@
       },
       "name": "flowCapacity",
       "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
-      "displayName": {
-        "en": "pressure capacity"
-      },
-      "name": "pressureCapacity",
-      "schema": "double",
-      "unit": "poundPerSquareInch",
       "writable": true
     }
   ],

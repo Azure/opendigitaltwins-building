@@ -3,6 +3,16 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
+      "@type": [
+        "Volume",
+        "Property"
+      ],
+      "name": "waterPerFlush",
+      "schema": "double",
+      "unit": "litre",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "description": {
         "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
@@ -47,16 +57,6 @@
         ],
         "valueSchema": "string"
       },
-      "writable": true
-    },
-    {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
-      "name": "waterPerFlush",
-      "schema": "double",
-      "unit": "litre",
       "writable": true
     },
     {

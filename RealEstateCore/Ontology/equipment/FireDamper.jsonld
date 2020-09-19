@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:FireDamper;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": [
+      "TimeSpan",
+      "Property"
+    ],
+    "displayName": {
+      "en": "fire rating"
+    },
+    "name": "fireRating",
+    "schema": "double",
+    "unit": "hour",
+    "writable": true
+  },
+  "displayName": {
+    "en": "Fire Damper"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:Damper;1",
+  "@context": "dtmi:dtdl:context;2"
+}

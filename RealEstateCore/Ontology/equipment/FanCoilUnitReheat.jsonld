@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:FanCoilUnitReheat;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:equipment:FanCoilUnit;1",
+  "@context": "dtmi:dtdl:context;2"
+}

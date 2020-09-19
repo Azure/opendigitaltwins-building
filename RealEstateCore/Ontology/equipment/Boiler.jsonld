@@ -37,28 +37,6 @@
       "writable": true
     },
     {
-      "@type": "Property",
-      "displayName": {
-        "en": "medium"
-      },
-      "name": "medium",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Steam",
-            "name": "Steam"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
       "@type": [
         "Power",
         "Property"
@@ -82,6 +60,28 @@
       "name": "powerInput",
       "schema": "double",
       "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "medium"
+      },
+      "name": "medium",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Steam",
+            "name": "Steam"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          }
+        ],
+        "valueSchema": "string"
+      },
       "writable": true
     },
     {

@@ -3,6 +3,16 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
+      "@type": [
+        "Volume",
+        "Property"
+      ],
+      "name": "waterPerFlush",
+      "schema": "double",
+      "unit": "litre",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "name": "installationType",
       "dtmi:dtdl:property:schema;2": {
@@ -19,16 +29,6 @@
         ],
         "valueSchema": "string"
       },
-      "writable": true
-    },
-    {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
-      "name": "waterPerFlush",
-      "schema": "double",
-      "unit": "litre",
       "writable": true
     }
   ],

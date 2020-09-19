@@ -3,6 +3,19 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "output voltage"
+      },
+      "name": "voltageOutput",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "output phases"
@@ -50,19 +63,6 @@
     },
     {
       "@type": [
-        "Voltage",
-        "Property"
-      ],
-      "displayName": {
-        "en": "output voltage"
-      },
-      "name": "voltageOutput",
-      "schema": "double",
-      "unit": "volt",
-      "writable": true
-    },
-    {
-      "@type": [
         "Volume",
         "Property"
       ],
@@ -97,15 +97,6 @@
       "writable": true
     },
     {
-      "@type": "Property",
-      "displayName": {
-        "en": "prime power rating (KVA)"
-      },
-      "name": "primePowerKVA",
-      "schema": "integer",
-      "writable": true
-    },
-    {
       "@type": [
         "Power",
         "Property"
@@ -116,6 +107,15 @@
       "name": "standbyPower",
       "schema": "double",
       "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "prime power rating (KVA)"
+      },
+      "name": "primePowerKVA",
+      "schema": "integer",
       "writable": true
     },
     {

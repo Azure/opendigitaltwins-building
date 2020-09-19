@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:LightingEquipment;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Lighting Equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

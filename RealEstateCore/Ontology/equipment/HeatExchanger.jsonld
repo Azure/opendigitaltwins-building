@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:HeatExchanger;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:equipment:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

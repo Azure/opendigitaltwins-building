@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:SupplyFan;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Supply Fan"
+  },
+  "extends": "dtmi:org:w3id:rec:equipment:Fan;1",
+  "@context": "dtmi:dtdl:context;2"
+}
