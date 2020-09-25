@@ -11,7 +11,6 @@ Our goal is to deliver a DTDL-based building ontology which we deem to be the â€
 
 <*perhaps explain why is this the MS recommeded building ontology for smart building solutions built with Azure Digital Twins*>
 
-![Building Ontology](images/BuildingOntologyRoadmap.jpg)
 
 ## Why RealEstateCore ontology
 
