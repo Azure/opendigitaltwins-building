@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.JsonLd;
+using VDS.RDF.Nodes;
 using VDS.RDF.Ontology;
 using VDS.RDF.Parsing;
 using VDS.RDF.Writing;
@@ -294,11 +295,16 @@ namespace OWL2DTDL
                 }
 
                 // If the class has direct superclasses, implement DTDL extends (for at most two, see limitation in DTDL spec)
-                IEnumerable<OntologyClass> namedSuperClasses = oClass.DirectSuperClasses.Where(superClass => superClass.IsNamed() && !superClass.IsOwlThing());
+                IEnumerable<OntologyClass> namedSuperClasses = oClass.DirectSuperClasses.Where(superClass => superClass.IsNamed() && !superClass.IsOwlThing() && !superClass.IsDeprecated());
                 if (namedSuperClasses.Any())
                 {
                     foreach (OntologyClass superClass in namedSuperClasses.Take(2))
                     {
+                        // Only include non-deprecated subclass relations
+                        if (PropertyAssertionIsDeprecated(oClass.GetUriNode(), Tools.CopyNode(rdfType, _ontologyGraph).AsUriNode(), superClass.GetUriNode()))
+                        {
+                            break;
+                        }
                         string superInterfaceDTMI = GetDTMI(superClass);
                         IUriNode superInterfaceNode = dtdlModel.CreateUriNode(UriFactory.Create(superInterfaceDTMI));
                         dtdlModel.Assert(new Triple(interfaceNode, dtdl_extends, superInterfaceNode));
@@ -492,6 +498,38 @@ namespace OWL2DTDL
                     interfaceArray.WriteTo(writer);
                 }
             }
+        }
+
+        private static bool PropertyAssertionIsDeprecated(INode subj, IUriNode pred, INode obj)
+        {
+            IUriNode owlAnnotatedSource = _ontologyGraph.CreateUriNode(OWL.annotatedSource);
+            IUriNode owlAnnotatedProperty = _ontologyGraph.CreateUriNode(OWL.annotatedProperty);
+            IUriNode owlAnnotatedTarget = _ontologyGraph.CreateUriNode(OWL.annotatedTarget);
+            IUriNode owlDeprecated = _ontologyGraph.CreateUriNode(OWL.deprecated);
+
+            IEnumerable<INode> axiomAnnotations = _ontologyGraph.Nodes
+                .Where(node => _ontologyGraph.ContainsTriple(new Triple(node, owlAnnotatedSource, subj)))
+                .Where(node => _ontologyGraph.ContainsTriple(new Triple(node, owlAnnotatedProperty, pred)))
+                .Where(node => _ontologyGraph.ContainsTriple(new Triple(node, owlAnnotatedTarget, obj)));
+
+            foreach (INode axiomAnnotation in axiomAnnotations)
+            {
+                foreach (Triple deprecationAssertion in _ontologyGraph.GetTriplesWithSubjectPredicate(axiomAnnotation, owlDeprecated).Where(trip => trip.Object.NodeType == NodeType.Literal))
+                {
+                    IValuedNode deprecationValue = deprecationAssertion.Object.AsValuedNode();
+                    try { 
+                        if (deprecationValue.AsBoolean())
+                        {
+                            return true;
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                }
+            }
+            return false;
         }
 
         /// <summary>
