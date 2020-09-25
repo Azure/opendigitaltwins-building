@@ -3,7 +3,7 @@
 
 ## Motivation & Purpose
 
-[Azure Digital Twins (ADT)](https://azure.microsoft.com/en-us/services/digital-twins/) and its underlying [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl) are at the heart of Smart Building Azure solutions. ADT provides the fundamental architectural component for many end solutions (ADT), while DTDL provides unifying schemas that can facilitate integration between the services underlying solutions (Time Series Insights, Azure Maps, etc.) and integration between these solutions and the vendors which supply them.
+[Azure Digital Twins (ADT)](https://azure.microsoft.com/en-us/services/digital-twins/) and its underlying [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl) are at the heart of Smart Building Azure solutions. ADT provides the fundamental architectural component for many end solutions, while DTDL provides unifying schemas that can facilitate integration between the services underlying solutions (Time Series Insights, Azure Maps, etc.) and integration between these solutions and the vendors which supply them.
 
 Although DTDL provides the schema by which developers can define the models of the entities they expect to use in their topologies, we are faced with problems such as developers not knowing where to start or creating models so fragmented that make it impossible to integrate with other DTDL-based solutions.
 
