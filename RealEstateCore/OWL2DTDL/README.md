@@ -69,6 +69,32 @@ DTMI:s for named classes are minted based on the classes' URIs by concatenating 
 
 E.g., `https://w3id.org/rec/device/Actuator` becomes `dtmi:org:w3id:rec:device:Actuator;1`.
 
+### Mapping OWL model to DTDL
+
+The following table maps key OWL constructs to DTDL. This map is used by the OWL2DTDL application to convert REC from OWL to DTDL. For detailed mappings, refer to the OWL2DTDL source code.
+
+| OWL Construct       |                      | DTDL Construct       |                                    |
+|---------------------|----------------------|----------------------|------------------------------------|
+| Classes             | owl:Class            | Interface            | @type:Interface                    |
+|                     | rdfs:label           |                      | @id, displayName                   |
+|                     | rdfs:comment         |                      | description                        |
+| Subclasses          | owl:Class            | Interface            | @type:Interface                    |
+|                     | rdfs:label           |                      | @id, displayName                   |
+|                     | rdfs:comment         |                      | description                        |
+|                     | rdfs:subClassOf      |                      | extends                            |
+| Datatype Properties | owl:DatatypeProperty | Interface Properties | @type:Property                     |
+|                     | rdfs:label           |                      | displayName                        |
+|                     | rdfs:range           |                      | schema                             |
+| Object Properties   | owl:ObjectProperty   | Relationship         | @type:Relationship                 |
+|                     | rdfs:range           |                      | target or omitted if no rdfs:range |
+|                     | rdfs:comment         |                      | description                        |
+|                     | rdfs:label           |                      | displayName                        |
+| Object Properties   | rdfs:subClassOf +    | Relationship         | @type:Relationship                 |
+|                     | owl:Restriction      |                      |                                    |
+|                     | owl:onProperty       |                      | name, description                  |
+|                     | owl:allValuesFrom    |                      | target                             |
+
+
 ## Translation examples
 
 TBD
