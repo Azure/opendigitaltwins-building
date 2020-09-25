@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:SetPoint;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "SetPoint"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Parameter;1",
+  "@context": "dtmi:dtdl:context;2"
+}

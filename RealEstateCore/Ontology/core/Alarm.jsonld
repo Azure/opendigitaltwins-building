@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Alarm;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Alarm"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

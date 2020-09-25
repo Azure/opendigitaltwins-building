@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Asset;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."
+  },
+  "displayName": {
+    "en": "Asset"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

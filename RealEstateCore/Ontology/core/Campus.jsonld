@@ -20,7 +20,7 @@
       },
       "minMultiplicity": 0,
       "name": "hasMember",
-      "target": "dtmi:org:w3id:rec:core:Location;1"
+      "target": "dtmi:org:w3id:rec:core:Space;1"
     }
   ],
   "description": {

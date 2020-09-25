@@ -52,6 +52,6 @@
   "displayName": {
     "en": "Sensor"
   },
-  "extends": "dtmi:org:w3id:rec:core:Device;1",
+  "extends": "dtmi:org:w3id:rec:core:Capability;1",
   "@context": "dtmi:dtdl:context;2"
 }

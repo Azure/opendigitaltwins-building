@@ -1,6 +1,6 @@
 {
   "@id": "dtmi:org:w3id:rec:equipment:PlumbingEquipment;1",
   "@type": "Interface",
-  "extends": "dtmi:org:w3id:rec:core:Equipment;1",
+  "extends": "dtmi:org:w3id:rec:core:MountedEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

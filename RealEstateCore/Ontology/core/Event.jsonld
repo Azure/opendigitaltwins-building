@@ -4,72 +4,6 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
-      "displayName": {
-        "en": "has updated time"
-      },
-      "name": "hasUpdatedTime",
-      "schema": "dateTime",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "description": {
-        "en": "Cognitive clustering of time-related properties that can apply to time-indexed objects (i.e., events of various sorts).\n\nCertain time properties are given using xsd:DateTime, i.e., ISO8601 (see below), whereas others are given as ints or floats, depending on use case.\n\nTime format ISO8601:\n\nComplete date, hour, minutes, seconds, and decimal fraction of second\n\n      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)\n\nWhere:\n     YYYY = 4 numbers for year.\n     MM = 2 numbers for month (01=January, e"
-      },
-      "displayName": {
-        "en": "has time"
-      },
-      "name": "hasTime",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "has stop time"
-      },
-      "name": "hasStopTime",
-      "schema": "dateTime",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "has start time"
-      },
-      "name": "hasStartTime",
-      "schema": "dateTime",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "has read time"
-      },
-      "name": "hasReadTime",
-      "schema": "dateTime",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "has point in time"
-      },
-      "name": "hasPointInTime",
-      "schema": "dateTime",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "has observation time"
-      },
-      "name": "hasObservationTime",
-      "schema": "dateTime",
-      "writable": true
-    },
-    {
-      "@type": "Property",
       "description": {
         "en": "Measured in ms (milliseconds). Duration is defined as the length of time that something lasts."
       },
@@ -107,7 +41,73 @@
         "en": "associated with device"
       },
       "name": "associatedWithDevice",
-      "target": "dtmi:org:w3id:rec:core:Device;1"
+      "target": "dtmi:org:w3id:rec:core:LogicalDevice;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has observation time"
+      },
+      "name": "hasObservationTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has point in time"
+      },
+      "name": "hasPointInTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has read time"
+      },
+      "name": "hasReadTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has start time"
+      },
+      "name": "hasStartTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has stop time"
+      },
+      "name": "hasStopTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Cognitive clustering of time-related properties that can apply to time-indexed objects (i.e., events of various sorts).\n\nCertain time properties are given using xsd:DateTime, i.e., ISO8601 (see below), whereas others are given as ints or floats, depending on use case.\n\nTime format ISO8601:\n\nComplete date, hour, minutes, seconds, and decimal fraction of second\n\n      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)\n\nWhere:\n     YYYY = 4 numbers for year.\n     MM = 2 numbers for month (01=January, e"
+      },
+      "displayName": {
+        "en": "has time"
+      },
+      "name": "hasTime",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has updated time"
+      },
+      "name": "hasUpdatedTime",
+      "schema": "dateTime",
+      "writable": true
     }
   ],
   "description": {

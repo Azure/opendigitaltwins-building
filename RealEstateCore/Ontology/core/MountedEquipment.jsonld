@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Equipment;1",
+  "@id": "dtmi:org:w3id:rec:core:MountedEquipment;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
@@ -85,7 +85,7 @@
         "en": "contains mounted device"
       },
       "name": "containsMountedDevice",
-      "target": "dtmi:org:w3id:rec:core:Device;1"
+      "target": "dtmi:org:w3id:rec:core:LogicalDevice;1"
     },
     {
       "@type": "Relationship",
@@ -94,7 +94,7 @@
       },
       "minMultiplicity": 0,
       "name": "locatedIn",
-      "target": "dtmi:org:w3id:rec:core:Location;1"
+      "target": "dtmi:org:w3id:rec:core:Space;1"
     },
     {
       "@type": "Relationship",
@@ -328,8 +328,8 @@
     "en": "Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc."
   },
   "displayName": {
-    "en": "Equipment"
+    "en": "Mounted equipment"
   },
-  "extends": "dtmi:org:w3id:rec:core:Device;1",
+  "extends": "dtmi:org:w3id:rec:core:Asset;1",
   "@context": "dtmi:dtdl:context;2"
 }

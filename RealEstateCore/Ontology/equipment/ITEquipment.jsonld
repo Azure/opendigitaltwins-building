@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:org:w3id:rec:equipment:ITEquipment;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:core:Asset;1",
+  "@context": "dtmi:dtdl:context;2"
+}

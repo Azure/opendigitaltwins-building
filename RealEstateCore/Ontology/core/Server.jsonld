@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Server;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:core:LogicalDevice;1",
+  "@context": "dtmi:dtdl:context;2"
+}

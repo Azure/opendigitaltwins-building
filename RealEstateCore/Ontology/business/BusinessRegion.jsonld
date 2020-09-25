@@ -8,7 +8,7 @@
     },
     "minMultiplicity": 0,
     "name": "hasMember",
-    "target": "dtmi:org:w3id:rec:core:Location;1"
+    "target": "dtmi:org:w3id:rec:core:Space;1"
   },
   "extends": "dtmi:org:w3id:rec:core:Collection;1",
   "@context": "dtmi:dtdl:context;2"

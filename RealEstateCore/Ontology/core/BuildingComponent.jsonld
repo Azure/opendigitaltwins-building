@@ -37,11 +37,10 @@
     }
   ],
   "description": {
-    "en": "The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc."
+    "en": "A part that constitutes a piece of a building's structural makeup. E.g., Facade, Wall, Slab, RoofInner, etc."
   },
   "displayName": {
     "en": "Building component"
   },
-  "extends": "dtmi:org:w3id:rec:core:Location;1",
   "@context": "dtmi:dtdl:context;2"
 }

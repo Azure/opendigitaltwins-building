@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Location;1",
+  "@id": "dtmi:org:w3id:rec:core:Space;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
@@ -21,20 +21,20 @@
     },
     {
       "@type": "Relationship",
-      "name": "superLocation",
-      "target": "dtmi:org:w3id:rec:core:Location;1"
+      "name": "superSpace",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
     },
     {
       "@type": "Relationship",
-      "name": "subLocations",
-      "target": "dtmi:org:w3id:rec:core:Location;1"
+      "name": "subSpaces",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
     }
   ],
   "description": {
-    "en": "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-locations. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings."
+    "en": "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings."
   },
   "displayName": {
-    "en": "Location"
+    "en": "Space"
   },
   "@context": "dtmi:dtdl:context;2"
 }

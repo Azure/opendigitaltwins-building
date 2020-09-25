@@ -31,6 +31,6 @@
   "displayName": {
     "en": "Building"
   },
-  "extends": "dtmi:org:w3id:rec:core:RealEstateComponent;1",
+  "extends": "dtmi:org:w3id:rec:core:Space;1",
   "@context": "dtmi:dtdl:context;2"
 }
