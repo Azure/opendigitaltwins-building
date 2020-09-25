@@ -3,11 +3,13 @@
 
 ## Motivation & Purpose
 
-Although [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl) provides the schema by which developers can define the models of the entities they expect to use in their topologies, we are faced with problems such as developers not knowing where to start or creating models so fragmented that make it impossible to integrate with other DTDL-based solutions.
+[Azure Digital Twins (ADT)](https://azure.microsoft.com/en-us/services/digital-twins/) and its underlying [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl) are at the heart of Smart Building Azure solutions. ADT provides the fundamental architectural component for many end solutions (ADT), while DTDL provides unifying schemas that can facilitate integration between the services underlying solutions (Time Series Insights, Azure Maps, etc.) and integration between these solutions and the vendors which supply them.
 
-Our motivation is to provide an open-source DTDL building ontology definition which learns from, builds on, and/or uses industry standards, meets the needs of downstream developers, and will be widely adopted and/or extended by the industry.
+Although DTDL provides the schema by which developers can define the models of the entities they expect to use in their topologies, we are faced with problems such as developers not knowing where to start or creating models so fragmented that make it impossible to integrate with other DTDL-based solutions.
 
-<*explain why this is the recommeded building ontology for smart building solutions built with Azure Digital Twins*>
+Our goal is to deliver a DTDL-based building ontology which we deem to be the “gold standard” for smart building modeling, leveraging industry standards to accelerate our work and prevent reinvention. As part of the delivery, also provide best practices for how to consume and properly extend the ontology. This is an open-source ontology definition which learns from, builds on, and uses industry standards, meets the needs of downstream developers, and will be widely adopted and/or extended by the industry.
+
+<*perhaps explain why is this the MS recommeded building ontology for smart building solutions built with Azure Digital Twins*>
 
 ![Building Ontology](images/BuildingOntologyRoadmap.jpg)
 
@@ -23,6 +25,8 @@ We selected RealEstateCore ontology foundation over other candidates for several
   * Familiarity with and commitment to Azure, Azure IoT, and Digital Twins.
 
 ## Ontology Structure
+
+<*work in progress*>
 
 RealEstateCore consists of a set of modules, which in the current version include:
   * **Agent** - Basic types of agents (people, organizations, groups), structurally aligned with FOAF.
