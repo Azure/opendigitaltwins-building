@@ -7,7 +7,7 @@ Although [Digital Twins Definition Language (DTDL)](https://github.com/Azure/ope
 
 Our motivation is to provide an open-source DTDL building ontology definition which learns from, builds on, and/or uses industry standards, meets the needs of downstream developers, and will be widely adopted and/or extended by the industry.
 
-<*explain why this is the recommeded building ontology that Microsoft recommands for smart building solutions built with Azure Digital Twins*>
+<*explain why this is the recommeded building ontology for smart building solutions built with Azure Digital Twins*>
 
 ![Building Ontology](images/BuildingOntologyRoadmap.jpg)
 
