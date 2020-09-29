@@ -301,9 +301,10 @@ namespace OWL2DTDL
                     foreach (OntologyClass superClass in namedSuperClasses.Take(2))
                     {
                         // Only include non-deprecated subclass relations
-                        if (PropertyAssertionIsDeprecated(oClass.GetUriNode(), Tools.CopyNode(rdfType, _ontologyGraph).AsUriNode(), superClass.GetUriNode()))
+                        IUriNode rdfsSubClassOf = _ontologyGraph.CreateUriNode(RDFS.subClassOf);
+                        if (PropertyAssertionIsDeprecated(oClass.GetUriNode(), rdfsSubClassOf, superClass.GetUriNode()))
                         {
-                            break;
+                            continue;
                         }
                         string superInterfaceDTMI = GetDTMI(superClass);
                         IUriNode superInterfaceNode = dtdlModel.CreateUriNode(UriFactory.Create(superInterfaceDTMI));

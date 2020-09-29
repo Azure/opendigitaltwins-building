@@ -25,6 +25,7 @@ namespace OWL2DTDL.VocabularyHelper
     public static class RDFS
     {
         public static readonly Uri label = new Uri("http://www.w3.org/2000/01/rdf-schema#label");
+        public static readonly Uri subClassOf = new Uri("http://www.w3.org/2000/01/rdf-schema#subClassOf");
         public static readonly Uri Datatype = new Uri("http://www.w3.org/2000/01/rdf-schema#Datatype");
         public static readonly Uri Literal = new Uri("http://www.w3.org/2000/01/rdf-schema#Literal");
     }
