@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:ITHardware;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "IT Hardware"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:ITEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

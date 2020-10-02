@@ -1,0 +1,21 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:ConveyanceEquipment;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "description": {
+      "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+    },
+    "displayName": {
+      "en": "type"
+    },
+    "name": "type",
+    "schema": "string",
+    "writable": true
+  },
+  "displayName": {
+    "en": "Conveyance Equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:MountedEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

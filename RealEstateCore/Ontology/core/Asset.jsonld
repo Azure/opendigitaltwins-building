@@ -1,6 +1,216 @@
 {
   "@id": "dtmi:org:w3id:rec:core:Asset;1",
   "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "located in"
+      },
+      "minMultiplicity": 0,
+      "name": "locatedIn",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "servicedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "manufacturedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "installedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "commissionedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that a given Asset hosts a logical device; e.g., a Raspberry Pi hosts a Home Assistant installation, or an IoT-connect smart camera unit hosts an IoT Edge runtime."
+      },
+      "displayName": {
+        "en": "hosts"
+      },
+      "name": "hosts"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has capability"
+      },
+      "name": "hasCapability",
+      "target": "dtmi:org:w3id:rec:core:Capability;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy."
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:core:Asset;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property."
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:core:Asset;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The asset that a given asset, sensor, or actuator works for/services. For example, an air-treatment Asset might serve an air diffuser Asset."
+      },
+      "displayName": {
+        "en": "serves asset"
+      },
+      "name": "servesAsset",
+      "target": "dtmi:org:w3id:rec:core:Asset;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The coverage or impact area of a given asset, sensor, or actuator. For example: an air-treatment Asset might serve several Rooms or a full Building."
+      },
+      "displayName": {
+        "en": "serves space"
+      },
+      "name": "servesSpace",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "commission date"
+      },
+      "name": "commissionDate",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "expected end-of-life"
+      },
+      "name": "expectedEndOfLife",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "expected life"
+      },
+      "name": "expectedLife",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "expected replacement cost"
+      },
+      "name": "expectedReplacementCost",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "initialCost",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "installation date"
+      },
+      "name": "installationDate",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maintenance interval"
+      },
+      "name": "maintenanceInterval",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "turnover date"
+      },
+      "name": "turnoverDate",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "IP address"
+      },
+      "name": "IPAddress",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Extra information about an object that is of a more exceptional character. E.g. \"This Device needs to be replaced no later than 2020\", \"Note: Black color is used to mark warmwater inlet\""
+      },
+      "displayName": {
+        "en": "has comment"
+      },
+      "name": "hasComment",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "model number"
+      },
+      "name": "modelNumber",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "physical tag number"
+      },
+      "name": "physicalTagNumber",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "serial number"
+      },
+      "name": "serialNumber",
+      "schema": "string",
+      "writable": true
+    }
+  ],
   "description": {
     "en": "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."
   },

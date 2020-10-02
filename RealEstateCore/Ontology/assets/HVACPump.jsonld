@@ -1,0 +1,83 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:HVACPump;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "vertical",
+            "name": "vertical"
+          },
+          {
+            "enumValue": "inline",
+            "name": "inline"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "pumpingMedia",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Pressure",
+        "Property"
+      ],
+      "displayName": {
+        "en": "pressure capacity"
+      },
+      "name": "pressureCapacity",
+      "schema": "double",
+      "unit": "poundPerSquareInch",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "foot of head"
+      },
+      "displayName": {
+        "en": "head capacity"
+      },
+      "name": "headCapacity",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
+      "description": {
+        "en": "litres per minute"
+      },
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "HVAC pump"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

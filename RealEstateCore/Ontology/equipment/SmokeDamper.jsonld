@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:equipment:SmokeDamper;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Smoke Damper"
-  },
-  "extends": "dtmi:org:w3id:rec:equipment:Damper;1",
-  "@context": "dtmi:dtdl:context;2"
-}

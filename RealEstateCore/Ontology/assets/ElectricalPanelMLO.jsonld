@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:ElectricalPanelMLO;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": [
+      "Current",
+      "Property"
+    ],
+    "displayName": {
+      "en": "mains rating"
+    },
+    "name": "mainsRating",
+    "schema": "double",
+    "unit": "ampere",
+    "writable": true
+  },
+  "displayName": {
+    "en": "Electrical panelboard MLO"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:ElectricalPanel;1",
+  "@context": "dtmi:dtdl:context;2"
+}

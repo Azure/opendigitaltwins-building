@@ -1,0 +1,97 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:UnitHeater;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "vertical",
+            "name": "vertical"
+          },
+          {
+            "enumValue": "horizontal",
+            "name": "horizontal"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "name": "nominalHeatingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
+      "name": "nominalAirflow",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "heatingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Steam",
+            "name": "Steam"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "Gas",
+            "name": "Gas"
+          },
+          {
+            "enumValue": "Electric",
+            "name": "Electric"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "name": "fanMotorPower",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Unit heater"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

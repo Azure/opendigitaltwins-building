@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:equipment:HVACPump;1",
-  "@type": "Interface",
-  "extends": "dtmi:org:w3id:rec:equipment:HVACEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
-}

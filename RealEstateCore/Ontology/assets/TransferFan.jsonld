@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:TransferFan;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Transfer Fan"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:Fan;1",
+  "@context": "dtmi:dtdl:context;2"
+}

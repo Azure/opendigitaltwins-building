@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:equipment:FanPoweredBoxReheat;1",
-  "@type": "Interface",
-  "extends": "dtmi:org:w3id:rec:equipment:FanPoweredBox;1",
-  "@context": "dtmi:dtdl:context;2"
-}

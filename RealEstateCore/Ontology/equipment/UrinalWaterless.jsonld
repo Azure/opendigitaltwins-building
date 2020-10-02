@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:equipment:UrinalWaterless;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Urinal - Waterless"
-  },
-  "extends": "dtmi:org:w3id:rec:equipment:Urinal;1",
-  "@context": "dtmi:dtdl:context;2"
-}

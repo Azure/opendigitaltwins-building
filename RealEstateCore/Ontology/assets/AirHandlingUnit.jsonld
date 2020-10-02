@@ -1,0 +1,451 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:AirHandlingUnit;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "primary cooling method"
+      },
+      "name": "primaryCoolingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "DX",
+            "name": "DX"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "pre-heating method"
+      },
+      "name": "preHeatingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "Gas",
+            "name": "Gas"
+          },
+          {
+            "enumValue": "Electric",
+            "name": "Electric"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "nominal cooling capacity"
+      },
+      "name": "nominalCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "net sensible cooling capacity"
+      },
+      "name": "netSensibleCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "humidification method"
+      },
+      "name": "humidificationMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Ultrasonic",
+            "name": "Ultrasonic"
+          },
+          {
+            "enumValue": "Steam",
+            "name": "Steam"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
+            "enumValue": "Adiabatic",
+            "name": "Adiabatic"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "filter type"
+      },
+      "name": "filterType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "discharge ductwork configuration"
+      },
+      "name": "dischargeDuctworkConfiguration",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "TripleDuct",
+            "name": "TripleDuct"
+          },
+          {
+            "enumValue": "SingleDuct",
+            "name": "SingleDuct"
+          },
+          {
+            "enumValue": "DualDuct",
+            "name": "DualDuct"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "dehumidification method"
+      },
+      "name": "dehumidificationMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WrapAroundCoil",
+            "name": "WrapAroundCoil"
+          },
+          {
+            "enumValue": "TieredCooling",
+            "name": "TieredCooling"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
+            "enumValue": "DualWheel",
+            "name": "DualWheel"
+          },
+          {
+            "enumValue": "Desiccant",
+            "name": "Desiccant"
+          },
+          {
+            "enumValue": "CoolReheat",
+            "name": "CoolReheat"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "airflow modulation"
+      },
+      "name": "airflowModulation",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "VariableVolume",
+            "name": "VariableVolume"
+          },
+          {
+            "enumValue": "ConstantVolume",
+            "name": "ConstantVolume"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "primary heating method"
+      },
+      "name": "primaryHeatingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Electric",
+            "name": "Electric"
+          },
+          {
+            "enumValue": "Gas",
+            "name": "Gas"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "re-heating method"
+      },
+      "name": "reHeatingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Electric",
+            "name": "Electric"
+          },
+          {
+            "enumValue": "Gas",
+            "name": "Gas"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "refrigerant type"
+      },
+      "name": "refrigerentType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "Power"
+      ],
+      "displayName": {
+        "en": "return fan motor size"
+      },
+      "name": "returnFanMotorSize",
+      "schema": "double",
+      "unit": "horsepower",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "VolumeFlowRate"
+      ],
+      "displayName": {
+        "en": "return fan nominal airflow"
+      },
+      "name": "returnFanNominalAirflow",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "secondary cooling method"
+      },
+      "name": "secondaryCoolingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          },
+          {
+            "enumValue": "DX",
+            "name": "DX"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "Power"
+      ],
+      "displayName": {
+        "en": "supply fan motor size"
+      },
+      "name": "supplyFanMotorSize",
+      "schema": "double",
+      "unit": "horsepower",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "VolumeFlowRate"
+      ],
+      "displayName": {
+        "en": "supply fan nominal airflow"
+      },
+      "name": "supplyFanNominalAirflow",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "ventilation configuration"
+      },
+      "name": "ventilationConfiguration",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "MixedAir",
+            "name": "MixedAir"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
+            "enumValue": "OA",
+            "name": "OA"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "ventilation strategy"
+      },
+      "name": "ventilationStrategy",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Demand",
+            "name": "Demand"
+          },
+          {
+            "enumValue": "DemandEconomizing",
+            "name": "DemandEconomizing"
+          },
+          {
+            "enumValue": "Economizing",
+            "name": "Economizing"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "zone delivery"
+      },
+      "name": "zoneDelivery",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "ChilledBeamZone",
+            "name": "ChilledBeamZone"
+          },
+          {
+            "enumValue": "DirectZone",
+            "name": "DirectZone"
+          },
+          {
+            "enumValue": "MultiZone",
+            "name": "MultiZone"
+          },
+          {
+            "enumValue": "VAVZone",
+            "name": "VAVZone"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Air Handling Unit"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

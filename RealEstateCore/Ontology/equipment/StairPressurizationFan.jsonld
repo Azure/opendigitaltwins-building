@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:equipment:StairPressurizationFan;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Stair Pressurization Fan"
-  },
-  "extends": "dtmi:org:w3id:rec:equipment:Fan;1",
-  "@context": "dtmi:dtdl:context;2"
-}

@@ -1,0 +1,62 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:FireSprinklerHead;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Upright",
+            "name": "Upright"
+          },
+          {
+            "enumValue": "SideWall",
+            "name": "SideWall"
+          },
+          {
+            "enumValue": "Pendant",
+            "name": "Pendant"
+          },
+          {
+            "enumValue": "ConcealedPendant",
+            "name": "ConcealedPendant"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "K-factor (metric)"
+      },
+      "name": "kFactorMetric",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "K-factor (imperial)"
+      },
+      "name": "kFactorImperial",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Fire Sprinkler Head"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:SprinklerEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

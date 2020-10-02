@@ -1,6 +1,30 @@
 {
   "@id": "dtmi:org:w3id:rec:core:Capability;1",
   "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The coverage or impact area of a given asset, sensor, or actuator. For example: an air-treatment Asset might serve several Rooms or a full Building."
+      },
+      "displayName": {
+        "en": "serves space"
+      },
+      "name": "servesSpace",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The asset that a given asset, sensor, or actuator works for/services. For example, an air-treatment Asset might serve an air diffuser Asset."
+      },
+      "displayName": {
+        "en": "serves asset"
+      },
+      "name": "servesAsset",
+      "target": "dtmi:org:w3id:rec:core:Asset;1"
+    }
+  ],
   "description": {
     "en": "A Capability indicates the capacity of a rec entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point\". Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system."
   },

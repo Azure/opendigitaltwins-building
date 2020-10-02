@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:SteamUnitHeater;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Steam unit heater"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:UnitHeater;1",
+  "@context": "dtmi:dtdl:context;2"
+}

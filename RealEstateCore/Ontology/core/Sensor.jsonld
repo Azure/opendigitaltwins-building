@@ -10,32 +10,21 @@
     },
     {
       "@type": "Relationship",
-      "displayName": {
-        "en": "generated observation"
-      },
-      "name": "generatedObservation",
-      "target": "dtmi:org:w3id:rec:core:Observation;1"
-    },
-    {
-      "@type": "Relationship",
       "description": {
-        "en": "The actuator that a sensor is configured or designed to observe."
-      },
-      "displayName": {
-        "en": "observes actuator"
-      },
-      "name": "observesActuator",
-      "target": "dtmi:org:w3id:rec:device:Actuator;1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for."
+        "en": "Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for. This allows systems to perform graph propagation of sensor values, e.g., letting a temperature sensor that observes a given room set the temperature for that room."
       },
       "displayName": {
         "en": "observes"
       },
       "name": "observes"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "generated observation"
+      },
+      "name": "generatedObservation",
+      "target": "dtmi:org:w3id:rec:core:Observation;1"
     },
     {
       "@type": "Relationship",

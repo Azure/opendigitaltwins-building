@@ -1,0 +1,102 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:Chiller;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WaterCooled",
+            "name": "WaterCooled"
+          },
+          {
+            "enumValue": "AirCooled",
+            "name": "AirCooled"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "refrigerant type"
+      },
+      "name": "refrigerentType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "nominal cooling capacity"
+      },
+      "name": "nominalCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "net sensible cooling capacity"
+      },
+      "name": "netSensibleCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "compressorType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Scroll",
+            "name": "Scroll"
+          },
+          {
+            "enumValue": "Screw",
+            "name": "Screw"
+          },
+          {
+            "enumValue": "Reciprocol",
+            "name": "Reciprocol"
+          },
+          {
+            "enumValue": "Centrifugal",
+            "name": "Centrifugal"
+          },
+          {
+            "enumValue": "Absorption",
+            "name": "Absorption"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Chiller"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:equipment:LightingController;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Lighting Controller"
-  },
-  "extends": "dtmi:org:w3id:rec:equipment:LightingEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
-}

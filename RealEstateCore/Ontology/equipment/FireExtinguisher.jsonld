@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:equipment:FireExtinguisher;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Fire Extinguisher"
-  },
-  "extends": "dtmi:org:w3id:rec:equipment:FireSuppressionEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
-}

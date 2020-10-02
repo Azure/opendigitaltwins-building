@@ -7,9 +7,6 @@
   "displayName": {
     "en": "Room"
   },
-  "extends": [
-    "dtmi:org:w3id:rec:core:Space;1",
-    "dtmi:org:w3id:rec:core:BuildingComponent;1"
-  ],
+  "extends": "dtmi:org:w3id:rec:core:Space;1",
   "@context": "dtmi:dtdl:context;2"
 }

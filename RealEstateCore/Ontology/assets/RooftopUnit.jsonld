@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:RooftopUnit;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Rooftop Unit"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:AirHandlingUnit;1",
+  "@context": "dtmi:dtdl:context;2"
+}

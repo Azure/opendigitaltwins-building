@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Level;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "description": {
+      "en": "A number indicating the ordinal number of this level within the building. Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others."
+    },
+    "displayName": {
+      "en": "level number"
+    },
+    "name": "levelNumber",
+    "schema": "integer",
+    "writable": true
+  },
+  "description": {
+    "en": "The level of a building, a.k.a. storey, floor, etc."
+  },
+  "displayName": {
+    "en": "Level"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Space;1",
+  "@context": "dtmi:dtdl:context;2"
+}

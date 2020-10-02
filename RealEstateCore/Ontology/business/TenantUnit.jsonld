@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:org:w3id:rec:business:TenantUnit;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Indicates that a collection entity includes some member entity, e.g., a campus includes some building, an apartment includes some room, etc."
+    },
+    "displayName": {
+      "en": "includes"
+    },
+    "minMultiplicity": 0,
+    "name": "includes",
+    "target": "dtmi:org:w3id:rec:core:Space;1"
+  },
+  "description": {
+    "en": "A tenant unit is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant."
+  },
+  "displayName": {
+    "en": "Tenant unit"
+  },
+  "extends": "dtmi:org:w3id:rec:core:SpaceCollection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,100 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:CondensingUnit;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WaterCooled",
+            "name": "WaterCooled"
+          },
+          {
+            "enumValue": "AirCooled",
+            "name": "AirCooled"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "refrigerant type"
+      },
+      "name": "refrigerentType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "name": "nominalHeatingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "nominal cooling capacity"
+      },
+      "name": "nominalCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "name": "netSensibleHeatingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "net sensible cooling capacity"
+      },
+      "name": "netSensibleCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "energy efficiency ratio"
+      },
+      "name": "eer",
+      "schema": "float",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Condensing unit"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

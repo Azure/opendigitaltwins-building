@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:FireAlarmEquipment;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Fire Alarm Equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:FireProtectionEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

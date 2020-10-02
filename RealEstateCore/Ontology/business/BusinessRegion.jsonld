@@ -4,12 +4,21 @@
   "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
-      "en": "has member"
+      "en": "Indicates that a collection entity includes some member entity, e.g., a campus includes some building, an apartment includes some room, etc."
+    },
+    "displayName": {
+      "en": "includes"
     },
     "minMultiplicity": 0,
-    "name": "hasMember",
+    "name": "includes",
     "target": "dtmi:org:w3id:rec:core:Space;1"
   },
-  "extends": "dtmi:org:w3id:rec:core:Collection;1",
+  "description": {
+    "en": "A region consisting of a set of included spaces, that serves some specific business/organizational purpose. E.g., \"EMEA\", \"The Back Bay\", \"New England\", etc."
+  },
+  "displayName": {
+    "en": "Business region"
+  },
+  "extends": "dtmi:org:w3id:rec:core:SpaceCollection;1",
   "@context": "dtmi:dtdl:context;2"
 }

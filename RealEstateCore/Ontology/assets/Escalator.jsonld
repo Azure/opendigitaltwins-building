@@ -1,0 +1,63 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:Escalator;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": [
+        "Length",
+        "Property"
+      ],
+      "displayName": {
+        "en": "step width"
+      },
+      "name": "stepWidth",
+      "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Length",
+        "Property"
+      ],
+      "displayName": {
+        "en": "maximum vertical rise"
+      },
+      "name": "maxVerticalRise",
+      "schema": "double",
+      "unit": "metre",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Velocity",
+        "Property"
+      ],
+      "displayName": {
+        "en": "maximum travel speed"
+      },
+      "name": "maxTravelSpeed",
+      "schema": "double",
+      "unit": "metrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Angle",
+        "Property"
+      ],
+      "displayName": {
+        "en": "inclination"
+      },
+      "name": "inclination",
+      "schema": "double",
+      "unit": "degreeOfArc",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Escalator"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:ConveyanceEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

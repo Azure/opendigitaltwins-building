@@ -4,8 +4,44 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Relationship",
-      "name": "sensorInterface",
-      "target": "dtmi:org:w3id:rec:core:SensorInterface;1"
+      "description": {
+        "en": "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property."
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that a REC entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment."
+      },
+      "displayName": {
+        "en": "included in"
+      },
+      "name": "includedIn",
+      "target": "dtmi:org:w3id:rec:core:Collection;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy."
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has capability"
+      },
+      "name": "hasCapability",
+      "target": "dtmi:org:w3id:rec:core:Capability;1"
     },
     {
       "@type": "Relationship",
@@ -18,16 +54,6 @@
       "minMultiplicity": 0,
       "name": "hasGeometry",
       "target": "dtmi:net:opengis:www:ont:geosparql:Geometry;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "superSpace",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "subSpaces",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
     }
   ],
   "description": {

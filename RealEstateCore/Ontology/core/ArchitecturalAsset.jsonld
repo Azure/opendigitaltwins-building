@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:core:ArchitecturalAsset;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Architectural asset"
-  },
-  "extends": "dtmi:org:w3id:rec:core:Asset;1",
-  "@context": "dtmi:dtdl:context;2"
-}

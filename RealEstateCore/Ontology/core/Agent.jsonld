@@ -34,6 +34,16 @@
         "en": "account"
       },
       "name": "account"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that an agent is the legal owner of a given REC entity, e.g., a Company owns some Real Estate."
+      },
+      "displayName": {
+        "en": "owns"
+      },
+      "name": "owns"
     }
   ],
   "description": {

@@ -1,0 +1,123 @@
+{
+  "@id": "dtmi:org:w3id:rec:assets:FanCoilUnit;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "vertical",
+            "name": "vertical"
+          },
+          {
+            "enumValue": "horizontal",
+            "name": "horizontal"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "refrigerant type"
+      },
+      "name": "refrigerentType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "nominal cooling capacity"
+      },
+      "name": "nominalCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
+      "name": "nominalAirflow",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "net sensible cooling capacity"
+      },
+      "name": "netSensibleCoolingCapacity",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "filter type"
+      },
+      "name": "filterType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "name": "fanMotorPower",
+      "schema": "double",
+      "unit": "horsepower",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "coolingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
+            "enumValue": "DX",
+            "name": "DX"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Fan coil unit"
+  },
+  "extends": "dtmi:org:w3id:rec:assets:TerminalUnit;1",
+  "@context": "dtmi:dtdl:context;2"
+}
