@@ -67,6 +67,7 @@ namespace OWL2DTDL.VocabularyHelper
             public static readonly Uri A = new Uri("http://qudt.org/vocab/unit/A");
             public static readonly Uri CentiM = new Uri("http://qudt.org/vocab/unit/CentiM");
             public static readonly Uri DEG = new Uri("http://qudt.org/vocab/unit/DEG");
+            public static readonly Uri DEG_C = new Uri("http://qudt.org/vocab/unit/DEG_C");
             public static readonly Uri HP = new Uri("http://qudt.org/vocab/unit/HP");
             public static readonly Uri HR = new Uri("http://qudt.org/vocab/unit/HR");
             public static readonly Uri KiloGM = new Uri("http://qudt.org/vocab/unit/KiloGM");
@@ -94,6 +95,7 @@ namespace OWL2DTDL.VocabularyHelper
             public static readonly Uri Mass = new Uri("http://qudt.org/vocab/quantitykind/Mass");
             public static readonly Uri Pressure = new Uri("http://qudt.org/vocab/quantitykind/Pressure");
             public static readonly Uri Time = new Uri("http://qudt.org/vocab/quantitykind/Time");
+            public static readonly Uri Temperature = new Uri("http://qudt.org/vocab/quantitykind/Temperature");
             public static readonly Uri Velocity = new Uri("http://qudt.org/vocab/quantitykind/Velocity");
             public static readonly Uri Voltage = new Uri("http://qudt.org/vocab/quantitykind/Voltage");
             public static readonly Uri Volume = new Uri("http://qudt.org/vocab/quantitykind/Volume");
@@ -142,6 +144,7 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri ampere = new Uri("dtmi:standard:unit:ampere;2");
         public static readonly Uri volt = new Uri("dtmi:standard:unit:volt;2");
         public static readonly Uri centimetre = new Uri("dtmi:standard:unit:centimetre;2");
+        public static readonly Uri degreeCelsius = new Uri("dtmi:standard:unit:degreeCelsius;2");
         public static readonly Uri degreeOfArc = new Uri("dtmi:standard:unit:degreeOfArc;2");
         public static readonly Uri horsepower = new Uri("dtmi:standard:unit:horsepower;2");
         public static readonly Uri hour = new Uri("dtmi:standard:unit:hour;2");
@@ -166,6 +169,7 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri Pressure = new Uri("dtmi:standard:class:Pressure;2");
         public static readonly Uri Length = new Uri("dtmi:standard:class:Length;2");
         public static readonly Uri Mass = new Uri("dtmi:standard:class:Mass;2");
+        public static readonly Uri Temperature = new Uri("dtmi:standard:class:Temperature;2");
         public static readonly Uri TimeSpan = new Uri("dtmi:standard:class:TimeSpan;2");
         public static readonly Uri Volume = new Uri("dtmi:standard:class:Volume;2");
         public static readonly Uri Velocity = new Uri("dtmi:standard:class:Velocity;2");
