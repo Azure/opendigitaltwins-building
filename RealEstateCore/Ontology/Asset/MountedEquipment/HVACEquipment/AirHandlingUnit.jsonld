@@ -12,16 +12,16 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
             "enumValue": "DX",
             "name": "DX"
           },
           {
             "enumValue": "ChilledWater",
             "name": "ChilledWater"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
           }
         ],
         "valueSchema": "string"

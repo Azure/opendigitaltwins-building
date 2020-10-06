@@ -39,7 +39,8 @@
       "displayName": {
         "en": "hosts"
       },
-      "name": "hosts"
+      "name": "hosts",
+      "target": "dtmi:org:w3id:rec:core:LogicalDevice;1"
     },
     {
       "@type": "Relationship",
