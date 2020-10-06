@@ -5,3 +5,9 @@ https://w3id.org/rec/core/MeasurementUnit;Measurement units and quantity kinds a
 https://w3id.org/rec/core/QuantityKind;
 https://w3id.org/rec/core/DataSchema;Data schemas will be handled through Telemetry and Command generation
 http://qudt.org;"QUDT-based datatypes are used to generate DTDL Semantic Types; they are not themselves translated to interfaces"
+https://w3id.org/rec/analytics/;REC analytics are out-of-scope for DTDL models
+https://w3id.org/rec/device/Communication;REC device communications are out-of-scope for DTDL models
+https://w3id.org/rec/device/DeviceEvents;The REC observation and device event models are out-of-scope for DTDL models
+https://w3id.org/rec/core/Observation;The REC observation and device event models are out-of-scope for DTDL models
+https://w3id.org/rec/device/PlacementContext;REC placement contexts should probably be expressed as properties in DTDL
+https://w3id.org/rec/core/Information;The REC Information class is intangible and probably not fit for instantiation as DT
