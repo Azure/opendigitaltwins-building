@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Server;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Server"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ITHardware;1",
+  "@context": "dtmi:dtdl:context;2"
+}

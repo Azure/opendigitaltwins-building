@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:CAVBox;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "CAV box"
-  },
-  "extends": "dtmi:org:w3id:rec:assets:TerminalUnit;1",
-  "@context": "dtmi:dtdl:context;2"
-}

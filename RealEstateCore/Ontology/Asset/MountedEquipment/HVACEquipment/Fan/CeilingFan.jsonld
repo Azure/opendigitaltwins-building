@@ -1,0 +1,29 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:CeilingFan;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum rotation speed"
+      },
+      "name": "maxRotationSpeed",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "blade diameter"
+      },
+      "name": "bladeDiameter",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Ceiling Fan"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Fan;1",
+  "@context": "dtmi:dtdl:context;2"
+}

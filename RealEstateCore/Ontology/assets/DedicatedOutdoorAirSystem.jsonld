@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:DedicatedOutdoorAirSystem;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Dedicated Outdoor Air System"
-  },
-  "extends": "dtmi:org:w3id:rec:assets:AirHandlingUnit;1",
-  "@context": "dtmi:dtdl:context;2"
-}

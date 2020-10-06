@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:core:Status;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Status"
-  },
-  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
-  "@context": "dtmi:dtdl:context;2"
-}

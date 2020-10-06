@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:BackdraftDamper;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Backdraft Damper"
-  },
-  "extends": "dtmi:org:w3id:rec:assets:Damper;1",
-  "@context": "dtmi:dtdl:context;2"
-}

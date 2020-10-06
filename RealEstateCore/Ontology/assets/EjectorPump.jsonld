@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:EjectorPump;1",
-  "@type": "Interface",
-  "extends": "dtmi:org:w3id:rec:assets:PlumbingPump;1",
-  "@context": "dtmi:dtdl:context;2"
-}

@@ -1,0 +1,39 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:FanPoweredBoxReheat;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "displayName": {
+      "en": "re-heating method"
+    },
+    "name": "reHeatingMethod",
+    "dtmi:dtdl:property:schema;2": {
+      "@type": "Enum",
+      "dtmi:dtdl:property:enumValues;2": [
+        {
+          "enumValue": "None",
+          "name": "None"
+        },
+        {
+          "enumValue": "HotWater",
+          "name": "HotWater"
+        },
+        {
+          "enumValue": "Gas",
+          "name": "Gas"
+        },
+        {
+          "enumValue": "Electric",
+          "name": "Electric"
+        }
+      ],
+      "valueSchema": "string"
+    },
+    "writable": true
+  },
+  "displayName": {
+    "en": "Fan powered box with reheat"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:FanPoweredBox;1",
+  "@context": "dtmi:dtdl:context;2"
+}

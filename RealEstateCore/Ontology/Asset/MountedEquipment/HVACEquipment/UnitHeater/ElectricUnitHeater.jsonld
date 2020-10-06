@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ElectricUnitHeater;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": [
+      "Power",
+      "Property"
+    ],
+    "displayName": {
+      "en": "power input"
+    },
+    "name": "powerInput",
+    "schema": "double",
+    "unit": "watt",
+    "writable": true
+  },
+  "displayName": {
+    "en": "Electric unit heater"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:UnitHeater;1",
+  "@context": "dtmi:dtdl:context;2"
+}

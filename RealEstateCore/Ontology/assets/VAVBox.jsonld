@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:VAVBox;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "VAV box"
-  },
-  "extends": "dtmi:org:w3id:rec:assets:TerminalUnit;1",
-  "@context": "dtmi:dtdl:context;2"
-}

@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:ChilledWaterPlant;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Chilled water plant"
-  },
-  "extends": "dtmi:org:w3id:rec:assets:HVACEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
-}

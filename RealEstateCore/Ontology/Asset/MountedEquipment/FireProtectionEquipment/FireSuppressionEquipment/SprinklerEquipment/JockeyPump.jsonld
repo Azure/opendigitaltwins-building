@@ -1,0 +1,66 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:JockeyPump;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "pumpingMedia",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Pressure",
+        "Property"
+      ],
+      "displayName": {
+        "en": "pressure capacity"
+      },
+      "name": "pressureCapacity",
+      "schema": "double",
+      "unit": "poundPerSquareInch",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "foot of head"
+      },
+      "displayName": {
+        "en": "head capacity"
+      },
+      "name": "headCapacity",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "litres per minute"
+      },
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Jockey Pump"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:SprinklerEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

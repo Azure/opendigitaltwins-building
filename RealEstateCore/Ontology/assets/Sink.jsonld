@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:Sink;1",
-  "@type": "Interface",
-  "extends": "dtmi:org:w3id:rec:assets:PlumbingFixture;1",
-  "@context": "dtmi:dtdl:context;2"
-}

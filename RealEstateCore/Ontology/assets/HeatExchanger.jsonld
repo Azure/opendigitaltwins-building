@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:assets:HeatExchanger;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Heat exchanger"
-  },
-  "extends": "dtmi:org:w3id:rec:assets:HVACEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
-}

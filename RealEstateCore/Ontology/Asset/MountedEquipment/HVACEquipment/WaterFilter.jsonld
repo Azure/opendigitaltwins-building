@@ -1,0 +1,71 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:WaterFilter;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": [
+        "Pressure",
+        "Property"
+      ],
+      "name": "workingPressure",
+      "schema": "double",
+      "unit": "poundPerSquareInch",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Volume",
+        "Property"
+      ],
+      "displayName": {
+        "en": "tank capacity"
+      },
+      "name": "tankCapacity",
+      "schema": "double",
+      "unit": "litre",
+      "writable": true
+    },
+    {
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
+      "description": {
+        "en": "litres per minute"
+      },
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "microns"
+      },
+      "name": "filtrationRating",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Water filter"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
