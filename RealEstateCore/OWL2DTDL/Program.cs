@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using OWL2DTDL.VocabularyHelper;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -277,7 +278,7 @@ namespace OWL2DTDL
             Console.WriteLine("Generating DTDL Interface declarations: ");
 
             // Start looping through named, non-deprecated, non-ignored classes
-            foreach (OntologyClass oClass in _ontologyGraph.OwlClasses.Where(oClass => oClass.IsNamed() && !oClass.IsDeprecated() && !IsIgnored(oClass)))
+            foreach (OntologyClass oClass in _ontologyGraph.OwlClasses.Where(oClass => oClass.IsNamed() && !oClass.IsDeprecated() && !IsIgnored(oClass) && !oClass.SuperClasses.Any(parent => parent.IsNamed() && IsIgnored(parent))))
             {
                 // Create Interface
                 string interfaceDtmi = GetDTMI(oClass);
