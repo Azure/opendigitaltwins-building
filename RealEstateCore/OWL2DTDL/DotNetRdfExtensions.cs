@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OWL2DTDL.VocabularyHelper;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -166,6 +167,43 @@ namespace OWL2DTDL
                 }
             }
             return largestParentDepth + 1;
+        }
+
+        public static List<string> ShortestParentPathToOwlThing(this OntologyClass oClass)
+        {
+            IUriNode rdfsSubClassOf = oClass.Graph.CreateUriNode(RDFS.subClassOf);
+            IEnumerable<OntologyClass> directSuperClasses = oClass.DirectSuperClasses.Where(
+                parentClass => 
+                    parentClass.IsNamed() && 
+                    !parentClass.IsDeprecated() &&
+                    !Program.PropertyAssertionIsDeprecated(oClass.GetUriNode(), rdfsSubClassOf, parentClass.GetUriNode())
+            );
+
+            // If we have no superclass or one of our superclasses is OWL:Thing, then we have reached the top level; return
+            if (directSuperClasses.Count() < 1 || directSuperClasses.Any(superClass => superClass.IsOwlThing()))
+            {
+                return new List<string>();
+            }
+            else
+            {
+                // Assume the first parent has the shortest path; if not, it will be replaced in subsequent foreach
+                OntologyClass shortestParent = directSuperClasses.First();
+                List<string> shortestParentPath = shortestParent.ShortestParentPathToOwlThing();
+                // Iterate through the other parents to see if any is shorter
+                foreach (OntologyClass possibleSuperClass in directSuperClasses.Skip(1))
+                {
+                    List<string> possibleSuperClassParents = possibleSuperClass.ShortestParentPathToOwlThing();
+                    if (possibleSuperClassParents.Count() < shortestParentPath.Count())
+                    {
+                        shortestParent = possibleSuperClass;
+                        shortestParentPath = possibleSuperClassParents;
+                    }
+                }
+
+                // At this point shortestParentPath + shortestParent should together contain the shortest path to the root; return them
+                shortestParentPath.Add(shortestParent.GetLocalName());
+                return shortestParentPath;
+            }
         }
 
         public static bool IsRestriction(this OntologyClass oClass)

@@ -469,9 +469,9 @@ namespace OWL2DTDL
                 interfaceDepths.Add(modelAsJsonLd, oClass.Depth());
 
                 if (!_mergedOutput) {
-                    // Create model output directory based on output path and shortname of model namespace
-                    string modelPrefix = namespacePrefixes[oClass.GetNamespace()];
-                    string modelOutputPath = $"{_outputPath}/{modelPrefix}/";  
+                    // Create model output directory based on output path and shortest parent path
+                    string modelPath = string.Join("/", oClass.ShortestParentPathToOwlThing());
+                    string modelOutputPath = $"{_outputPath}/{modelPath}/";
                     Directory.CreateDirectory(modelOutputPath);
                     string outputFileName = modelOutputPath + oClass.GetLocalName() + ".jsonld";
                     using (StreamWriter file = File.CreateText(outputFileName))
@@ -503,7 +503,8 @@ namespace OWL2DTDL
             }
         }
 
-        private static bool PropertyAssertionIsDeprecated(INode subj, IUriNode pred, INode obj)
+        // TODO: move this into the DotNetRdfExtensions class
+        internal static bool PropertyAssertionIsDeprecated(INode subj, IUriNode pred, INode obj)
         {
             IUriNode owlAnnotatedSource = _ontologyGraph.CreateUriNode(OWL.annotatedSource);
             IUriNode owlAnnotatedProperty = _ontologyGraph.CreateUriNode(OWL.annotatedProperty);
