@@ -268,7 +268,7 @@ namespace OWL2DTDL
 
         public static bool IsOwlThing(this OntologyClass oClass)
         {
-            return oClass.IsNamed() && oClass.GetUri().AbsoluteUri.Equals(VocabularyHelper.OWL.Thing.AbsoluteUri);
+            return oClass.IsNamed() && oClass.GetUri().AbsoluteUri.Equals(OWL.Thing.AbsoluteUri);
         }
 
         public static bool IsXsdDatatype(this OntologyClass oClass)
