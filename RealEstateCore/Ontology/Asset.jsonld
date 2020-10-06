@@ -5,29 +5,32 @@
     {
       "@type": "Relationship",
       "displayName": {
-        "en": "located in"
+        "en": "serviced by"
       },
-      "minMultiplicity": 0,
-      "name": "locatedIn",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
-    },
-    {
-      "@type": "Relationship",
       "name": "servicedBy",
       "target": "dtmi:org:w3id:rec:core:Agent;1"
     },
     {
       "@type": "Relationship",
+      "displayName": {
+        "en": "manufactured by"
+      },
       "name": "manufacturedBy",
       "target": "dtmi:org:w3id:rec:core:Agent;1"
     },
     {
       "@type": "Relationship",
+      "displayName": {
+        "en": "installed by"
+      },
       "name": "installedBy",
       "target": "dtmi:org:w3id:rec:core:Agent;1"
     },
     {
       "@type": "Relationship",
+      "displayName": {
+        "en": "commissioned by"
+      },
       "name": "commissionedBy",
       "target": "dtmi:org:w3id:rec:core:Agent;1"
     },
@@ -41,6 +44,15 @@
       },
       "name": "hosts",
       "target": "dtmi:org:w3id:rec:core:LogicalDevice;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "located in"
+      },
+      "minMultiplicity": 0,
+      "name": "locatedIn",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
     },
     {
       "@type": "Relationship",
@@ -64,6 +76,17 @@
     {
       "@type": "Relationship",
       "description": {
+        "en": "Indicates that a REC entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment."
+      },
+      "displayName": {
+        "en": "included in"
+      },
+      "name": "includedIn",
+      "target": "dtmi:org:w3id:rec:core:Collection;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
         "en": "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property."
       },
       "displayName": {
@@ -75,24 +98,12 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "The asset that a given asset, sensor, or actuator works for/services. For example, an air-treatment Asset might serve an air diffuser Asset."
+        "en": "The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset."
       },
       "displayName": {
-        "en": "serves asset"
+        "en": "serves"
       },
-      "name": "servesAsset",
-      "target": "dtmi:org:w3id:rec:core:Asset;1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "The coverage or impact area of a given asset, sensor, or actuator. For example: an air-treatment Asset might serve several Rooms or a full Building."
-      },
-      "displayName": {
-        "en": "serves space"
-      },
-      "name": "servesSpace",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
+      "name": "serves"
     },
     {
       "@type": "Property",
@@ -132,6 +143,9 @@
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "initial cost"
+      },
       "name": "initialCost",
       "schema": "string",
       "writable": true

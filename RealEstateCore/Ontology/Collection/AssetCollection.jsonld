@@ -9,6 +9,7 @@
     "displayName": {
       "en": "includes"
     },
+    "minMultiplicity": 0,
     "name": "includes",
     "target": "dtmi:org:w3id:rec:core:Asset;1"
   },

@@ -6,6 +6,9 @@
       "Volume",
       "Property"
     ],
+    "displayName": {
+      "en": "water per flush"
+    },
     "name": "waterPerFlush",
     "schema": "double",
     "unit": "litre",

@@ -7,6 +7,9 @@
         "Pressure",
         "Property"
       ],
+      "displayName": {
+        "en": "working pressure"
+      },
       "name": "workingPressure",
       "schema": "double",
       "unit": "poundPerSquareInch",
@@ -14,9 +17,6 @@
     },
     {
       "@type": "Property",
-      "description": {
-        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
-      },
       "displayName": {
         "en": "type"
       },
@@ -57,6 +57,9 @@
       "@type": "Property",
       "description": {
         "en": "microns"
+      },
+      "displayName": {
+        "en": "filtration rating"
       },
       "name": "filtrationRating",
       "schema": "integer",

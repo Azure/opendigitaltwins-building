@@ -5,6 +5,36 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "primary heating method"
+      },
+      "name": "primaryHeatingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Electric",
+            "name": "Electric"
+          },
+          {
+            "enumValue": "Gas",
+            "name": "Gas"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "primary cooling method"
       },
       "name": "primaryCoolingMethod",
@@ -203,36 +233,6 @@
           {
             "enumValue": "ConstantVolume",
             "name": "ConstantVolume"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "primary heating method"
-      },
-      "name": "primaryHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
           }
         ],
         "valueSchema": "string"

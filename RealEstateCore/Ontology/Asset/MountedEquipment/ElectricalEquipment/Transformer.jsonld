@@ -30,9 +30,6 @@
     },
     {
       "@type": "Property",
-      "description": {
-        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
-      },
       "displayName": {
         "en": "type"
       },

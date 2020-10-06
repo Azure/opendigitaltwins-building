@@ -4,9 +4,6 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
-      "description": {
-        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
-      },
       "displayName": {
         "en": "type"
       },
@@ -94,6 +91,9 @@
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "drive type"
+      },
       "name": "driveType",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",

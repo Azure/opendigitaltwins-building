@@ -5,6 +5,25 @@
     {
       "@type": "Relationship",
       "description": {
+        "en": "Property that defines the legal owner(s) of a given REC entity."
+      },
+      "displayName": {
+        "en": "owned by"
+      },
+      "name": "ownedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "operated by"
+      },
+      "name": "operatedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
         "en": "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property."
       },
       "displayName": {
@@ -49,11 +68,27 @@
         "en": "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
       },
       "displayName": {
-        "en": "hasGeometry"
+        "en": "has geometry"
       },
       "minMultiplicity": 0,
       "name": "hasGeometry",
       "target": "dtmi:net:opengis:www:ont:geosparql:Geometry;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "constructed by"
+      },
+      "name": "constructedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "architected by"
+      },
+      "name": "architectedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
     }
   ],
   "description": {

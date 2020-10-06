@@ -7,6 +7,9 @@
         "Volume",
         "Property"
       ],
+      "displayName": {
+        "en": "water per flush"
+      },
       "name": "waterPerFlush",
       "schema": "double",
       "unit": "litre",
@@ -14,9 +17,6 @@
     },
     {
       "@type": "Property",
-      "description": {
-        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
-      },
       "displayName": {
         "en": "type"
       },
@@ -61,6 +61,9 @@
     },
     {
       "@type": "Relationship",
+      "displayName": {
+        "en": "mounted on"
+      },
       "name": "mountedOn"
     }
   ],

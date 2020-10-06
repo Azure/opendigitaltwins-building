@@ -20,6 +20,9 @@
         "VolumeFlowRate",
         "Property"
       ],
+      "displayName": {
+        "en": "nominal airflow"
+      },
       "name": "nominalAirflow",
       "schema": "double",
       "unit": "litrePerSecond",
@@ -46,6 +49,9 @@
         "Power",
         "Property"
       ],
+      "displayName": {
+        "en": "fan motor power"
+      },
       "name": "fanMotorPower",
       "schema": "double",
       "unit": "horsepower",

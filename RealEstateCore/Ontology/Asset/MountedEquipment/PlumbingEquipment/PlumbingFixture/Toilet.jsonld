@@ -7,6 +7,9 @@
         "Volume",
         "Property"
       ],
+      "displayName": {
+        "en": "water per flush"
+      },
       "name": "waterPerFlush",
       "schema": "double",
       "unit": "litre",
@@ -14,6 +17,9 @@
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "installation type"
+      },
       "name": "installationType",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",

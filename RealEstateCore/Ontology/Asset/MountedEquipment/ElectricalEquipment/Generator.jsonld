@@ -39,12 +39,18 @@
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "mode of operation"
+      },
       "name": "modeOfOperation",
       "schema": "string",
       "writable": true
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "fuel type"
+      },
       "name": "fuelType",
       "schema": "string",
       "writable": true
@@ -97,6 +103,19 @@
       "writable": true
     },
     {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "standby power rating"
+      },
+      "name": "standbyPower",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "prime power rating (KVA)"
@@ -111,20 +130,7 @@
         "Property"
       ],
       "displayName": {
-        "en": "standby power rating (Watt)"
-      },
-      "name": "standbyPower",
-      "schema": "double",
-      "unit": "watt",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Power",
-        "Property"
-      ],
-      "displayName": {
-        "en": "prime power rating (Watt)"
+        "en": "prime power rating"
       },
       "name": "primePower",
       "schema": "double",

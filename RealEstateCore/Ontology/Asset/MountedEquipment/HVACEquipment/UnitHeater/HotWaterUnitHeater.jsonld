@@ -20,6 +20,9 @@
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "condensate"
+      },
       "name": "condensate",
       "schema": "integer",
       "writable": true

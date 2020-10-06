@@ -4,9 +4,6 @@
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Property",
-      "description": {
-        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
-      },
       "displayName": {
         "en": "type"
       },
@@ -54,6 +51,9 @@
         "VolumeFlowRate",
         "Property"
       ],
+      "displayName": {
+        "en": "nominal airflow"
+      },
       "name": "nominalAirflow",
       "schema": "double",
       "unit": "litrePerSecond",
@@ -86,6 +86,9 @@
         "Power",
         "Property"
       ],
+      "displayName": {
+        "en": "fan motor power"
+      },
       "name": "fanMotorPower",
       "schema": "double",
       "unit": "horsepower",
@@ -93,6 +96,9 @@
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "cooling method"
+      },
       "name": "coolingMethod",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",

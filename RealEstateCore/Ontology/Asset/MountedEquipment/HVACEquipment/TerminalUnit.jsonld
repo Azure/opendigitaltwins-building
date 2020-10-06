@@ -69,6 +69,9 @@
     },
     {
       "@type": "Property",
+      "displayName": {
+        "en": "duct inlet configuration"
+      },
       "name": "ductInletConfiguration",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
