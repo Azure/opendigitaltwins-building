@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Server;1",
+  "@id": "dtmi:org:w3id:rec:asset:EthernetRouter;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
@@ -22,8 +22,8 @@
     }
   ],
   "displayName": {
-    "en": "Server"
+    "en": "Ethernet router"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ITHardware;1",
+  "extends": "dtmi:org:w3id:rec:asset:DataNetworkEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

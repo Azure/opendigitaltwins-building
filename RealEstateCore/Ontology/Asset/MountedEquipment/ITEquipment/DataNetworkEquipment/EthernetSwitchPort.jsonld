@@ -1,0 +1,35 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:EthernetSwitchPort;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "10/100/1000MB, 10GB"
+      },
+      "displayName": {
+        "en": "port speed"
+      },
+      "name": "portSpeed",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "1,2,3,4"
+      },
+      "displayName": {
+        "en": "PoE type"
+      },
+      "name": "poeType",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Ethernet switch port"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:DataNetworkEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

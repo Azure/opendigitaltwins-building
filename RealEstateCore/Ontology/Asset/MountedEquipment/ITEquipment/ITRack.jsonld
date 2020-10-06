@@ -1,0 +1,71 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ITRack;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values."
+      },
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "TwoPost",
+            "name": "TwoPost"
+          },
+          {
+            "enumValue": "FourPost",
+            "name": "FourPost"
+          },
+          {
+            "enumValue": "Cabinet",
+            "name": "Cabinet"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "mounting"
+      },
+      "name": "mounting",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Wall",
+            "name": "Wall"
+          },
+          {
+            "enumValue": "Floor",
+            "name": "Floor"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "height (rack units)"
+      },
+      "name": "heightRUs",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "IT Rack"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ITEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

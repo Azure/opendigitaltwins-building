@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ITHardware;1",
+  "@id": "dtmi:org:w3id:rec:asset:DataNetworkEquipment;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
@@ -24,7 +24,7 @@
     "target": "dtmi:org:w3id:rec:asset:ITRack;1"
   },
   "displayName": {
-    "en": "IT Hardware"
+    "en": "Data network equipment"
   },
   "extends": "dtmi:org:w3id:rec:asset:ITEquipment;1",
   "@context": "dtmi:dtdl:context;2"
