@@ -1,4 +1,4 @@
-# [RealEstateCore(REC)](https://www.realestatecore.io/)-based Building Ontology for smart building solutions built on [Azure Digital Twins](https://azure.microsoft.com/en-us/services/digital-twins/)
+# Building Ontology for smart building solutions built on [Azure Digital Twins](https://azure.microsoft.com/en-us/services/digital-twins/)
 
 
 ## Motivation & Purpose
@@ -9,19 +9,10 @@ Although DTDL provides the schema by which developers can define the models of t
 
 Our goal is to deliver a DTDL-based building ontology which we deem to be the “gold standard” for smart building modeling, leveraging industry standards to accelerate our work and prevent reinvention. As part of the delivery, also provide best practices for how to consume and properly extend the ontology. This is an open-source ontology definition which learns from, builds on, and uses industry standards, meets the needs of downstream developers, and will be widely adopted and/or extended by the industry.
 
-<*perhaps explain why is this the MS recommeded building ontology for smart building solutions built with Azure Digital Twins*>
+## RealEstateCore-aligned ontology
+We are releasing an open source Smart Buildings DTDL repository, aligned to the [Real Estate Core (REC)](https://www.realestatecore.io/) standard ontology, and taking inspiration from prominent industry ontologies like [Brick](https://brickschema.org/ontology/), [Haystack](https://project-haystack.org/), [Web Ontology Language(OWL)](https://www.w3.org/OWL) or FOAF.
 
-
-## Why RealEstateCore ontology
-
-We selected RealEstateCore ontology foundation over other candidates for several reasons:
-  * Deep domain knowledge and expertise with industry (smart buildings, real estate) and technology (Semantic Web).
-  * Commitment to openness and knowledge-sharing (freely accessible for commercial use under the MIT License).
-  * Incorporation of other industry concepts and standards (BIM, IFC, Brick, Haystack, etc.).
-  * Delivers a generic OWL to DTDL converter which could be used to convert other OWL-based standards into DTDL.
-  * Years of experience with model authoring and maintenance.
-  * Real-world applications and partners actively using their models (Vasakronan, Idun, etc.).
-  * Familiarity with and commitment to Azure, Azure IoT, and Digital Twins.
+RealEstateCore ontology foundation have deep domain knowledge and expertise with industry (smart buildings, real estate) and technology (Semantic Web). They are incorporating other industry concepts and standards (BIM, IFC, Brick, Haystack, etc.) into their ontology and have years of experience with model authoring and maintenance. Their real-world applications and partners actively using their models (Vasakronan, Idun, etc.) are demonstrating that ...
 
 ## Ontology Structure
 
