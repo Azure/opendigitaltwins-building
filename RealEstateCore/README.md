@@ -23,7 +23,7 @@ RealEstateCore ontology foundation have deep domain knowledge and expertise with
 ## Ontology structure
 
 <*change the diagram to reflext the latest*>
-![Building Ontology](images/OntologyDiagram.jpg)
+![Building Ontology](images/OntologyDiagram.JPG)
 
 <*work in progress*>
 RealEstateCore consists of a set of modules, which in the current version include:
