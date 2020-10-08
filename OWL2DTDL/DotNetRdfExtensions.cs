@@ -156,18 +156,6 @@ namespace OWL2DTDL
 
         #region OntologyClass extensions
 
-        public static bool IsDeprecated(this OntologyClass oClass)
-        {
-            IUriNode deprecated = oClass.Graph.CreateUriNode(OWL.deprecated);
-            foreach (OntologyClass parentClassOrSelf in oClass.SuperClasses.Append(oClass))
-            {
-                if (parentClassOrSelf.GetNodesViaPredicate(deprecated).LiteralNodes().Any(node => node.Value == "true")) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
         public static int Depth(this OntologyClass oClass)
         {
             int largestParentDepth = 0;

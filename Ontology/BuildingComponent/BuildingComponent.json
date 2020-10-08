@@ -24,6 +24,18 @@
       },
       "name": "hasPart",
       "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates which Building a certain Building Component is part of. Inverse of: hasBuildingComponent"
+      },
+      "displayName": {
+        "en": "component of building"
+      },
+      "maxMultiplicity": 1,
+      "name": "componentOfBuilding",
+      "target": "dtmi:org:w3id:rec:core:Building;1"
     }
   ],
   "description": {
