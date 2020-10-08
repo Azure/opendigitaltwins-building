@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:org:w3id:rec:core:SensorInterface;1",
-  "@type": "Interface",
-  "extends": "dtmi:org:w3id:rec:core:Software;1",
-  "@context": "dtmi:dtdl:context;2"
-}

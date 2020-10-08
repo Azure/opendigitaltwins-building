@@ -11,3 +11,4 @@ https://w3id.org/rec/device/DeviceEvents;The REC observation and device event mo
 https://w3id.org/rec/core/Observation;The REC observation and device event models are out-of-scope for DTDL models
 https://w3id.org/rec/device/PlacementContext;REC placement contexts should probably be expressed as properties in DTDL
 https://w3id.org/rec/core/Information;The REC Information class is intangible and probably not fit for instantiation as DT
+https://w3id.org/rec/core/SensorInterface;Sensor interface relates to the sensor schema, which is a DTDL language feature
