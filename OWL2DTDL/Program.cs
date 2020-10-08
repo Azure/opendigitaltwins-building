@@ -471,7 +471,11 @@ namespace OWL2DTDL
 
                 if (!_mergedOutput) {
                     // Create model output directory based on output path and shortest parent path
-                    string modelPath = string.Join("/", oClass.ShortestParentPathToOwlThing());
+                    List<string> parentDirectories = oClass.ShortestParentPathToOwlThing();
+                    if (oClass.DirectSubClasses.Any()) {
+                        parentDirectories.Add(oClass.GetLocalName());
+                    }
+                    string modelPath = string.Join("/", parentDirectories);
                     string modelOutputPath = $"{_outputPath}/{modelPath}/";
                     Directory.CreateDirectory(modelOutputPath);
                     string outputFileName = modelOutputPath + oClass.GetLocalName() + ".json";
