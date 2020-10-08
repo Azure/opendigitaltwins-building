@@ -863,10 +863,21 @@ namespace OWL2DTDL
             IEnumerable<ILiteralNode> comments = resource.Comment;
             IUriNode dtdl_description = dtdlModel.CreateUriNode(DTDL.description);
 
+            string inverseDescription = "";
+            if (resource is OntologyProperty)
+            {
+                OntologyProperty resourceAsProperty = (OntologyProperty)resource;
+                IEnumerable<OntologyProperty> inverses = resourceAsProperty.InverseProperties;
+                inverseDescription += $" Inverse of: {string.Join(", ", inverses.Select(property => property.GetLocalName()))}";
+            }
+
+            int lengthOfInverseDescription = inverseDescription.Length;
+            int lengthOfCommentToKeep = 512 - lengthOfInverseDescription;
+
             IEnumerable<ILiteralNode> nonLocalizedComments = comments.Where(node => node.Language == string.Empty);
             if (nonLocalizedComments.Any())
             {
-                ILiteralNode commentNode = dtdlModel.CreateLiteralNode(string.Concat(nonLocalizedComments.First().Value.Take(512)), "en");
+                ILiteralNode commentNode = dtdlModel.CreateLiteralNode(string.Concat(nonLocalizedComments.First().Value.Take(lengthOfCommentToKeep)) + inverseDescription, "en");
                 Triple retVal = new Triple(subjectNode, dtdl_description, commentNode);
                 return new List<Triple> { retVal };
             }
@@ -875,7 +886,7 @@ namespace OWL2DTDL
                 List<Triple> triples = new List<Triple>();
                 foreach (ILiteralNode comment in comments)
                 {
-                    ILiteralNode commentNode = dtdlModel.CreateLiteralNode(string.Concat(comment.Value.Take(512)), comment.Language);
+                    ILiteralNode commentNode = dtdlModel.CreateLiteralNode(string.Concat(comment.Value.Take(lengthOfCommentToKeep)) + inverseDescription, comment.Language);
                     triples.Add(new Triple(subjectNode, dtdl_description, commentNode));
                 }
                 return triples;
