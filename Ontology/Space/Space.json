@@ -5,7 +5,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "Property that defines the legal owner(s) of a given REC entity. Inverse of: owns"
+        "en": "Property that defines the legal owner(s) of a given entity. Inverse of: owns"
       },
       "displayName": {
         "en": "owned by"
@@ -24,7 +24,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property. Inverse of: hasPart"
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
       },
       "displayName": {
         "en": "is part of"
@@ -35,7 +35,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "Indicates that a REC entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of: includes"
+        "en": "Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of: includes"
       },
       "displayName": {
         "en": "included in"
@@ -46,7 +46,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy. Inverse of: isPartOf"
+        "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
       },
       "displayName": {
         "en": "has part"

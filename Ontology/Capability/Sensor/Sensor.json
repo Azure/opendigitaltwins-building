@@ -22,7 +22,7 @@
     }
   ],
   "description": {
-    "en": "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it."
+    "en": "Capability to detect or measure properties of the physical world."
   },
   "displayName": {
     "en": "Sensor"

@@ -5,7 +5,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents)."
+        "en": "A name for some Agent."
       },
       "displayName": {
         "en": "name"
@@ -28,17 +28,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "An online account that an Agent holds."
-      },
-      "displayName": {
-        "en": "account"
-      },
-      "name": "account"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Indicates that an agent is the legal owner of a given REC entity, e.g., a Company owns some Real Estate. Inverse of: ownedBy"
+        "en": "Indicates that an agent is the legal owner of a given entity, e.g., a Company owns some Real Estate. Inverse of: ownedBy"
       },
       "displayName": {
         "en": "owns"
@@ -47,7 +37,7 @@
     }
   ],
   "description": {
-    "en": "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchored in one joint place, on the Agent class. Conceptually this mimics the Agent class from the well-known FOAF vocabulary, see http://xmlns.com/foaf/spec/#term_Agent."
+    "en": "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Company, Department...) to be anchored in one joint place, on the Agent class."
   },
   "displayName": {
     "en": "Agent"

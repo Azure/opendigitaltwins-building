@@ -14,7 +14,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property. Inverse of: hasPart"
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
       },
       "displayName": {
         "en": "is part of"
