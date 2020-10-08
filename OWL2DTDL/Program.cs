@@ -472,7 +472,7 @@ namespace OWL2DTDL
                 if (!_mergedOutput) {
                     // Create model output directory based on output path and shortest parent path
                     List<string> parentDirectories = oClass.ShortestParentPathToOwlThing();
-                    if (oClass.DirectSubClasses.Any()) {
+                    if (oClass.DirectSubClasses.Any(cls => cls.IsNamed() && !cls.IsDeprecated() && !IsIgnored(cls))) {
                         parentDirectories.Add(oClass.GetLocalName());
                     }
                     string modelPath = string.Join("/", parentDirectories);
