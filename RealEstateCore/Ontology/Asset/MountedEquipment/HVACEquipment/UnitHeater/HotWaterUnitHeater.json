@@ -1,0 +1,36 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HotWaterUnitHeater;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
+      "description": {
+        "en": "litres per minute Inverse of: "
+      },
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "condensate"
+      },
+      "name": "condensate",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Hot water unit heater"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:UnitHeater;1",
+  "@context": "dtmi:dtdl:context;2"
+}

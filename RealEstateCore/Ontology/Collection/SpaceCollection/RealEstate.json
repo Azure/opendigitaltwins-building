@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:RealEstate;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Property that defines the legal owner(s) of a given REC entity. Inverse of: owns"
+      },
+      "displayName": {
+        "en": "owned by"
+      },
+      "minMultiplicity": 0,
+      "name": "ownedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that a collection entity includes some member entity, e.g., a campus includes some building, an apartment includes some room, etc. Inverse of: includedIn"
+      },
+      "displayName": {
+        "en": "includes"
+      },
+      "minMultiplicity": 0,
+      "name": "includes",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    }
+  ],
+  "description": {
+    "en": "The legal/administrative representation of some lands and/or buildings."
+  },
+  "displayName": {
+    "en": "Real estate"
+  },
+  "extends": "dtmi:org:w3id:rec:core:SpaceCollection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

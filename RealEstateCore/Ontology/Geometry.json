@@ -1,0 +1,49 @@
+{
+  "@id": "dtmi:net:opengis:www:ont:geosparql:Geometry;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The GML serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document. Inverse of: "
+      },
+      "displayName": {
+        "en": "asGML"
+      },
+      "name": "asGML",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document. Inverse of: "
+      },
+      "displayName": {
+        "en": "asWKT"
+      },
+      "name": "asWKT",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Connects a geometry object with its text-based serialization.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document. Inverse of: "
+      },
+      "displayName": {
+        "en": "has serialization"
+      },
+      "name": "hasSerialization",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+  },
+  "displayName": {
+    "en": "Geometry"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

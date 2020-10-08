@@ -1,0 +1,21 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:AssetCollection;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Indicates that a collection entity includes some member entity, e.g., a campus includes some building, an apartment includes some room, etc. Inverse of: includedIn"
+    },
+    "displayName": {
+      "en": "includes"
+    },
+    "minMultiplicity": 0,
+    "name": "includes",
+    "target": "dtmi:org:w3id:rec:core:Asset;1"
+  },
+  "displayName": {
+    "en": "Asset collection"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Collection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

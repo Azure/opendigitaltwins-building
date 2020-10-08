@@ -1,0 +1,23 @@
+{
+  "@id": "dtmi:org:w3id:rec:agents:Group;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Indicates the member Agents that are part of a certain Group. Inverse of: "
+    },
+    "displayName": {
+      "en": "has member"
+    },
+    "name": "hasMember",
+    "target": "dtmi:org:w3id:rec:core:Agent;1"
+  },
+  "description": {
+    "en": "A collection of individual Agents (included in the Group via the object property hasMember). These agents can be organizations or persons."
+  },
+  "displayName": {
+    "en": "Group"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Agent;1",
+  "@context": "dtmi:dtdl:context;2"
+}
