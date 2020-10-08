@@ -18,7 +18,9 @@ We are releasing an open source Smart Buildings DTDL repository, aligned to the 
 
 RealEstateCore ontology foundation have deep domain knowledge and expertise with industry (smart buildings, real estate) and technology (Semantic Web). They are incorporating other industry concepts and standards (BIM, IFC, Brick, Haystack, etc.) into their ontology and have years of experience with model authoring and maintenance. Their real-world applications and partners actively using their models (Vasakronan, Idun, etc.) are demonstrating that ...
 
-<*show link to REC ontology*>
+<*explain the evolution of REC ontology*>
+
+![Ontology Evolution](images/OntologyEvolution.JPG)
 
 ## Ontology structure
 
