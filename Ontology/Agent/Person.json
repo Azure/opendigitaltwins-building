@@ -5,7 +5,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A person's last name (if they have one; this varies across cultural contexts). Inverse of: "
+        "en": "A person's last name (if they have one; this varies across cultural contexts)."
       },
       "displayName": {
         "en": "last name"
@@ -17,7 +17,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A person's personal, individual name. Inverse of: "
+        "en": "A person's personal, individual name."
       },
       "displayName": {
         "en": "given name"
@@ -29,7 +29,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A gender designation for a Person. Stricter than FOAF, which allows all Agents to have gender. Inverse of: "
+        "en": "A gender designation for a Person. Stricter than FOAF, which allows all Agents to have gender."
       },
       "displayName": {
         "en": "gender"
@@ -41,7 +41,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A person's first name (if they have one; this varies across cultural contexts). Inverse of: "
+        "en": "A person's first name (if they have one; this varies across cultural contexts)."
       },
       "displayName": {
         "en": "first name"
@@ -53,7 +53,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A person's family name. Inverse of: "
+        "en": "A person's family name."
       },
       "displayName": {
         "en": "family name"
@@ -65,7 +65,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "Property that links a Person to an image that represents them. Inverse of: "
+        "en": "Property that links a Person to an image that represents them."
       },
       "displayName": {
         "en": "image"

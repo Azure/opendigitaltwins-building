@@ -5,7 +5,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "The GML serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document. Inverse of: "
+        "en": "The GML serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
       },
       "displayName": {
         "en": "asGML"
@@ -17,7 +17,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document. Inverse of: "
+        "en": "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
       },
       "displayName": {
         "en": "asWKT"
@@ -29,7 +29,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Connects a geometry object with its text-based serialization.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document. Inverse of: "
+        "en": "Connects a geometry object with its text-based serialization.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
       },
       "displayName": {
         "en": "has serialization"

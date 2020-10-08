@@ -189,7 +189,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Extra information about an object that is of a more exceptional character. E.g. \"This Device needs to be replaced no later than 2020\", \"Note: Black color is used to mark warmwater inlet\" Inverse of: "
+        "en": "Extra information about an object that is of a more exceptional character. E.g. \"This Device needs to be replaced no later than 2020\", \"Note: Black color is used to mark warmwater inlet\""
       },
       "displayName": {
         "en": "has comment"

@@ -43,7 +43,7 @@
         "Property"
       ],
       "description": {
-        "en": "litres per minute Inverse of: "
+        "en": "litres per minute"
       },
       "displayName": {
         "en": "flow capacity"
@@ -56,7 +56,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "microns Inverse of: "
+        "en": "microns"
       },
       "displayName": {
         "en": "filtration rating"

@@ -4,7 +4,7 @@
   "dtmi:dtdl:property:contents;2": {
     "@type": "Property",
     "description": {
-      "en": "The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).\n\nBearings are never greater than 90°.\nBearings are based on true north. Inverse of: "
+      "en": "The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).\n\nBearings are never greater than 90°.\nBearings are based on true north."
     },
     "displayName": {
       "en": "has geo reference bearing"

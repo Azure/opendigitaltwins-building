@@ -34,7 +34,7 @@
         "Property"
       ],
       "description": {
-        "en": "litres per minute Inverse of: "
+        "en": "litres per minute"
       },
       "displayName": {
         "en": "flow capacity"

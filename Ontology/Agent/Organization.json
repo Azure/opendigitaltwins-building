@@ -4,7 +4,7 @@
   "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
-      "en": "Links an Organization to an image/logo that represents them. Inverse of: "
+      "en": "Links an Organization to an image/logo that represents them."
     },
     "displayName": {
       "en": "logo"

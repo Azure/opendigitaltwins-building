@@ -5,7 +5,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents). Inverse of: "
+        "en": "A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents)."
       },
       "displayName": {
         "en": "name"
@@ -17,7 +17,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "A role that is held by some agent (e.g., a Person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role). Inverse of: "
+        "en": "A role that is held by some agent (e.g., a Person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role)."
       },
       "displayName": {
         "en": "has role"
@@ -28,7 +28,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "An online account that an Agent holds. Inverse of: "
+        "en": "An online account that an Agent holds."
       },
       "displayName": {
         "en": "account"

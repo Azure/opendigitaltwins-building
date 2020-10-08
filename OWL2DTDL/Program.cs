@@ -872,7 +872,10 @@ namespace OWL2DTDL
             {
                 OntologyProperty resourceAsProperty = (OntologyProperty)resource;
                 IEnumerable<OntologyProperty> inverses = resourceAsProperty.InverseProperties;
-                inverseDescription += $" Inverse of: {string.Join(", ", inverses.Select(property => property.GetLocalName()))}";
+                if (inverses.Any())
+                {
+                    inverseDescription += $" Inverse of: {string.Join(", ", inverses.Select(property => property.GetLocalName()))}";
+                }
             }
 
             int lengthOfInverseDescription = inverseDescription.Length;

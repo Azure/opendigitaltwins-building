@@ -58,7 +58,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Hz Inverse of: "
+        "en": "Hz"
       },
       "displayName": {
         "en": "frequency"

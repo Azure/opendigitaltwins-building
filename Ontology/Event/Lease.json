@@ -5,7 +5,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Time at which a lease arrangement begins. Inverse of: "
+        "en": "Time at which a lease arrangement begins."
       },
       "displayName": {
         "en": "lease start"
@@ -17,7 +17,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Time at which a lease arrangement ends. Inverse of: "
+        "en": "Time at which a lease arrangement ends."
       },
       "displayName": {
         "en": "lease end"
@@ -29,7 +29,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "A lease is regulated by some contract entered into by the leasor and leasees. Inverse of: "
+        "en": "A lease is regulated by some contract entered into by the leasor and leasees."
       },
       "displayName": {
         "en": "regulated by"
@@ -40,7 +40,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "The agent leasing out some leasable object, i.e., the owner of the asset. Inverse of: "
+        "en": "The agent leasing out some leasable object, i.e., the owner of the asset."
       },
       "displayName": {
         "en": "leasor"
@@ -51,7 +51,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "The agent leasing some leasable object, i.e., the user of the asset. Inverse of: "
+        "en": "The agent leasing some leasable object, i.e., the user of the asset."
       },
       "displayName": {
         "en": "leasee"
@@ -62,7 +62,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "The object (e.g., property, equipment, etc) that this a lease of. Inverse of: "
+        "en": "The object (e.g., property, equipment, etc) that this a lease of."
       },
       "displayName": {
         "en": "lease of"

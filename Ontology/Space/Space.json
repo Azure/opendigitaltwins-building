@@ -65,7 +65,7 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document. Inverse of: "
+        "en": "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
       },
       "displayName": {
         "en": "has geometry"

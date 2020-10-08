@@ -27,7 +27,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "litres per minute Inverse of: "
+        "en": "litres per minute"
       },
       "displayName": {
         "en": "maximum flow rate"

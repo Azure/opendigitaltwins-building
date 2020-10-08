@@ -4,7 +4,7 @@
   "dtmi:dtdl:property:contents;2": {
     "@type": "Relationship",
     "description": {
-      "en": "Indicates the member Agents that are part of a certain Group. Inverse of: "
+      "en": "Indicates the member Agents that are part of a certain Group."
     },
     "displayName": {
       "en": "has member"

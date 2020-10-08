@@ -36,7 +36,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "foot of head Inverse of: "
+        "en": "foot of head"
       },
       "displayName": {
         "en": "head capacity"
@@ -48,7 +48,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "litres per minute Inverse of: "
+        "en": "litres per minute"
       },
       "displayName": {
         "en": "flow capacity"
