@@ -474,7 +474,7 @@ namespace OWL2DTDL
                     string modelPath = string.Join("/", oClass.ShortestParentPathToOwlThing());
                     string modelOutputPath = $"{_outputPath}/{modelPath}/";
                     Directory.CreateDirectory(modelOutputPath);
-                    string outputFileName = modelOutputPath + oClass.GetLocalName() + ".jsonld";
+                    string outputFileName = modelOutputPath + oClass.GetLocalName() + ".json";
                     using (StreamWriter file = File.CreateText(outputFileName))
                     using (JsonTextWriter writer = new JsonTextWriter(file) { Formatting = Formatting.Indented })
                     {
@@ -495,7 +495,7 @@ namespace OWL2DTDL
                 IEnumerable<JObject> interfaces = interfacesAndDepths.Select(pair => pair.Key);
                 JArray interfaceArray = new JArray(interfaces);
                 Directory.CreateDirectory(_outputPath);
-                string outputFileName = _outputPath + "RecModels.jsonld";
+                string outputFileName = _outputPath + "RecModels.json";
                 using (StreamWriter file = File.CreateText(outputFileName))
                 using (JsonTextWriter writer = new JsonTextWriter(file) { Formatting = Formatting.Indented })
                 {
