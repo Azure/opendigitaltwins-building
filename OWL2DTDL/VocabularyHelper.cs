@@ -74,6 +74,7 @@ namespace OWL2DTDL.VocabularyHelper
             public static readonly Uri KiloGM_PER_HR = new Uri("http://qudt.org/vocab/unit/KiloGM-PER-HR");
             public static readonly Uri KiloPA = new Uri("http://qudt.org/vocab/unit/KiloPA");
             public static readonly Uri KiloW_HR = new Uri("http://qudt.org/vocab/unit/KiloW-HR");
+            public static readonly Uri KiloW = new Uri("http://qudt.org/vocab/unit/KiloW");
             public static readonly Uri L = new Uri("http://qudt.org/vocab/unit/L");
             public static readonly Uri L_PER_SEC = new Uri("http://qudt.org/vocab/unit/L-PER-SEC");
             public static readonly Uri LUX = new Uri("http://qudt.org/vocab/unit/LUX");
@@ -157,6 +158,7 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri kilogramPerHour = new Uri("dtmi:standard:unit:kilogramPerHour;2");
         public static readonly Uri kilopascal = new Uri("dtmi:standard:unit:kilopascal;2");
         public static readonly Uri kilowattHour = new Uri("dtmi:standard:unit:kilowattHour;2");
+        public static readonly Uri kilowatt = new Uri("dtmi:standard:unit:kilowatt;2");
         public static readonly Uri litre = new Uri("dtmi:standard:unit:litre;2");
         public static readonly Uri litrePerSecond = new Uri("dtmi:standard:unit:litrePerSecond;2");
         public static readonly Uri lux = new Uri("dtmi:standard:unit:lux;2");

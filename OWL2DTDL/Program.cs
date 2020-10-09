@@ -115,6 +115,7 @@ namespace OWL2DTDL
             { QUDT.UnitNS.KiloGM, DTDL.kilogram },
             { QUDT.UnitNS.KiloGM_PER_HR, DTDL.kilogramPerHour },
             { QUDT.UnitNS.KiloPA, DTDL.kilopascal },
+            { QUDT.UnitNS.KiloW, DTDL.kilowatt },
             { QUDT.UnitNS.KiloW_HR, DTDL.kilowattHour },
             { QUDT.UnitNS.L, DTDL.litre },
             { QUDT.UnitNS.L_PER_SEC, DTDL.litrePerSecond },
