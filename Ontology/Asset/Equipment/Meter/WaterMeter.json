@@ -1,0 +1,74 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:WaterMeter;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
+      "displayName": {
+        "en": "volume flow"
+      },
+      "name": "volumeFlow",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Volume",
+        "Property"
+      ],
+      "displayName": {
+        "en": "volume"
+      },
+      "name": "volume",
+      "schema": "double",
+      "unit": "litre",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Temperature",
+        "Property"
+      ],
+      "displayName": {
+        "en": "supply temp"
+      },
+      "name": "supplyTemp",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "sub-meter of"
+      },
+      "name": "subMeterOf",
+      "target": "dtmi:org:w3id:rec:asset:WaterMeter;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "measures"
+      },
+      "name": "measures"
+    }
+  ],
+  "displayName": {
+    "en": "Water meter"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Meter;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,126 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ThermalMeter;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": [
+        "Volume",
+        "Property"
+      ],
+      "displayName": {
+        "en": "volume total"
+      },
+      "name": "volumeTotal",
+      "schema": "double",
+      "unit": "litre",
+      "writable": true
+    },
+    {
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
+      "displayName": {
+        "en": "volume flow"
+      },
+      "name": "volumeFlow",
+      "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Temperature",
+        "Property"
+      ],
+      "displayName": {
+        "en": "supply temp"
+      },
+      "name": "supplyTemp",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Temperature",
+        "Property"
+      ],
+      "displayName": {
+        "en": "return temp"
+      },
+      "name": "returnTemp",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Energy",
+        "Property"
+      ],
+      "displayName": {
+        "en": "energy total"
+      },
+      "name": "energyTotal",
+      "schema": "float",
+      "unit": "kilowattHour",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "energy rate"
+      },
+      "name": "energyRate",
+      "schema": "float",
+      "unit": "kilowatt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Temperature",
+        "Property"
+      ],
+      "displayName": {
+        "en": "delta temp"
+      },
+      "name": "deltaTemp",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "sub-meter of"
+      },
+      "name": "subMeterOf",
+      "target": "dtmi:org:w3id:rec:asset:ThermalMeter;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "measures"
+      },
+      "name": "measures"
+    }
+  ],
+  "displayName": {
+    "en": "Thermal meter"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Meter;1",
+  "@context": "dtmi:dtdl:context;2"
+}

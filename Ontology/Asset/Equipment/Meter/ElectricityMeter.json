@@ -1,0 +1,127 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ElectricityMeter;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "DC",
+            "name": "DC"
+          },
+          {
+            "enumValue": "AC",
+            "name": "AC"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "net power"
+      },
+      "name": "netPower",
+      "schema": "float",
+      "unit": "kilowatt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Energy",
+        "Property"
+      ],
+      "displayName": {
+        "en": "net energy"
+      },
+      "name": "netEnergy",
+      "schema": "float",
+      "unit": "kilowattHour",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "import power"
+      },
+      "name": "importPower",
+      "schema": "float",
+      "unit": "kilowatt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Energy",
+        "Property"
+      ],
+      "displayName": {
+        "en": "import energy"
+      },
+      "name": "importEnergy",
+      "schema": "float",
+      "unit": "kilowattHour",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "export power"
+      },
+      "name": "exportPower",
+      "schema": "float",
+      "unit": "kilowatt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Energy",
+        "Property"
+      ],
+      "displayName": {
+        "en": "export energy"
+      },
+      "name": "exportEnergy",
+      "schema": "float",
+      "unit": "kilowattHour",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "sub-meter of"
+      },
+      "name": "subMeterOf",
+      "target": "dtmi:org:w3id:rec:asset:ElectricityMeter;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "measures"
+      },
+      "name": "measures",
+      "target": "dtmi:org:w3id:rec:asset:ElectricalCircuit;1"
+    }
+  ],
+  "displayName": {
+    "en": "Electricity meter"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Meter;1",
+  "@context": "dtmi:dtdl:context;2"
+}

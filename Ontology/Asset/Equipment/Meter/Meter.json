@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Meter;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Meter"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
