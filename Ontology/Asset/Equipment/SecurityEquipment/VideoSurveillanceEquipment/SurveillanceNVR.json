@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SurveillanceNVR;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Network video recorder."
+  },
+  "displayName": {
+    "en": "Surveillance NVR"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:VideoSurveillanceEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
