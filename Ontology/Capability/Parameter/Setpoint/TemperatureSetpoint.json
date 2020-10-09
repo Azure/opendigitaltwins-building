@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:TemperatureSetpoint;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": [
+      "Temperature",
+      "Property"
+    ],
+    "description": {
+      "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
+    },
+    "displayName": {
+      "en": "has value"
+    },
+    "name": "hasValue",
+    "schema": "double",
+    "unit": "degreeCelsius",
+    "writable": true
+  },
+  "displayName": {
+    "en": "Temperature setpoint"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Setpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

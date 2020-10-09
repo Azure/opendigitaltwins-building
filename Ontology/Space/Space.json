@@ -64,18 +64,6 @@
     },
     {
       "@type": "Relationship",
-      "description": {
-        "en": "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
-      },
-      "displayName": {
-        "en": "has geometry"
-      },
-      "minMultiplicity": 0,
-      "name": "hasGeometry",
-      "target": "dtmi:net:opengis:www:ont:geosparql:Geometry;1"
-    },
-    {
-      "@type": "Relationship",
       "displayName": {
         "en": "constructed by"
       },

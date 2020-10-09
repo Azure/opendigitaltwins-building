@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:FlowSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Flow sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

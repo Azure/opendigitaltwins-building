@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:CO2Sensor;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "description": {
+      "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
+    },
+    "displayName": {
+      "en": "has value"
+    },
+    "name": "hasValue",
+    "schema": "integer",
+    "writable": true
+  },
+  "description": {
+    "en": "Measurement unit: PPM."
+  },
+  "displayName": {
+    "en": "CO2 sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

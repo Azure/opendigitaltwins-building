@@ -3,18 +3,6 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": "Property",
-      "description": {
-        "en": "A name for some Agent."
-      },
-      "displayName": {
-        "en": "name"
-      },
-      "name": "name",
-      "schema": "string",
-      "writable": true
-    },
-    {
       "@type": "Relationship",
       "description": {
         "en": "A role that is held by some agent (e.g., a Person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role)."
@@ -34,6 +22,18 @@
         "en": "owns"
       },
       "name": "owns"
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A name for some Agent."
+      },
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {

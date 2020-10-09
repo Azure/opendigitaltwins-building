@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:AirTemperatureSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Air temperature sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:TemperatureSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

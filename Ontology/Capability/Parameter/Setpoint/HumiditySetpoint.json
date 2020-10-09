@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:HumiditySetpoint;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "description": {
+      "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
+    },
+    "displayName": {
+      "en": "has value"
+    },
+    "name": "hasValue",
+    "schema": "float",
+    "writable": true
+  },
+  "description": {
+    "en": "Unit: % relative humidity."
+  },
+  "displayName": {
+    "en": "Humidity setpoint"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Setpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

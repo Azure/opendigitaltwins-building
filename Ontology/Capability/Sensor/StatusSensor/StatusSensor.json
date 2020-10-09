@@ -1,0 +1,21 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:StatusSensor;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "description": {
+      "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
+    },
+    "displayName": {
+      "en": "has value"
+    },
+    "name": "hasValue",
+    "schema": "boolean",
+    "writable": true
+  },
+  "displayName": {
+    "en": "Status sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

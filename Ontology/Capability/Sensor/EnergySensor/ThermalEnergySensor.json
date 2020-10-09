@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:ThermalEnergySensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Thermal energy sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:EnergySensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}
