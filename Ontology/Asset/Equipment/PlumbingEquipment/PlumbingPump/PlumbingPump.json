@@ -46,7 +46,10 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
       "description": {
         "en": "litres per minute"
       },
@@ -54,7 +57,8 @@
         "en": "flow capacity"
       },
       "name": "flowCapacity",
-      "schema": "integer",
+      "schema": "double",
+      "unit": "litrePerSecond",
       "writable": true
     }
   ],
