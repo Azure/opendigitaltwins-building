@@ -25,15 +25,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
-      "description": {
-        "en": "litres per minute"
-      },
+      "@type": [
+        "VolumeFlowRate",
+        "Property"
+      ],
       "displayName": {
         "en": "maximum flow rate"
       },
       "name": "maxFlowRate",
-      "schema": "integer",
+      "schema": "double",
+      "unit": "litrePerSecond",
       "writable": true
     },
     {

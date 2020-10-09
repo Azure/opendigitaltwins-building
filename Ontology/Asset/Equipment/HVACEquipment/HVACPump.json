@@ -63,9 +63,6 @@
         "VolumeFlowRate",
         "Property"
       ],
-      "description": {
-        "en": "litres per minute"
-      },
       "displayName": {
         "en": "flow capacity"
       },
