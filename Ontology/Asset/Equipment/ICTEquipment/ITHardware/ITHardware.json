@@ -26,6 +26,6 @@
   "displayName": {
     "en": "IT Hardware"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ITEquipment;1",
+  "extends": "dtmi:org:w3id:rec:asset:ICTEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

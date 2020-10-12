@@ -1,53 +1,6 @@
 {
   "@id": "dtmi:org:w3id:rec:core:LogicalGateway;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": [
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "registration key"
-      },
-      "name": "registrationKey",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "registration ID"
-      },
-      "name": "registrationId",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "enabled"
-      },
-      "name": "enabled",
-      "schema": "boolean",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "detected"
-      },
-      "name": "detected",
-      "schema": "boolean",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "connector ID"
-      },
-      "name": "connectorId",
-      "schema": "string",
-      "writable": true
-    }
-  ],
   "displayName": {
     "en": "Logical gateway"
   },

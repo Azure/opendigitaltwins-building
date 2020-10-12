@@ -1,8 +1,8 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ITEquipment;1",
+  "@id": "dtmi:org:w3id:rec:asset:ICTEquipment;1",
   "@type": "Interface",
   "displayName": {
-    "en": "IT Equipment"
+    "en": "ICT Equipment"
   },
   "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
   "@context": "dtmi:dtdl:context;2"

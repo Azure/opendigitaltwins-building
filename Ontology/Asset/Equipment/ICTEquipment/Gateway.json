@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Gateway;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Gateway"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ICTEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
