@@ -3,6 +3,18 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
+      "@type": "Property",
+      "description": {
+        "en": "The number of people who can fit in a Room or Elevator."
+      },
+      "displayName": {
+        "en": "person capacity"
+      },
+      "name": "personCapacity",
+      "schema": "integer",
+      "writable": true
+    },
+    {
       "@type": [
         "Mass",
         "Property"
@@ -13,15 +25,6 @@
       "name": "weightCapacity",
       "schema": "double",
       "unit": "kilogram",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "person capacity"
-      },
-      "name": "personCapacity",
-      "schema": "integer",
       "writable": true
     },
     {
