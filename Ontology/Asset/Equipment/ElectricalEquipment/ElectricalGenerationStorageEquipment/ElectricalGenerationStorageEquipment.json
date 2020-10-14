@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ElectricalGenerationStorageEquipment;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Electrical generation & storage equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ElectricalEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

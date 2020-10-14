@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SteamSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Steam system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:GasSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

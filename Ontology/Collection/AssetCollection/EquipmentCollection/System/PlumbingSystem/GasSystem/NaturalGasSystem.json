@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:NaturalGasSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Natural gas system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:GasSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

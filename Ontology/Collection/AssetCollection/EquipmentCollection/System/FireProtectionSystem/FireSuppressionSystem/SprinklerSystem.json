@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SprinklerSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Sprinkler system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:FireSuppressionSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

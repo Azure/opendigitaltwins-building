@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:DomesticColdWaterSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Domestic cold water system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:DomesticWaterSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

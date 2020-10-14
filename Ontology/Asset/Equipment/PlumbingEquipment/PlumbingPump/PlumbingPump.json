@@ -59,6 +59,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Plumbing pump"
+  },
   "extends": "dtmi:org:w3id:rec:asset:PlumbingEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

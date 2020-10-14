@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PlumbingPressureReducingValve;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Pressure-reducing valve"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingValve;1",
+  "@context": "dtmi:dtdl:context;2"
+}

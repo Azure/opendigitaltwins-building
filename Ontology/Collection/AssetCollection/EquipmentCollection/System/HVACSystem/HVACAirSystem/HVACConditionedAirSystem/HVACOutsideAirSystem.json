@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACOutsideAirSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC outside air system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACConditionedAirSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

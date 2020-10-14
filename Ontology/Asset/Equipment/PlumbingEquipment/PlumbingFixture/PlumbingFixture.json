@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:PlumbingFixture;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Plumbing fixture"
+  },
   "extends": "dtmi:org:w3id:rec:asset:PlumbingEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

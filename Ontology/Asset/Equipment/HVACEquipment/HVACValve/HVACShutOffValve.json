@@ -1,0 +1,35 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACShutOffValve;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "displayName": {
+      "en": "type"
+    },
+    "name": "type",
+    "dtmi:dtdl:property:schema;2": {
+      "@type": "Enum",
+      "dtmi:dtdl:property:enumValues;2": [
+        {
+          "enumValue": "Gate",
+          "name": "Gate"
+        },
+        {
+          "enumValue": "Butterfly",
+          "name": "Butterfly"
+        },
+        {
+          "enumValue": "Ball",
+          "name": "Ball"
+        }
+      ],
+      "valueSchema": "string"
+    },
+    "writable": true
+  },
+  "displayName": {
+    "en": "Shut-off valve"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACValve;1",
+  "@context": "dtmi:dtdl:context;2"
+}

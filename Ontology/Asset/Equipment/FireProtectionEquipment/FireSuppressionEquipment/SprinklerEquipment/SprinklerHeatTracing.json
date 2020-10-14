@@ -1,0 +1,45 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SprinklerHeatTracing;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "SelfRegulating",
+            "name": "SelfRegulating"
+          },
+          {
+            "enumValue": "ConstantWattage",
+            "name": "ConstantWattage"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Watts/square meter"
+      },
+      "displayName": {
+        "en": "power density"
+      },
+      "name": "powerDensity",
+      "schema": "float",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Sprinkler heat tracing"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:SprinklerEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

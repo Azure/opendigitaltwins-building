@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:FireProtectionSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Fire protection system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:System;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PlumbingBalancingValve;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Balancing valve"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingValve;1",
+  "@context": "dtmi:dtdl:context;2"
+}

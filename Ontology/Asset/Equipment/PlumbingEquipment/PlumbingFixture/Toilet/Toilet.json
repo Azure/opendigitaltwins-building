@@ -38,6 +38,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Toilet"
+  },
   "extends": "dtmi:org:w3id:rec:asset:PlumbingFixture;1",
   "@context": "dtmi:dtdl:context;2"
 }

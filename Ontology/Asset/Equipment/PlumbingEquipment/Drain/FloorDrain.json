@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:FloorDrain;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Floor drain"
+  },
   "extends": "dtmi:org:w3id:rec:asset:Drain;1",
   "@context": "dtmi:dtdl:context;2"
 }

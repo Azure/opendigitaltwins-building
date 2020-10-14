@@ -98,6 +98,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Boiler"
+  },
   "extends": "dtmi:org:w3id:rec:asset:PlumbingEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

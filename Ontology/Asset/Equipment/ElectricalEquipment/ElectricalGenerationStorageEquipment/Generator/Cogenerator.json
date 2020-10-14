@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Cogenerator;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Cogenerator"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Generator;1",
+  "@context": "dtmi:dtdl:context;2"
+}

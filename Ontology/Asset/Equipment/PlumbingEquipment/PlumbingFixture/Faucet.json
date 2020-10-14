@@ -55,6 +55,9 @@
       "target": "dtmi:org:w3id:rec:asset:Sink;1"
     }
   ],
+  "displayName": {
+    "en": "Faucet"
+  },
   "extends": "dtmi:org:w3id:rec:asset:PlumbingFixture;1",
   "@context": "dtmi:dtdl:context;2"
 }

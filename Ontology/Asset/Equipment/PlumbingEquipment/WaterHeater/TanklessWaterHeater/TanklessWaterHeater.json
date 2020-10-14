@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:TanklessWaterHeater;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Tank-less water heater"
+  },
   "extends": "dtmi:org:w3id:rec:asset:WaterHeater;1",
   "@context": "dtmi:dtdl:context;2"
 }

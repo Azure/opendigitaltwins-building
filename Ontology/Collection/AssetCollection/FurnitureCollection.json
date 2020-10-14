@@ -1,0 +1,21 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:FurnitureCollection;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc. Inverse of: includedIn"
+    },
+    "displayName": {
+      "en": "includes"
+    },
+    "minMultiplicity": 0,
+    "name": "includes",
+    "target": "dtmi:org:w3id:rec:asset:Furniture;1"
+  },
+  "displayName": {
+    "en": "Furniture collection"
+  },
+  "extends": "dtmi:org:w3id:rec:core:AssetCollection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

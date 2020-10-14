@@ -1,0 +1,55 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PlumbingStorageTank;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "arrangement"
+      },
+      "name": "arrangement",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Vertical",
+            "name": "Vertical"
+          },
+          {
+            "enumValue": "Horizontal",
+            "name": "Horizontal"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Plumbing storage tank"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingTank;1",
+  "@context": "dtmi:dtdl:context;2"
+}
