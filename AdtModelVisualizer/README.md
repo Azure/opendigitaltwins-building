@@ -16,7 +16,7 @@ You can also click on the Interface icons to view the Interface's DTDL.
 
 - Create an Azure Digital Twins service instance with an Azure Active Directory client app registration according to the article [https://docs.microsoft.com/en-us/azure/digital-twins/how-to-set-up-instance-portal](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-set-up-instance-portal). A few important aspects for your app registrations:
   - Make sure you add app registrations to the Web platform section of the app registration, not the desktop/mobile section.
-  - When adding callback URLs to the app registration, please make sure to add `http://localhost:3000`.
+  - When adding callback URLs to the app registration, please make sure to add `https://localhost:5001`.
   - Check the **Access Tokens** toggle in the **Implicit Grants** section a few paragraphs below the **Platform Configuration** section on the page. If this toggle is not checked, you will not get authorization tokens.
 - Upload your DTDL model to your ADT instance using the [ADT CLI](https://docs.microsoft.com/en-us/cli/azure/ext/azure-iot/dt/model?view=azure-cli-latest#ext_azure_iot_az_dt_model_create), [REST API](https://docs.microsoft.com/en-us/rest/api/digital-twins/dataplane/models), or [SDKs](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model#upload-models).
 
@@ -33,6 +33,7 @@ You can also click on the Interface icons to view the Interface's DTDL.
 - Build and run the application:
   - ```dotnet build```
   - ```dotnet run```
+- Browse to [https://localhost:5001](https://localhost:5001)
 
 ## Credit
 The ADT Model Visualizer was developed in collaboration with [Willow](https://www.willowinc.com/).
