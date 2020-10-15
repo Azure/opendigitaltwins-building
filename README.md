@@ -16,7 +16,7 @@ The evolution of our journey started with evaluation of multiple industry standa
 
 ![Ontology Evolution](images/OntologyEvolution.JPG)
 
-## RealEstateCore-based ontology
+## REC-based ontology
 This ontology is implemented based on [Real Estate Core (REC)](https://doc.realestatecore.io/3.3/full.html) domain ontology, and taking inspiration from prominent industry standards like [Brick](https://brickschema.org/ontology/), [Haystack](https://project-haystack.org/), [Web Ontology Language(OWL)](https://www.w3.org/OWL), and WillowTwin's models.
 
 REC ontology foundation have deep domain knowledge and expertise with smart buildimg and real estate industry and Semantic Web technology, and have years of experience with model authoring and maintenance. Their real-world applications and customers are actively using REC models and demonstrated cost-efficiency solutions to connect their buildings with new services on a large scale, and not have to worry about building- or technology-specific implementation details and formats. 
@@ -41,9 +41,18 @@ RealEstateCore consists of a main set of modules:
 
 ## Using REC ontology
 
-Real simple example of a building, two floors, rooms, one HVAC with VAV ...
-show this diagram of the building graph as shown, see https://brickschema.org/ - diagram
-show DTDL of models you have used in the graph, more simplified .. show inheritance of classes
+Here is a real example of a subgraph of twins' instances based on this ontology
+
+![Using the models](images/UsingModels.JPG)
+
+We have instanciated the following twins (":" nenotes inheritance or extends)
+- Two VAVs twins *VAVL1.01* and *VAVL1.02* of type **VAVBox:TerminalUnit:HVACEquipment:Equipment:Asset** 
+- VAVs are *locatedIn* in two room twins *Room 101* and *Room102* of type **Laboratory:Room:Space**
+- etc.
+
+
+
+<*show DTDL of models you have used in the graph, more simplified .. show inheritance of classes*>
 
 ## REC full
 This ontology was generated using OWL2DTDL converter which generated FullBuildingRecModels.json to be uploaded into ADT.
