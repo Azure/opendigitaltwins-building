@@ -25,13 +25,13 @@ REC ontology foundation have deep domain knowledge and expertise with smart buil
 
 ![Building Ontology](images/OntologyDiagram.JPG)
 
-RealEstateCore consists of a main set of modules:
+RealEstateCore ontology consists of a main set of interfaces:
   - **Asset** – An object which is placed inside of a building, but is not an integral part of that building's structure, for example architectural, furniture, equipment, systems, etc.
   - **LogicalDevice** – A physical or logical object defined as an electronic equipment or software that communicates and interacts with a digital twin platform. A logical device could be an integrated circuit inside of a smart HVAC unit, or a virtual server running on a Kubernetes cluster. Logical devices can have Capability instances (through hasCapability) that describe their input/output capabilties. If Logical Devices are embedded within Asset entities (through the locatedIn property) such capabilties typically denote the capabilities of the asset.
   - **Capability** - A capability indicates the capacity of a entity, be it a Space, an Asset, or a LogicalDevice, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point\". Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.
   - **Space** - A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. For example a Region can contain many pieces of Land, which in turn can contain many Buildings, which in turn can contain Levels and Rooms.
 
-  Auxiliary modules:
+  More base interfaces:
   - **Agent** - Any basic types of agents (people, organizations, groups), structurally aligned with [FOAF](http://xmlns.com/foaf/spec/).
   - **Building Component** - A part that constitutes a piece of a building's structural makeup, for example Facade, Wall, Slab, RoofInner, etc.
   - **Collection** - An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an Apartment is typically contiguous), however that is not a requirement (see, e.g., a distributed Campus consisting of spatially disjoint plots or buildings).
@@ -45,14 +45,126 @@ Here is a real example of a subgraph of twins' instances based on this ontology
 
 ![Using the models](images/UsingModels.JPG)
 
-We have instanciated the following twins (":" nenotes inheritance or extends)
-- Two VAVs twins *VAVL1.01* and *VAVL1.02* of type **VAVBox:TerminalUnit:HVACEquipment:Equipment:Asset** 
-- VAVs are *locatedIn* in two room twins *Room 101* and *Room102* of type **Laboratory:Room:Space**
-- etc.
+We have instantiated the following twins:
+- A building instance *Building 121* of type **Building:Space**
+- One level instance *Level 1* of type **Level:Space** which is part of the building
+- Two zones, *Level 1 Left Wing* and *HVAC Zone 1* of type **HVACZone:Zone:Space**, both of them have capability Space Utilization virtual sensor 
+- Two room instances *Room 101* and *Room 103* of type **ClimateControlRoom:Room:Space** which are part of level and HVAC zone
+- A VAV physical device *VAVL1.01* of type **VAVBox:TerminalUnit:HVACEquipment:Equipment:Asset** with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, feeds the HVAC zone and located in a room
+- An AHU physical device *AHUL1.01* of type **AirHandlingUnit:HVACEquipment:Equipment:Asset** feeds the VAV and located in a room
+- A Vergesense device *VergeSensorDevice* of type **SensorEquipment:ICTEquipment:Equipment:Asset** with two sensors *PeopleCount* and *SignOfLife*, which serves the wing zone and located in a room
 
+Here are the DTDL interfaces snippets for these twins
 
+**Space**
+```
+{
+  "@id": "dtmi:org:w3id:rec:core:Space;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    //...
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has capability"
+      },
+      "name": "hasCapability",
+      "target": "dtmi:org:w3id:rec:core:Capability;1"
+    }
+    //...
+  ],
+  //...
+  "displayName": {
+    "en": "Space"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}
+```
 
-<*show DTDL of models you have used in the graph, more simplified .. show inheritance of classes*>
+**Asset**
+```
+{
+  "@id": "dtmi:org:w3id:rec:core:Asset;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "located in"
+      },
+      "minMultiplicity": 0,
+      "name": "locatedIn",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has capability"
+      },
+      "name": "hasCapability",
+      "target": "dtmi:org:w3id:rec:core:Capability;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:core:Asset;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset. Inverse of: servedBy"
+      },
+      "displayName": {
+        "en": "serves"
+      },
+      "name": "serves"
+    },
+    //...
+  ],
+  "description": {
+    "en": "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."
+  },
+  "displayName": {
+    "en": "Asset"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}
+```
+
+**Sensor**
+```
+{
+  "@id": "dtmi:org:w3id:rec:core:Sensor;1",
+  "@type": "Interface",
+  //...
+  "description": {
+    "en": "Capability to detect or measure properties of the physical world."
+  },
+  "displayName": {
+    "en": "Sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Capability;1",
+  "@context": "dtmi:dtdl:context;2"
+}
+
+```
 
 ## REC full
 This ontology was generated using OWL2DTDL converter which generated FullBuildingRecModels.json to be uploaded into ADT.
@@ -67,7 +179,7 @@ What Kevin did ...
 
 ## Extending the ontology
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<*explain how to upload the models into ADT - Karl to add*>
 How to customize for yourself ...
 
 ## Validating the models
@@ -75,7 +187,7 @@ How to customize for yourself ...
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Contributing to ontology
-
+<*explain how to contribute to this ontology, probably creating PRs in this repo is the easiest one to go - Karl to add*>
 We are working on improving the core ontology, adding more modules, and as well is working on making better tools to integrate and use the ontology in smart building platforms and its applications.
 
 We encourage you to contribute to make RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend modules and vocabularies, suggest improvements in order to evolve this ontology
