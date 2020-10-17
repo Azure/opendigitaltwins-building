@@ -1,22 +1,12 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:SprinklerTank;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": [
-      "Volume",
-      "Property"
-    ],
-    "displayName": {
-      "en": "tank capacity"
-    },
-    "name": "tankCapacity",
-    "schema": "double",
-    "unit": "litre",
-    "writable": true
-  },
   "displayName": {
     "en": "Sprinkler tank"
   },
-  "extends": "dtmi:org:w3id:rec:asset:SprinklerEquipment;1",
+  "extends": [
+    "dtmi:org:w3id:rec:asset:Tank;1",
+    "dtmi:org:w3id:rec:asset:SprinklerEquipment;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

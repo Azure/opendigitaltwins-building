@@ -1,37 +1,12 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:PlumbingTank;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": [
-    {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
-      "displayName": {
-        "en": "tank capacity"
-      },
-      "name": "tankCapacity",
-      "schema": "double",
-      "unit": "litre",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
-      "displayName": {
-        "en": "system pressure"
-      },
-      "name": "systemPressure",
-      "schema": "double",
-      "unit": "poundPerSquareInch",
-      "writable": true
-    }
-  ],
   "displayName": {
     "en": "Plumbing tank"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingEquipment;1",
+  "extends": [
+    "dtmi:org:w3id:rec:asset:Tank;1",
+    "dtmi:org:w3id:rec:asset:PlumbingEquipment;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

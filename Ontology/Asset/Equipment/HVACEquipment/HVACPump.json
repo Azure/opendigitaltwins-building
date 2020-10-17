@@ -1,80 +1,12 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:HVACPump;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": [
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "type"
-      },
-      "name": "type",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "vertical",
-            "name": "vertical"
-          },
-          {
-            "enumValue": "inline",
-            "name": "inline"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "pumping media"
-      },
-      "name": "pumpingMedia",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
-      "displayName": {
-        "en": "pressure capacity"
-      },
-      "name": "pressureCapacity",
-      "schema": "double",
-      "unit": "poundPerSquareInch",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "description": {
-        "en": "foot of head"
-      },
-      "displayName": {
-        "en": "head capacity"
-      },
-      "name": "headCapacity",
-      "schema": "integer",
-      "writable": true
-    },
-    {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
-      "displayName": {
-        "en": "flow capacity"
-      },
-      "name": "flowCapacity",
-      "schema": "double",
-      "unit": "litrePerSecond",
-      "writable": true
-    }
-  ],
   "displayName": {
     "en": "HVAC pump"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": [
+    "dtmi:org:w3id:rec:asset:Pump;1",
+    "dtmi:org:w3id:rec:asset:HVACEquipment;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }
