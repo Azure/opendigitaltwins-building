@@ -177,6 +177,43 @@ namespace OWL2DTDL
             return largestParentDepth + 1;
         }
 
+        public static List<string> LongestParentPathToOwlThing(this OntologyClass oClass)
+        {
+            IUriNode rdfsSubClassOf = oClass.Graph.CreateUriNode(RDFS.subClassOf);
+            IEnumerable<OntologyClass> directSuperClasses = oClass.DirectSuperClasses.Where(
+                parentClass =>
+                    parentClass.IsNamed() &&
+                    !parentClass.IsDeprecated() &&
+                    !Program.PropertyAssertionIsDeprecated(oClass.GetUriNode(), rdfsSubClassOf, parentClass.GetUriNode())
+            );
+
+            // If we have no superclass or one of our superclasses is OWL:Thing, then we have reached the top level; return
+            if (directSuperClasses.Count() < 1 || directSuperClasses.Any(superClass => superClass.IsOwlThing()))
+            {
+                return new List<string>();
+            }
+            else
+            {
+                // Assume the first parent has the longest path; if not, it will be replaced in subsequent foreach
+                OntologyClass longestParent = directSuperClasses.First();
+                List<string> longestParentPath = longestParent.LongestParentPathToOwlThing();
+                // Iterate through the other parents to see if any is longer
+                foreach (OntologyClass possibleSuperClass in directSuperClasses.Skip(1))
+                {
+                    List<string> possibleSuperClassParents = possibleSuperClass.LongestParentPathToOwlThing();
+                    if (possibleSuperClassParents.Count() > longestParentPath.Count())
+                    {
+                        longestParent = possibleSuperClass;
+                        longestParentPath = possibleSuperClassParents;
+                    }
+                }
+
+                // At this point shortestParentPath + shortestParent should together contain the shortest path to the root; return them
+                longestParentPath.Add(longestParent.GetLocalName());
+                return longestParentPath;
+            }
+        }
+
         public static List<string> ShortestParentPathToOwlThing(this OntologyClass oClass)
         {
             IUriNode rdfsSubClassOf = oClass.Graph.CreateUriNode(RDFS.subClassOf);

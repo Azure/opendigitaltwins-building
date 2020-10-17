@@ -491,8 +491,9 @@ namespace OWL2DTDL
                 interfaceDepths.Add(modelAsJsonLd, oClass.Depth());
 
                 if (!_mergedOutput) {
-                    // Create model output directory based on output path and shortest parent path
-                    List<string> parentDirectories = oClass.ShortestParentPathToOwlThing();
+                    // Create model output directory based on output path and longest parent path
+                    // I.e., we put multi-inheritance classes as far down as possible in their respective hierarchy
+                    List<string> parentDirectories = oClass.LongestParentPathToOwlThing();
                     if (oClass.DirectSubClasses.Any(cls => cls.IsNamed() && !cls.IsDeprecated() && !IsIgnored(cls))) {
                         parentDirectories.Add(oClass.GetLocalName());
                     }
