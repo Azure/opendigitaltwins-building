@@ -1,28 +1,38 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:FanPoweredBox;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": "Property",
-    "displayName": {
-      "en": "configuration"
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "configuration"
+      },
+      "name": "configuration",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "series",
+            "name": "series"
+          },
+          {
+            "enumValue": "parallel",
+            "name": "parallel"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
     },
-    "name": "configuration",
-    "dtmi:dtdl:property:schema;2": {
-      "@type": "Enum",
-      "dtmi:dtdl:property:enumValues;2": [
-        {
-          "enumValue": "series",
-          "name": "series"
-        },
-        {
-          "enumValue": "parallel",
-          "name": "parallel"
-        }
-      ],
-      "valueSchema": "string"
-    },
-    "writable": true
-  },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "fan"
+      },
+      "name": "fan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    }
+  ],
   "displayName": {
     "en": "Fan powered box"
   },

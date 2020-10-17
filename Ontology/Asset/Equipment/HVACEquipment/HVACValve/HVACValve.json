@@ -1,50 +1,12 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:HVACValve;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": [
-    {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
-      "displayName": {
-        "en": "pressure capacity"
-      },
-      "name": "pressureCapacity",
-      "schema": "double",
-      "unit": "poundPerSquareInch",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Length",
-        "Property"
-      ],
-      "displayName": {
-        "en": "pipe diameter"
-      },
-      "name": "pipeDiameter",
-      "schema": "float",
-      "unit": "centimetre",
-      "writable": true
-    },
-    {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
-      "displayName": {
-        "en": "flow capacity"
-      },
-      "name": "flowCapacity",
-      "schema": "double",
-      "unit": "litrePerSecond",
-      "writable": true
-    }
-  ],
   "displayName": {
     "en": "HVAC valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": [
+    "dtmi:org:w3id:rec:asset:Valve;1",
+    "dtmi:org:w3id:rec:asset:HVACEquipment;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

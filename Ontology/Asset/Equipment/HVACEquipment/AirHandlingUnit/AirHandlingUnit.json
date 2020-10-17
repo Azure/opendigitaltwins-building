@@ -12,12 +12,12 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "DX",
-            "name": "DX"
-          },
-          {
             "enumValue": "ChilledWater",
             "name": "ChilledWater"
+          },
+          {
+            "enumValue": "DX",
+            "name": "DX"
           },
           {
             "enumValue": "None",
@@ -210,6 +210,30 @@
       "writable": true
     },
     {
+      "@type": "Component",
+      "displayName": {
+        "en": "supply fan"
+      },
+      "name": "supplyFan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "return fan"
+      },
+      "name": "returnFan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "exhaust fan"
+      },
+      "name": "exhaustFan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "primary heating method"
@@ -279,32 +303,6 @@
       "writable": true
     },
     {
-      "@type": [
-        "Property",
-        "Power"
-      ],
-      "displayName": {
-        "en": "return fan motor size"
-      },
-      "name": "returnFanMotorSize",
-      "schema": "double",
-      "unit": "horsepower",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Property",
-        "VolumeFlowRate"
-      ],
-      "displayName": {
-        "en": "return fan nominal airflow"
-      },
-      "name": "returnFanNominalAirflow",
-      "schema": "double",
-      "unit": "litrePerSecond",
-      "writable": true
-    },
-    {
       "@type": "Property",
       "displayName": {
         "en": "secondary cooling method"
@@ -328,32 +326,6 @@
         ],
         "valueSchema": "string"
       },
-      "writable": true
-    },
-    {
-      "@type": [
-        "Property",
-        "Power"
-      ],
-      "displayName": {
-        "en": "supply fan motor size"
-      },
-      "name": "supplyFanMotorSize",
-      "schema": "double",
-      "unit": "horsepower",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Property",
-        "VolumeFlowRate"
-      ],
-      "displayName": {
-        "en": "supply fan nominal airflow"
-      },
-      "name": "supplyFanNominalAirflow",
-      "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     },
     {

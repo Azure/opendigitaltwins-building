@@ -66,6 +66,6 @@
   "displayName": {
     "en": "Water filter"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:org:w3id:rec:asset:HVACWaterTreatment;1",
   "@context": "dtmi:dtdl:context;2"
 }

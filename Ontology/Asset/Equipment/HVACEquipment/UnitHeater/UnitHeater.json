@@ -38,19 +38,6 @@
       "writable": true
     },
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
-      "displayName": {
-        "en": "nominal airflow"
-      },
-      "name": "nominalAirflow",
-      "schema": "double",
-      "unit": "litrePerSecond",
-      "writable": true
-    },
-    {
       "@type": "Property",
       "displayName": {
         "en": "heating method"
@@ -85,17 +72,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": "Component",
       "displayName": {
-        "en": "fan motor power"
+        "en": "fan"
       },
-      "name": "fanMotorPower",
-      "schema": "double",
-      "unit": "watt",
-      "writable": true
+      "name": "fan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
     }
   ],
   "displayName": {

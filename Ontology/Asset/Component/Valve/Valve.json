@@ -1,18 +1,31 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:CoolingTower;1",
+  "@id": "dtmi:org:w3id:rec:asset:Valve;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": [
-        "Power",
+        "Pressure",
         "Property"
       ],
       "displayName": {
-        "en": "nominal cooling capacity"
+        "en": "pressure capacity"
       },
-      "name": "nominalCoolingCapacity",
+      "name": "pressureCapacity",
       "schema": "double",
-      "unit": "watt",
+      "unit": "poundPerSquareInch",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Length",
+        "Property"
+      ],
+      "displayName": {
+        "en": "pipe diameter"
+      },
+      "name": "pipeDiameter",
+      "schema": "float",
+      "unit": "centimetre",
       "writable": true
     },
     {
@@ -27,19 +40,11 @@
       "schema": "double",
       "unit": "litrePerSecond",
       "writable": true
-    },
-    {
-      "@type": "Component",
-      "displayName": {
-        "en": "fan"
-      },
-      "name": "fan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
     }
   ],
   "displayName": {
-    "en": "Cooling tower"
+    "en": "Valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:org:w3id:rec:asset:Component;1",
   "@context": "dtmi:dtdl:context;2"
 }

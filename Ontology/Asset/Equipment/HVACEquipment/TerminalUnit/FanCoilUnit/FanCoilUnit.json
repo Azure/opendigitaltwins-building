@@ -48,19 +48,6 @@
     },
     {
       "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
-      "displayName": {
-        "en": "nominal airflow"
-      },
-      "name": "nominalAirflow",
-      "schema": "double",
-      "unit": "litrePerSecond",
-      "writable": true
-    },
-    {
-      "@type": [
         "Power",
         "Property"
       ],
@@ -79,19 +66,6 @@
       },
       "name": "filterType",
       "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Power",
-        "Property"
-      ],
-      "displayName": {
-        "en": "fan motor power"
-      },
-      "name": "fanMotorPower",
-      "schema": "double",
-      "unit": "horsepower",
       "writable": true
     },
     {
@@ -119,6 +93,14 @@
         "valueSchema": "string"
       },
       "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "fan"
+      },
+      "name": "fan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
     }
   ],
   "displayName": {

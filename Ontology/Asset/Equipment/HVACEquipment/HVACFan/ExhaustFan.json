@@ -4,6 +4,6 @@
   "displayName": {
     "en": "Exhaust Fan"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Fan;1",
+  "extends": "dtmi:org:w3id:rec:asset:HVACFan;1",
   "@context": "dtmi:dtdl:context;2"
 }
