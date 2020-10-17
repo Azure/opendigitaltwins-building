@@ -166,9 +166,10 @@ Here are the DTDL interfaces snippets for these twins
 
 ```
 
-## REC full
-This ontology was generated using OWL2DTDL converter which generated FullBuildingRecModels.json to be uploaded into ADT.
-<*point to FullBuildingRecModels.json*>
+## REC Full
+We have put together an turn-key deployment version of RealEstateCore by importing all of the modules into a ready-to-use REC Full ontology. This full version was generated using [OWL2DTDL converter](OWL2DTDL) which generats FullBuildingRecModels.json to be uploaded into your Azure Digital Twins instance as described by this article. 
+**Note**: Models don't have to be validated with the DTDL parser unless you change them.
+
 
 ## Upload the models
 <*explain how to upload the models into ADT*>
