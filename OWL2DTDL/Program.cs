@@ -348,7 +348,7 @@ namespace OWL2DTDL
                     // Define the Relationship and its name
                     IBlankNode relationshipNode = dtdlModel.CreateBlankNode();
                     dtdlModel.Assert(new Triple(interfaceNode, dtdl_contents, relationshipNode));
-                    dtdlModel.Assert(new Triple(relationshipNode, rdfType, dtdl_Relationship));
+                    
                     ILiteralNode relationshipNameNode = dtdlModel.CreateLiteralNode(relationshipName);
                     dtdlModel.Assert(new Triple(relationshipNode, dtdl_name, relationshipNameNode));
 
@@ -364,6 +364,28 @@ namespace OWL2DTDL
                         dtdlModel.Assert(GetDtdlDescriptionTriples(oProperty, relationshipNode));
                     }
 
+                    // If this relationship is annotated with the dtdlType annotation,
+                    // and that type is a component, then assert the relationship is a component, set its schema, and go to next relationship.
+                    if (!relationship.Target.IsOwlThing() && relationship.Target.IsNamed() && relationship.Target.DtdlTypes().Contains("component"))
+                    {
+                        dtdlModel.Assert(new Triple(relationshipNode, rdfType, dtdl_Component));
+                        string schemaDtmi = GetDTMI(relationship.Target);
+                        IUriNode schemaInterfaceNode = dtdlModel.CreateUriNode(UriFactory.Create(schemaDtmi));
+                        dtdlModel.Assert(new Triple(relationshipNode, dtdl_schema, schemaInterfaceNode));
+                        continue;
+                    }
+
+                    // Assert target (if defined)
+                    if (!relationship.Target.IsOwlThing())
+                    {
+                        string targetDtmi = GetDTMI(relationship.Target);
+                        IUriNode targetInterfaceNode = dtdlModel.CreateUriNode(UriFactory.Create(targetDtmi));
+                        dtdlModel.Assert(new Triple(relationshipNode, dtdl_target, targetInterfaceNode));
+                    }
+
+                    // Assert that this is indeed a Relationship
+                    dtdlModel.Assert(new Triple(relationshipNode, rdfType, dtdl_Relationship));
+
                     // Assert min multiplicity. Hardcoded: per DTDL v2 spec: "For this release, minMultiplicity must always be 0"
                     if (relationship.MinimumCount.HasValue)
                     {   
@@ -376,13 +398,6 @@ namespace OWL2DTDL
                     {
                         ILiteralNode maxMultiplicityNode = dtdlModel.CreateLiteralNode(relationship.MaximumCount.Value.ToString(), UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
                         dtdlModel.Assert(new Triple(relationshipNode, dtdl_maxMultiplicity, maxMultiplicityNode));
-                    }
-
-                    // Assert target (if defined)
-                    if (!relationship.Target.IsOwlThing()) { 
-                        string targetDtmi = GetDTMI(relationship.Target);
-                        IUriNode targetInterfaceNode = dtdlModel.CreateUriNode(UriFactory.Create(targetDtmi));
-                        dtdlModel.Assert(new Triple(relationshipNode, dtdl_target, targetInterfaceNode));
                     }
 
                     // Extract annotations on object properties -- these become DTDL Relationship Properties
@@ -512,6 +527,29 @@ namespace OWL2DTDL
                     interfaceArray.WriteTo(writer);
                 }
             }
+        }
+
+        // TODO: move this into the DotNetRdfExtensions class
+        internal static IEnumerable<INode> GetAxiomAnnnotations(INode subj, IUriNode pred, INode obj, IUriNode annotationProperty)
+        {
+            IUriNode owlAnnotatedSource = _ontologyGraph.CreateUriNode(OWL.annotatedSource);
+            IUriNode owlAnnotatedProperty = _ontologyGraph.CreateUriNode(OWL.annotatedProperty);
+            IUriNode owlAnnotatedTarget = _ontologyGraph.CreateUriNode(OWL.annotatedTarget);
+
+            IEnumerable<INode> axiomAnnotations = _ontologyGraph.Nodes
+                .Where(node => _ontologyGraph.ContainsTriple(new Triple(node, owlAnnotatedSource, subj)))
+                .Where(node => _ontologyGraph.ContainsTriple(new Triple(node, owlAnnotatedProperty, pred)))
+                .Where(node => _ontologyGraph.ContainsTriple(new Triple(node, owlAnnotatedTarget, obj)));
+
+            HashSet<INode> retVal = new HashSet<INode>();
+            foreach (INode axiomAnnotation in axiomAnnotations)
+            {
+                foreach (Triple annotationAssertion in _ontologyGraph.GetTriplesWithSubjectPredicate(axiomAnnotation, annotationProperty))
+                {
+                    retVal.Add(annotationAssertion.Object);
+                }
+            }
+            return retVal;
         }
 
         // TODO: move this into the DotNetRdfExtensions class

@@ -67,6 +67,13 @@ namespace OWL2DTDL
             return Path.GetFileName(node.Uri.AbsolutePath);
         }
 
+        public static IEnumerable<string> DtdlTypes(this IUriNode node)
+        {
+            IGraph g = node.Graph;
+            IUriNode dtdlType = g.CreateUriNode(new Uri("https://w3id.org/rec/metadata/dtdlType"));
+            return g.GetTriplesWithSubjectPredicate(node, dtdlType).Select(trip => trip.Object).LiteralNodes().Select(litNode => litNode.Value);
+        }
+
         // TODO This should probably be fixed to handle URN namespaces properly..
         public static Uri GetNamespace(this IUriNode node)
         {
@@ -315,6 +322,8 @@ namespace OWL2DTDL
                 .Select(superClass => new OntologyRestriction(superClass));
             foreach (OntologyRestriction ontologyRestriction in ontologyRestrictions)
             {
+
+
                 OntologyProperty restrictionProperty = ontologyRestriction.OnProperty;
                 OntologyClass restrictionClass = ontologyRestriction.OnClass;
                 if (restrictionProperty.IsNamed() && (restrictionClass.IsNamed() || restrictionClass.IsDatatype()))
@@ -354,6 +363,15 @@ namespace OWL2DTDL
 
             // Return the values
             return relationshipsDict.Values;
+        }
+
+        public static IEnumerable<string> DtdlTypes(this OntologyClass oClass)
+        {
+            if (oClass.IsNamed())
+            {
+                return oClass.GetUriNode().DtdlTypes();
+            }
+            return new List<string>();
         }
 
         public static IEnumerable<OntologyClass> SuperClassesWithOwlThing(this OntologyClass cls)
