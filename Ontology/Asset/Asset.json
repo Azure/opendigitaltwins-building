@@ -189,6 +189,15 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "MAC address"
+      },
+      "name": "MACAddress",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "model number"
       },
       "name": "modelNumber",
