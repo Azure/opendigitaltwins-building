@@ -1,0 +1,72 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:DuctConnection;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": [
+        "Length",
+        "Property"
+      ],
+      "displayName": {
+        "en": "duct inlet size"
+      },
+      "name": "ductInletSize",
+      "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "duct inlet shape"
+      },
+      "name": "ductInletShape",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "round",
+            "name": "round"
+          },
+          {
+            "enumValue": "rectangle",
+            "name": "rectangle"
+          },
+          {
+            "enumValue": "oval",
+            "name": "oval"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "duct inlet configuration"
+      },
+      "name": "ductInletConfiguration",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "single",
+            "name": "single"
+          },
+          {
+            "enumValue": "dual",
+            "name": "dual"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Duct connection"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Component;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -12,51 +12,20 @@
       "writable": true
     },
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
-      "displayName": {
-        "en": "duct inlet size"
-      },
-      "name": "ductInletSize",
-      "schema": "double",
-      "unit": "millimetre",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "duct inlet shape"
-      },
-      "name": "ductInletShape",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Round",
-            "name": "Round"
-          },
-          {
-            "enumValue": "Rectangle",
-            "name": "Rectangle"
-          },
-          {
-            "enumValue": "Oval",
-            "name": "Oval"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
       "@type": "Component",
       "displayName": {
         "en": "fan"
       },
       "name": "fan",
       "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "duct inlet"
+      },
+      "name": "ductInlet",
+      "schema": "dtmi:org:w3id:rec:asset:DuctConnection;1"
     }
   ],
   "displayName": {

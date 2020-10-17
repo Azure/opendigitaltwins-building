@@ -54,6 +54,14 @@
       "name": "maxNumberOfPoles",
       "schema": "integer",
       "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "main bus"
+      },
+      "name": "mainBus",
+      "schema": "dtmi:org:w3id:rec:asset:ElectricalBus;1"
     }
   ],
   "displayName": {
