@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ModelUploader": {
+      "commandName": "Project",
+      "commandLineArgs": "-p C:\\Users\\karlh\\Scratch\\Git\\opendigitaltwins-building\\Ontology"
+    }
+  }
+}
