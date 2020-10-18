@@ -494,9 +494,6 @@ namespace OWL2DTDL
                     // Create model output directory based on output path and longest parent path
                     // I.e., we put multi-inheritance classes as far down as possible in their respective hierarchy
                     List<string> parentDirectories = oClass.LongestParentPathToOwlThing();
-                    if (oClass.DirectSubClasses.Any(cls => cls.IsNamed() && !cls.IsDeprecated() && !IsIgnored(cls))) {
-                        parentDirectories.Add(oClass.GetLocalName());
-                    }
                     string modelPath = string.Join("/", parentDirectories);
                     string modelOutputPath = $"{_outputPath}/{modelPath}/";
                     Directory.CreateDirectory(modelOutputPath);

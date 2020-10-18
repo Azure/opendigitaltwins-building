@@ -2,7 +2,7 @@
   "profiles": {
     "OWL2DTDL": {
       "commandName": "Project",
-      "commandLineArgs": "-u https://w3id.org/rec/full/3.3/ -i ./RecIgnoredNames.csv -o C:\\Users\\HaKa\\source\\repos\\opendigitaltwins-building\\Ontology"
+      "commandLineArgs": "-u https://w3id.org/rec/full/3.3/ -i ./RecIgnoredNames.csv -o C:\\Users\\karlh\\Scratch\\Git\\opendigitaltwins-building\\Ontology"
     }
   }
 }
