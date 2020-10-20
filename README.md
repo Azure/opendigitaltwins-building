@@ -1,27 +1,21 @@
-# [RealEstateCore-based](https://doc.realestatecore.io/3.2/full.html) ontology for smart building
+# Digital Twins Definition Language-based [RealEstateCore](https://doc.realestatecore.io/3.2/full.html) ontology for smart buildings
 
 Note: this is a work in progress repo
 
 ## Motivation and purpose
 
-[Azure Digital Twins (ADT)](https://azure.microsoft.com/en-us/services/digital-twins/) and its underlying [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl) are at the heart of Smart Building Azure solutions. 
+[Azure Digital Twins (ADT)](https://azure.microsoft.com/en-us/services/digital-twins/) and its underlying [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl) are at the heart of Smart Building solutions built on Azure. 
 
-Although DTDL provides the schema by which developers can define the models of the entities they expect to use in their topologies, we are faced with problems such as developers not knowing where to start or creating models so fragmented that make it impossible to integrate with other DTDL-based solutions.
+DTDL provides the schema by which developers can define the models of the entities they expect to use in their topologies. Since DTDL is a blank canvas which can model any entity, it is important to accelerate developers' time to results while also providing a unified ontology to enable seamless integration between various DTDL-based solutions.
 
-Our goal is to deliver a DTDL-based building ontology(or set of models) which we recommand as “gold standard” for smart building modeling, leveraging industry standards to accelerate our work and prevent reinvention. As part of the delivery, also provide best practices for how to consume and properly extend the ontology. 
+Our partnership with RealEstateCore seeks to deliver a DTDL-based ontology (or set of models) for the real estate industry which provides common ground for modeling smart buildings, leveraging industry standards to prevent reinvention. As part of the delivery, we also provide best practices for how to consume and properly extend the ontology. 
 
 This is an open-source ontology definition which learns from, builds on, and uses industry standards, meets the needs of downstream developers, and we hope it will be widely adopted and/or extended by developers.
 
-The evolution of our journey started with evaluation of multiple industry standards, adoption of RealEstateCore (REC) ontology, refinement with partners, validation of models with real world solutions, including Microsoft Campus, and will continue to evangelize with Digital Twins Consortium and partner’s ecosystem to extend the developer tools and management of this ontology (see Ontology Evolution picture)
+## DTDL-based RealEstateCore ontology
+This ontology is implemented based on the [Real Estate Core](https://doc.realestatecore.io/3.3/full.html) domain ontology. RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other industry standards such as Brick, Project Haystack, and more. The DTDL-based RealEstateCore ontology will not only accelerate developers from the “blank page,” but will also facilitate business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology will be open sourced, developers can easily annotate existing models while contributing their own domain expertise. 
 
-![Ontology Evolution](images/OntologyEvolution.JPG)
-
-## REC-based ontology
-This ontology is implemented based on [Real Estate Core (REC)](https://doc.realestatecore.io/3.3/full.html) domain ontology, and taking inspiration from prominent industry standards like [Brick](https://brickschema.org/ontology/), [Haystack](https://project-haystack.org/), [Web Ontology Language(OWL)](https://www.w3.org/OWL), and WillowTwin's models.
-
-REC ontology foundation have deep domain knowledge and expertise with smart buildimg and real estate industry and Semantic Web technology, and have years of experience with model authoring and maintenance. Their real-world applications and customers are actively using REC models and demonstrated cost-efficiency solutions to connect their buildings with new services on a large scale, and not have to worry about building- or technology-specific implementation details and formats. 
-
-## REC structure
+## RealEstateCore structure
 
 ![Building Ontology](images/OntologyDiagram.JPG)
 
@@ -39,7 +33,7 @@ RealEstateCore ontology consists of a main set of interfaces:
   - **Event** - A spatiotemporally indexed entity with participants, something which occurs somewhere, and that has or takes some time, for example a Lease or Rent.
   - **Role** -- A role that is held by some agent, for example a person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role
 
-## Using REC ontology
+## Using RealEstateCore ontology
 
 Here is a real example of a subgraph of twins' instances based on this ontology
 
@@ -166,7 +160,7 @@ Here are the DTDL interfaces snippets for these twins
 
 ```
 
-## REC Full
+## RealEstateCore Full
 We have put together an turn-key deployment version of RealEstateCore by importing all of the modules into a ready-to-use REC Full ontology. This full version was generated using [OWL2DTDL converter](OWL2DTDL) which created FullBuildingRecModels.json to be uploaded into your Azure Digital Twins instance as described by [upload models article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model#upload-models). 
 **Note**: Models don't have to be validated with the DTDL parser unless you change them.
 
