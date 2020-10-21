@@ -326,6 +326,7 @@ namespace OWL2DTDL
                 !relationship.Property.IsDeprecated() && 
                 !relationship.Target.IsDeprecated() &&
                 !IsIgnored(relationship.Target) &&
+                !relationship.Target.SuperClasses.Any(parent => parent.IsNamed() && IsIgnored(parent)) && 
                 !IsIgnored(relationship.Property)))
                 {
                     OntologyProperty oProperty = relationship.Property;
