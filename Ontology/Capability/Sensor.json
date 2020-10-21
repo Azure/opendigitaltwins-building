@@ -1,26 +1,16 @@
 {
   "@id": "dtmi:org:w3id:rec:core:Sensor;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": [
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for. This allows systems to perform graph propagation of sensor values, e.g., letting a temperature sensor that observes a given room set the temperature for that room."
-      },
-      "displayName": {
-        "en": "observes"
-      },
-      "name": "observes"
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Relationship",
+    "description": {
+      "en": "Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for. This allows systems to perform graph propagation of sensor values, e.g., letting a temperature sensor that observes a given room set the temperature for that room."
     },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "generated exception"
-      },
-      "name": "generatedException",
-      "target": "dtmi:org:w3id:rec:device:Exception;1"
-    }
-  ],
+    "displayName": {
+      "en": "observes"
+    },
+    "name": "observes"
+  },
   "description": {
     "en": "Capability to detect or measure properties of the physical world."
   },
