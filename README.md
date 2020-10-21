@@ -40,13 +40,13 @@ Here is a real example of a subgraph of twins' instances based on this ontology
 ![Using the models](images/UsingModels.JPG)
 
 We have instantiated the following twins:
-- A building instance *Building 121* of type **Building:Space**
-- One level instance *Level 1* of type **Level:Space** which is part of the building
-- Two zones, *Level 1 Left Wing* and *HVAC Zone 1* of type **HVACZone:Zone:Space**, both of them have capability Space Utilization virtual sensor 
-- Two room instances *Room 101* and *Room 103* of type **ClimateControlRoom:Room:Space** which are part of level and HVAC zone
-- A VAV physical device *VAVL1.01* of type **VAVBox:TerminalUnit:HVACEquipment:Equipment:Asset** with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, feeds the HVAC zone and located in a room
-- An AHU physical device *AHUL1.01* of type **AirHandlingUnit:HVACEquipment:Equipment:Asset** feeds the VAV and located in a room
-- A Vergesense device *VergeSensorDevice* of type **SensorEquipment:ICTEquipment:Equipment:Asset** with two sensors *PeopleCount* and *SignOfLife*, which serves the wing zone and located in a room
+- A building instance *Building 121* of type [**dtmi:org:w3id:rec:core:Building;1**](Ontology/Space/Building.json)
+- One level instance *Level 1* of type [**dtmi:org:w3id:rec:core:Level;1**](Ontology/Space/Level.json) which is part of the building
+- Two zones, *Level 1 Left Wing* and *HVAC Zone 1* of type [**dtmi:org:w3id:rec:core:HVACZone;1**](Ontology/Space/Zone/HVACZone.json), both of them have capability Space Utilization virtual sensor 
+- Two room instances *Room 101* and *Room 103* of type [**dtmi:org:w3id:rec:building:ClimateControlRoom;1**](Ontology/Space/Room/UtilitiesRoom/ClimateControlRoom.json) which are part of level and HVAC zone
+- A VAV physical device *VAVL1.01* of type [**dtmi:org:w3id:rec:asset:VAVBox;1**](Ontology/Asset/Equipment/HVACEquipment/TerminalUnit/VAVBox.json) with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, feeds the HVAC zone and located in a room
+- An AHU physical device *AHUL1.01* of type [**dtmi:org:w3id:rec:asset:AirHandlingUnit;1**](Ontology/Asset/Equipment/HVACEquipment/AirHandlingUnit.json) feeds the VAV and located in a room
+- A Vergesense device *VergeSensorDevice* of type [**dtmi:org:w3id:rec:asset:SensorEquipment;1**](Ontology/Asset/Equipment/ICTEquipment/SensorEquipment.json) with two sensors *PeopleCount* and *SignOfLife*, which serves the wing zone and located in a room
 
 Here are the DTDL interfaces snippets for these twins
 
@@ -160,32 +160,64 @@ Here are the DTDL interfaces snippets for these twins
 
 ```
 
-## RealEstateCore Full
-We have put together an turn-key deployment version of RealEstateCore by importing all of the modules into a ready-to-use REC Full ontology. This full version was generated using [OWL2DTDL converter](OWL2DTDL) which created FullBuildingRecModels.json to be uploaded into your Azure Digital Twins instance as described by [upload models article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model#upload-models). 
-**Note**: Models don't have to be validated with the DTDL parser unless you change them.
-
-
 ## Upload the models
 <*explain how to upload the models into ADT*>
-What Kevin did ...
+You can upload all models in your own instance of ADT by using [Model Uploader](ModelUploader). Follow the instructions on ModelUploader on how to upload all models in your own instance. Here is [an article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model) on how to manage models, update, retrieve, update, decommision and delete models.
+
 
 ## Visualizing the models
-<*explain this is coming soon and give a preview screenshot of the models, Willow could contribute here with thier model visualizer*>
+Once you have uploaded these models into your Azure Digital Twins instance, now it's time to view how models are related to each other. Please use [ADT Model Visualizer](AdtModelVisualizer) to view the models. This tool is a draft version (read-only visualizer, no edits) and we also invite you to contribute to it to make it better.
 
 ## Extending the ontology
+<*Karl to add more or to update*>
 
-<*explain how to upload the models into ADT - Karl to add*>
-How to customize for yourself ...
+We encourage users to extend existing models via inheritance by using **extends**. Interface inheritance can be used to create specialized interfaces from more general interfaces. If you need to add a new interface or add additional properties, try to find the leaf-level interface to extend from. For example, if you need to add a specialized type of room, like *FocusRoom*, add a new interface *FocusRoom* which inherits from *Room* interface. Through inheritance, the *FocusRoom* has two properties *Room*: the *personCapacity* property (from Room) and the *occupied* property (from FocusRoom).
+
+```
+[
+  {
+    "@id": "dtmi:org:w3id:rec:core:Room;1",
+    "@type": "Interface",
+    "dtmi:dtdl:property:contents;2": {
+      "@type": "Property",
+      // ...
+      "name": "personCapacity",
+      "schema": "integer",
+      "writable": true
+    },
+    // ...
+    "extends": "dtmi:org:w3id:rec:core:Space;1",
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:core:FocusRoom;1",
+    "@type": "Interface",
+    "dtmi:dtdl:property:contents;2": {
+      "@type": "Property",
+      // ...
+      "name": "occupied",
+      "schema": "bool",
+      "writable": true
+    },
+    // ...
+    "extends": "dtmi:org:w3id:rec:core:Room;1",
+    "@context": "dtmi:dtdl:context;2"
+  }
+]
+
+Now that you have extended your specialized interface/s, ask yourself if your extensions are generic and could benefit other users. If the answer is yes, our recommendation is to fork the existing repository, make your changes and send a pull request. 
+```
 
 ## Validating the models
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+These models don't have to be validated with the DTDL parser unless you change them. If you have extended our models or made changes, it's recommanded to validate the models as described by this article [Validate models](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-convert-models#validate-and-upload-dtdl-models)
+
 
 ## Contributing to ontology
 <*explain how to contribute to this ontology, probably creating PRs in this repo is the easiest one to go - Karl to add*>
-We are working on improving the core ontology, adding more modules, and as well is working on making better tools to integrate and use the ontology in smart building platforms and its applications.
+We are working on improving the main interfaces, adding more interfaces, as well as making better tools to integrate and use the models in smart building platforms and its applications.
 
-We encourage you to contribute to make RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend modules and vocabularies, suggest improvements in order to evolve this ontology
+We encourage you to contribute to make DTDL RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements in order to evolve this ontology.
 
 - Comment or create a new issue for bug reporting
 - For improvements, please fork the rec repository, make your changes and send a pull request
@@ -193,12 +225,13 @@ We encourage you to contribute to make RealEstateCore-based ontology better. Ple
 
 ## Read more
 
-- Azure Digital Twins product page
-- Azure Digital Twins: Powering the next generation of IoT connected solutions
-- Digital Twins Definition Language Repo
-- Azure Digital Twins introduction video
-- Azure Digital Twins IoT Show Preview
-- Azure Digital Twins Tech Deep Dive
+- [Azure Digital Twins product page](https://azure.microsoft.com/en-us/services/digital-twins/)
+- [Azure Digital Twins: Powering the next generation of IoT connected solutions](https://channel9.msdn.com/Events/Build/2020/INT177)
+- [Digital Twins Definition Language Repository](https://github.com/Azure/opendigitaltwins-dtdl)
+- [Azure Digital Twins introduction video](https://azure.microsoft.com/en-us/resources/videos/azure-digital-twins-introduction-video/)
+- [Azure Digital Twins IoT Show Public Preview](https://www.youtube.com/watch?v=D6kyhrRVdfc&feature=youtu.be)
+- [Azure Digital Twins Tech Deep Dive](https://www.youtube.com/watch?v=5Ku55g1GQG8&feature=youtu.be)
+- [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
 
 ---
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
