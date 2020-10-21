@@ -222,7 +222,6 @@ We encourage you to contribute to make DTDL RealEstateCore-based ontology better
 
 - Comment or create a new issue for bug reporting
 - For improvements, please fork the rec repository, make your changes and send a pull request
-- Email us if you want to make a case(?)
 
 ## Read more
 
