@@ -162,6 +162,7 @@ Here are the DTDL interfaces snippets for these twins
 
 ## Upload the models
 <*explain how to upload the models into ADT*>
+
 You can upload all models in your own instance of ADT by using [Model Uploader](ModelUploader). Follow the instructions on ModelUploader on how to upload all models in your own instance. Here is [an article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model) on how to manage models, update, retrieve, update, decommision and delete models.
 
 
