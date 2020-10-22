@@ -242,7 +242,7 @@ We encourage you to contribute to make DTDL RealEstateCore-based ontology better
 - [Azure Digital Twins Tech Deep Dive](https://www.youtube.com/watch?v=5Ku55g1GQG8&feature=youtu.be)
 - [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
 
-## Read more about Real Estate Core (#realestatecore)
+## Read more about Real Estate Core
 One solution powered by RealEstateCore is Idun ProptechOS, which enables real estate owners to analyze and optimize sustainability, well-being, and productivity of their buildings.  ProptechOS is used by a number of significant customers at scale, including Vasakronan, Sweden’s largest property company comprising 174 properties and 24.7 million square feet of real estate, as well as YIT, the largest Finnish and a significant North European construction company and urban developer.
 
 ---
