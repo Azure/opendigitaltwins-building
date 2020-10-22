@@ -6,14 +6,23 @@ Note: this is a work in progress repo
 
 [Azure Digital Twins (ADT)](https://azure.microsoft.com/en-us/services/digital-twins/) and its underlying [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl) are at the heart of Smart Building solutions built on Azure. 
 
-DTDL provides the schema by which developers can define the models of the entities they expect to use in their topologies. Since DTDL is a blank canvas which can model any entity, it is important to accelerate developers' time to results while also providing a unified ontology to enable seamless integration between various DTDL-based solutions.
+DTDL provides the schema by which developers can define the language of the entities they expect to use in their topologies. Since DTDL is a blank canvas which can model any entity, it is important to accelerate developers' time to results while also providing a unified ontology to enable seamless integration between various DTDL-based solutions.
 
 Our partnership with RealEstateCore seeks to deliver a DTDL-based ontology (or set of models) for the real estate industry which provides common ground for modeling smart buildings, leveraging industry standards to prevent reinvention. As part of the delivery, we also provide best practices for how to consume and properly extend the ontology. 
 
 This is an open-source ontology definition which learns from, builds on, and uses industry standards, meets the needs of downstream developers, and we hope it will be widely adopted and/or extended by developers.
 
 ## DTDL-based RealEstateCore ontology
-This ontology is implemented based on the [Real Estate Core](https://doc.realestatecore.io/3.3/full.html) domain ontology. RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other industry standards such as Brick, Project Haystack, and more. The DTDL-based RealEstateCore ontology will not only accelerate developers from the “blank page,” but will also facilitate business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology will be open sourced, developers can easily annotate existing models while contributing their own domain expertise. 
+
+This ontology is implemented based on the [Real Estate Core](https://doc.realestatecore.io/3.3/full.html) domain ontology. RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other industry standards such as Brick Schema, Project Haystack, W3C Building Topology Ontology (W3C BOT), and more. 
+
+For example:
+- The *Asset* interface, covering systems and equipment within buildings is based on an interpretation and extension of the [Brick Schema Ontology](https://brickschema.org/ontology/), carried out in conjunction with [Willow Inc.](https://www.willowinc.com/willowtwin/). 
+- Our spatial modeling is in line with the [W3C BOT ontology](https://w3c-lbd-cg.github.io/bot) and clearly differentiates between *Building Components* and *Spaces*; where the former make up the building's structural elements, and the latter make up physical spaces inside (rooms, levels, etc) or outside (regions, land, etc) of a building.
+- *Capability* model is based on the BMS notion of Points (as represented in Brick Schema or Haystack) or Affordances, as represented in [Web of Things](https://www.w3.org/WoT/). Subclasses of Capability denote specific sensorsing or actuation capabilities that can be assigned to Spaces, Assets, etc.
+- LogicalDevice is inspired from [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub) (IoT Hub is calling it *Device*) and represents a connected entity that pushes data to the cloud or receives commands from the cloud, which is typically an instance of a piece of software like an IoTEdge module, a HomeAssistant install, or some proprietary BMS system, etc.
+
+The DTDL-based RealEstateCore ontology will not only accelerate developers from the “blank page,” but will also facilitate business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology will be open sourced, developers can easily annotate existing models while contributing their own domain expertise. [Read more about Real Estate Core](#read more about real estate core)
 
 ## RealEstateCore structure
 
@@ -223,7 +232,7 @@ We encourage you to contribute to make DTDL RealEstateCore-based ontology better
 - Comment or create a new issue for bug reporting
 - For improvements, please fork the rec repository, make your changes and send a pull request
 
-## Read more
+## Read more about Azure Digital Twins
 
 - [Azure Digital Twins product page](https://azure.microsoft.com/en-us/services/digital-twins/)
 - [Azure Digital Twins: Powering the next generation of IoT connected solutions](https://channel9.msdn.com/Events/Build/2020/INT177)
@@ -232,6 +241,9 @@ We encourage you to contribute to make DTDL RealEstateCore-based ontology better
 - [Azure Digital Twins IoT Show Public Preview](https://www.youtube.com/watch?v=D6kyhrRVdfc&feature=youtu.be)
 - [Azure Digital Twins Tech Deep Dive](https://www.youtube.com/watch?v=5Ku55g1GQG8&feature=youtu.be)
 - [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
+
+## Read more about Real Estate Core
+One solution powered by RealEstateCore is Idun ProptechOS, which enables real estate owners to analyze and optimize sustainability, well-being, and productivity of their buildings.  ProptechOS is used by a number of significant customers at scale, including Vasakronan, Sweden’s largest property company comprising 174 properties and 24.7 million square feet of real estate, as well as YIT, the largest Finnish and a significant North European construction company and urban developer.
 
 ---
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
