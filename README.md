@@ -22,7 +22,7 @@ For example:
 - *Capability* model is based on the BMS notion of Points (as represented in Brick Schema or Haystack) or Affordances, as represented in [Web of Things](https://www.w3.org/WoT/). Subclasses of Capability denote specific sensorsing or actuation capabilities that can be assigned to Spaces, Assets, etc.
 - LogicalDevice is inspired from [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub) (IoT Hub is calling it *Device*) and represents a connected entity that pushes data to the cloud or receives commands from the cloud, which is typically an instance of a piece of software like an IoTEdge module, a HomeAssistant install, or some proprietary BMS system, etc.
 
-The DTDL-based RealEstateCore ontology will not only accelerate developers from the “blank page,” but will also facilitate business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology will be open sourced, developers can easily annotate existing models while contributing their own domain expertise. [Read more about Real Estate Core](#real-estate-core)
+The DTDL-based RealEstateCore ontology will not only accelerate developers from the “blank page,” but will also facilitate business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology will be open sourced, developers can easily annotate existing models while contributing their own domain expertise. [More about Real Estate Core](#more-about-real-estate-core)
 
 ## RealEstateCore structure
 
@@ -232,7 +232,7 @@ We encourage you to contribute to make DTDL RealEstateCore-based ontology better
 - Comment or create a new issue for bug reporting
 - For improvements, please fork the rec repository, make your changes and send a pull request
 
-## Read more about Azure Digital Twins
+## More about Azure Digital Twins
 
 - [Azure Digital Twins product page](https://azure.microsoft.com/en-us/services/digital-twins/)
 - [Azure Digital Twins: Powering the next generation of IoT connected solutions](https://channel9.msdn.com/Events/Build/2020/INT177)
@@ -242,7 +242,7 @@ We encourage you to contribute to make DTDL RealEstateCore-based ontology better
 - [Azure Digital Twins Tech Deep Dive](https://www.youtube.com/watch?v=5Ku55g1GQG8&feature=youtu.be)
 - [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
 
-## Read more about Real Estate Core
+## More about Real Estate Core
 One solution powered by RealEstateCore is Idun ProptechOS, which enables real estate owners to analyze and optimize sustainability, well-being, and productivity of their buildings.  ProptechOS is used by a number of significant customers at scale, including Vasakronan, Sweden’s largest property company comprising 174 properties and 24.7 million square feet of real estate, as well as YIT, the largest Finnish and a significant North European construction company and urban developer.
 
 ---
