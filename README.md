@@ -26,7 +26,7 @@ The DTDL-based RealEstateCore ontology will not only accelerate developers from 
 
 ## RealEstateCore structure
 
-![Building Ontology](Images/OntologyDiagram.JPG)
+![Building Ontology](images/OntologyDiagram.JPG)
 
 RealEstateCore ontology consists of a main set of interfaces:
   - **Asset** – An object which is placed inside of a building, but is not an integral part of that building's structure, for example architectural, furniture, equipment, systems, etc.
@@ -46,7 +46,7 @@ RealEstateCore ontology consists of a main set of interfaces:
 
 Here is a real example of a subgraph of twins' instances based on this ontology
 
-![Using the models](Images/UsingModels.JPG)
+![Using the models](images/UsingModels.JPG)
 
 We have instantiated the following twins:
 - A building instance *Building 121* of type [**dtmi:org:w3id:rec:core:Building;1**](Ontology/Space/Building.json)
@@ -171,7 +171,7 @@ These models don't have to be validated with the DTDL parser unless you change t
 <*Karl to add more or to update*>
 This is the decision tree workflow we recommend for extending and contributing to RealEstateCore ontology.
 
-![Extending ontology](Images/OntologyExtend.JPG)  
+![Extending ontology](images/OntologyExtend.JPG)  
 
 We encourage users to extend existing models via inheritance by using **extends**. Interface inheritance can be used to create specialized interfaces from more general interfaces. If you need to add a new interface or add additional properties, try to find the interfaces to extend from. For example, if you need to add a specialized type of room, like *FocusRoom*, add a new interface *FocusRoom* which inherits from *Room* interface. Through inheritance, the *FocusRoom* has two properties *Room*: the *personCapacity* property (from Room) and the *occupied* property (from FocusRoom).
 
