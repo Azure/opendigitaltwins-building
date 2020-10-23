@@ -15,3 +15,4 @@ https://w3id.org/rec/core/SensorInterface;Sensor interface relates to the sensor
 http://www.opengis.net/ont/geosparql#Geometry;
 https://w3id.org/rec/core/Software;
 https://w3id.org/rec/core/Service;
+https://w3id.org/rec/asset/ElectricalCircuit;Filtered out for v1.0 of DTDL model set, at Willow's request, until we figure out where it belongs.

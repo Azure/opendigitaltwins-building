@@ -134,16 +134,16 @@ namespace OWL2DTDL
             { QUDT.QuantityKindNS.Illuminance, DTDL.Illuminance },
             { QUDT.QuantityKindNS.PlaneAngle, DTDL.Angle },
             { QUDT.QuantityKindNS.Voltage, DTDL.Voltage },
-            { QUDT.QuantityKindNS.Power, DTDL.Power },
+            //{ QUDT.QuantityKindNS.Power, DTDL.Power },
             { QUDT.QuantityKindNS.Mass, DTDL.Mass },
             { QUDT.QuantityKindNS.MassPerTime, DTDL.MassFlowRate },
-            { QUDT.QuantityKindNS.Pressure, DTDL.Pressure },
-            { QUDT.QuantityKindNS.Length, DTDL.Length },
-            { QUDT.QuantityKindNS.Temperature, DTDL.Temperature },
+            //{ QUDT.QuantityKindNS.Pressure, DTDL.Pressure },
+            //{ QUDT.QuantityKindNS.Length, DTDL.Length },
+            //{ QUDT.QuantityKindNS.Temperature, DTDL.Temperature },
             { QUDT.QuantityKindNS.Time, DTDL.TimeSpan },
-            { QUDT.QuantityKindNS.Velocity, DTDL.Velocity },
-            { QUDT.QuantityKindNS.Volume, DTDL.Volume },
-            { QUDT.QuantityKindNS.VolumeFlowRate, DTDL.VolumeFlowRate }
+            //{ QUDT.QuantityKindNS.Velocity, DTDL.Velocity },
+            //{ QUDT.QuantityKindNS.Volume, DTDL.Volume },
+            //{ QUDT.QuantityKindNS.VolumeFlowRate, DTDL.VolumeFlowRate }
         };
 
         static void Main(string[] args)
