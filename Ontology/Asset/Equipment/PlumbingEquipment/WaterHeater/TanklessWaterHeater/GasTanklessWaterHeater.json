@@ -2,16 +2,12 @@
   "@id": "dtmi:org:w3id:rec:asset:GasTanklessWaterHeater;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": {
-    "@type": [
-      "Power",
-      "Property"
-    ],
+    "@type": "Property",
     "displayName": {
       "en": "power input"
     },
     "name": "powerInput",
     "schema": "double",
-    "unit": "watt",
     "writable": true
   },
   "displayName": {

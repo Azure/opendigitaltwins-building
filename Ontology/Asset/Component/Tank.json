@@ -3,29 +3,21 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "tank capacity"
       },
       "name": "tankCapacity",
       "schema": "double",
-      "unit": "litre",
       "writable": true
     },
     {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "system pressure"
       },
       "name": "systemPressure",
       "schema": "double",
-      "unit": "poundPerSquareInch",
       "writable": true
     }
   ],

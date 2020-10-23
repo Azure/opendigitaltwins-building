@@ -25,16 +25,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "power output"
       },
       "name": "powerOutput",
       "schema": "double",
-      "unit": "watt",
       "writable": true
     },
     {

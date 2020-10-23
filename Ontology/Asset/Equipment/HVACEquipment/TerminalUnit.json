@@ -3,29 +3,21 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "minimum airflow rating"
       },
       "name": "minAirflowRating",
       "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     },
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "maximum airflow rating"
       },
       "name": "maxAirflowRating",
       "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     },
     {

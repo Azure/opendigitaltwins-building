@@ -3,42 +3,30 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "pressure capacity"
       },
       "name": "pressureCapacity",
       "schema": "double",
-      "unit": "poundPerSquareInch",
       "writable": true
     },
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "pipe diameter"
       },
       "name": "pipeDiameter",
       "schema": "float",
-      "unit": "centimetre",
       "writable": true
     },
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "flow capacity"
       },
       "name": "flowCapacity",
       "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     }
   ],

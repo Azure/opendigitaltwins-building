@@ -3,16 +3,12 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "width"
       },
       "name": "width",
       "schema": "float",
-      "unit": "centimetre",
       "writable": true
     },
     {
@@ -38,16 +34,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "thickness"
       },
       "name": "thickness",
       "schema": "float",
-      "unit": "centimetre",
       "writable": true
     },
     {
@@ -60,16 +52,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "height"
       },
       "name": "height",
       "schema": "float",
-      "unit": "centimetre",
       "writable": true
     },
     {

@@ -5,7 +5,7 @@
     {
       "@type": "Property",
       "description": {
-        "en": "The number of people who can fit in a Room or Elevator."
+        "en": "The number of people who can fit in a Space."
       },
       "displayName": {
         "en": "person capacity"
@@ -28,29 +28,21 @@
       "writable": true
     },
     {
-      "@type": [
-        "Velocity",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "maximum travel speed"
       },
       "name": "maxTravelSpeed",
       "schema": "double",
-      "unit": "metrePerSecond",
       "writable": true
     },
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "maximum travel distance"
       },
       "name": "maxTravelDistance",
       "schema": "double",
-      "unit": "metre",
       "writable": true
     },
     {

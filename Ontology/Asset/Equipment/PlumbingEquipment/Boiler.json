@@ -25,42 +25,30 @@
       "writable": true
     },
     {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "tank capacity"
       },
       "name": "tankCapacity",
       "schema": "double",
-      "unit": "litre",
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "power output"
       },
       "name": "powerOutput",
       "schema": "double",
-      "unit": "watt",
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "power input"
       },
       "name": "powerInput",
       "schema": "double",
-      "unit": "watt",
       "writable": true
     },
     {

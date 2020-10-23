@@ -3,16 +3,12 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "duct inlet size"
       },
       "name": "ductInletSize",
       "schema": "double",
-      "unit": "millimetre",
       "writable": true
     },
     {

@@ -2,16 +2,12 @@
   "@id": "dtmi:org:w3id:rec:asset:TankWaterHeater;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": {
-    "@type": [
-      "Volume",
-      "Property"
-    ],
+    "@type": "Property",
     "displayName": {
       "en": "tank capacity"
     },
     "name": "tankCapacity",
     "schema": "double",
-    "unit": "litre",
     "writable": true
   },
   "displayName": {

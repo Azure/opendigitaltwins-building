@@ -3,16 +3,12 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "working pressure"
       },
       "name": "workingPressure",
       "schema": "double",
-      "unit": "poundPerSquareInch",
       "writable": true
     },
     {
@@ -25,29 +21,21 @@
       "writable": true
     },
     {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "tank capacity"
       },
       "name": "tankCapacity",
       "schema": "double",
-      "unit": "litre",
       "writable": true
     },
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "flow capacity"
       },
       "name": "flowCapacity",
       "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     },
     {

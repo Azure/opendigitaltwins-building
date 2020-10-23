@@ -1,6 +1,30 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:SensorEquipment;1",
   "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Wi-Fi signal strength"
+      },
+      "name": "wifiSignalStrength",
+      "schema": "float",
+      "writable": true
+    },
+    {
+      "@type": [
+        "TimeSpan",
+        "Property"
+      ],
+      "displayName": {
+        "en": "battery life"
+      },
+      "name": "batteryLife",
+      "schema": "double",
+      "unit": "minute",
+      "writable": true
+    }
+  ],
   "displayName": {
     "en": "Sensor equipment"
   },

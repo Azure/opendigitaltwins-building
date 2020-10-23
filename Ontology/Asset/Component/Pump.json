@@ -34,16 +34,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "Pressure",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "pressure capacity"
       },
       "name": "pressureCapacity",
       "schema": "double",
-      "unit": "poundPerSquareInch",
       "writable": true
     },
     {
@@ -59,16 +55,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "flow capacity"
       },
       "name": "flowCapacity",
       "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     }
   ],

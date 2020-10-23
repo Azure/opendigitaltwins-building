@@ -12,12 +12,12 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "ChilledWater",
-            "name": "ChilledWater"
-          },
-          {
             "enumValue": "DX",
             "name": "DX"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
           },
           {
             "enumValue": "None",
@@ -59,29 +59,21 @@
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "nominal cooling capacity"
       },
       "name": "nominalCoolingCapacity",
       "schema": "double",
-      "unit": "watt",
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "net sensible cooling capacity"
       },
       "name": "netSensibleCoolingCapacity",
       "schema": "double",
-      "unit": "watt",
       "writable": true
     },
     {

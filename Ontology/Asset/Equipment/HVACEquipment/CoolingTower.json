@@ -3,29 +3,21 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "nominal cooling capacity"
       },
       "name": "nominalCoolingCapacity",
       "schema": "double",
-      "unit": "watt",
       "writable": true
     },
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "flow capacity"
       },
       "name": "flowCapacity",
       "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     },
     {

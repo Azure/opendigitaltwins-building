@@ -2,10 +2,7 @@
   "@id": "dtmi:org:w3id:rec:core:AirFlowSensor;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": {
-    "@type": [
-      "VolumeFlowRate",
-      "Property"
-    ],
+    "@type": "Property",
     "description": {
       "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
     },
@@ -14,7 +11,6 @@
     },
     "name": "hasValue",
     "schema": "double",
-    "unit": "litrePerSecond",
     "writable": true
   },
   "displayName": {

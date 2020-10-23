@@ -3,42 +3,30 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "step width"
       },
       "name": "stepWidth",
       "schema": "double",
-      "unit": "millimetre",
       "writable": true
     },
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "maximum vertical rise"
       },
       "name": "maxVerticalRise",
       "schema": "double",
-      "unit": "metre",
       "writable": true
     },
     {
-      "@type": [
-        "Velocity",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "maximum travel speed"
       },
       "name": "maxTravelSpeed",
       "schema": "double",
-      "unit": "metrePerSecond",
       "writable": true
     },
     {

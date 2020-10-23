@@ -16,16 +16,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "Length",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "blade diameter"
       },
       "name": "bladeDiameter",
       "schema": "float",
-      "unit": "centimetre",
       "writable": true
     }
   ],

@@ -3,6 +3,18 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
+      "@type": "Property",
+      "description": {
+        "en": "Reference to the unique identity of the real estate in the property register in the country where the real estate is located."
+      },
+      "displayName": {
+        "en": "property register designation"
+      },
+      "name": "propertyRegisterDesignation",
+      "schema": "string",
+      "writable": true
+    },
+    {
       "@type": "Relationship",
       "description": {
         "en": "Property that defines the legal owner(s) of a given entity. Inverse of: owns"

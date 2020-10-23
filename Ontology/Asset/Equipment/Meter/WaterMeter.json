@@ -3,29 +3,21 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "VolumeFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "volume flow"
       },
       "name": "volumeFlow",
       "schema": "double",
-      "unit": "litrePerSecond",
       "writable": true
     },
     {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "volume"
       },
       "name": "volume",
       "schema": "double",
-      "unit": "litre",
       "writable": true
     },
     {
@@ -38,16 +30,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "Temperature",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "supply temp"
       },
       "name": "supplyTemp",
       "schema": "double",
-      "unit": "degreeCelsius",
       "writable": true
     },
     {

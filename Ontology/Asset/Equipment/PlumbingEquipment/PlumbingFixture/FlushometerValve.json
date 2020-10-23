@@ -3,16 +3,12 @@
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
     {
-      "@type": [
-        "Volume",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
         "en": "water per flush"
       },
       "name": "waterPerFlush",
       "schema": "double",
-      "unit": "litre",
       "writable": true
     },
     {
