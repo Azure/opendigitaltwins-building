@@ -155,8 +155,6 @@ Here are the DTDL interfaces snippets for these twins
 ```
 
 ## Upload the models
-<*explain how to upload the models into ADT*>
-
 You can upload all models in your own instance of ADT by using [Model Uploader](ModelUploader). Follow the instructions on ModelUploader on how to upload all models in your own instance. Here is [an article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model) on how to manage models, update, retrieve, update, decommision and delete models.
 
 
@@ -164,7 +162,6 @@ You can upload all models in your own instance of ADT by using [Model Uploader](
 Once you have uploaded these models into your Azure Digital Twins instance, now it's time to view how models are related to each other. Please use [ADT Model Visualizer](AdtModelVisualizer) to view the models. This tool is a draft version (read-only visualizer, no edits) and we also invite you to contribute to it to make it better.
 
 ## Validating the models
-
 These models don't have to be validated with the DTDL parser unless you change them. If you have extended our models or made changes, it's recommanded to validate the models as described by this article [Validate models](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-convert-models#validate-and-upload-dtdl-models)
 
 ## Extending the ontology
@@ -211,11 +208,12 @@ Now that you have extended your specialized interface/s, ask yourself if your ex
 
 ## Contributing to ontology
 <*explain how to contribute to this ontology, probably creating PRs in this repo is the easiest one to go - Karl to add*>
+
 We are working on improving the main interfaces, adding more interfaces in building's areas that we don't support, as well as making better tools to integrate and use the models in smart building platforms and its applications.
 
 We encourage you to contribute to make DTDL RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements in order to evolve this ontology.
 
-- Comment or create a new issue for bug reporting
+- Comment or create a new issue for bug reporting or anything else you want to trigger us
 - For improvements, please fork the rec repository, make your changes and send a pull request
 
 ## More about Azure Digital Twins
@@ -234,6 +232,11 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 Microsoft collects performance and usage information which may be used to provide and improve Microsoft products and services and enhance your experience.
 To learn more, review the [privacy statement](https://go.microsoft.com/fwlink/?LinkId=521839&clcid=0x409).
+
+## Contributors
+<*shall we add this section with company names or just remove it?*>
+
+
 
 
 
