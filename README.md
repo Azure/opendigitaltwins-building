@@ -26,7 +26,7 @@ The DTDL-based RealEstateCore ontology will not only accelerate developers from 
 
 ## RealEstateCore structure
 
-![Building Ontology](images/OntologyDiagram.JPG)
+![Building Ontology](Images/OntologyDiagram.JPG)
 
 RealEstateCore ontology consists of a main set of interfaces:
   - **Asset** – An object which is placed inside of a building, but is not an integral part of that building's structure, for example architectural, furniture, equipment, systems, etc.
@@ -46,7 +46,7 @@ RealEstateCore ontology consists of a main set of interfaces:
 
 Here is a real example of a subgraph of twins' instances based on this ontology
 
-![Using the models](images/UsingModels.JPG)
+![Using the models](Images/UsingModels.JPG)
 
 We have instantiated the following twins:
 - A building instance *Building 121* of type [**dtmi:org:w3id:rec:core:Building;1**](Ontology/Space/Building.json)
@@ -163,10 +163,17 @@ You can upload all models in your own instance of ADT by using [Model Uploader](
 ## Visualizing the models
 Once you have uploaded these models into your Azure Digital Twins instance, now it's time to view how models are related to each other. Please use [ADT Model Visualizer](AdtModelVisualizer) to view the models. This tool is a draft version (read-only visualizer, no edits) and we also invite you to contribute to it to make it better.
 
+## Validating the models
+
+These models don't have to be validated with the DTDL parser unless you change them. If you have extended our models or made changes, it's recommanded to validate the models as described by this article [Validate models](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-convert-models#validate-and-upload-dtdl-models)
+
 ## Extending the ontology
 <*Karl to add more or to update*>
+This is the decision tree workflow we recommend for extending and contributing to RealEstateCore ontology.
 
-We encourage users to extend existing models via inheritance by using **extends**. Interface inheritance can be used to create specialized interfaces from more general interfaces. If you need to add a new interface or add additional properties, try to find the leaf-level interface to extend from. For example, if you need to add a specialized type of room, like *FocusRoom*, add a new interface *FocusRoom* which inherits from *Room* interface. Through inheritance, the *FocusRoom* has two properties *Room*: the *personCapacity* property (from Room) and the *occupied* property (from FocusRoom).
+![Extending ontology](Images/OntologyExtend.JPG)  
+
+We encourage users to extend existing models via inheritance by using **extends**. Interface inheritance can be used to create specialized interfaces from more general interfaces. If you need to add a new interface or add additional properties, try to find the interfaces to extend from. For example, if you need to add a specialized type of room, like *FocusRoom*, add a new interface *FocusRoom* which inherits from *Room* interface. Through inheritance, the *FocusRoom* has two properties *Room*: the *personCapacity* property (from Room) and the *occupied* property (from FocusRoom).
 
 ```
 [
@@ -197,18 +204,14 @@ We encourage users to extend existing models via inheritance by using **extends*
     "@context": "dtmi:dtdl:context;2"
   }
 ]
-
-Now that you have extended your specialized interface/s, ask yourself if your extensions are generic and could benefit other users. If the answer is yes, our recommendation is to fork the existing repository, make your changes and send a pull request. 
 ```
 
-## Validating the models
-
-These models don't have to be validated with the DTDL parser unless you change them. If you have extended our models or made changes, it's recommanded to validate the models as described by this article [Validate models](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-convert-models#validate-and-upload-dtdl-models)
+Now that you have extended your specialized interface/s, ask yourself if your extensions are generic and could benefit other users. If the answer is yes, our recommendation is to fork the existing repository, make your changes and send a pull request. 
 
 
 ## Contributing to ontology
 <*explain how to contribute to this ontology, probably creating PRs in this repo is the easiest one to go - Karl to add*>
-We are working on improving the main interfaces, adding more interfaces, as well as making better tools to integrate and use the models in smart building platforms and its applications.
+We are working on improving the main interfaces, adding more interfaces in building's areas that we don't support, as well as making better tools to integrate and use the models in smart building platforms and its applications.
 
 We encourage you to contribute to make DTDL RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements in order to evolve this ontology.
 
