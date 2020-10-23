@@ -22,7 +22,7 @@ For example:
 - *Capability* model is based on the BMS notion of Points (as represented in Brick Schema or Haystack) or Affordances, as represented in [Web of Things](https://www.w3.org/WoT/). Subclasses of Capability denote specific sensorsing or actuation capabilities that can be assigned to Spaces, Assets, etc.
 - LogicalDevice is inspired from [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub) (IoT Hub is calling it *Device*) and represents a connected entity that pushes data to the cloud or receives commands from the cloud, which is typically an instance of a piece of software like an IoTEdge module, a HomeAssistant install, or some proprietary BMS system, etc.
 
-The DTDL-based RealEstateCore ontology will not only accelerate developers from the “blank page,” but will also facilitate business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology will be open sourced, developers can easily annotate existing models while contributing their own domain expertise. [More about Real Estate Core](#more-about-real-estate-core)
+The DTDL-based RealEstateCore ontology will not only accelerate developers from the “blank page,” but will also facilitate business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology will be open sourced, developers can easily annotate existing models while contributing their own domain expertise. [More about Real Estate Core](Partners/README.md#more-about-real-estate-core), [more about Willow](Partners/README.md##more-about-willow)
 
 ## RealEstateCore structure
 
@@ -68,26 +68,21 @@ Here are the DTDL interfaces snippets for these twins
     //...
     {
       "@type": "Relationship",
-      "description": {
-        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
-      },
-      "displayName": {
-        "en": "is part of"
-      },
+      //...
       "name": "isPartOf",
       "target": "dtmi:org:w3id:rec:core:Space;1"
     },
     {
       "@type": "Relationship",
-      "displayName": {
-        "en": "has capability"
-      },
+      //...
       "name": "hasCapability",
       "target": "dtmi:org:w3id:rec:core:Capability;1"
     }
     //...
   ],
-  //...
+  "description": {
+    "en": "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings."
+  },
   "displayName": {
     "en": "Space"
   },
@@ -103,40 +98,26 @@ Here are the DTDL interfaces snippets for these twins
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Relationship",
-      "displayName": {
-        "en": "located in"
-      },
+      //...
       "minMultiplicity": 0,
       "name": "locatedIn",
       "target": "dtmi:org:w3id:rec:core:Space;1"
     },
     {
       "@type": "Relationship",
-      "displayName": {
-        "en": "has capability"
-      },
+      //...
       "name": "hasCapability",
       "target": "dtmi:org:w3id:rec:core:Capability;1"
     },
     {
       "@type": "Relationship",
-      "description": {
-        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
-      },
-      "displayName": {
-        "en": "is part of"
-      },
+      //...
       "name": "isPartOf",
       "target": "dtmi:org:w3id:rec:core:Asset;1"
     },
     {
       "@type": "Relationship",
-      "description": {
-        "en": "The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset. Inverse of: servedBy"
-      },
-      "displayName": {
-        "en": "serves"
-      },
+      //...
       "name": "serves"
     },
     //...
@@ -156,7 +137,11 @@ Here are the DTDL interfaces snippets for these twins
 {
   "@id": "dtmi:org:w3id:rec:core:Sensor;1",
   "@type": "Interface",
-  //...
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Relationship",
+    //...
+    "name": "observes"
+  },
   "description": {
     "en": "Capability to detect or measure properties of the physical world."
   },
@@ -192,8 +177,7 @@ We encourage users to extend existing models via inheritance by using **extends*
       "@type": "Property",
       // ...
       "name": "personCapacity",
-      "schema": "integer",
-      "writable": true
+      "schema": "integer"
     },
     // ...
     "extends": "dtmi:org:w3id:rec:core:Space;1",
@@ -206,8 +190,7 @@ We encourage users to extend existing models via inheritance by using **extends*
       "@type": "Property",
       // ...
       "name": "occupied",
-      "schema": "bool",
-      "writable": true
+      "schema": "bool"
     },
     // ...
     "extends": "dtmi:org:w3id:rec:core:Room;1",
@@ -241,9 +224,6 @@ We encourage you to contribute to make DTDL RealEstateCore-based ontology better
 - [Azure Digital Twins IoT Show Public Preview](https://www.youtube.com/watch?v=D6kyhrRVdfc&feature=youtu.be)
 - [Azure Digital Twins Tech Deep Dive](https://www.youtube.com/watch?v=5Ku55g1GQG8&feature=youtu.be)
 - [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
-
-## More about Real Estate Core
-One solution powered by RealEstateCore is Idun ProptechOS, which enables real estate owners to analyze and optimize sustainability, well-being, and productivity of their buildings.  ProptechOS is used by a number of significant customers at scale, including Vasakronan, Sweden’s largest property company comprising 174 properties and 24.7 million square feet of real estate, as well as YIT, the largest Finnish and a significant North European construction company and urban developer.
 
 ---
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
