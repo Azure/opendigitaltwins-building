@@ -42,6 +42,12 @@ RealEstateCore ontology consists of a main set of interfaces:
   - **Event** - A spatiotemporally indexed entity with participants, something which occurs somewhere, and that has or takes some time, for example a Lease or Rent.
   - **Role** -- A role that is held by some agent, for example a person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role
 
+
+RealEstateCore ontology has these main set of relationships:
+- **isPartOf**, **hasPart** - A simplified set of topological relations to connect sub- and super-entities within the top-level RealEstateCore interface tree. "isPartOf" and "hasPart" are now defined to operate on entities of the same type, for example Spaces have only Spaces as parts, Assets have only Assets as parts, etc.
+- <*to be finsihed with all relationships*/
+
+
 ## Using RealEstateCore ontology
 
 Here is a real example of a subgraph of twins' instances based on this ontology
@@ -211,7 +217,7 @@ Now that you have extended your specialized interface/s, ask yourself if your ex
 
 We are working on improving the main interfaces, adding more interfaces in building's areas that we don't support, as well as making better tools to integrate and use the models in smart building platforms and its applications.
 
-We encourage you to contribute to make DTDL RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements in order to evolve this ontology.
+We encourage you to contribute to make DTDL RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements to evolve this ontology.
 
 - Comment or create a new issue for bug reporting or anything else you want to trigger us
 - For improvements, please fork the rec repository, make your changes and send a pull request
