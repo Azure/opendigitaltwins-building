@@ -67,7 +67,7 @@ Here are the DTDL interfaces snippets for these twins:
 **Alina - the interfaces in the DTDL below don't line up with the example diagram and the interfaces mentioned in the above bullet points**
 
 **Space**
-```
+```yaml
 {
   "@id": "dtmi:org:w3id:rec:core:Space;1",
   "@type": "Interface",
@@ -98,7 +98,7 @@ Here are the DTDL interfaces snippets for these twins:
 ```
 
 **Asset**
-```
+```yaml
 {
   "@id": "dtmi:org:w3id:rec:core:Asset;1",
   "@type": "Interface",
@@ -140,7 +140,7 @@ Here are the DTDL interfaces snippets for these twins:
 ```
 
 **Sensor**
-```
+```yaml
 {
   "@id": "dtmi:org:w3id:rec:core:Sensor;1",
   "@type": "Interface",
@@ -178,7 +178,7 @@ This is the decision tree workflow we recommend for extending and contributing t
 
 We encourage users to extend existing models via inheritance by using the DTDL **extends** property. Interface inheritance can be used to create specialized interfaces from more general interfaces. If you need to add a new interface or add additional properties, try to find the interfaces to extend from. For example, if you need to add a specialized type of room, like *FocusRoom*, add a new interface *FocusRoom* which inherits from *Room* interface. Through inheritance, the *FocusRoom* has two properties *Room*: the *personCapacity* property (from Room) and the *occupied* property (from FocusRoom).
 
-```
+```yaml
 [
   {
     "@id": "dtmi:org:w3id:rec:core:Room;1",
