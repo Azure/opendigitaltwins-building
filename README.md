@@ -14,13 +14,15 @@ This is an open-source ontology definition which learns from, builds on, and use
 
 ## DTDL-based RealEstateCore ontology
 
-This ontology is implemented based on the [RealEstateCore](https://doc.realestatecore.io/3.3/full.html) domain ontology. RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other building industry standards such as Brick Schema, Project Haystack, W3C Building Topology Ontology (W3C BOT), and more.
+This ontology is implemented based on the [RealEstateCore](https://doc.realestatecore.io/3.3/full.html) domain ontology.  RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other building industry standards such as Brick Schema, Project Haystack, W3C Building Topology Ontology (W3C BOT), and more.
 
 For example:
 - **Asset** interfaces, covering systems and equipment within buildings is based on an interpretation and extension of the [Brick Schema Ontology](https://brickschema.org/ontology/), carried out in conjunction with [Willow Inc.](https://www.willowinc.com/willowtwin/). 
 - Our spatial modeling is in line with the [W3C BOT ontology](https://w3c-lbd-cg.github.io/bot) and clearly differentiates between **Building Components** and **Spaces**; where the former make up the building's structural elements, and the latter make up physical spaces inside (rooms, levels, etc) or outside (regions, land, etc) of a building.
 - **Capability** interfaces are based on the BMS notion of Points (as represented in Brick Schema or Haystack). Subclasses of Capability denote specific sensorsing or actuation capabilities that can be assigned to Spaces, Assets, etc.
 - **LogicalDevice** is inspired from [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub) (IoT Hub is calling it *Device*) and represents a connected entity that pushes data to the cloud or receives commands from the cloud, which is typically an instance of a piece of software like an IoTEdge module, a HomeAssistant install, or some proprietary BMS system, etc. The reason we have created *LogicalDevice* interface, different from *Device*, is that we see the physical device being represented as a *Device* digital twin in IoT Hub and the *LogicalDevice* twin being represented in this ontology. For example, the *LogicalDevice* may have *hasCapability* relationships to *Capability*. A physical device connected to IoT Hub would not have those relationships, instead it would have *Telemetry*, *Properties*, and *Commands* potentially feeding the Sensors, Parameters, and Actuators in this ontology.
+
+The upstream RealEstateCore ontology is represented using the W3C Web Ontology Language (OWL). It is translated into the DTDL syntax used in this repository using the [OWL2DTDL](OWL2DTDL/) tool that we provide.
 
 The DTDL-based RealEstateCore ontology accelerates developers from the “blank page” and facilitates business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology is open sourced, developers can easily annotate existing models while contributing their own domain expertise. [More about Real Estate Core](Partners/README.md#more-about-real-estate-core), [more about Willow](Partners/README.md##more-about-willow)
 
@@ -171,7 +173,6 @@ Once you have uploaded these models into your Azure Digital Twins instance, you 
 The DTDL RealEstateCore models in this repo have already been validated. You don't have to validate them with the DTDL parser unless you change them. If you have extended the models or made changes, it's recommanded to validate the models as described by this article [Validate models](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-convert-models#validate-and-upload-dtdl-models).
 
 ## Extending the ontology
-<*Karl to add more or to update*>
 This is the decision tree workflow we recommend for extending and contributing to RealEstateCore ontology.
 
 ![Extending ontology](images/OntologyExtend.JPG)  
@@ -209,17 +210,27 @@ We encourage users to extend existing models via inheritance by using the DTDL *
 ]
 ```
 
-Now that you have extended your specialized interface/s, ask yourself if your extensions are generic and could benefit other users. If the answer is yes, our recommendation is to fork the existing repository, make your changes and send a pull request.
+Now that you have extended your specialized interface/s, ask yourself if your extensions are generic and could benefit other users. If the answer is yes, our recommendation is to fork the existing repository, make your changes and send a pull request (see the section below).
 
 ## Contributing to ontology
-<*explain how to contribute to this ontology, probably creating PRs in this repo is the easiest one to go - Karl to add*>
+We are working on improving the main interfaces, adding more interfaces in areas that we don't support, as well as making better tools to integrate and use the models in smart building platforms and its applications.
 
-We are working on improving the main interfaces, adding more interfaces in building's areas that we don't support, as well as making better tools to integrate and use the models in smart building platforms and its applications.
-
-We encourage you to contribute to make DTDL RealEstateCore-based ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements to evolve this ontology.
+We encourage you to contribute to make the DTDL RealEstateCore ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements to evolve this ontology.
 
 - Comment or create a new issue for bug reporting or anything else you want to trigger us
-- For improvements, please fork the rec repository, make your changes and send a pull request
+- For improvements, please fork this repository, make your changes and send a pull request
+
+Pull requests will be evaluated based on the quality of the proposed interface models, adherence to the modeling conventions used in the repo (see below), and conceptual and roadmap compliance with the [upstream RealEstateCore OWL model project](https://github.com/RealEstateCore/rec/) that DTDL RealEstateCore is generated from. To make doubly sure that your pull requests are merged, we encourage you to check ongoing developments and issues in that upstream repo.
+
+### Modeling conventions
+
+* All entitiy naming (Interfaces, Properties, Relationships, Components, etc.) is done in English. 
+* Interfaces are named as singular nouns using CamelCase with capital initial (aka. PascalCase); e.g., `Space` or `Asset`. For the sake of clarity, sub-interfaces can include suffixes indicating parent interfaces, e.g., `LightingEquipment` or `SpaceCollection`.
+* Properties are named as singular nouns using camelCase with lower-case initial, typically with two or three name components; e.g., `filterType`, `maxVerticalRise`. Exceptions to the singular noun rule may be made in cases where the property represents a count (e.g., `maxLandings` for an `Elevator` interface).
+* Relationships are named as singular nouns using camelCase with lower-case initial, typically with two or three name components. Naming can represent either the relationship itself, in the case of generic relationships (e.g., `isPartOf` or `serves`), or a target Interface (e.g., `hasCapability` or `subMeterOf`).
+* DTMIs are minted based on the underlying REC model namespaces; for new contributions, please use the path `org:w3id:rec:contrib`, e.g., `dtmi:org:w3id:rec:contrib:{YourEntityName};1`
+* Please use language-tagged `displayName`and `description` fields, providing at minimum english-language versions of these (more languages are of course welcome!).
+* The english-language value of `displayName` should mirror the DTMI local name written out in lowercase, i.e., `isPartOf` has the display name `is part of`.
 
 ## More about Azure Digital Twins
 
