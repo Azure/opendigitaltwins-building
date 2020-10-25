@@ -1,4 +1,4 @@
-# Digital Twins Definition Language-based [RealEstateCore](https://doc.realestatecore.io/3.2/full.html) ontology for smart buildings
+# Digital Twins Definition Language-based [RealEstateCore](https://doc.realestatecore.io/3.3/full.html) ontology for smart buildings
 
 Note: this is a work in progress repo
 
