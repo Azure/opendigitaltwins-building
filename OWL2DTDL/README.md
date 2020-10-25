@@ -190,7 +190,7 @@ The RealEstateCore 3.3 Space class is given below. Its translation into DTDL usi
 
 **Resulting DTDL version of REC Space:**
 
-```json
+```yaml
 {
   "@id": "dtmi:org:w3id:rec:core:Space;1",
   "@type": "Interface",
@@ -392,7 +392,7 @@ The `substance` annotation property given below applies to two OWL object proper
 
 **Resulting DTDL version of Equipment:**
 
-```json
+```yaml
 {
   "@id": "dtmi:org:w3id:rec:asset:Equipment;1",
   "@type": "Interface",
