@@ -12,19 +12,19 @@ Our partnership with [RealEstateCore](https://www.realestatecore.io/) has delive
 
 This is an open-source ontology definition which learns from, builds on, and uses industry standards, and meets the needs of DTDL model developers. We hope it will be widely adopted and/or extended by developers.
 
-## DTDL-based RealEstateCore ontology
+## DTDL-based RealEstateCore ontology overview
 
-This ontology is implemented based on the [RealEstateCore](https://doc.realestatecore.io/3.3/full.html) domain ontology.  RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other building industry standards such as Brick Schema, Project Haystack, W3C Building Topology Ontology (W3C BOT), and more.
+This DTDL ontology is implemented based on the [RealEstateCore](https://doc.realestatecore.io/3.3/full.html) domain ontology.  RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other building industry standards such as Brick Schema, Project Haystack, W3C Building Topology Ontology (W3C BOT), and more.
 
 For example:
 - **Asset** interfaces, covering systems and equipment within buildings is based on an interpretation and extension of the [Brick Schema Ontology](https://brickschema.org/ontology/), carried out in conjunction with [Willow Inc.](https://www.willowinc.com/willowtwin/). 
 - Our spatial modeling is in line with the [W3C BOT ontology](https://w3c-lbd-cg.github.io/bot) and clearly differentiates between **Building Components** and **Spaces**; where the former make up the building's structural elements, and the latter make up physical spaces inside (rooms, levels, etc) or outside (regions, land, etc) of a building.
 - **Capability** interfaces are based on the BMS notion of Points (as represented in Brick Schema or Haystack). Subclasses of Capability denote specific sensorsing or actuation capabilities that can be assigned to Spaces, Assets, etc.
-- **LogicalDevice** is inspired from [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub) (IoT Hub is calling it *Device*) and represents a connected entity that pushes data to the cloud or receives commands from the cloud, which is typically an instance of a piece of software like an IoTEdge module, a HomeAssistant install, or some proprietary BMS system, etc. The reason we have created *LogicalDevice* interface, different from *Device*, is that we see the physical device being represented as a *Device* digital twin in IoT Hub and the *LogicalDevice* twin being represented in this ontology. For example, the *LogicalDevice* may have *hasCapability* relationships to *Capability*. A physical device connected to IoT Hub would not have those relationships, instead it would have *Telemetry*, *Properties*, and *Commands* potentially feeding the Sensors, Parameters, and Actuators in this ontology.
+- **LogicalDevice** is inspired by [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub)'s *Device* terminology and represents a connected entity that pushes data to the cloud or receives commands from the cloud (typically an endpoint such as a piece of software like an IoTEdge module, a HomeAssistant install, or some proprietary BMS system, etc.). The reason we have created the *LogicalDevice* interface different from the *Device* interface, is that we see the physical device being represented as a *Device* digital twin in IoT Hub and the *LogicalDevice* twin being represented in this ontology. For example, the *LogicalDevice* may have *hasCapability* relationships to *Capability*. A physical device connected to IoT Hub would not have those relationships, instead it would have *Telemetry*, *Properties*, and *Commands* potentially feeding the Sensors, Parameters, and Actuators in this ontology.
 
 The upstream RealEstateCore ontology is represented using the W3C Web Ontology Language (OWL). It is translated into the DTDL syntax used in this repository using the [OWL2DTDL](OWL2DTDL/) tool that we provide.
 
-The DTDL-based RealEstateCore ontology accelerates developers from the “blank page” and facilitates business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology is open sourced, developers can easily annotate existing models while contributing their own domain expertise. [More about Real Estate Core](Partners/README.md#more-about-real-estate-core), [more about Willow](Partners/README.md##more-about-willow)
+The DTDL-based RealEstateCore ontology accelerates developers from the “blank page” and facilitates business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology is open sourced, developers can easily annotate existing models while contributing their own domain expertise. [More about Real Estate Core](Partners/README.md#more-about-real-estate-core), [more about Willow](Partners/README.md##more-about-willow).
 
 ## RealEstateCore structure
 
@@ -33,16 +33,16 @@ The DTDL-based RealEstateCore ontology accelerates developers from the “blank 
 RealEstateCore ontology consists of a main set of interfaces:
   - **Asset** – An object which is placed inside of a building, but is not an integral part of that building's structure, for example architectural, furniture, equipment, systems, etc.
   - **LogicalDevice** – A physical or logical object defined as an electronic equipment or software that communicates and interacts with a digital twin platform. A logical device could be an integrated circuit inside of a smart HVAC unit, or a virtual server running on a Kubernetes cluster. Logical devices can have Capability instances (through hasCapability) that describe their input/output capabilties. If Logical Devices are embedded within Asset entities (through the hostedBy property) such capabilties typically denote the capabilities of the asset.
-  - **Capability** - A capability indicates the capacity of a entity, be it a Space, an Asset, or a LogicalDevice, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point\". Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.
+  - **Capability** - A capability indicates the capacity of a entity, be it a Space, an Asset, or a LogicalDevice, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point.\" Specific subclasses specialize this behavior: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.
   - **Space** - A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. For example a Region can contain many pieces of Land, which in turn can contain many Buildings, which in turn can contain Levels and Rooms.
 
 RealEstateCore also contains additional base interfaces:
-  - **Agent** - Any basic types of agents that can have roles or perform activities, e.g., people, companies, departments.
+  - **Agent** - Any basic types of stakeholder that can have roles or perform activities, e.g., people, companies, departments.
   - **Building Component** - A part that constitutes a piece of a building's structural makeup, for example Facade, Wall, Slab, RoofInner, etc.
   - **Collection** - An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an Apartment is typically contiguous), however that is not a requirement (see, e.g., a distributed Campus consisting of spatially disjoint plots or buildings).
   - **Document** - A formal piece of written, printed or electronic matter that provides information or evidence or that serves as an official record, for example LeaseContract, Building Specification, Warranty, Drawing, etc. 
   - **Event** - A spatiotemporally indexed entity with participants, something which occurs somewhere, and that has or takes some time, for example a Lease or Rent.
-  - **Role** -- A role that is held by some agent, for example a person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role
+  - **Role** - A role that is held by some agent, for example a person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role
 
 RealEstateCore contains a number of relationship types:
 - **isPartOf**, **hasPart** - A simplified set of topological relations to connect sub- and super-entities within the top-level RealEstateCore interface tree. "isPartOf" and "hasPart" are now defined to operate on entities of the same type, for example Spaces have only Spaces as parts, Assets have only Assets as parts, etc.
@@ -51,7 +51,7 @@ RealEstateCore contains a number of relationship types:
 
 ## Using RealEstateCore ontology
 
-Here is a real example of a subgraph of twins' instances based on this ontology
+Here is a real example of a subgraph of an Azure Digital Twins instance based on this ontology:
 
 ![Using the models](images/UsingModels.JPG)
 
@@ -163,17 +163,17 @@ Here are the DTDL interfaces snippets for these twins:
 
 ```
 
-## Upload the models
-You can upload all models in your own instance of ADT by using [Model Uploader](ModelUploader). Follow the instructions on ModelUploader on how to upload all models in your own instance. Here is [an article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model) on how to manage models, update, retrieve, update, decommision and delete models.
+## Upload the models to Azure Digital Twins
+You can upload this ontology into your own instance of ADT by using [Model Uploader](ModelUploader). Follow the instructions on ModelUploader to upload all of these models into your own instance. Here is [an article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model) on how to manage models, update, retrieve, update, decommision and delete models.
 
 ## Visualizing the models
-Once you have uploaded these models into your Azure Digital Twins instance, you can view the model topology using [ADT Model Visualizer](AdtModelVisualizer). This tool is a draft version (read-only visualizer, no edits) and we invite you to contribute to it to make it better.
+Once you have uploaded these models into your Azure Digital Twins instance, you can view the ontology using [ADT Model Visualizer](AdtModelVisualizer). This tool is a draft version (read-only visualizer, no edits) and we invite you to contribute to it to make it better.
 
 ## Validating the models
-The DTDL RealEstateCore models in this repo have already been validated. You don't have to validate them with the DTDL parser unless you change them. If you have extended the models or made changes, it's recommanded to validate the models as described by this article [Validate models](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-convert-models#validate-and-upload-dtdl-models).
+The DTDL RealEstateCore models in this repo have already been validated. You don't have to validate them with the DTDL parser unless you change them. If you have extended the models or made changes, it's recommended to validate the models as described by this article: [Validate models](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-convert-models#validate-and-upload-dtdl-models).
 
 ## Extending the ontology
-This is the decision tree workflow we recommend for extending and contributing to RealEstateCore ontology.
+This is the decision tree workflow we recommend for extending and contributing to this DTDL-based RealEstateCore ontology.
 
 ![Extending ontology](images/OntologyExtend.JPG)  
 
@@ -210,12 +210,12 @@ We encourage users to extend existing models via inheritance by using the DTDL *
 ]
 ```
 
-Now that you have extended your specialized interface/s, ask yourself if your extensions are generic and could benefit other users. If the answer is yes, our recommendation is to fork the existing repository, make your changes and send a pull request (see the section below).
+Now that you have extended your specialized interface(s), ask yourself if your extensions are generic and could benefit other users. If the answer is yes, our recommendation is to fork the existing repository, make your changes and send a pull request (see the section below).
 
 ## Contributing to ontology
-We are working on improving the main interfaces, adding more interfaces in areas that we don't support, as well as making better tools to integrate and use the models in smart building platforms and its applications.
+We are working on improving the main interfaces, adding more interfaces in areas that we don't yet support, as well as making better tools to integrate and use the models in smart building platforms and its applications.
 
-We encourage you to contribute to make the DTDL RealEstateCore ontology better. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, suggest improvements to evolve this ontology.
+We encourage you to contribute to continue improving the DTDL-based RealEstateCore ontology. Please point out bugs or peculiarities, add or extend interfaces and vocabularies, and suggest improvements to evolve this ontology.
 
 - Comment or create a new issue for bug reporting or anything else you want to trigger us
 - For improvements, please fork this repository, make your changes and send a pull request
