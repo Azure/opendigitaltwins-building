@@ -6,7 +6,7 @@ Note: this is a work in progress repo
 
 [Azure Digital Twins (ADT)](https://azure.microsoft.com/en-us/services/digital-twins/), and its underlying [Digital Twins Definition Language (DTDL)](https://github.com/Azure/opendigitaltwins-dtdl), are at the heart of Smart Building solutions built on Azure.
 
-DTDL provides the schema by which developers can define the interfaces (entities) and relationships they expect to use in their model. Since DTDL is a blank canvas which can model any entity, it is important to accelerate developers' time to results while also providing a unified ontology to enable seamless integration between various DTDL-based solutions.
+DTDL is the language by which developers can define the language of the entities they expect to use in their topologies. Since DTDL is a blank canvas which can model any entity, it is important to accelerate developers' time to results while also providing a unified ontology to enable seamless integration between various DTDL-based solutions.
 
 Our partnership with [RealEstateCore](https://www.realestatecore.io/) has delivered this DTDL-based ontology (or set of models) for the real estate industry, which provides common ground for modeling smart buildings while leveraging industry standards to prevent reinvention. As part of the delivery, we also provide best practices for how to consume and properly extend the ontology.
 
@@ -44,10 +44,16 @@ RealEstateCore also contains additional base interfaces:
   - **Event** - A spatiotemporally indexed entity with participants, something which occurs somewhere, and that has or takes some time, for example a Lease or Rent.
   - **Role** - A role that is held by some agent, for example a person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role
 
-RealEstateCore contains a number of relationship types:
+RealEstateCore contains a number of relationship types, here we list the main ones:
 - **isPartOf**, **hasPart** - A simplified set of topological relations to connect sub- and super-entities within the top-level RealEstateCore interface tree. "isPartOf" and "hasPart" are now defined to operate on entities of the same type, for example Spaces have only Spaces as parts, Assets have only Assets as parts, etc.
-- <*to be finsihed with all relationships*/
-
+- **hasCapability** - Indicates that a Space, Asset or LogicalDevice has the ability to produces or ingest data represented by sensors, actuators or parameters, for example a VAV.L01.01 *hasCapability* relationship to an TemperatureSensor. Inverse of **serves**, for example the same TemperatureSensor *serves* a Zone or perhaps a *PeopleCountSensor* *serves* a delimited zone to count people.
+- **includedIn** -  Indicates that an entity is included in some Collection, for example a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of **includes**, for example a Campus includes some Space, an Apartment includes some Room
+- **locatedIn** - Indicates that a given Asset is physically located in a Space. There is no inverse of this one.
+- **hosts** - Indicates that a given Asset hosts a logical device; for example a Raspberry Pi *hosts* a Home Assistant installation, or an IoT-connect smart camera unit *hosts* an IoT Edge runtime. Inverse of: **hostedBy**, which indicates the physical hardware asset that a given logical device is hosted and executed on.
+- **serves** - The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, for example an air-treatment Asset might serve an air diffuser Asset. Inverse of: **servedBy**
+- **feeds** - Indicates that a given equipment is feeding "something" to another equipment or space, like electricity, water or air. For example, an AHU equipment *feeds* air to a VAV equipment. See [Equipment](Ontology/Asset/Equipment/Equipment.json) interface for  details. Inverse of: **isFedBy**
+- **hasBuildingComponent** - Parthood traversal property linking Buildings to the Building Components that they are made up of, for example a Building *hasBuildingComponent* a Facade or Wall which are of type *BuildingComponent*,. Inverse of: **componentOfBuilding**.
+- **owns** - Indicates that an agent is the legal owner of a given entity, for example a Company owns some Real Estate. Inverse of: **ownedBy**
 
 ## Using RealEstateCore ontology
 
@@ -64,37 +70,190 @@ We have instantiated the following twins:
 - An AHU physical device *AHUL1.01* of type [**dtmi:org:w3id:rec:asset:AirHandlingUnit;1**](Ontology/Asset/Equipment/HVACEquipment/AirHandlingUnit.json) which feeds the VAV and is located in a room
 - A Vergesense device *VergeSensorDevice* of type [**dtmi:org:w3id:rec:asset:SensorEquipment;1**](Ontology/Asset/Equipment/ICTEquipment/SensorEquipment.json) with two sensors *PeopleCount* and *SignOfLife*, which serves the wing zone and is located in a room
 
-Here are the DTDL interfaces snippets for these twins:
+Here are few DTDL interfaces snippets for these twins:
 
-**Alina - the interfaces in the DTDL below don't line up with the example diagram and the interfaces mentioned in the above bullet points**
-
-**Space**
+**Building**
 ```yaml
 {
-  "@id": "dtmi:org:w3id:rec:core:Space;1",
+  "@id": "dtmi:org:w3id:rec:core:Building;1",
   "@type": "Interface",
   "dtmi:dtdl:property:contents;2": [
+  {
+    "@type": "Relationship",
     //...
+    "name": "hasBuildingComponent",
+    "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
+  },
+  {
+    "@type": "Property",
+    //... inherited from Space
+    "name": "personOccupancy",
+    "schema": "integer"
+  },
+  {
+    "@type": "Property",
+    //... inherited from Space
+    "name": "personCapacity",
+    "schema": "integer"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "servedBy"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "ownedBy"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "operatedBy"
+  },
+    {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "isPartOf"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "includedIn"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "hasPart"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "hasCapability"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "constructedBy"
+  },
+  {
+    "@type": "Relationship",
+    //... inherited from Space
+    "name": "architectedBy"
+  }
+  ]
+  "description": {
+    "en": "A confined building structure."
+  },
+  "displayName": {
+    "en": "Building"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Space;1",
+  "@context": "dtmi:dtdl:context;2"
+}
+```
+
+**VAVBox**
+```yaml
+{
+  "@id": "dtmi:org:w3id:rec:asset:VAVBox;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:asset:TerminalUnit;1",
+  "@context": "dtmi:dtdl:context;2"
+}
+```
+
+**TerminalUnit**
+```yaml
+{
+  "@id": "dtmi:org:w3id:rec:asset:TerminalUnit;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "name": "minAirflowRating",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "maxAirflowRating",
+      "schema": "double"
+    },
+    {
+      "@type": "Component",
+      "name": "ductInlet",
+      "schema": "dtmi:org:w3id:rec:asset:DuctConnection;1"
+    }
+  ],
+  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
+```
+
+**HVACEquipment**
+```yaml
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
+```
+
+**Equipment**
+```yaml
+{
+  "@id": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Relationship",
-      //...
-      "name": "isPartOf",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
+      "name": "isFedBy",
+      "dtmi:dtdl:property:properties;2": {
+        "@type": "Property",
+        "name": "substance",
+        "dtmi:dtdl:property:schema;2": {
+          "@type": "Enum",
+          "dtmi:dtdl:property:enumValues;2": [
+            {
+              "enumValue": "Water",
+              "name": "Water"
+            },
+            {
+              "enumValue": "TransferAir",
+              "name": "TransferAir"
+            },
+            //...
+          "valueSchema": "string"
+        },
+        "writable": true
+      }
     },
     {
       "@type": "Relationship",
-      //...
-      "name": "hasCapability",
-      "target": "dtmi:org:w3id:rec:core:Capability;1"
+      "name": "feeds",
+      "dtmi:dtdl:property:properties;2": {
+        "@type": "Property",
+        "name": "substance",
+        "dtmi:dtdl:property:schema;2": {
+          "@type": "Enum",
+          "dtmi:dtdl:property:enumValues;2": [
+            {
+              "enumValue": "Water",
+              "name": "Water"
+            },
+            {
+              "enumValue": "WasteVentDrainage",
+              "name": "WasteVentDrainage"
+            },
+            //...
+          ],
+          "valueSchema": "string"
+        }
+      }
     }
-    //...
   ],
-  "description": {
-    "en": "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings."
-  },
-  "displayName": {
-    "en": "Space"
-  },
+  "extends": "dtmi:org:w3id:rec:core:Asset;1",
   "@context": "dtmi:dtdl:context;2"
 }
 ```
@@ -107,35 +266,28 @@ Here are the DTDL interfaces snippets for these twins:
   "dtmi:dtdl:property:contents;2": [
     {
       "@type": "Relationship",
-      //...
       "minMultiplicity": 0,
       "name": "locatedIn",
       "target": "dtmi:org:w3id:rec:core:Space;1"
     },
     {
       "@type": "Relationship",
-      //...
       "name": "hasCapability",
       "target": "dtmi:org:w3id:rec:core:Capability;1"
     },
     {
       "@type": "Relationship",
-      //...
       "name": "isPartOf",
       "target": "dtmi:org:w3id:rec:core:Asset;1"
     },
     {
       "@type": "Relationship",
-      //...
       "name": "serves"
     },
     //...
   ],
   "description": {
     "en": "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."
-  },
-  "displayName": {
-    "en": "Asset"
   },
   "@context": "dtmi:dtdl:context;2"
 }
