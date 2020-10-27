@@ -1,6 +1,15 @@
 {
   "@id": "dtmi:org:w3id:rec:core:Collection;1",
   "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": {
+    "@type": "Property",
+    "displayName": {
+      "en": "name"
+    },
+    "name": "name",
+    "schema": "string",
+    "writable": true
+  },
   "description": {
     "en": "An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings)."
   },

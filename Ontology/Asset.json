@@ -38,6 +38,15 @@
       "target": "dtmi:org:w3id:rec:core:LogicalDevice;1"
     },
     {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    },
+    {
       "@type": "Relationship",
       "displayName": {
         "en": "serviced by"

@@ -21,6 +21,15 @@
         "en": "is capabilty of"
       },
       "name": "isCapabilityOf"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {

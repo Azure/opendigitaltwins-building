@@ -5,6 +5,36 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "primary heating method"
+      },
+      "name": "primaryHeatingMethod",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Electric",
+            "name": "Electric"
+          },
+          {
+            "enumValue": "Gas",
+            "name": "Gas"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "primary cooling method"
       },
       "name": "primaryCoolingMethod",
@@ -12,16 +42,16 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
             "enumValue": "DX",
             "name": "DX"
           },
           {
             "enumValue": "ChilledWater",
             "name": "ChilledWater"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
           }
         ],
         "valueSchema": "string"
@@ -224,36 +254,6 @@
       },
       "name": "exhaustFan",
       "schema": "dtmi:org:w3id:rec:asset:Fan;1"
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "primary heating method"
-      },
-      "name": "primaryHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
     },
     {
       "@type": "Property",

@@ -36,6 +36,15 @@
       "maxMultiplicity": 1,
       "name": "componentOfBuilding",
       "target": "dtmi:org:w3id:rec:core:Building;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {

@@ -97,6 +97,15 @@
       "name": "hasCreatedTime",
       "schema": "dateTime",
       "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {

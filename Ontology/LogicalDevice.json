@@ -42,6 +42,15 @@
       "maxMultiplicity": 1,
       "name": "hostedBy",
       "target": "dtmi:org:w3id:rec:core:Asset;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
     }
   ],
   "description": {
