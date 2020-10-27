@@ -12,16 +12,12 @@
       "writable": true
     },
     {
-      "@type": [
-        "TimeSpan",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
-        "en": "battery life"
+        "en": "battery percentage"
       },
-      "name": "batteryLife",
-      "schema": "double",
-      "unit": "minute",
+      "name": "batteryPercentage",
+      "schema": "float",
       "writable": true
     }
   ],
