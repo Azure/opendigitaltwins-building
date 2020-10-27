@@ -303,6 +303,31 @@ namespace OWL2DTDL
                     dtdlModel.Assert(GetDtdlDescriptionTriples(oClass, interfaceNode));
                 }
 
+                // If the class is a top-level class, i.e., it has zero superclasses that are
+                // not owl:Thing, implement a generic 'name' property
+                IEnumerable<OntologyClass> namedDirectSuperClasses = oClass.DirectSuperClasses.Where(superClass => superClass.IsNamed());
+                if (!namedDirectSuperClasses.Where(superClass => !superClass.IsOwlThing()).Any())
+                {
+                    // Create Property node and name
+                    IBlankNode propertyNode = dtdlModel.CreateBlankNode();
+                    dtdlModel.Assert(new Triple(interfaceNode, dtdl_contents, propertyNode));
+                    dtdlModel.Assert(new Triple(propertyNode, rdfType, dtdl_Property));
+                    ILiteralNode propertyNameNode = dtdlModel.CreateLiteralNode("name");
+                    dtdlModel.Assert(new Triple(propertyNode, dtdl_name, propertyNameNode));
+
+                    // Name is string
+                    IUriNode schemaNode = dtdlModel.CreateUriNode(DTDL._string);
+                    dtdlModel.Assert(new Triple(propertyNode, dtdl_schema, schemaNode));
+
+                    // Display name (of name property) is hardcoded to "name".
+                    ILiteralNode displayNameNode = dtdlModel.CreateLiteralNode("name", "en");
+                    dtdlModel.Assert(new Triple(propertyNode, dtdl_displayName, displayNameNode));
+
+                    // Name is writeable
+                    ILiteralNode trueNode = dtdlModel.CreateLiteralNode("true", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean));
+                    dtdlModel.Assert(new Triple(propertyNode, dtdl_writable, trueNode));
+                }
+
                 // If the class has direct superclasses, implement DTDL extends (for at most two, see limitation in DTDL spec)
                 IEnumerable<OntologyClass> namedSuperClasses = oClass.DirectSuperClasses.Where(superClass => superClass.IsNamed() && !superClass.IsOwlThing() && !superClass.IsDeprecated());
                 if (namedSuperClasses.Any())
