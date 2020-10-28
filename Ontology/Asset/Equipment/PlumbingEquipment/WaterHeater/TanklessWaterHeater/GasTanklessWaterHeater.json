@@ -1,15 +1,17 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:GasTanklessWaterHeater;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": "Property",
-    "displayName": {
-      "en": "power input"
-    },
-    "name": "powerInput",
-    "schema": "double",
-    "writable": true
-  },
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "power input"
+      },
+      "name": "powerInput",
+      "schema": "double",
+      "writable": true
+    }
+  ],
   "displayName": {
     "en": "Gas tank-less water heater"
   },

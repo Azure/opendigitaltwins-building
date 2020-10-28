@@ -1,15 +1,17 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:UrinalFlushometer;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": "Property",
-    "displayName": {
-      "en": "water per flush"
-    },
-    "name": "waterPerFlush",
-    "schema": "double",
-    "writable": true
-  },
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "water per flush"
+      },
+      "name": "waterPerFlush",
+      "schema": "double",
+      "writable": true
+    }
+  ],
   "displayName": {
     "en": "Urinal with Flushometer"
   },

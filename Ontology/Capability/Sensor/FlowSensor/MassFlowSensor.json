@@ -1,22 +1,24 @@
 {
   "@id": "dtmi:org:w3id:rec:core:MassFlowSensor;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": [
-      "MassFlowRate",
-      "Property"
-    ],
-    "description": {
-      "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
-    },
-    "displayName": {
-      "en": "has value"
-    },
-    "name": "hasValue",
-    "schema": "float",
-    "unit": "kilogramPerHour",
-    "writable": true
-  },
+  "contents": [
+    {
+      "@type": [
+        "MassFlowRate",
+        "Property"
+      ],
+      "description": {
+        "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
+      },
+      "displayName": {
+        "en": "has value"
+      },
+      "name": "hasValue",
+      "schema": "float",
+      "unit": "kilogramPerHour",
+      "writable": true
+    }
+  ],
   "displayName": {
     "en": "Mass flow sensor"
   },

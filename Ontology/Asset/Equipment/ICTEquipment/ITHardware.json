@@ -1,28 +1,30 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:ITHardware;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": "Relationship",
-    "displayName": {
-      "en": "mounted in rack"
-    },
-    "name": "mountedInRack",
-    "dtmi:dtdl:property:properties;2": [
-      {
-        "@type": "Property",
-        "name": "rackTopPosition",
-        "schema": "integer",
-        "writable": true
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "mounted in rack"
       },
-      {
-        "@type": "Property",
-        "name": "rackBottomPosition",
-        "schema": "integer",
-        "writable": true
-      }
-    ],
-    "target": "dtmi:org:w3id:rec:asset:ITRack;1"
-  },
+      "name": "mountedInRack",
+      "dtmi:dtdl:property:properties;2": [
+        {
+          "@type": "Property",
+          "name": "rackTopPosition",
+          "schema": "integer",
+          "writable": true
+        },
+        {
+          "@type": "Property",
+          "name": "rackBottomPosition",
+          "schema": "integer",
+          "writable": true
+        }
+      ],
+      "target": "dtmi:org:w3id:rec:asset:ITRack;1"
+    }
+  ],
   "displayName": {
     "en": "IT Hardware"
   },

@@ -1,17 +1,19 @@
 {
   "@id": "dtmi:org:w3id:rec:device:Actuator;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": "Relationship",
-    "description": {
-      "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."
-    },
-    "displayName": {
-      "en": "observed by"
-    },
-    "name": "observedBy",
-    "target": "dtmi:org:w3id:rec:core:Sensor;1"
-  },
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."
+      },
+      "displayName": {
+        "en": "observed by"
+      },
+      "name": "observedBy",
+      "target": "dtmi:org:w3id:rec:core:Sensor;1"
+    }
+  ],
   "description": {
     "en": "An actuator takes some control input and executes some real-world action based on this input. Examples include setting dampers/valves in heating/cooling systems at certain configurations, opening or closing a smart lock, turning on or off an electric radiator, etc. REC does not provide semantics for every type of actuator you might find in a building; rather we here provide classes and properties that allows users to define their own actuator models, based on the systems they have, adhering to REC."
   },

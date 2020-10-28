@@ -1,14 +1,16 @@
 {
   "@id": "dtmi:org:w3id:rec:asset:AirFilter;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": "Component",
-    "displayName": {
-      "en": "fan"
-    },
-    "name": "fan",
-    "schema": "dtmi:org:w3id:rec:asset:Fan;1"
-  },
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "fan"
+      },
+      "name": "fan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    }
+  ],
   "displayName": {
     "en": "Air filter"
   },

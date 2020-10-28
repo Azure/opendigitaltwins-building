@@ -1,22 +1,24 @@
 {
   "@id": "dtmi:org:w3id:rec:core:MassSensor;1",
   "@type": "Interface",
-  "dtmi:dtdl:property:contents;2": {
-    "@type": [
-      "Mass",
-      "Property"
-    ],
-    "description": {
-      "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
-    },
-    "displayName": {
-      "en": "has value"
-    },
-    "name": "hasValue",
-    "schema": "double",
-    "unit": "kilogram",
-    "writable": true
-  },
+  "contents": [
+    {
+      "@type": [
+        "Mass",
+        "Property"
+      ],
+      "description": {
+        "en": "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
+      },
+      "displayName": {
+        "en": "has value"
+      },
+      "name": "hasValue",
+      "schema": "double",
+      "unit": "kilogram",
+      "writable": true
+    }
+  ],
   "displayName": {
     "en": "Mass sensor"
   },
