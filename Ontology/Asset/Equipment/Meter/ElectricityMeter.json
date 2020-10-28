@@ -46,7 +46,7 @@
         "en": "net energy"
       },
       "name": "netEnergy",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilowattHour",
       "writable": true
     },
@@ -72,7 +72,7 @@
         "en": "import energy"
       },
       "name": "importEnergy",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilowattHour",
       "writable": true
     },
@@ -98,7 +98,7 @@
         "en": "export energy"
       },
       "name": "exportEnergy",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilowattHour",
       "writable": true
     },

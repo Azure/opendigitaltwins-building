@@ -30,7 +30,7 @@
         "en": "nominal heating capacity"
       },
       "name": "nominalHeatingCapacity",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {

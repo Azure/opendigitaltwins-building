@@ -8,7 +8,7 @@
         "en": "power input"
       },
       "name": "powerInput",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     }
   ],

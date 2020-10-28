@@ -33,7 +33,7 @@
         "en": "mains rating"
       },
       "name": "mainsRating",
-      "schema": "float",
+      "schema": "double",
       "unit": "ampere",
       "writable": true
     }

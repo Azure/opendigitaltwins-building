@@ -8,7 +8,7 @@
         "en": "width"
       },
       "name": "width",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {
@@ -39,7 +39,7 @@
         "en": "thickness"
       },
       "name": "thickness",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {
@@ -57,7 +57,7 @@
         "en": "height"
       },
       "name": "height",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {

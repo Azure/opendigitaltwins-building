@@ -94,7 +94,7 @@
         "en": "nominal cooling capacity"
       },
       "name": "nominalCoolingCapacity",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {
@@ -103,7 +103,7 @@
         "en": "net sensible cooling capacity"
       },
       "name": "netSensibleCoolingCapacity",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {

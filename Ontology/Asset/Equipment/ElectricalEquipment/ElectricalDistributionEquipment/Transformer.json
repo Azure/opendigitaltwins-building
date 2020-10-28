@@ -11,7 +11,7 @@
         "en": "secondary voltage"
       },
       "name": "voltageSecondary",
-      "schema": "float",
+      "schema": "double",
       "unit": "volt",
       "writable": true
     },
@@ -24,7 +24,7 @@
         "en": "primary voltage"
       },
       "name": "voltagePrimary",
-      "schema": "float",
+      "schema": "double",
       "unit": "volt",
       "writable": true
     },

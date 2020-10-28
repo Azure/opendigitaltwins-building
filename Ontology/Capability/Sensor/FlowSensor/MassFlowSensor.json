@@ -14,7 +14,7 @@
         "en": "has value"
       },
       "name": "hasValue",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilogramPerHour",
       "writable": true
     }

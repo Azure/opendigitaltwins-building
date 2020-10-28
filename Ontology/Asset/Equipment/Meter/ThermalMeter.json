@@ -56,7 +56,7 @@
         "en": "energy total"
       },
       "name": "energyTotal",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilowattHour",
       "writable": true
     },
@@ -69,7 +69,7 @@
         "en": "energy rate"
       },
       "name": "energyRate",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilowatt",
       "writable": true
     },

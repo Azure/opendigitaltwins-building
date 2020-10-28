@@ -20,7 +20,7 @@
         "en": "mass flow"
       },
       "name": "massFlow",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilogramPerHour",
       "writable": true
     },

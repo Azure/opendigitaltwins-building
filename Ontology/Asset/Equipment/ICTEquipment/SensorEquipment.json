@@ -8,7 +8,7 @@
         "en": "Wi-Fi signal strength"
       },
       "name": "wifiSignalStrength",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {
@@ -17,7 +17,7 @@
         "en": "battery percentage"
       },
       "name": "batteryPercentage",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     }
   ],

@@ -42,7 +42,7 @@
         "en": "input voltage"
       },
       "name": "inputVoltage",
-      "schema": "float",
+      "schema": "double",
       "unit": "volt",
       "writable": true
     },

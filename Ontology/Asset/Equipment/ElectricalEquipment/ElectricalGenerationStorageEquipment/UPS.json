@@ -33,7 +33,7 @@
         "en": "power output"
       },
       "name": "powerOutput",
-      "schema": "float",
+      "schema": "double",
       "unit": "kilowatt",
       "writable": true
     },
@@ -46,7 +46,7 @@
         "en": "output voltage"
       },
       "name": "outputVoltage",
-      "schema": "float",
+      "schema": "double",
       "unit": "volt",
       "writable": true
     },
@@ -81,7 +81,7 @@
         "en": "input voltage"
       },
       "name": "inputVoltage",
-      "schema": "float",
+      "schema": "double",
       "unit": "volt",
       "writable": true
     },

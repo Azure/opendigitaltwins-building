@@ -11,7 +11,7 @@
         "en": "has value"
       },
       "name": "hasValue",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     }
   ],

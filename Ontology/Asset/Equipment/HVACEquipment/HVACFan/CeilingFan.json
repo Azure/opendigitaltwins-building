@@ -11,7 +11,7 @@
         "en": "maximum rotation speed"
       },
       "name": "maxRotationSpeed",
-      "schema": "float",
+      "schema": "double",
       "unit": "revolutionPerMinute",
       "writable": true
     },
@@ -21,7 +21,7 @@
         "en": "blade diameter"
       },
       "name": "bladeDiameter",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     }
   ],

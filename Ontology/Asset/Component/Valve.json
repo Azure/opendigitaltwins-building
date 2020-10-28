@@ -17,7 +17,7 @@
         "en": "pipe diameter"
       },
       "name": "pipeDiameter",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     },
     {

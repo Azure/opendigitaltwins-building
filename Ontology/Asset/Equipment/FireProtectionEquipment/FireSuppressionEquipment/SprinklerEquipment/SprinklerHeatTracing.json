@@ -27,13 +27,13 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Watts/square meter"
+        "en": "Watts/length unit"
       },
       "displayName": {
         "en": "power density"
       },
       "name": "powerDensity",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     }
   ],
