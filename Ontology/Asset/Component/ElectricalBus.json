@@ -33,7 +33,7 @@
         "en": "current rating"
       },
       "name": "currentRating",
-      "schema": "double",
+      "schema": "float",
       "unit": "ampere",
       "writable": true
     }

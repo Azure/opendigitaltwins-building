@@ -11,7 +11,7 @@
         "en": "output voltage"
       },
       "name": "outputVoltage",
-      "schema": "double",
+      "schema": "float",
       "unit": "volt",
       "writable": true
     },
@@ -95,12 +95,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "standby power rating"
       },
       "name": "standbyPower",
-      "schema": "double",
+      "schema": "float",
+      "unit": "kilowatt",
       "writable": true
     },
     {
@@ -113,12 +117,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "prime power rating"
       },
       "name": "primePower",
-      "schema": "double",
+      "schema": "float",
+      "unit": "kilowatt",
       "writable": true
     }
   ],

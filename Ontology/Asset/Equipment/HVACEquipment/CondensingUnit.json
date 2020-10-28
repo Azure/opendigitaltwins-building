@@ -39,7 +39,7 @@
         "en": "nominal heating capacity"
       },
       "name": "nominalHeatingCapacity",
-      "schema": "double",
+      "schema": "float",
       "writable": true
     },
     {
@@ -48,7 +48,7 @@
         "en": "nominal cooling capacity"
       },
       "name": "nominalCoolingCapacity",
-      "schema": "double",
+      "schema": "float",
       "writable": true
     },
     {
@@ -57,7 +57,7 @@
         "en": "net sensible heating capacity"
       },
       "name": "netSensibleHeatingCapacity",
-      "schema": "double",
+      "schema": "float",
       "writable": true
     },
     {
@@ -66,7 +66,7 @@
         "en": "net sensible cooling capacity"
       },
       "name": "netSensibleCoolingCapacity",
-      "schema": "double",
+      "schema": "float",
       "writable": true
     },
     {

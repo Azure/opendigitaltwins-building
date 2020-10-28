@@ -3,12 +3,16 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "power input"
       },
       "name": "powerInput",
       "schema": "double",
+      "unit": "watt",
       "writable": true
     }
   ],

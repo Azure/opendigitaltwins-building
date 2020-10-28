@@ -20,7 +20,7 @@
         "en": "input voltage"
       },
       "name": "inputVoltage",
-      "schema": "double",
+      "schema": "float",
       "unit": "volt",
       "writable": true
     },

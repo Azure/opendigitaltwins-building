@@ -11,7 +11,7 @@
         "en": "main circuit breaker rating"
       },
       "name": "MCBRating",
-      "schema": "double",
+      "schema": "float",
       "unit": "ampere",
       "writable": true
     }

@@ -25,12 +25,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "net power"
       },
       "name": "netPower",
-      "schema": "float",
+      "schema": "double",
+      "unit": "watt",
       "writable": true
     },
     {
@@ -47,12 +51,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "import power"
       },
       "name": "importPower",
-      "schema": "float",
+      "schema": "double",
+      "unit": "watt",
       "writable": true
     },
     {
@@ -69,12 +77,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "export power"
       },
       "name": "exportPower",
-      "schema": "float",
+      "schema": "double",
+      "unit": "watt",
       "writable": true
     },
     {

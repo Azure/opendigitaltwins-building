@@ -61,12 +61,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "energy rate"
       },
       "name": "energyRate",
       "schema": "float",
+      "unit": "kilowatt",
       "writable": true
     },
     {

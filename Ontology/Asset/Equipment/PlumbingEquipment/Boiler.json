@@ -39,16 +39,20 @@
         "en": "power output"
       },
       "name": "powerOutput",
-      "schema": "double",
+      "schema": "float",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "power input"
       },
       "name": "powerInput",
       "schema": "double",
+      "unit": "watt",
       "writable": true
     },
     {

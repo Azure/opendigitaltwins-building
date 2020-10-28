@@ -8,7 +8,20 @@
         "en": "transition type"
       },
       "name": "transitionType",
-      "schema": "string",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Open",
+            "name": "Open"
+          },
+          {
+            "enumValue": "Closed",
+            "name": "Closed"
+          }
+        ],
+        "valueSchema": "string"
+      },
       "writable": true
     },
     {
@@ -17,7 +30,24 @@
         "en": "switching mechanism"
       },
       "name": "switchingMechanism",
-      "schema": "string",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Contactor",
+            "name": "Contactor"
+          },
+          {
+            "enumValue": "CircuitBreakerPowerCase",
+            "name": "CircuitBreakerPowerCase"
+          },
+          {
+            "enumValue": "CircuitBreakerMoldedCase",
+            "name": "CircuitBreakerMoldedCase"
+          }
+        ],
+        "valueSchema": "string"
+      },
       "writable": true
     }
   ],

@@ -16,12 +16,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Power",
+        "Property"
+      ],
       "displayName": {
         "en": "motor power"
       },
       "name": "motorPower",
       "schema": "double",
+      "unit": "horsepower",
       "writable": true
     }
   ],
