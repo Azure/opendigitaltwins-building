@@ -141,8 +141,10 @@ namespace OWL2DTDL.VocabularyHelper
         public static readonly Uri _string = new Uri("dtmi:dtdl:instance:Schema:string;2");
         public static readonly Uri _boolean = new Uri("dtmi:dtdl:instance:Schema:boolean;2");
         public static readonly Uri _integer = new Uri("dtmi:dtdl:instance:Schema:integer;2");
+        public static readonly Uri _date = new Uri("dtmi:dtdl:instance:Schema:date;2");
         public static readonly Uri _dateTime = new Uri("dtmi:dtdl:instance:Schema:dateTime;2");
         public static readonly Uri _double = new Uri("dtmi:dtdl:instance:Schema:double;2");
+        public static readonly Uri _duration = new Uri("dtmi:dtdl:instance:Schema:duration;2");
         public static readonly Uri _float = new Uri("dtmi:dtdl:instance:Schema:float;2");
         public static readonly Uri _long = new Uri("dtmi:dtdl:instance:Schema:long;2");
 

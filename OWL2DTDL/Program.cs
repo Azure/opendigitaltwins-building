@@ -826,7 +826,9 @@ namespace OWL2DTDL
                 {
                     {"boolean", DTDL._boolean },
                     {"byte", DTDL._integer },
+                    {"date", DTDL._date },
                     {"dateTime", DTDL._dateTime },
+                    {"duration", DTDL._duration },
                     {"dateTimeStamp", DTDL._dateTime },
                     {"double", DTDL._double },
                     {"float", DTDL._float },
