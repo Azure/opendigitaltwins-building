@@ -130,7 +130,7 @@
         "en": "commission date"
       },
       "name": "commissionDate",
-      "schema": "dateTime",
+      "schema": "date",
       "writable": true
     },
     {
@@ -139,7 +139,7 @@
         "en": "expected end-of-life"
       },
       "name": "expectedEndOfLife",
-      "schema": "dateTime",
+      "schema": "date",
       "writable": true
     },
     {
@@ -148,7 +148,7 @@
         "en": "expected life"
       },
       "name": "expectedLife",
-      "schema": "string",
+      "schema": "duration",
       "writable": true
     },
     {
@@ -175,7 +175,7 @@
         "en": "installation date"
       },
       "name": "installationDate",
-      "schema": "dateTime",
+      "schema": "date",
       "writable": true
     },
     {
@@ -184,7 +184,7 @@
         "en": "maintenance interval"
       },
       "name": "maintenanceInterval",
-      "schema": "string",
+      "schema": "duration",
       "writable": true
     },
     {
@@ -193,7 +193,7 @@
         "en": "turnover date"
       },
       "name": "turnoverDate",
-      "schema": "dateTime",
+      "schema": "date",
       "writable": true
     },
     {
