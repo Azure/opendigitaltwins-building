@@ -62,12 +62,13 @@ Here is a real example of a subgraph of an Azure Digital Twins instance based on
 ![Using the models](images/UsingModels.JPG)
 
 We have instantiated the following twins:
-- A building instance *Building 121* of type [**dtmi:org:w3id:rec:core:Building;1**](Ontology/Space/Building.json)
-- One level instance *Level 1* of type [**dtmi:org:w3id:rec:core:Level;1**](Ontology/Space/Level.json) which is part of the building
-- An *HVAC Zone 1* of type [**dtmi:org:w3id:rec:core:HVACZone;1**](Ontology/Space/Zone/HVACZone.json)
-- Three room instances *Room 101*, *Room 102* and *Room 103* of type [**dtmi:org:w3id:rec:building:ClimateControlRoom;1**](Ontology/Space/Room/UtilitiesRoom/ClimateControlRoom.json) which are part of level and *Room 103* is also part of *HVAC Zone 1*
-- THree VAV physical devices *VAVL1.01*, *VAVL1.02*, *VAVL1.03* of type [**dtmi:org:w3id:rec:asset:VAVBox;1**](Ontology/Asset/Equipment/HVACEquipment/TerminalUnit/VAVBox.json) with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, one serves HVAC zone and all located in rooms
-- An AHU physical device *AHUL1.01* of type [**dtmi:org:w3id:rec:asset:AirHandlingUnit;1**](Ontology/Asset/Equipment/HVACEquipment/AirHandlingUnit.json) which feeds one of the VAV and is located in a room
+- A building instance *Building 121* of type [**dtmi:org:w3id:rec:core:Building;1**](Ontology/Space/Building.json) inherited from [**dtmi:org:w3id:rec:core:Space;1**](Ontology/Space.json)
+- One level instance *Level 1* of type [**dtmi:org:w3id:rec:core:Level;1**](Ontology/Space/Level.json) which is part of the building, inherited from same Space above.
+- An *HVAC Zone 1* of type [**dtmi:org:w3id:rec:core:HVACZone;1**](Ontology/Space/Zone/HVACZone.json), inherited from same Space above.
+- Three room instances *Room 101*, *Room 102* and *Room 103* of type [**dtmi:org:w3id:rec:building:ClimateControlRoom;1**](Ontology/Space/Room/UtilitiesRoom/ClimateControlRoom.json) which are part of level and *Room 103* is also part of *HVAC Zone 1*, inherited from same Space above.
+- Three VAV physical devices *VAVL1.01*, *VAVL1.02*, *VAVL1.03* of type [**dtmi:org:w3id:rec:asset:VAVBox;1**](Ontology/Asset/Equipment/HVACEquipment/TerminalUnit/VAVBox.json) with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, one serves HVAC zone and all located in rooms. VAV devices inherit from [**dtmi:org:w3id:rec:core:Asset;1**](Ontology/Asset.json)
+- An AHU physical device *AHUL1.01* of type [**dtmi:org:w3id:rec:asset:AirHandlingUnit;1**](Ontology/Asset/Equipment/HVACEquipment/AirHandlingUnit.json) which feeds one of the VAV and is located in a room. AHU device inherits from same Asset above.
+- Few capabilities instances of type [**dtmi:org:w3id:rec:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json), of type [**dtmi:org:w3id:rec:core:AirFlowSensor;1**](Ontology/Capability/Sensor/FlowSensor/AirFlowSensor.json) and of type [**dtmi:org:w3id:rec:core:FlowSetpoint;1**](Ontology/Capability/Parameter/Setpoint/FlowSensor/FlowSetpoint.json), all inherited from [**dtmi:org:w3id:rec:core:Capability;1**](Ontology/Capability.json)
 
 Below is the Azure Digital Twins query to find out the all temperatures on *Level 1* on *Building 121* which values are below 70 on above. To learn more on Azure Digital Twins queries, please refer to [Query the Azure Digital Twins twin graph](https://docs.microsoft.com/azure/digital-twins/how-to-query-graph) article.
 <*add query here*>
