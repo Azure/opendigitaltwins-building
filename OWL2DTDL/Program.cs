@@ -134,7 +134,7 @@ namespace OWL2DTDL
             { QUDT.QuantityKindNS.Illuminance, DTDL.Illuminance },
             { QUDT.QuantityKindNS.PlaneAngle, DTDL.Angle },
             { QUDT.QuantityKindNS.Voltage, DTDL.Voltage },
-            //{ QUDT.QuantityKindNS.Power, DTDL.Power },
+            { QUDT.QuantityKindNS.Power, DTDL.Power },
             { QUDT.QuantityKindNS.Mass, DTDL.Mass },
             { QUDT.QuantityKindNS.MassPerTime, DTDL.MassFlowRate },
             //{ QUDT.QuantityKindNS.Pressure, DTDL.Pressure },
