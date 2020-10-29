@@ -3,7 +3,7 @@
 Ultimately, an ontology is only as successful as the solutions in which it is utilized. As such, we are actively pursuing and deliver opportunities to test and realize the value of the ontology we have selected. These partners are implenting solutions with RealEstateCore-based DTDL ontology and have provided valuable feedback that's reflected into current version of the ontology.
 
 
-## Idun/RealEstateCore
+## Idun-RealEstateCore
 One solution powered by [RealEstateCore](https://www.realestatecore.io/) is [Idun ProptechOS](https://idunrealestate.com/proptechos/), which enables the creation of rich digital twins of  building management systems, IoT sensors, blueprints, assets management systems, and administrative systems – an operating system for the property owner's portfolio.
 
 RealEstateCore is the common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete while providing simplicity and real-world applicability with proven industry solutions and partnerships. RealEstateCore precisely does not aim to be a new standard but instead provides a common denominator and bridge with other industry standards such as Brick, Project Haystack, IFC, and more.

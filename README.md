@@ -172,7 +172,7 @@ Pull requests will be evaluated based on the quality of the proposed interface m
 - **LogicalDevice** is inspired by [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub)'s *Device* terminology and represents a connected entity that pushes data to the cloud or receives commands from the cloud (typically an endpoint such as a piece of software like an IoTEdge module, a HomeAssistant install, or some proprietary BMS system, etc.). The reason we have created the *LogicalDevice* interface different from the *Device* interface, is that we see the physical device being represented as a *Device* digital twin in IoT Hub and the *LogicalDevice* twin being represented in this ontology. For example, the *LogicalDevice* may have *hasCapability* relationships to *Capability*. A physical device connected to IoT Hub would not have those relationships, instead it would have *Telemetry*, *Properties*, and *Commands* potentially feeding the Sensors, Parameters, and Actuators in this ontology.
 
 The DTDL-based RealEstateCore ontology accelerates developers from the “blank page” and facilitates business-to-business integrations between vendors in a smart building. Since the DTDL-based ontology is open sourced, developers can easily annotate existing models while contributing their own domain expertise. Read more about
-- [Idun/RealEstateCore](Partners/README.md#idunrealestatecore)
+- [Idun-RealEstateCore](Partners/README.md#idun-realestatecore)
 - [Willow](Partners/README.md#willow-inc)
 
 ## More about Azure Digital Twins
