@@ -60,10 +60,40 @@ We have instantiated the following twins:
 - Three room instances *Room 101*, *Room 102* and *Room 103* of type [**dtmi:org:w3id:rec:building:ClimateControlRoom;1**](Ontology/Space/Room/UtilitiesRoom/ClimateControlRoom.json) which are part of level and *Room 103* is also part of *HVAC Zone 1*, inherited from same Space above.
 - Three VAV physical devices *VAVL1.01*, *VAVL1.02*, *VAVL1.03* of type [**dtmi:org:w3id:rec:asset:VAVBox;1**](Ontology/Asset/Equipment/HVACEquipment/TerminalUnit/VAVBox.json) with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, one serves HVAC zone and all located in rooms. VAV devices inherit from [**dtmi:org:w3id:rec:core:Asset;1**](Ontology/Asset.json)
 - An AHU physical device *AHUL1.01* of type [**dtmi:org:w3id:rec:asset:AirHandlingUnit;1**](Ontology/Asset/Equipment/HVACEquipment/AirHandlingUnit.json) which feeds one of the VAV and is located in a room. AHU device inherits from same Asset above.
-- Few capabilities instances of type [**dtmi:org:w3id:rec:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json), of type [**dtmi:org:w3id:rec:core:AirFlowSensor;1**](Ontology/Capability/Sensor/FlowSensor/AirFlowSensor.json) and of type [**dtmi:org:w3id:rec:core:FlowSetpoint;1**](Ontology/Capability/Parameter/Setpoint/FlowSensor/FlowSetpoint.json), all inherited from [**dtmi:org:w3id:rec:core:Capability;1**](Ontology/Capability.json)
+- Few capabilities instances of type [**dtmi:org:w3id:rec:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json), of type [**dtmi:org:w3id:rec:core:AirFlowSensor;1**](Ontology/Capability/Sensor/FlowSensor/AirFlowSensor.json) and of type [**dtmi:org:w3id:rec:core:FlowSetpoint;1**](Ontology/Capability/Parameter/Setpoint/FlowSensor/FlowSetpoint.json), all inherited from [**dtmi:org:w3id:rec:core:Capability;1**](Ontology/Capability.json). These are assigned using *hasCapability* relationship to VAVs. 
+- One capability instance *TemperatureR* of type [**dtmi:org:w3id:rec:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json) assigned to one of the rooms to show temperature on room level.
 
-Below is the Azure Digital Twins query to find out the all temperatures on *Level 1* on *Building 121* which values are below 70 on above. To learn more on Azure Digital Twins queries, please refer to [Query the Azure Digital Twins twin graph](https://docs.microsoft.com/azure/digital-twins/how-to-query-graph) article.
-<*add query here*>
+Below is the Azure Digital Twins query to find out all rooms' temperatures in *Building 121*, *Level 1* which values are below 73. 
+```sql
+SELECT Room, Sensor, Level 
+    FROM DIGITALTWINS Room  
+    JOIN Level RELATED Room.isPartOf
+    JOIN Sensor RELATED Room.hasCapability
+    JOIN Building RELATED Level.isPartOf
+    WHERE IS_OF_MODEL(Room, 'dtmi:org:w3id:rec:core:Room;1') 
+    AND IS_OF_MODEL(Level, 'dtmi:org:w3id:rec:core:Level;1')
+    AND IS_OF_MODEL(Building, 'dtmi:org:w3id:rec:core:Building;1')
+    AND IS_OF_MODEL(Sensor, 'dtmi:org:w3id:rec:core:TemperatureSensor;1')
+    AND Level.levelNumber = 1 
+    AND IS_DEFINED(Sensor.hasValue)
+    AND Building.$dtId = 'Building121'
+    AND Sensor.hasValue < 73
+```
+
+Another query example on above subgraph is to find the rooms which are affected by VAVs with serialNumber 2561A5510 (because it's going to be replaced).
+```sql
+SELECT VAV, Room 
+    FROM DIGITALTWINS VAV
+    JOIN Room RELATED VAV.locatedIn  
+    JOIN Level RELATED Room.isPartOf
+    JOIN Building RELATED Level.isPartOf
+    WHERE IS_OF_MODEL(Room, 'dtmi:org:w3id:rec:core:Room;1') 
+    AND IS_OF_MODEL(Level, 'dtmi:org:w3id:rec:core:Level;1')
+    AND IS_OF_MODEL(Building, 'dtmi:org:w3id:rec:core:Building;1')
+    AND Building.$dtId = 'Building121'
+    AND VAV.serialNumber ='2561A5510'
+```
+To learn more on Azure Digital Twins queries, please refer to [Query the Azure Digital Twins twin graph](https://docs.microsoft.com/azure/digital-twins/how-to-query-graph) article.
 
 ## Upload the models to Azure Digital Twins
 You can upload this ontology into your own instance of ADT by using [Model Uploader](ModelUploader). Follow the instructions on ModelUploader to upload all of these models into your own instance. Here is [an article](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-model) on how to manage models, update, retrieve, update, decommission and delete models.
