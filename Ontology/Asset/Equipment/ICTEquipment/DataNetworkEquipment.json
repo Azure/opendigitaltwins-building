@@ -11,12 +11,18 @@
       "dtmi:dtdl:property:properties;2": [
         {
           "@type": "Property",
+          "displayName": {
+            "en": "rack top position (RU)"
+          },
           "name": "rackTopPosition",
           "schema": "integer",
           "writable": true
         },
         {
           "@type": "Property",
+          "displayName": {
+            "en": "rack bottom position (RU)"
+          },
           "name": "rackBottomPosition",
           "schema": "integer",
           "writable": true

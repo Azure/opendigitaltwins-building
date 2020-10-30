@@ -10,6 +10,9 @@
       "name": "isFedBy",
       "dtmi:dtdl:property:properties;2": {
         "@type": "Property",
+        "displayName": {
+          "en": "substance"
+        },
         "name": "substance",
         "dtmi:dtdl:property:schema;2": {
           "@type": "Enum",
@@ -172,6 +175,9 @@
       "name": "feeds",
       "dtmi:dtdl:property:properties;2": {
         "@type": "Property",
+        "displayName": {
+          "en": "substance"
+        },
         "name": "substance",
         "dtmi:dtdl:property:schema;2": {
           "@type": "Enum",

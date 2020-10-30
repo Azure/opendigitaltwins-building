@@ -10,15 +10,6 @@
       "name": "flowCapacity",
       "schema": "double",
       "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "condensate"
-      },
-      "name": "condensate",
-      "schema": "integer",
-      "writable": true
     }
   ],
   "displayName": {
