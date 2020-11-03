@@ -203,8 +203,10 @@ Willow: Rick Szcodronski
 </sub>
 
 ---
-**Disclosure**
+**Disclosure:**
+<sub>
 ADT Explorer will not be able to create instances for some of the models which contains fully qualified DTMI, however it will be able to visualize them, like "dtmi:dtdl:property:contents;2", "dtmi:dtdl:property:properties;2", "dtmi:dtdl:property:enumValues;2", "dtmi:dtdl:property:schema;2". ADT team is looking into these issues, stay tuned for updates.
+</sub>
 
 
 
