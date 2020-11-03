@@ -197,7 +197,7 @@ Jönköping University: Karl Hammar
 <br /> 
 Microsoft: Alina Stanciu, Brian Crawford, Bert Van Hoof, Akshay Johar, Matthew Vogel, Kevin Hilscher, Miriam Berhane Russom, OP Ravi
 <br /> 
-RealEstateCore: Karl Hammar, Erik Wallin, Per Karlberg, Peter Hartlev, Joakim Eriksson
+RealEstateCore Consortium: Karl Hammar, Erik Wallin, Per Karlberg, Peter Hartlev, Joakim Eriksson
 <br />
 Idun Real Estate Solutions: Erik Wallin, Per Karlberg
 <br />
