@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Workspace;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Workspace"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Zone;1",
+  "@context": "dtmi:dtdl:context;2"
+}

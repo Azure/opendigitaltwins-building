@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:RoofOuter;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Roof, outer"
+  },
+  "extends": "dtmi:org:w3id:rec:core:BuildingComponent;1",
+  "@context": "dtmi:dtdl:context;2"
+}

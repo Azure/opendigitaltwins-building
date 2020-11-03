@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC Equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

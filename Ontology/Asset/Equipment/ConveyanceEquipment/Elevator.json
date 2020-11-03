@@ -1,0 +1,63 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Elevator;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The number of people who can fit in a Space."
+      },
+      "displayName": {
+        "en": "person capacity"
+      },
+      "name": "personCapacity",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Mass",
+        "Property"
+      ],
+      "displayName": {
+        "en": "weight capacity"
+      },
+      "name": "weightCapacity",
+      "schema": "double",
+      "unit": "kilogram",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum travel speed"
+      },
+      "name": "maxTravelSpeed",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum travel distance"
+      },
+      "name": "maxTravelDistance",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum landings"
+      },
+      "name": "maxLandings",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Elevator"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ConveyanceEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

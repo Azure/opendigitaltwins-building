@@ -1,0 +1,42 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Toilet;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "water per flush"
+      },
+      "name": "waterPerFlush",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "installation type"
+      },
+      "name": "installationType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WallMounted",
+            "name": "WallMounted"
+          },
+          {
+            "enumValue": "FloorMounted",
+            "name": "FloorMounted"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Toilet"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingFixture;1",
+  "@context": "dtmi:dtdl:context;2"
+}

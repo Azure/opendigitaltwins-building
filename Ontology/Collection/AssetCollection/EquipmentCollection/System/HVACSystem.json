@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:System;1",
+  "@context": "dtmi:dtdl:context;2"
+}

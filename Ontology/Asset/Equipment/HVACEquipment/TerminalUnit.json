@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:TerminalUnit;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "minimum airflow rating"
+      },
+      "name": "minAirflowRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum airflow rating"
+      },
+      "name": "maxAirflowRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "duct inlet"
+      },
+      "name": "ductInlet",
+      "schema": "dtmi:org:w3id:rec:asset:DuctConnection;1"
+    }
+  ],
+  "displayName": {
+    "en": "Terminal unit"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

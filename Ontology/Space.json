@@ -1,0 +1,132 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Space;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The number of people presently occupying a Space."
+      },
+      "displayName": {
+        "en": "person occupancy"
+      },
+      "name": "personOccupancy",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The number of people who can fit in a Space."
+      },
+      "displayName": {
+        "en": "person capacity"
+      },
+      "name": "personCapacity",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that a Space or Asset is served by some Sensor/Actuator or other Asset. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset. Inverse of: serves"
+      },
+      "displayName": {
+        "en": "served by"
+      },
+      "name": "servedBy"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Property that defines the legal owner(s) of a given entity. Inverse of: owns"
+      },
+      "displayName": {
+        "en": "owned by"
+      },
+      "name": "ownedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "operated by"
+      },
+      "name": "operatedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of: includes"
+      },
+      "displayName": {
+        "en": "included in"
+      },
+      "name": "includedIn",
+      "target": "dtmi:org:w3id:rec:core:Collection;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has capability"
+      },
+      "name": "hasCapability",
+      "target": "dtmi:org:w3id:rec:core:Capability;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "constructed by"
+      },
+      "name": "constructedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "architected by"
+      },
+      "name": "architectedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings."
+  },
+  "displayName": {
+    "en": "Space"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

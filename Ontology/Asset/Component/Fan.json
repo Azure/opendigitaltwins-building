@@ -1,0 +1,73 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Fan;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "nominal airflow"
+      },
+      "name": "nominalAirflow",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "motor power"
+      },
+      "name": "motorPower",
+      "schema": "double",
+      "unit": "horsepower",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "minimum airflow rating"
+      },
+      "name": "minAirflowRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum airflow rating"
+      },
+      "name": "maxAirflowRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "drive type"
+      },
+      "name": "driveType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Direct",
+            "name": "Direct"
+          },
+          {
+            "enumValue": "Belt",
+            "name": "Belt"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Fan"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Component;1",
+  "@context": "dtmi:dtdl:context;2"
+}

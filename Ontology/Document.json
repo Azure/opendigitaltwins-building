@@ -1,0 +1,28 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Document;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "URL"
+      },
+      "name": "url",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Document"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

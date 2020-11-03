@@ -1,0 +1,36 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACFan;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "fan"
+      },
+      "name": "fan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "duct inlet"
+      },
+      "name": "ductInlet",
+      "schema": "dtmi:org:w3id:rec:asset:DuctConnection;1"
+    }
+  ],
+  "displayName": {
+    "en": "Fan"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

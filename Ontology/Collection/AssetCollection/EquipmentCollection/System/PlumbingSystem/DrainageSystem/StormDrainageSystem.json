@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:StormDrainageSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Storm drainage system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:DrainageSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

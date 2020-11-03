@@ -1,0 +1,34 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Campus;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "operated by"
+      },
+      "name": "operatedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc. Inverse of: includedIn"
+      },
+      "displayName": {
+        "en": "includes"
+      },
+      "minMultiplicity": 0,
+      "name": "includes",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    }
+  ],
+  "description": {
+    "en": "A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc."
+  },
+  "displayName": {
+    "en": "Campus"
+  },
+  "extends": "dtmi:org:w3id:rec:core:SpaceCollection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

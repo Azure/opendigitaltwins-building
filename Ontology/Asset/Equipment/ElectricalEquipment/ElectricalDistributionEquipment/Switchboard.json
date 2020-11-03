@@ -1,0 +1,63 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Switchboard;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "short circuit rating"
+      },
+      "name": "shortCircuitRating",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "input voltage"
+      },
+      "name": "inputVoltage",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "input phases"
+      },
+      "name": "inputPhases",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Three",
+            "name": "Three"
+          },
+          {
+            "enumValue": "One",
+            "name": "One"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "main bus"
+      },
+      "name": "mainBus",
+      "schema": "dtmi:org:w3id:rec:asset:ElectricalBus;1"
+    }
+  ],
+  "displayName": {
+    "en": "Switchboard"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ElectricalDistributionEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

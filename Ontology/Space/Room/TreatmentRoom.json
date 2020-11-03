@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:TreatmentRoom;1",
+  "@type": "Interface",
+  "description": {
+    "en": "For e.g. medical or other treatment or consultation."
+  },
+  "displayName": {
+    "en": "TreatmentRoom"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Room;1",
+  "@context": "dtmi:dtdl:context;2"
+}

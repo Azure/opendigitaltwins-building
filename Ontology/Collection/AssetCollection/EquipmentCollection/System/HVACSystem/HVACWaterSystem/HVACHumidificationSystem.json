@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACHumidificationSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC humidification system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACWaterSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

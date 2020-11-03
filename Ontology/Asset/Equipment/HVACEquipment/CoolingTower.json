@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:CoolingTower;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "nominal cooling capacity"
+      },
+      "name": "nominalCoolingCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "fan"
+      },
+      "name": "fan",
+      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+    }
+  ],
+  "displayName": {
+    "en": "Cooling tower"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACHeatTracing;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC heat tracing"
+  },
+  "extends": [
+    "dtmi:org:w3id:rec:asset:HeatTracing;1",
+    "dtmi:org:w3id:rec:asset:HVACEquipment;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

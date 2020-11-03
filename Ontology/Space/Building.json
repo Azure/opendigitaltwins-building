@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Building;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Parthood traversal property linking Buildings to the Building Components that they are made up of. Inverse of: isPartOfBuilding, componentOfBuilding"
+      },
+      "displayName": {
+        "en": "has building component"
+      },
+      "name": "hasBuildingComponent",
+      "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
+    }
+  ],
+  "description": {
+    "en": "A confined building structure."
+  },
+  "displayName": {
+    "en": "Building"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Space;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACPump;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC pump"
+  },
+  "extends": [
+    "dtmi:org:w3id:rec:asset:Pump;1",
+    "dtmi:org:w3id:rec:asset:HVACEquipment;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

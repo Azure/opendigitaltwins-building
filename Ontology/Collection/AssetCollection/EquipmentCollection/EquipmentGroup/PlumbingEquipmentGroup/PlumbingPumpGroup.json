@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PlumbingPumpGroup;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Pump group"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingEquipmentGroup;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:MailRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Mail room"
+  },
+  "extends": "dtmi:org:w3id:rec:building:BackOffice;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:FuelOilSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Fuel oil system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

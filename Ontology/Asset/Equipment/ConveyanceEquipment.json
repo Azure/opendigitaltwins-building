@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ConveyanceEquipment;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Conveyance Equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

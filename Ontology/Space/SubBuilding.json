@@ -1,0 +1,33 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:SubBuilding;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Wing",
+            "name": "Wing"
+          },
+          {
+            "enumValue": "Tower",
+            "name": "Tower"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Sub-building"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Space;1",
+  "@context": "dtmi:dtdl:context;2"
+}

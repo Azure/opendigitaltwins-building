@@ -1,0 +1,440 @@
+﻿# The OWL2DTDL Converter
+
+**Author:** [Karl Hammar](https://karlhammar.com)
+
+The OWL2DTDL converter is a tool that translates an OWL ontology or an ontology network (one root ontology reusing other ontologies through `owl:imports` declarations) into a set of DTDL Interface declarations for use, e.g., with the Azure Digital Twins service. This converter is a work-in-progress; if you find bugs, do not hesitate to contact the author.
+
+## Example usage
+
+`./OWL2DTDL -u https://w3id.org/rec/full/3.3/ -i ./RecIgnoredNames.csv -o /Users/karl/Desktop/DTDL/`
+
+## Options
+
+```
+  -n, --no-imports       Sets program to not follow owl:imports declarations.
+
+  -f, --file-path        Required. The path to the on-disk root ontology file to
+                         translate.
+
+  -u, --uri-path         Required. The URI of the root ontology file to
+                         translate.
+
+  -o, --outputPath       Required. The directory in which to create DTDL models.
+
+  -m, --merged-output    Sets program to output one merged JSON-LD file for
+                         batch import into ADT.
+
+  -i, --ignorefile       Path to a CSV file, the first column of which lists
+                         (whole or partial) IRI:s that should be ignored by this
+                         tool and not translated into DTDL output.
+```
+
+## Supported OWL features
+
+### owl:Class
+
+* Named OWL classes are translated into DTDL Interfaces.
+* Anonymous classes are ignored.
+
+### owl:ObjectProperty
+
+* Object properties that are defined for a class (i.e., that are used in an OWL restriction on that class itself, or that have that class as defined rdfs:domain) are become DTDL Relationships on that Interface. 
+* As DTDL only allows a single Target definition per Relationship, we only map such properties that have named singleton ranges (targets). More complex properties are ignored (for now).
+
+### owl:DataProperty
+
+* Data Properties that are defined for a class (i.e., that are either used in a restriction on that class itself, or have that class as defined rdfs:domain) become DTDL Properties on that Interface. 
+* Data properties that have ranges that are XSD base types are translated into corresponding DTDL primitive schemas per the table below. 
+* Ranges that are custom data types that derive from exactly one built-in XSD base type gets translated the same way, with a comment added to the parent Property indicating the label of the derived type (e.g., "LitersPerMinute" for an int).
+
+### owl:AnnotationProperty on owl:ObjectProperty
+
+OWL annotation properties that have an object property defined as their rdfs:domains are translated into DTDL Properties on the corresponding DTDL Relationships (see above). Per this approach, the property-graph behaviour of DTDL can be loosely emulated in OWL.
+
+### Documentation and Deprecation
+
+* rdfs:labels become DTDL displayNames; language tags are maintained.
+* rdfs:comments become DTDL comments; language tags are maintained.
+* Entities that are marked as deprecated (i.e., are annotated with the property owl:deprecated and the boolean value true) are ignored in translation.
+
+### DTMI Minting
+
+DTMI:s for named classes are minted based on the classes' URIs by concatenating five components: 
+
+* The `"dtmi:"` prefix
+* The hostname component of the URI, reversed, with periods converted to colons
+* The path component of the URI, with slashes converted to colons
+* The local name of the class
+* The DTMI version identifier; for now hardcoded as `";1"`
+
+E.g., `https://w3id.org/rec/device/Actuator` becomes `dtmi:org:w3id:rec:device:Actuator;1`.
+
+### Mapping OWL model to DTDL
+
+The following table maps key OWL constructs to DTDL. This map is used by the OWL2DTDL application to convert REC from OWL to DTDL. For detailed mappings, refer to the OWL2DTDL source code.
+
+| OWL Construct       |                      | DTDL Construct       |                                    |
+|---------------------|----------------------|----------------------|------------------------------------|
+| Classes             | owl:Class            | Interface            | @type:Interface                    |
+|                     | rdfs:label           |                      | @id, displayName                   |
+|                     | rdfs:comment         |                      | description                        |
+| Subclasses          | owl:Class            | Interface            | @type:Interface                    |
+|                     | rdfs:label           |                      | @id, displayName                   |
+|                     | rdfs:comment         |                      | description                        |
+|                     | rdfs:subClassOf      |                      | extends                            |
+| Datatype Properties | owl:DatatypeProperty | Interface Properties | @type:Property                     |
+|                     | rdfs:label           |                      | displayName                        |
+|                     | rdfs:range           |                      | schema                             |
+| Object Properties   | owl:ObjectProperty   | Relationship         | @type:Relationship                 |
+|                     | rdfs:range           |                      | target or omitted if no rdfs:range |
+|                     | rdfs:comment         |                      | description                        |
+|                     | rdfs:label           |                      | displayName                        |
+| Object Properties   | rdfs:subClassOf +    | Relationship         | @type:Relationship                 |
+|                     | owl:Restriction      |                      |                                    |
+|                     | owl:onProperty       |                      | name, description                  |
+|                     | owl:allValuesFrom    |                      | target                             |
+
+
+## Translation examples
+
+### RealEstateCore Space
+
+The RealEstateCore 3.3 Space class is given below. Its translation into DTDL using this tool is provided in the subsequent listing. Note that the two restrictions on the property `hasGeometry` are filtered out of the DTDL translation, as the `Geometry` class is included in the file ignored classes listing passed in using the command line option `-i`.
+
+**Source OWL version of REC Space:**
+
+```xml
+<owl:Class rdf:about="https://w3id.org/rec/core/Space">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/architectedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/constructedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/operatedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/ownedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/personCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/personOccupancy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+```
+
+**Resulting DTDL version of REC Space:**
+
+```yaml
+{
+  "@id": "dtmi:org:w3id:rec:core:Space;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The number of people presently occupying a Space."
+      },
+      "displayName": {
+        "en": "person occupancy"
+      },
+      "name": "personOccupancy",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The number of people who can fit in a Space."
+      },
+      "displayName": {
+        "en": "person capacity"
+      },
+      "name": "personCapacity",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that a Space or Asset is served by some Sensor/Actuator or other Asset. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset. Inverse of: serves"
+      },
+      "displayName": {
+        "en": "served by"
+      },
+      "name": "servedBy"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Property that defines the legal owner(s) of a given entity. Inverse of: owns"
+      },
+      "displayName": {
+        "en": "owned by"
+      },
+      "name": "ownedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "operated by"
+      },
+      "name": "operatedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of: includes"
+      },
+      "displayName": {
+        "en": "included in"
+      },
+      "name": "includedIn",
+      "target": "dtmi:org:w3id:rec:core:Collection;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has capability"
+      },
+      "name": "hasCapability",
+      "target": "dtmi:org:w3id:rec:core:Capability;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "constructed by"
+      },
+      "name": "constructedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "architected by"
+      },
+      "name": "architectedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    }
+  ],
+  "description": {
+    "en": "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings."
+  },
+  "displayName": {
+    "en": "Space"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}
+```
+
+### Equipment feeds/isFedBy Relationship with embedded Property
+
+The `substance` annotation property given below applies to two OWL object properties, `feeds` and `isFedBy`, which are in turn used in restrictions on the `Equipment` class. The range of `substance` range, reproduced below in abbreviated form, is a custom datatype based on an enumeration. When passed through OWL2DTDL, the two object properties become DTDL Relationship declarations on `Equipment`, with nested `substance` Properties on them, using an enumeration schema corresponding to the OWL custom datatype.
+
+**Properties**:
+
+```xml
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/asset/substance">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/EquipmentFeedSubstance"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/feeds"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
+    </owl:AnnotationProperty>
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/isFedBy">
+        <rdfs:label xml:lang="en">is fed by</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/feeds">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
+        <rdfs:label xml:lang="en">feeds</rdfs:label>
+    </owl:ObjectProperty>
+```
+
+**Class that object properties apply to:**
+
+```xml
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Equipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/feeds"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+```
+
+**Annotation property range (custom datatype):**
+```xml
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/asset/EquipmentFeedSubstance">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ACElec</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Air</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>BlowdownWater</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>              
+```
+
+**Resulting DTDL version of Equipment:**
+
+```yaml
+{
+  "@id": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;2": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "is fed by"
+      },
+      "name": "isFedBy",
+      "dtmi:dtdl:property:properties;2": {
+        "@type": "Property",
+        "name": "substance",
+        "dtmi:dtdl:property:schema;2": {
+          "@type": "Enum",
+          "dtmi:dtdl:property:enumValues;2": [
+            {
+              "enumValue": "ACElec",
+              "name": "ACElec"
+            },
+            {
+              "enumValue": "Air",
+              "name": "Air"
+            },
+            {
+              "enumValue": "BlowdownWater",
+              "name": "BlowdownWater"
+            }
+          ],
+          "valueSchema": "string"
+        },
+        "writable": true
+      }
+    }
+  ],
+  "description": {
+    "en": "Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc."
+  },
+  "displayName": {
+    "en": "Equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Asset;1",
+  "@context": "dtmi:dtdl:context;2"
+}
+```

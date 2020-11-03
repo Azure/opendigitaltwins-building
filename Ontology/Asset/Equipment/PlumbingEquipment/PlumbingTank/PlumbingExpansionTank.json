@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PlumbingExpansionTank;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Diaphragm",
+            "name": "Diaphragm"
+          },
+          {
+            "enumValue": "Compression",
+            "name": "Compression"
+          },
+          {
+            "enumValue": "Bladder",
+            "name": "Bladder"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Plumbing expansion tank"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingTank;1",
+  "@context": "dtmi:dtdl:context;2"
+}

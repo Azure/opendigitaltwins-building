@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:HVACZone;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC zone"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Zone;1",
+  "@context": "dtmi:dtdl:context;2"
+}

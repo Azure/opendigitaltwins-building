@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:RoofDrain;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Roof drain"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Drain;1",
+  "@context": "dtmi:dtdl:context;2"
+}

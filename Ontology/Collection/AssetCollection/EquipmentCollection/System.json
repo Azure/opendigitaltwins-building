@@ -1,0 +1,65 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:System;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "comment"
+      },
+      "name": "comment",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "service"
+      },
+      "name": "service",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Utility",
+            "name": "Utility"
+          },
+          {
+            "enumValue": "Tenant",
+            "name": "Tenant"
+          },
+          {
+            "enumValue": "Site",
+            "name": "Site"
+          },
+          {
+            "enumValue": "District",
+            "name": "District"
+          },
+          {
+            "enumValue": "Building",
+            "name": "Building"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:asset:System;1"
+    }
+  ],
+  "displayName": {
+    "en": "System"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:EquipmentCollection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,68 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:DuctConnection;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "size"
+      },
+      "name": "size",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "shape"
+      },
+      "name": "shape",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "round",
+            "name": "round"
+          },
+          {
+            "enumValue": "rectangle",
+            "name": "rectangle"
+          },
+          {
+            "enumValue": "oval",
+            "name": "oval"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "configuration"
+      },
+      "name": "configuration",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "single",
+            "name": "single"
+          },
+          {
+            "enumValue": "dual",
+            "name": "dual"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Duct connection"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Component;1",
+  "@context": "dtmi:dtdl:context;2"
+}

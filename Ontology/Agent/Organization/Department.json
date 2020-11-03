@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:agents:Department;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Department"
+  },
+  "extends": "dtmi:org:w3id:rec:agents:Organization;1",
+  "@context": "dtmi:dtdl:context;2"
+}

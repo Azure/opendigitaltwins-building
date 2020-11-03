@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:LogicalGateway;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Logical gateway"
+  },
+  "extends": "dtmi:org:w3id:rec:core:LogicalDevice;1",
+  "@context": "dtmi:dtdl:context;2"
+}

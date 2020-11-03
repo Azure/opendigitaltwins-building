@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PlumbingWaterSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Plumbing water system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

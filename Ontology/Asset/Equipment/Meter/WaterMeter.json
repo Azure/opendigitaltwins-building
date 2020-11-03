@@ -1,0 +1,62 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:WaterMeter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "volume flow"
+      },
+      "name": "volumeFlow",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "volume"
+      },
+      "name": "volume",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "supply temp"
+      },
+      "name": "supplyTemp",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "sub-meter of"
+      },
+      "name": "subMeterOf",
+      "target": "dtmi:org:w3id:rec:asset:WaterMeter;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "measures"
+      },
+      "name": "measures"
+    }
+  ],
+  "displayName": {
+    "en": "Water meter"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Meter;1",
+  "@context": "dtmi:dtdl:context;2"
+}

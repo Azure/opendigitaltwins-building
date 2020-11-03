@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWL2DTDL", "OWL2DTDL.csproj", "{878ABCD8-CA64-4752-A601-75AE8FCAA695}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{878ABCD8-CA64-4752-A601-75AE8FCAA695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878ABCD8-CA64-4752-A601-75AE8FCAA695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878ABCD8-CA64-4752-A601-75AE8FCAA695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878ABCD8-CA64-4752-A601-75AE8FCAA695}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EAFFD29-25C7-4E0F-963A-0DD3D8F0BF30}
+	EndGlobalSection
+EndGlobal

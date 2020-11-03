@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:HVACRefrigerantSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HVAC refrigerant system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SecurityEquipment;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Security equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

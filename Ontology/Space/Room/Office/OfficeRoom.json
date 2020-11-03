@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:OfficeRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "OfficeRoom"
+  },
+  "extends": "dtmi:org:w3id:rec:building:Office;1",
+  "@context": "dtmi:dtdl:context;2"
+}

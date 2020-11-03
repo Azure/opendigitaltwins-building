@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:GasTankWaterHeater;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "power input"
+      },
+      "name": "powerInput",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Gas water heater with tank"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:TankWaterHeater;1",
+  "@context": "dtmi:dtdl:context;2"
+}

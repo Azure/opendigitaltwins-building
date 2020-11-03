@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SteamUnitHeater;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "condensate"
+      },
+      "name": "condensate",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Steam unit heater"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:UnitHeater;1",
+  "@context": "dtmi:dtdl:context;2"
+}

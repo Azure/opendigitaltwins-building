@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:LaboratoryWet;1",
+  "@type": "Interface",
+  "description": {
+    "en": "A LaboratoryWet is a type of laboratory where it is necessary to handle various types of chemicals and potential \"wet\" hazards, so the room has to be carefully designed, constructed, and controlled to avoid spillage and contamination."
+  },
+  "displayName": {
+    "en": "LaboratoryWet"
+  },
+  "extends": "dtmi:org:w3id:rec:building:Laboratory;1",
+  "@context": "dtmi:dtdl:context;2"
+}

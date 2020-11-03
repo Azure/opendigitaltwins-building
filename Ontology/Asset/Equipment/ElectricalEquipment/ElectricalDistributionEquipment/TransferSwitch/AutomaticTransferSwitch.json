@@ -1,0 +1,59 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:AutomaticTransferSwitch;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "transition type"
+      },
+      "name": "transitionType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Open",
+            "name": "Open"
+          },
+          {
+            "enumValue": "Closed",
+            "name": "Closed"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "switching mechanism"
+      },
+      "name": "switchingMechanism",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Contactor",
+            "name": "Contactor"
+          },
+          {
+            "enumValue": "CircuitBreakerPowerCase",
+            "name": "CircuitBreakerPowerCase"
+          },
+          {
+            "enumValue": "CircuitBreakerMoldedCase",
+            "name": "CircuitBreakerMoldedCase"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Automatic transfer switch"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:TransferSwitch;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,63 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:WirelessAccessPoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WiFi7",
+            "name": "WiFi7"
+          },
+          {
+            "enumValue": "WiFi6",
+            "name": "WiFi6"
+          },
+          {
+            "enumValue": "WiFi5",
+            "name": "WiFi5"
+          },
+          {
+            "enumValue": "WiFi4",
+            "name": "WiFi4"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "mounting"
+      },
+      "name": "mounting",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Outdoor",
+            "name": "Outdoor"
+          },
+          {
+            "enumValue": "Indoor",
+            "name": "Indoor"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Wireless access point"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:DataNetworkEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

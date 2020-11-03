@@ -1,0 +1,19 @@
+{
+  "@id": "dtmi:org:w3id:rec:business:Role;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Role"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

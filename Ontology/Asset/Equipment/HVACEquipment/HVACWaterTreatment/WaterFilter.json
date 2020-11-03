@@ -1,0 +1,59 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:WaterFilter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "working pressure"
+      },
+      "name": "workingPressure",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "tank capacity"
+      },
+      "name": "tankCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "microns"
+      },
+      "displayName": {
+        "en": "filtration rating"
+      },
+      "name": "filtrationRating",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Water filter"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACWaterTreatment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

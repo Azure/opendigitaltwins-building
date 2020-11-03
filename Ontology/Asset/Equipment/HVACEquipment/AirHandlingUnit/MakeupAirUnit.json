@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:MakeupAirUnit;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Makeup Air Unit"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:AirHandlingUnit;1",
+  "@context": "dtmi:dtdl:context;2"
+}

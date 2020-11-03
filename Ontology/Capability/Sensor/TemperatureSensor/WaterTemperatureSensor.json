@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:WaterTemperatureSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Water temperature sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:TemperatureSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

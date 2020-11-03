@@ -1,0 +1,33 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:CeilingFan;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "AngularVelocity",
+        "Property"
+      ],
+      "displayName": {
+        "en": "maximum rotation speed"
+      },
+      "name": "maxRotationSpeed",
+      "schema": "double",
+      "unit": "revolutionPerMinute",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "blade diameter"
+      },
+      "name": "bladeDiameter",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Ceiling Fan"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACFan;1",
+  "@context": "dtmi:dtdl:context;2"
+}

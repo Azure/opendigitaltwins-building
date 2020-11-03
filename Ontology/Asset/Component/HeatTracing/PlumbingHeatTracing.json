@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PlumbingHeatTracing;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Plumbing heat tracing"
+  },
+  "extends": [
+    "dtmi:org:w3id:rec:asset:PlumbingEquipment;1",
+    "dtmi:org:w3id:rec:asset:HeatTracing;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

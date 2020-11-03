@@ -1,0 +1,46 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ElectricalBus;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "material"
+      },
+      "name": "material",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Copper",
+            "name": "Copper"
+          },
+          {
+            "enumValue": "Aluminium",
+            "name": "Aluminium"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Current",
+        "Property"
+      ],
+      "displayName": {
+        "en": "current rating"
+      },
+      "name": "currentRating",
+      "schema": "double",
+      "unit": "ampere",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Electrical bus"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Component;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,46 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:TransferSwitch;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "poles"
+      },
+      "name": "poles",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Three",
+            "name": "Three"
+          },
+          {
+            "enumValue": "Four",
+            "name": "Four"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Current",
+        "Property"
+      ],
+      "displayName": {
+        "en": "mains rating"
+      },
+      "name": "mainsRating",
+      "schema": "double",
+      "unit": "ampere",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Transfer switch"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ElectricalDistributionEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

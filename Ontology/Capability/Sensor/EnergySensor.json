@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:EnergySensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Energy sensor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

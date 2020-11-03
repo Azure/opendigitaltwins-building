@@ -1,0 +1,57 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:BuildingComponent;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "maxMultiplicity": 1,
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates which Building a certain Building Component is part of. Inverse of: hasBuildingComponent"
+      },
+      "displayName": {
+        "en": "component of building"
+      },
+      "maxMultiplicity": 1,
+      "name": "componentOfBuilding",
+      "target": "dtmi:org:w3id:rec:core:Building;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A part that constitutes a piece of a building's structural makeup. E.g., Facade, Wall, Slab, RoofInner, etc."
+  },
+  "displayName": {
+    "en": "Building component"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

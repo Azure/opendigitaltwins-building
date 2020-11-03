@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Chair;1",
+  "@type": "Interface",
+  "extends": "dtmi:org:w3id:rec:asset:Furniture;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,59 @@
+{
+  "@id": "dtmi:org:w3id:rec:agents:Organization;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "URL link to an image/logo that represents the organization."
+      },
+      "displayName": {
+        "en": "logo"
+      },
+      "name": "logo",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:agents:Organization;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:agents:Organization;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates the individual Persons that are members of an Organization. For member Organizations, use hasPart."
+      },
+      "displayName": {
+        "en": "has member"
+      },
+      "name": "hasMember",
+      "target": "dtmi:org:w3id:rec:agents:Person;1"
+    }
+  ],
+  "description": {
+    "en": "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"
+  },
+  "displayName": {
+    "en": "Organization"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Agent;1",
+  "@context": "dtmi:dtdl:context;2"
+}

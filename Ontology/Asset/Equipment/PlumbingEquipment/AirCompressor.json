@@ -1,0 +1,42 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:AirCompressor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "working pressure"
+      },
+      "name": "workingPressure",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "motor power"
+      },
+      "name": "motorPower",
+      "schema": "double",
+      "unit": "horsepower",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "free air delivery"
+      },
+      "name": "freeAirDelivery",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Air compressor"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

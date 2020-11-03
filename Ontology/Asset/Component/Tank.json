@@ -1,0 +1,29 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Tank;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "tank capacity"
+      },
+      "name": "tankCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "system pressure"
+      },
+      "name": "systemPressure",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Tank"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:Component;1",
+  "@context": "dtmi:dtdl:context;2"
+}

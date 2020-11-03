@@ -1,0 +1,71 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:FlushometerValve;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "water per flush"
+      },
+      "name": "waterPerFlush",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Touchless",
+            "name": "Touchless"
+          },
+          {
+            "enumValue": "ManualOnly",
+            "name": "ManualOnly"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "technology"
+      },
+      "name": "technology",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Piston",
+            "name": "Piston"
+          },
+          {
+            "enumValue": "Diaphragm",
+            "name": "Diaphragm"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "mounted on"
+      },
+      "name": "mountedOn"
+    }
+  ],
+  "displayName": {
+    "en": "Flushometer-Valve"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PlumbingFixture;1",
+  "@context": "dtmi:dtdl:context;2"
+}

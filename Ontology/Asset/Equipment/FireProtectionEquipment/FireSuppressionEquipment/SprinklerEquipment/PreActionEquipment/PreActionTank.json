@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:PreActionTank;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Pre-action tank"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:PreActionEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

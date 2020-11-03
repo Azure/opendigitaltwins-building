@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Luminaire;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WallMount",
+            "name": "WallMount"
+          },
+          {
+            "enumValue": "Recessed",
+            "name": "Recessed"
+          },
+          {
+            "enumValue": "Pendant",
+            "name": "Pendant"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Luminaire"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:LightingEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

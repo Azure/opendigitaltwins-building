@@ -1,0 +1,97 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Damper;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "service"
+      },
+      "name": "service",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Supply",
+            "name": "Supply"
+          },
+          {
+            "enumValue": "Return",
+            "name": "Return"
+          },
+          {
+            "enumValue": "Exhaust",
+            "name": "Exhaust"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "leakage class"
+      },
+      "name": "leakageClass",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "III",
+            "name": "III"
+          },
+          {
+            "enumValue": "II",
+            "name": "II"
+          },
+          {
+            "enumValue": "I",
+            "name": "I"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "blade type"
+      },
+      "name": "bladeType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Vee",
+            "name": "Vee"
+          },
+          {
+            "enumValue": "Round",
+            "name": "Round"
+          },
+          {
+            "enumValue": "Airfoil",
+            "name": "Airfoil"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "duct inlet"
+      },
+      "name": "ductInlet",
+      "schema": "dtmi:org:w3id:rec:asset:DuctConnection;1"
+    }
+  ],
+  "displayName": {
+    "en": "Damper"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

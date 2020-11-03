@@ -1,0 +1,50 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:RealEstate;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Reference to the unique identity of the real estate in the property register in the country where the real estate is located."
+      },
+      "displayName": {
+        "en": "property register designation"
+      },
+      "name": "propertyRegisterDesignation",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Property that defines the legal owner(s) of a given entity. Inverse of: owns"
+      },
+      "displayName": {
+        "en": "owned by"
+      },
+      "minMultiplicity": 0,
+      "name": "ownedBy",
+      "target": "dtmi:org:w3id:rec:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc. Inverse of: includedIn"
+      },
+      "displayName": {
+        "en": "includes"
+      },
+      "minMultiplicity": 0,
+      "name": "includes",
+      "target": "dtmi:org:w3id:rec:core:Space;1"
+    }
+  ],
+  "description": {
+    "en": "The legal/administrative representation of some lands and/or buildings."
+  },
+  "displayName": {
+    "en": "Real estate"
+  },
+  "extends": "dtmi:org:w3id:rec:core:SpaceCollection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

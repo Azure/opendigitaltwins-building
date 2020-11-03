@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SprinklerBalancingValve;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Balancing valve"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:SprinklerValve;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,51 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:MovingWalkway;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "step width"
+      },
+      "name": "stepWidth",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum travel speed"
+      },
+      "name": "maxTravelSpeed",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum length"
+      },
+      "name": "maxLength",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Angle",
+        "Property"
+      ],
+      "displayName": {
+        "en": "inclination"
+      },
+      "name": "inclination",
+      "schema": "double",
+      "unit": "degreeOfArc",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Moving Walkway"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ConveyanceEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

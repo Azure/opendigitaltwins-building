@@ -1,0 +1,94 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:Chiller;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "WaterCooled",
+            "name": "WaterCooled"
+          },
+          {
+            "enumValue": "AirCooled",
+            "name": "AirCooled"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "refrigerant type"
+      },
+      "name": "refrigerentType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "nominal cooling capacity"
+      },
+      "name": "nominalCoolingCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "net sensible cooling capacity"
+      },
+      "name": "netSensibleCoolingCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "compressor type"
+      },
+      "name": "compressorType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Scroll",
+            "name": "Scroll"
+          },
+          {
+            "enumValue": "Screw",
+            "name": "Screw"
+          },
+          {
+            "enumValue": "Reciprocol",
+            "name": "Reciprocol"
+          },
+          {
+            "enumValue": "Centrifugal",
+            "name": "Centrifugal"
+          },
+          {
+            "enumValue": "Absorption",
+            "name": "Absorption"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Chiller"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

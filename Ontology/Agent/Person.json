@@ -1,0 +1,97 @@
+{
+  "@id": "dtmi:org:w3id:rec:agents:Person;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's last name (if they have one; this varies across cultural contexts)."
+      },
+      "displayName": {
+        "en": "last name"
+      },
+      "name": "lastName",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "URL link to an image that represents the person."
+      },
+      "displayName": {
+        "en": "image"
+      },
+      "name": "image",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's personal, individual name."
+      },
+      "displayName": {
+        "en": "given name"
+      },
+      "name": "givenName",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A gender designation for a Person."
+      },
+      "displayName": {
+        "en": "gender"
+      },
+      "name": "gender",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's first name (if they have one; this varies across cultural contexts)."
+      },
+      "displayName": {
+        "en": "first name"
+      },
+      "name": "firstName",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A person's family name."
+      },
+      "displayName": {
+        "en": "family name"
+      },
+      "name": "familyName",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates the Organization(s) that this Person is a member of."
+      },
+      "displayName": {
+        "en": "is member of"
+      },
+      "name": "isMemberOf",
+      "target": "dtmi:org:w3id:rec:agents:Organization;1"
+    }
+  ],
+  "description": {
+    "en": "A natural person (i.e., an individual human being)."
+  },
+  "displayName": {
+    "en": "Person"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Agent;1",
+  "@context": "dtmi:dtdl:context;2"
+}

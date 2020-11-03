@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:building:Floor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Floor"
+  },
+  "extends": "dtmi:org:w3id:rec:core:BuildingComponent;1",
+  "@context": "dtmi:dtdl:context;2"
+}

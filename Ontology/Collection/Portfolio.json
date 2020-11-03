@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:org:w3id:rec:core:Portfolio;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc. Inverse of: includedIn"
+      },
+      "displayName": {
+        "en": "includes"
+      },
+      "minMultiplicity": 0,
+      "name": "includes"
+    }
+  ],
+  "description": {
+    "en": "A portfolio is a grouping of real estates, spaces, or other portfolios that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc."
+  },
+  "displayName": {
+    "en": "Portfolio"
+  },
+  "extends": "dtmi:org:w3id:rec:core:Collection;1",
+  "@context": "dtmi:dtdl:context;2"
+}

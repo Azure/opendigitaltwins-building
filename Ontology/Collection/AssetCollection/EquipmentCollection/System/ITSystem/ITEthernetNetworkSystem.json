@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:ITEthernetNetworkSystem;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "IT Ethernet network system"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ITSystem;1",
+  "@context": "dtmi:dtdl:context;2"
+}

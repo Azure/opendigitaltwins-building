@@ -1,0 +1,29 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SensorEquipment;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Wi-Fi signal strength"
+      },
+      "name": "wifiSignalStrength",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "battery percentage"
+      },
+      "name": "batteryPercentage",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Sensor equipment"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ICTEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

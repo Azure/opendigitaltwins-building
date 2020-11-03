@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:SprinklerSolenoidValve;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Solenoid valve"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:SprinklerValve;1",
+  "@context": "dtmi:dtdl:context;2"
+}

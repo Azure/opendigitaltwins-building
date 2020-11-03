@@ -1,0 +1,116 @@
+{
+  "@id": "dtmi:org:w3id:rec:asset:UPS;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "TimeSpan",
+        "Property"
+      ],
+      "displayName": {
+        "en": "runtime"
+      },
+      "name": "runtime",
+      "schema": "double",
+      "unit": "minute",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "power output (KVA)"
+      },
+      "name": "powerOutputKVA",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "power output"
+      },
+      "name": "powerOutput",
+      "schema": "double",
+      "unit": "kilowatt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "output voltage"
+      },
+      "name": "outputVoltage",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "output phases"
+      },
+      "name": "outputPhases",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Three",
+            "name": "Three"
+          },
+          {
+            "enumValue": "One",
+            "name": "One"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "input voltage"
+      },
+      "name": "inputVoltage",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "input phases"
+      },
+      "name": "inputPhases",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Three",
+            "name": "Three"
+          },
+          {
+            "enumValue": "One",
+            "name": "One"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "UPS"
+  },
+  "extends": "dtmi:org:w3id:rec:asset:ElectricalGenerationStorageEquipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}
