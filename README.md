@@ -184,14 +184,27 @@ The DTDL-based RealEstateCore ontology accelerates developers from the “blank 
 - [Azure Digital Twins Tech Deep Dive](https://www.youtube.com/watch?v=5Ku55g1GQG8&feature=youtu.be)
 - [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
 
----
+
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 Microsoft collects performance and usage information which may be used to provide and improve Microsoft products and services and enhance your experience.
 To learn more, review the [privacy statement](https://go.microsoft.com/fwlink/?LinkId=521839&clcid=0x409).
 
+## Contributors
+<sub>
+Jönköping University: Karl Hammar
+<br /> 
+Microsoft: Alina Stanciu, Brian Crawford, Bert Van Hoof, Akshay Johar, Matthew Vogel, Kevin Hilscher, Miriam Berhane Russom, OP Ravi
+<br /> 
+RealEstateCore: Karl Hammar, Erik Wallin, Per Karlberg, Peter Hartlev, Joakim Eriksson
+<br />
+Willow: Rick Szcodronski
+</sub>
 
+---
+**Disclosure**
+ADT Explorer will not be able to create instances for some of the models which contains fully qualified DTMI, however it will be able to visualize them, like "dtmi:dtdl:property:contents;2", "dtmi:dtdl:property:properties;2", "dtmi:dtdl:property:enumValues;2", "dtmi:dtdl:property:schema;2". ADT team is looking into these issues, stay tuned for updates.
 
 
 
