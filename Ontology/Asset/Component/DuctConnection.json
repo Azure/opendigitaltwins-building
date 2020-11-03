@@ -5,18 +5,18 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "duct inlet size"
+        "en": "size"
       },
-      "name": "ductInletSize",
+      "name": "size",
       "schema": "double",
       "writable": true
     },
     {
       "@type": "Property",
       "displayName": {
-        "en": "duct inlet shape"
+        "en": "shape"
       },
-      "name": "ductInletShape",
+      "name": "shape",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
@@ -40,9 +40,9 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "duct inlet configuration"
+        "en": "configuration"
       },
-      "name": "ductInletConfiguration",
+      "name": "configuration",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
