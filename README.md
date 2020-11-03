@@ -199,6 +199,8 @@ Microsoft: Alina Stanciu, Brian Crawford, Bert Van Hoof, Akshay Johar, Matthew V
 <br /> 
 RealEstateCore: Karl Hammar, Erik Wallin, Per Karlberg, Peter Hartlev, Joakim Eriksson
 <br />
+Idun Real Estate Solutions: Erik Wallin, Per Karlberg
+<br />
 Willow: Rick Szcodronski
 </sub>
 
