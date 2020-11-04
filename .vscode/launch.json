@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/OWL2DTDL/bin/Debug/netcoreapp3.1/OWL2DTDL.dll",
-            "args": ["-u","https://w3id.org/rec/full/3.3/","-o","${workspaceFolder}/Ontology","-i","RecIgnoredNames.csv"],
+            "args": ["-u","https://w3id.org/rec/full/3.3/","-o","${workspaceFolder}/Ontology","-i","RecIgnoredNames.csv","-s","rec_3_3"],
             "cwd": "${workspaceFolder}/OWL2DTDL",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",

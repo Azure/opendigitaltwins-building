@@ -35,6 +35,8 @@ namespace OWL2DTDL
             public bool MergedOutput { get; set; }
             [Option('i', "ignorefile", Required = false, HelpText = "Path to a CSV file, the first column of which lists (whole or partial) IRI:s that should be ignored by this tool and not translated into DTDL output.")]
             public string IgnoreFile { get; set; }
+            [Option('s', "ontologySource", Required = false, HelpText = "An identifier for the ontology source; will be used to generate DTMI:s per the following design, where interfaceName is the local name of a translated OWL class, and ontologyName is the last segment of the translated class's namespace: <dtmi:digitaltwins:{ontologySource}:{ontologyName}:{interfaceName};1>.")]
+            public string OntologySource { get; set; }
         }
 
         /// <summary>
@@ -73,6 +75,7 @@ namespace OWL2DTDL
         private static string _ontologyPath;
         private static string _outputPath;
         private static bool _mergedOutput;
+        private static string _ontologySource;
 
         /// <summary>
         /// The root ontology being parsed.
@@ -177,6 +180,11 @@ namespace OWL2DTDL
                                    ignoredUris.Add(values[0]);
                                }
                            }
+                       }
+
+                       if (o.OntologySource != null)
+                       {
+                           _ontologySource = o.OntologySource;
                        }
                    })
                    .WithNotParsed((errs) =>
@@ -982,22 +990,41 @@ namespace OWL2DTDL
                 throw new RdfException($"Could not generate DTMI for OntologyResource '{resource}'; resource is anonymous.");
             }
 
+            // Get the resource namespace for DTMI minting (see below)
             Uri resourceNamespace = resource.GetNamespace();
+            char[] uriTrimChars = { '#', '/' };
 
             // Ensure that the resource is in the namespace mapper. Why do we do this again?
             if (!namespacePrefixes.ContainsKey(resourceNamespace))
             {
-                char[] trimChars = { '#', '/' };
-                string namespaceShortName = resourceNamespace.AbsoluteUri.Trim(trimChars).Split('/').Last();
+                string namespaceShortName = resourceNamespace.AbsoluteUri.Trim(uriTrimChars).Split('/').Last();
                 namespacePrefixes[resourceNamespace] = namespaceShortName;
             }
 
+            // Combine (reversed) host and path component arrays to create namespace components array
             string[] hostComponents = resourceNamespace.Host.Split('.');
             Array.Reverse(hostComponents);
-            string hostComponentsBlock = string.Join(':', hostComponents);
-            string pathComponentBlock = resourceNamespace.AbsolutePath.Replace('/', ':').Trim(':');
-            string dtmiPrefix = $"{hostComponentsBlock}:{pathComponentBlock}";
-            string dtmi = $"{dtmiPrefix}:{resource.GetLocalName()}";
+            string[] pathComponents = resourceNamespace.AbsolutePath.Trim(uriTrimChars).Split('/');
+            string[] namespaceComponents = hostComponents.Concat(pathComponents).ToArray();
+
+            // The ontologyName is the last component in the namespace array
+            string ontologyName = namespaceComponents.Last();
+
+            // If an ontology source has been set at CLI option, use it; otherwise generate from the namespace
+            // components array (omitting the previously extracted ontologyName component)
+            string ontologySource;
+            if (_ontologySource != null)
+            {
+                ontologySource = _ontologySource;
+            }
+            else
+            {
+                string[] ontologySourceComponents = namespaceComponents.Take(namespaceComponents.Count() - 1).ToArray();
+                ontologySource = string.Join(':', ontologySourceComponents);
+            }
+
+            // Put together the pieces
+            string dtmi = $"{ontologySource}:{ontologyName}:{resource.GetLocalName()}";
 
             // Run the candidate DTMI through validation per the spec, removing non-conforming chars
             string[] pathSegments = dtmi.Split(':');
@@ -1014,7 +1041,8 @@ namespace OWL2DTDL
             }
             dtmi = string.Join(':', pathSegments);
 
-            return $"dtmi:{dtmi};1";
+            // Add prefix and suffix
+            return $"dtmi:digitaltwins:{dtmi};1";
         }
 
         /// <summary>
