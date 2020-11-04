@@ -53,14 +53,14 @@ Here is a real example of a subgraph of an Azure Digital Twins instance based on
 ![Using the models](images/UsingModels.JPG)
 
 We have instantiated the following twins:
-* A building instance *Building 121* of type [**dtmi:org:w3id:rec:core:Building;1**](Ontology/Space/Building.json) inherited from [**dtmi:org:w3id:rec:core:Space;1**](Ontology/Space.json)
-* One level instance *Level 1* of type [**dtmi:org:w3id:rec:core:Level;1**](Ontology/Space/Level.json) which is part of the building, inherited from same Space above.
-* An *HVAC Zone 1* of type [**dtmi:org:w3id:rec:core:HVACZone;1**](Ontology/Space/Zone/HVACZone.json), inherited from same Space above.
-* Three room instances *Room 101*, *Room 102* and *Room 103* of type [**dtmi:org:w3id:rec:building:ClimateControlRoom;1**](Ontology/Space/Room/UtilitiesRoom/ClimateControlRoom.json) which are part of level and *Room 103* is also part of *HVAC Zone 1*, inherited from same Space above.
-* Three VAV physical devices *VAVL1.01*, *VAVL1.02*, *VAVL1.03* of type [**dtmi:org:w3id:rec:asset:VAVBox;1**](Ontology/Asset/Equipment/HVACEquipment/TerminalUnit/VAVBox.json) with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, one serves HVAC zone and all located in rooms. VAV devices inherit from [**dtmi:org:w3id:rec:core:Asset;1**](Ontology/Asset.json)
-* An AHU physical device *AHUL1.01* of type [**dtmi:org:w3id:rec:asset:AirHandlingUnit;1**](Ontology/Asset/Equipment/HVACEquipment/AirHandlingUnit.json) which feeds one of the VAV and is located in a room. AHU device inherits from same Asset above.
-* Few capabilities instances of type [**dtmi:org:w3id:rec:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json), of type [**dtmi:org:w3id:rec:core:AirFlowSensor;1**](Ontology/Capability/Sensor/FlowSensor/AirFlowSensor.json) and of type [**dtmi:org:w3id:rec:core:FlowSetpoint;1**](Ontology/Capability/Parameter/Setpoint/FlowSensor/FlowSetpoint.json), all inherited from [**dtmi:org:w3id:rec:core:Capability;1**](Ontology/Capability.json). These are assigned using *hasCapability* relationship to VAVs. 
-* One capability instance *TemperatureR* of type [**dtmi:org:w3id:rec:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json) assigned to one of the rooms to show temperature on room level.
+* A building instance *Building 121* of type [**dtmi:digitaltwins:rec_3_3:core:Building;1**](Ontology/Space/Building.json) inherited from [**dtmi:digitaltwins:rec_3_3:core:Space;1**](Ontology/Space.json)
+* One level instance *Level 1* of type [**dtmi:digitaltwins:rec_3_3:core:Level;1**](Ontology/Space/Level.json) which is part of the building, inherited from same Space above.
+* An *HVAC Zone 1* of type [**dtmi:digitaltwins:rec_3_3:core:HVACZone;1**](Ontology/Space/Zone/HVACZone.json), inherited from same Space above.
+* Three room instances *Room 101*, *Room 102* and *Room 103* of type [**dtmi:digitaltwins:rec_3_3:building:ClimateControlRoom;1**](Ontology/Space/Room/UtilitiesRoom/ClimateControlRoom.json) which are part of level and *Room 103* is also part of *HVAC Zone 1*, inherited from same Space above.
+* Three VAV physical devices *VAVL1.01*, *VAVL1.02*, *VAVL1.03* of type [**dtmi:digitaltwins:rec_3_3:asset:VAVBox;1**](Ontology/Asset/Equipment/HVACEquipment/TerminalUnit/VAVBox.json) with three capabilities *AirTemperatureSensor*, *AirFlowSensor* and *AirFlowSetpoint*, one serves HVAC zone and all located in rooms. VAV devices inherit from [**dtmi:digitaltwins:rec_3_3:core:Asset;1**](Ontology/Asset.json)
+* An AHU physical device *AHUL1.01* of type [**dtmi:digitaltwins:rec_3_3:asset:AirHandlingUnit;1**](Ontology/Asset/Equipment/HVACEquipment/AirHandlingUnit.json) which feeds one of the VAV and is located in a room. AHU device inherits from same Asset above.
+* Few capabilities instances of type [**dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json), of type [**dtmi:digitaltwins:rec_3_3:core:AirFlowSensor;1**](Ontology/Capability/Sensor/FlowSensor/AirFlowSensor.json) and of type [**dtmi:digitaltwins:rec_3_3:core:FlowSetpoint;1**](Ontology/Capability/Parameter/Setpoint/FlowSensor/FlowSetpoint.json), all inherited from [**dtmi:digitaltwins:rec_3_3:core:Capability;1**](Ontology/Capability.json). These are assigned using *hasCapability* relationship to VAVs. 
+* One capability instance *TemperatureR* of type [**dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1**](Ontology/Capability/Sensor/TemperatureSensor.json) assigned to one of the rooms to show temperature on room level.
 
 Below is the Azure Digital Twins query to find out all rooms' temperatures in *Building 121*, *Level 1* which values are below 73. 
 ```sql
@@ -69,10 +69,10 @@ SELECT Room, Sensor, Level
     JOIN Level RELATED Room.isPartOf
     JOIN Sensor RELATED Room.hasCapability
     JOIN Building RELATED Level.isPartOf
-    WHERE IS_OF_MODEL(Room, 'dtmi:org:w3id:rec:core:Room;1') 
-    AND IS_OF_MODEL(Level, 'dtmi:org:w3id:rec:core:Level;1')
-    AND IS_OF_MODEL(Building, 'dtmi:org:w3id:rec:core:Building;1')
-    AND IS_OF_MODEL(Sensor, 'dtmi:org:w3id:rec:core:TemperatureSensor;1')
+    WHERE IS_OF_MODEL(Room, 'dtmi:digitaltwins:rec_3_3:core:Room;1') 
+    AND IS_OF_MODEL(Level, 'dtmi:digitaltwins:rec_3_3:core:Level;1')
+    AND IS_OF_MODEL(Building, 'dtmi:digitaltwins:rec_3_3:core:Building;1')
+    AND IS_OF_MODEL(Sensor, 'dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1')
     AND Level.levelNumber = 1 
     AND IS_DEFINED(Sensor.hasValue)
     AND Building.$dtId = 'Building121'
@@ -86,9 +86,9 @@ SELECT VAV, Room
     JOIN Room RELATED VAV.locatedIn  
     JOIN Level RELATED Room.isPartOf
     JOIN Building RELATED Level.isPartOf
-    WHERE IS_OF_MODEL(Room, 'dtmi:org:w3id:rec:core:Room;1') 
-    AND IS_OF_MODEL(Level, 'dtmi:org:w3id:rec:core:Level;1')
-    AND IS_OF_MODEL(Building, 'dtmi:org:w3id:rec:core:Building;1')
+    WHERE IS_OF_MODEL(Room, 'dtmi:digitaltwins:rec_3_3:core:Room;1') 
+    AND IS_OF_MODEL(Level, 'dtmi:digitaltwins:rec_3_3:core:Level;1')
+    AND IS_OF_MODEL(Building, 'dtmi:digitaltwins:rec_3_3:core:Building;1')
     AND Building.$dtId = 'Building121'
     AND VAV.serialNumber ='2561A5510'
 ```
@@ -113,7 +113,7 @@ We encourage users to extend existing models via inheritance by using the DTDL *
 ```yaml
 [
   {
-    "@id": "dtmi:org:w3id:rec:core:Room;1",
+    "@id": "dtmi:digitaltwins:rec_3_3:core:Room;1",
     "@type": "Interface",
     "dtmi:dtdl:property:contents;2": {
       "@type": "Property",
@@ -122,11 +122,11 @@ We encourage users to extend existing models via inheritance by using the DTDL *
       "schema": "integer"
     },
     // ...
-    "extends": "dtmi:org:w3id:rec:core:Space;1",
+    "extends": "dtmi:digitaltwins:rec_3_3:core:Space;1",
     "@context": "dtmi:dtdl:context;2"
   },
   {
-    "@id": "dtmi:org:w3id:rec:core:FocusRoom;1",
+    "@id": "dtmi:digitaltwins:rec_3_3:core:FocusRoom;1",
     "@type": "Interface",
     "dtmi:dtdl:property:contents;2": {
       "@type": "Property",
@@ -135,7 +135,7 @@ We encourage users to extend existing models via inheritance by using the DTDL *
       "schema": "bool"
     },
     // ...
-    "extends": "dtmi:org:w3id:rec:core:Room;1",
+    "extends": "dtmi:digitaltwins:rec_3_3:core:Room;1",
     "@context": "dtmi:dtdl:context;2"
   }
 ]
