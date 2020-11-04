@@ -31,18 +31,6 @@
       },
       "name": "hasRole",
       "target": "dtmi:digitaltwins:rec_3_3:business:Role;1"
-    },
-    {
-      "@type": "Property",
-      "description": {
-        "en": "A name for some Agent."
-      },
-      "displayName": {
-        "en": "name"
-      },
-      "name": "name",
-      "schema": "string",
-      "writable": true
     }
   ],
   "description": {

@@ -5,22 +5,6 @@
     {
       "@type": "Relationship",
       "displayName": {
-        "en": "manufactured by"
-      },
-      "name": "manufacturedBy",
-      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "installed by"
-      },
-      "name": "installedBy",
-      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
-    },
-    {
-      "@type": "Relationship",
-      "displayName": {
         "en": "commissioned by"
       },
       "name": "commissionedBy",
@@ -45,6 +29,22 @@
       "name": "name",
       "schema": "string",
       "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "installed by"
+      },
+      "name": "installedBy",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "manufactured by"
+      },
+      "name": "manufacturedBy",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
     },
     {
       "@type": "Relationship",
