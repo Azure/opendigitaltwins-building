@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:NetworkSecurityEquipment;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:NetworkSecurityEquipment;1",
   "@type": "Interface",
   "contents": [
     {
@@ -24,6 +24,6 @@
   "displayName": {
     "en": "Network security equipment"
   },
-  "extends": "dtmi:org:w3id:rec:asset:DataNetworkEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:DataNetworkEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

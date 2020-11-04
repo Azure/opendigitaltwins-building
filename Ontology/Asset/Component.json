@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Component;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@type": "Interface",
   "displayName": {
     "en": "Component"
   },
-  "extends": "dtmi:org:w3id:rec:core:Asset;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Asset;1",
   "@context": "dtmi:dtdl:context;2"
 }

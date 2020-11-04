@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:RequestToExitDevice;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:RequestToExitDevice;1",
   "@type": "Interface",
   "displayName": {
     "en": "Request to exit device"
   },
-  "extends": "dtmi:org:w3id:rec:asset:AccessControlEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:AccessControlEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Document;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Document;1",
   "@type": "Interface",
   "contents": [
     {

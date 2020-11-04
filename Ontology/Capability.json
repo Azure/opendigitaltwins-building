@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Capability;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Capability;1",
   "@type": "Interface",
   "contents": [
     {

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:AccessReader;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:AccessReader;1",
   "@type": "Interface",
   "displayName": {
     "en": "Access reader"
   },
-  "extends": "dtmi:org:w3id:rec:asset:AccessControlEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:AccessControlEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

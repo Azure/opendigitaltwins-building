@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:BarrierAsset;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:BarrierAsset;1",
   "@type": "Interface",
   "contents": [
     {
@@ -89,7 +89,7 @@
       },
       "minMultiplicity": 0,
       "name": "toSpace",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
     },
     {
       "@type": "Relationship",
@@ -98,12 +98,12 @@
       },
       "minMultiplicity": 0,
       "name": "fromSpace",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
     }
   ],
   "displayName": {
     "en": "Barrier asset"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ArchitecturalAsset;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ArchitecturalAsset;1",
   "@context": "dtmi:dtdl:context;2"
 }

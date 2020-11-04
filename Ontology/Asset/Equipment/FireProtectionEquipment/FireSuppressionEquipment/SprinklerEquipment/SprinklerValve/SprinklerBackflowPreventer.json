@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:SprinklerBackflowPreventer;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:SprinklerBackflowPreventer;1",
   "@type": "Interface",
   "displayName": {
     "en": "Backflow preventer"
   },
-  "extends": "dtmi:org:w3id:rec:asset:SprinklerValve;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:SprinklerValve;1",
   "@context": "dtmi:dtdl:context;2"
 }

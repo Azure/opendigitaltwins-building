@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:DuctConnection;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:DuctConnection;1",
   "@type": "Interface",
   "contents": [
     {
@@ -63,6 +63,6 @@
   "displayName": {
     "en": "Duct connection"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Component;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": "dtmi:dtdl:context;2"
 }

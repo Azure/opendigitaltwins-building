@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:SprinklerRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:SprinklerRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "Sprinkler room"
   },
-  "extends": "dtmi:org:w3id:rec:building:UtilitiesRoom;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:UtilitiesRoom;1",
   "@context": "dtmi:dtdl:context;2"
 }

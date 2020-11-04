@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HVACTransferAirSystem;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACTransferAirSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "HVAC transfer air system"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACAirSystem;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACAirSystem;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Furniture;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Furniture;1",
   "@type": "Interface",
   "displayName": {
     "en": "Furniture"
   },
-  "extends": "dtmi:org:w3id:rec:core:Asset;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Asset;1",
   "@context": "dtmi:dtdl:context;2"
 }

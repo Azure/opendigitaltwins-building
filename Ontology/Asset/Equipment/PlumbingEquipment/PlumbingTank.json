@@ -1,12 +1,12 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:PlumbingTank;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingTank;1",
   "@type": "Interface",
   "displayName": {
     "en": "Plumbing tank"
   },
   "extends": [
-    "dtmi:org:w3id:rec:asset:Tank;1",
-    "dtmi:org:w3id:rec:asset:PlumbingEquipment;1"
+    "dtmi:digitaltwins:rec_3_3:asset:Tank;1",
+    "dtmi:digitaltwins:rec_3_3:asset:PlumbingEquipment;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }

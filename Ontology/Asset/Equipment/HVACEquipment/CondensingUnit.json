@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:CondensingUnit;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:CondensingUnit;1",
   "@type": "Interface",
   "contents": [
     {
@@ -82,6 +82,6 @@
   "displayName": {
     "en": "Condensing unit"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

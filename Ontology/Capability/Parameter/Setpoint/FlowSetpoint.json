@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:FlowSetpoint;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:FlowSetpoint;1",
   "@type": "Interface",
   "contents": [
     {
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Flow setpoint"
   },
-  "extends": "dtmi:org:w3id:rec:core:Setpoint;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Setpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

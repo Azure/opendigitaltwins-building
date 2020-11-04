@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:BuildingComponent;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1",
   "@type": "Interface",
   "contents": [
     {
@@ -12,7 +12,7 @@
       },
       "maxMultiplicity": 1,
       "name": "isPartOf",
-      "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1"
     },
     {
       "@type": "Relationship",
@@ -23,7 +23,7 @@
         "en": "has part"
       },
       "name": "hasPart",
-      "target": "dtmi:org:w3id:rec:core:BuildingComponent;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1"
     },
     {
       "@type": "Relationship",
@@ -35,7 +35,7 @@
       },
       "maxMultiplicity": 1,
       "name": "componentOfBuilding",
-      "target": "dtmi:org:w3id:rec:core:Building;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Building;1"
     },
     {
       "@type": "Property",

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:UrinalWaterless;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:UrinalWaterless;1",
   "@type": "Interface",
   "displayName": {
     "en": "Urinal - Waterless"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Urinal;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Urinal;1",
   "@context": "dtmi:dtdl:context;2"
 }

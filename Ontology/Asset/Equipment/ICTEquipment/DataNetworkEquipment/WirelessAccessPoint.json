@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:WirelessAccessPoint;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:WirelessAccessPoint;1",
   "@type": "Interface",
   "contents": [
     {
@@ -58,6 +58,6 @@
   "displayName": {
     "en": "Wireless access point"
   },
-  "extends": "dtmi:org:w3id:rec:asset:DataNetworkEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:DataNetworkEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

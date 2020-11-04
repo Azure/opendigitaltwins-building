@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HVACSupplyAirSystem;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACSupplyAirSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "HVAC supply air system"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACConditionedAirSystem;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACConditionedAirSystem;1",
   "@context": "dtmi:dtdl:context;2"
 }

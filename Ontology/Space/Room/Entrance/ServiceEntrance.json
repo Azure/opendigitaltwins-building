@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:ServiceEntrance;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:ServiceEntrance;1",
   "@type": "Interface",
   "displayName": {
     "en": "ServiceEntrance"
   },
-  "extends": "dtmi:org:w3id:rec:building:Entrance;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:Entrance;1",
   "@context": "dtmi:dtdl:context;2"
 }

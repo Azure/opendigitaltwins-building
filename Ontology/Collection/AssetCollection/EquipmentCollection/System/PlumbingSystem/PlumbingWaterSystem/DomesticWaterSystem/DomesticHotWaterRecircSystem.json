@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:DomesticHotWaterRecircSystem;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:DomesticHotWaterRecircSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "Domestic hot water recirculation system"
   },
-  "extends": "dtmi:org:w3id:rec:asset:DomesticWaterSystem;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:DomesticWaterSystem;1",
   "@context": "dtmi:dtdl:context;2"
 }

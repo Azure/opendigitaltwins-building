@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:DataServerRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:DataServerRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "DataServerRoom"
   },
-  "extends": "dtmi:org:w3id:rec:building:UtilitiesRoom;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:UtilitiesRoom;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:System;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:System;1",
   "@type": "Interface",
   "contents": [
     {
@@ -54,12 +54,12 @@
         "en": "is part of"
       },
       "name": "isPartOf",
-      "target": "dtmi:org:w3id:rec:asset:System;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:System;1"
     }
   ],
   "displayName": {
     "en": "System"
   },
-  "extends": "dtmi:org:w3id:rec:asset:EquipmentCollection;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:EquipmentCollection;1",
   "@context": "dtmi:dtdl:context;2"
 }

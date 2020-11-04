@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:MovingWalkway;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:MovingWalkway;1",
   "@type": "Interface",
   "contents": [
     {
@@ -46,6 +46,6 @@
   "displayName": {
     "en": "Moving Walkway"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ConveyanceEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ConveyanceEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

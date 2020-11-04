@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Controller;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Controller;1",
   "@type": "Interface",
   "displayName": {
     "en": "Controller"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ICTEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:School;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:School;1",
   "@type": "Interface",
   "displayName": {
     "en": "School"
   },
-  "extends": "dtmi:org:w3id:rec:core:Building;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Building;1",
   "@context": "dtmi:dtdl:context;2"
 }

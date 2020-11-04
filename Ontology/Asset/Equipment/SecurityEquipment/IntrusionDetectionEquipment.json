@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:IntrusionDetectionEquipment;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:IntrusionDetectionEquipment;1",
   "@type": "Interface",
   "displayName": {
     "en": "Intrusion detection equipment"
   },
-  "extends": "dtmi:org:w3id:rec:asset:SecurityEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:SecurityEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

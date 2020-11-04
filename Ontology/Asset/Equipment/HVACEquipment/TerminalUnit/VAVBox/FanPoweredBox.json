@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FanPoweredBox;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FanPoweredBox;1",
   "@type": "Interface",
   "contents": [
     {
@@ -30,12 +30,12 @@
         "en": "fan"
       },
       "name": "fan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     }
   ],
   "displayName": {
     "en": "Fan powered box"
   },
-  "extends": "dtmi:org:w3id:rec:asset:VAVBox;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:VAVBox;1",
   "@context": "dtmi:dtdl:context;2"
 }

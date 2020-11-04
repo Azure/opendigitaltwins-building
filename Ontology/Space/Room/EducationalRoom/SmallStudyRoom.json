@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:SmallStudyRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:SmallStudyRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "SmallStudyRoom"
   },
-  "extends": "dtmi:org:w3id:rec:building:EducationalRoom;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:EducationalRoom;1",
   "@context": "dtmi:dtdl:context;2"
 }

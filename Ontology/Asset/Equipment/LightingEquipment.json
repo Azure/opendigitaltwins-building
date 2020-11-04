@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:LightingEquipment;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:LightingEquipment;1",
   "@type": "Interface",
   "displayName": {
     "en": "Lighting Equipment"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Equipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

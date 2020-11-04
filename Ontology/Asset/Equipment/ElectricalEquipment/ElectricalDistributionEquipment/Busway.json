@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Busway;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Busway;1",
   "@type": "Interface",
   "contents": [
     {
@@ -52,12 +52,12 @@
         "en": "main bus"
       },
       "name": "mainBus",
-      "schema": "dtmi:org:w3id:rec:asset:ElectricalBus;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:ElectricalBus;1"
     }
   ],
   "displayName": {
     "en": "Busway"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ElectricalDistributionEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalDistributionEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

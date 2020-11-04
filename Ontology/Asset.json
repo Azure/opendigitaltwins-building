@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Asset;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Asset;1",
   "@type": "Interface",
   "contents": [
     {
@@ -8,7 +8,7 @@
         "en": "manufactured by"
       },
       "name": "manufacturedBy",
-      "target": "dtmi:org:w3id:rec:core:Agent;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
     },
     {
       "@type": "Relationship",
@@ -16,7 +16,7 @@
         "en": "installed by"
       },
       "name": "installedBy",
-      "target": "dtmi:org:w3id:rec:core:Agent;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
     },
     {
       "@type": "Relationship",
@@ -24,7 +24,7 @@
         "en": "commissioned by"
       },
       "name": "commissionedBy",
-      "target": "dtmi:org:w3id:rec:core:Agent;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
     },
     {
       "@type": "Relationship",
@@ -35,7 +35,7 @@
         "en": "hosts"
       },
       "name": "hosts",
-      "target": "dtmi:org:w3id:rec:core:LogicalDevice;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:LogicalDevice;1"
     },
     {
       "@type": "Property",
@@ -52,7 +52,7 @@
         "en": "serviced by"
       },
       "name": "servicedBy",
-      "target": "dtmi:org:w3id:rec:core:Agent;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
     },
     {
       "@type": "Relationship",
@@ -61,7 +61,7 @@
       },
       "minMultiplicity": 0,
       "name": "locatedIn",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
     },
     {
       "@type": "Relationship",
@@ -69,7 +69,7 @@
         "en": "has capability"
       },
       "name": "hasCapability",
-      "target": "dtmi:org:w3id:rec:core:Capability;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Capability;1"
     },
     {
       "@type": "Relationship",
@@ -80,7 +80,7 @@
         "en": "has part"
       },
       "name": "hasPart",
-      "target": "dtmi:org:w3id:rec:core:Asset;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Asset;1"
     },
     {
       "@type": "Relationship",
@@ -91,7 +91,7 @@
         "en": "included in"
       },
       "name": "includedIn",
-      "target": "dtmi:org:w3id:rec:core:Collection;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Collection;1"
     },
     {
       "@type": "Relationship",
@@ -102,7 +102,7 @@
         "en": "is part of"
       },
       "name": "isPartOf",
-      "target": "dtmi:org:w3id:rec:core:Asset;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Asset;1"
     },
     {
       "@type": "Relationship",

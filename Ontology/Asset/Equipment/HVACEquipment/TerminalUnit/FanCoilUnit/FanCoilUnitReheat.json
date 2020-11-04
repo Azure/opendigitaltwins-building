@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FanCoilUnitReheat;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FanCoilUnitReheat;1",
   "@type": "Interface",
   "contents": [
     {
@@ -36,6 +36,6 @@
   "displayName": {
     "en": "Fan coil unit with reheat"
   },
-  "extends": "dtmi:org:w3id:rec:asset:FanCoilUnit;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:FanCoilUnit;1",
   "@context": "dtmi:dtdl:context;2"
 }

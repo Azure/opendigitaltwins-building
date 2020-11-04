@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Parameter;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Parameter;1",
   "@type": "Interface",
   "displayName": {
     "en": "Parameter"
   },
-  "extends": "dtmi:org:w3id:rec:core:Capability;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Capability;1",
   "@context": "dtmi:dtdl:context;2"
 }

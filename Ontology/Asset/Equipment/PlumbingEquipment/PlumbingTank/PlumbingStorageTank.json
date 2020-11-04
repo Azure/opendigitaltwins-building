@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:PlumbingStorageTank;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingStorageTank;1",
   "@type": "Interface",
   "contents": [
     {
@@ -50,6 +50,6 @@
   "displayName": {
     "en": "Plumbing storage tank"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingTank;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingTank;1",
   "@context": "dtmi:dtdl:context;2"
 }

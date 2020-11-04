@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:TemperatureSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1",
   "@type": "Interface",
   "contents": [
     {
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Temperature sensor"
   },
-  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

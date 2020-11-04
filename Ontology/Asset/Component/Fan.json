@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Fan;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Fan;1",
   "@type": "Interface",
   "contents": [
     {
@@ -68,6 +68,6 @@
   "displayName": {
     "en": "Fan"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Component;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": "dtmi:dtdl:context;2"
 }

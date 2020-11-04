@@ -1,12 +1,12 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HVACTank;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACTank;1",
   "@type": "Interface",
   "displayName": {
     "en": "HVAC Tank"
   },
   "extends": [
-    "dtmi:org:w3id:rec:asset:Tank;1",
-    "dtmi:org:w3id:rec:asset:HVACEquipment;1"
+    "dtmi:digitaltwins:rec_3_3:asset:Tank;1",
+    "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }

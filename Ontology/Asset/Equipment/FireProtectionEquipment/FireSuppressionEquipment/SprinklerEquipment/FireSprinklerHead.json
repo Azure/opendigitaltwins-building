@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FireSprinklerHead;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FireSprinklerHead;1",
   "@type": "Interface",
   "contents": [
     {
@@ -54,6 +54,6 @@
   "displayName": {
     "en": "Fire Sprinkler Head"
   },
-  "extends": "dtmi:org:w3id:rec:asset:SprinklerEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:SprinklerEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

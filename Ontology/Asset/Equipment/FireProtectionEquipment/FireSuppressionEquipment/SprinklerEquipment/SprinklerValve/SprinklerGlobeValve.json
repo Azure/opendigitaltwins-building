@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:SprinklerGlobeValve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:SprinklerGlobeValve;1",
   "@type": "Interface",
   "displayName": {
     "en": "Globe valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:SprinklerValve;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:SprinklerValve;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:WaterFilter;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:WaterFilter;1",
   "@type": "Interface",
   "contents": [
     {
@@ -54,6 +54,6 @@
   "displayName": {
     "en": "Water filter"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACWaterTreatment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACWaterTreatment;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:AutomaticTransferSwitch;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:AutomaticTransferSwitch;1",
   "@type": "Interface",
   "contents": [
     {
@@ -54,6 +54,6 @@
   "displayName": {
     "en": "Automatic transfer switch"
   },
-  "extends": "dtmi:org:w3id:rec:asset:TransferSwitch;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:TransferSwitch;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:device:Actuator;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:Actuator;1",
   "@type": "Interface",
   "contents": [
     {
@@ -11,7 +11,7 @@
         "en": "observed by"
       },
       "name": "observedBy",
-      "target": "dtmi:org:w3id:rec:core:Sensor;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
     }
   ],
   "description": {
@@ -20,6 +20,6 @@
   "displayName": {
     "en": "Actuator"
   },
-  "extends": "dtmi:org:w3id:rec:core:Capability;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Capability;1",
   "@context": "dtmi:dtdl:context;2"
 }

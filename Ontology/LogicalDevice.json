@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:LogicalDevice;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:LogicalDevice;1",
   "@type": "Interface",
   "contents": [
     {
@@ -21,7 +21,7 @@
       },
       "maxMultiplicity": 1,
       "name": "isPartOf",
-      "target": "dtmi:org:w3id:rec:core:LogicalDevice;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:LogicalDevice;1"
     },
     {
       "@type": "Relationship",
@@ -29,7 +29,7 @@
         "en": "has capability"
       },
       "name": "hasCapability",
-      "target": "dtmi:org:w3id:rec:core:Capability;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Capability;1"
     },
     {
       "@type": "Relationship",
@@ -41,7 +41,7 @@
       },
       "maxMultiplicity": 1,
       "name": "hostedBy",
-      "target": "dtmi:org:w3id:rec:core:Asset;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Asset;1"
     },
     {
       "@type": "Property",

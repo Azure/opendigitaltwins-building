@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FireSmokeDamper;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FireSmokeDamper;1",
   "@type": "Interface",
   "displayName": {
     "en": "Fire/Smoke Damper"
   },
-  "extends": "dtmi:org:w3id:rec:asset:FireDamper;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:FireDamper;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:agents:Company;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:agents:Company;1",
   "@type": "Interface",
   "displayName": {
     "en": "Company"
   },
-  "extends": "dtmi:org:w3id:rec:agents:Organization;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:agents:Organization;1",
   "@context": "dtmi:dtdl:context;2"
 }

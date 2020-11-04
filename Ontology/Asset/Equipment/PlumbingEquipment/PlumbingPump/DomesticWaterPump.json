@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:DomesticWaterPump;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:DomesticWaterPump;1",
   "@type": "Interface",
   "displayName": {
     "en": "Domestic water pump"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingPump;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingPump;1",
   "@context": "dtmi:dtdl:context;2"
 }

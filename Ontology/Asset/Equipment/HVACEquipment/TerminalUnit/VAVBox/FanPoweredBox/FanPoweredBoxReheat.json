@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FanPoweredBoxReheat;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FanPoweredBoxReheat;1",
   "@type": "Interface",
   "contents": [
     {
@@ -36,6 +36,6 @@
   "displayName": {
     "en": "Fan powered box with reheat"
   },
-  "extends": "dtmi:org:w3id:rec:asset:FanPoweredBox;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:FanPoweredBox;1",
   "@context": "dtmi:dtdl:context;2"
 }

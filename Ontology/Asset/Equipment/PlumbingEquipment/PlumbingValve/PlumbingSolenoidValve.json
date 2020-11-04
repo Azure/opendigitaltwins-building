@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:PlumbingSolenoidValve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingSolenoidValve;1",
   "@type": "Interface",
   "displayName": {
     "en": "Solenoid valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingValve;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingValve;1",
   "@context": "dtmi:dtdl:context;2"
 }

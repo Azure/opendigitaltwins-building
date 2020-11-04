@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:VAVBoxReheat;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:VAVBoxReheat;1",
   "@type": "Interface",
   "contents": [
     {
@@ -36,6 +36,6 @@
   "displayName": {
     "en": "VAV box with reheat"
   },
-  "extends": "dtmi:org:w3id:rec:asset:VAVBox;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:VAVBox;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:DrainageSystem;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:DrainageSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "Drainage system"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingSystem;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingSystem;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Generator;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Generator;1",
   "@type": "Interface",
   "contents": [
     {
@@ -133,6 +133,6 @@
   "displayName": {
     "en": "Generator"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ElectricalGenerationStorageEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalGenerationStorageEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

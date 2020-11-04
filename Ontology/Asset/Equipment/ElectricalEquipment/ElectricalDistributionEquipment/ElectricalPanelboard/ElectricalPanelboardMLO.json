@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ElectricalPanelboardMLO;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ElectricalPanelboardMLO;1",
   "@type": "Interface",
   "displayName": {
     "en": "Electrical panelboard MLO"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ElectricalPanelboard;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalPanelboard;1",
   "@context": "dtmi:dtdl:context;2"
 }

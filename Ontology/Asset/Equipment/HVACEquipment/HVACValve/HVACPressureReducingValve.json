@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HVACPressureReducingValve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACPressureReducingValve;1",
   "@type": "Interface",
   "displayName": {
     "en": "Pressure-reducing valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACValve;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACValve;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HotWaterUnitHeater;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HotWaterUnitHeater;1",
   "@type": "Interface",
   "contents": [
     {
@@ -15,6 +15,6 @@
   "displayName": {
     "en": "Hot water unit heater"
   },
-  "extends": "dtmi:org:w3id:rec:asset:UnitHeater;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:UnitHeater;1",
   "@context": "dtmi:dtdl:context;2"
 }

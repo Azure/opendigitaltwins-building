@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:agents:Organization;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:agents:Organization;1",
   "@type": "Interface",
   "contents": [
     {
@@ -23,7 +23,7 @@
         "en": "is part of"
       },
       "name": "isPartOf",
-      "target": "dtmi:org:w3id:rec:agents:Organization;1"
+      "target": "dtmi:digitaltwins:rec_3_3:agents:Organization;1"
     },
     {
       "@type": "Relationship",
@@ -34,7 +34,7 @@
         "en": "has part"
       },
       "name": "hasPart",
-      "target": "dtmi:org:w3id:rec:agents:Organization;1"
+      "target": "dtmi:digitaltwins:rec_3_3:agents:Organization;1"
     },
     {
       "@type": "Relationship",
@@ -45,7 +45,7 @@
         "en": "has member"
       },
       "name": "hasMember",
-      "target": "dtmi:org:w3id:rec:agents:Person;1"
+      "target": "dtmi:digitaltwins:rec_3_3:agents:Person;1"
     }
   ],
   "description": {
@@ -54,6 +54,6 @@
   "displayName": {
     "en": "Organization"
   },
-  "extends": "dtmi:org:w3id:rec:core:Agent;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Agent;1",
   "@context": "dtmi:dtdl:context;2"
 }

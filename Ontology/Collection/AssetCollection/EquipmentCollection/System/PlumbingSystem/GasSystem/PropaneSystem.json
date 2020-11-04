@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:PropaneSystem;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PropaneSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "Propane system"
   },
-  "extends": "dtmi:org:w3id:rec:asset:GasSystem;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:GasSystem;1",
   "@context": "dtmi:dtdl:context;2"
 }

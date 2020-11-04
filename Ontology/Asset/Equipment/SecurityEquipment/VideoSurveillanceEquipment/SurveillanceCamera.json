@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:SurveillanceCamera;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:SurveillanceCamera;1",
   "@type": "Interface",
   "displayName": {
     "en": "Surveillance camera"
   },
-  "extends": "dtmi:org:w3id:rec:asset:VideoSurveillanceEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:VideoSurveillanceEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

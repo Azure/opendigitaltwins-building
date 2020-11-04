@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ToiletFlushometer;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ToiletFlushometer;1",
   "@type": "Interface",
   "displayName": {
     "en": "Toilet with Flushometer"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Toilet;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Toilet;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:TreatmentWaitingRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:TreatmentWaitingRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "TreatmentWaitingRoom"
   },
-  "extends": "dtmi:org:w3id:rec:building:TreatmentRoom;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:TreatmentRoom;1",
   "@context": "dtmi:dtdl:context;2"
 }

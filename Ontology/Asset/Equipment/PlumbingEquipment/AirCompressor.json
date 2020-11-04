@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:AirCompressor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:AirCompressor;1",
   "@type": "Interface",
   "contents": [
     {
@@ -37,6 +37,6 @@
   "displayName": {
     "en": "Air compressor"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

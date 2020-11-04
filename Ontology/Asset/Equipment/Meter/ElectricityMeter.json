@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ElectricityMeter;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ElectricityMeter;1",
   "@type": "Interface",
   "contents": [
     {
@@ -108,12 +108,12 @@
         "en": "sub-meter of"
       },
       "name": "subMeterOf",
-      "target": "dtmi:org:w3id:rec:asset:ElectricityMeter;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:ElectricityMeter;1"
     }
   ],
   "displayName": {
     "en": "Electricity meter"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Meter;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Meter;1",
   "@context": "dtmi:dtdl:context;2"
 }

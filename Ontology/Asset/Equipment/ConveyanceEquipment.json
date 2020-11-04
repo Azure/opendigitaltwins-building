@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ConveyanceEquipment;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ConveyanceEquipment;1",
   "@type": "Interface",
   "contents": [
     {
@@ -15,6 +15,6 @@
   "displayName": {
     "en": "Conveyance Equipment"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Equipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Equipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

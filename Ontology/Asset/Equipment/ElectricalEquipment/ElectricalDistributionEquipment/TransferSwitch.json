@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:TransferSwitch;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:TransferSwitch;1",
   "@type": "Interface",
   "contents": [
     {
@@ -41,6 +41,6 @@
   "displayName": {
     "en": "Transfer switch"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ElectricalDistributionEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalDistributionEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

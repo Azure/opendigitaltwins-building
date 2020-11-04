@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:UrinalFlushometer;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:UrinalFlushometer;1",
   "@type": "Interface",
   "contents": [
     {
@@ -15,6 +15,6 @@
   "displayName": {
     "en": "Urinal with Flushometer"
   },
-  "extends": "dtmi:org:w3id:rec:asset:Urinal;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Urinal;1",
   "@context": "dtmi:dtdl:context;2"
 }

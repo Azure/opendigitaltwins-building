@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:WaterFlowSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:WaterFlowSensor;1",
   "@type": "Interface",
   "contents": [
     {
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Water flow sensor"
   },
-  "extends": "dtmi:org:w3id:rec:core:FlowSensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:FlowSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

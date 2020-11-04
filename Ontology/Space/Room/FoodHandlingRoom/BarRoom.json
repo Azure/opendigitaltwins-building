@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:BarRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:BarRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "BarRoom"
   },
-  "extends": "dtmi:org:w3id:rec:building:FoodHandlingRoom;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:FoodHandlingRoom;1",
   "@context": "dtmi:dtdl:context;2"
 }

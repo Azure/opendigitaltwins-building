@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:WallInner;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:WallInner;1",
   "@type": "Interface",
   "displayName": {
     "en": "Inner wall"
   },
-  "extends": "dtmi:org:w3id:rec:building:Wall;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:Wall;1",
   "@context": "dtmi:dtdl:context;2"
 }

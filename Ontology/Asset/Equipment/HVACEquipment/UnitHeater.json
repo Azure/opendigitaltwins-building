@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:UnitHeater;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:UnitHeater;1",
   "@type": "Interface",
   "contents": [
     {
@@ -73,12 +73,12 @@
         "en": "fan"
       },
       "name": "fan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     }
   ],
   "displayName": {
     "en": "Unit heater"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

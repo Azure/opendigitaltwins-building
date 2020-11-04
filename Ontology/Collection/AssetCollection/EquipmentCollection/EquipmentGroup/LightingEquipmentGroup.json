@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:LightingEquipmentGroup;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:LightingEquipmentGroup;1",
   "@type": "Interface",
   "contents": [
     {
@@ -12,12 +12,12 @@
       },
       "minMultiplicity": 0,
       "name": "includes",
-      "target": "dtmi:org:w3id:rec:asset:LightingEquipment;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:LightingEquipment;1"
     }
   ],
   "displayName": {
     "en": "Lighting equipment group"
   },
-  "extends": "dtmi:org:w3id:rec:asset:EquipmentGroup;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:EquipmentGroup;1",
   "@context": "dtmi:dtdl:context;2"
 }

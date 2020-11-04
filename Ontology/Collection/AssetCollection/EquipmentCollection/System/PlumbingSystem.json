@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:PlumbingSystem;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "Plumbing system"
   },
-  "extends": "dtmi:org:w3id:rec:asset:System;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:System;1",
   "@context": "dtmi:dtdl:context;2"
 }

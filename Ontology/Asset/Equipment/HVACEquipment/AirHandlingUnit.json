@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:AirHandlingUnit;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:AirHandlingUnit;1",
   "@type": "Interface",
   "contents": [
     {
@@ -237,7 +237,7 @@
         "en": "supply fan"
       },
       "name": "supplyFan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     },
     {
       "@type": "Component",
@@ -245,7 +245,7 @@
         "en": "return fan"
       },
       "name": "returnFan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     },
     {
       "@type": "Component",
@@ -253,7 +253,7 @@
         "en": "exhaust fan"
       },
       "name": "exhaustFan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     },
     {
       "@type": "Property",
@@ -410,6 +410,6 @@
   "displayName": {
     "en": "Air Handling Unit"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

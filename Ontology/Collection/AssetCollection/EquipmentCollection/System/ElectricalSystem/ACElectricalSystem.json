@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ACElectricalSystem;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ACElectricalSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "AC electrical system"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ElectricalSystem;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalSystem;1",
   "@context": "dtmi:dtdl:context;2"
 }

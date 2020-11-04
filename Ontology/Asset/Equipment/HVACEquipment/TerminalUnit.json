@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:TerminalUnit;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:TerminalUnit;1",
   "@type": "Interface",
   "contents": [
     {
@@ -26,12 +26,12 @@
         "en": "duct inlet"
       },
       "name": "ductInlet",
-      "schema": "dtmi:org:w3id:rec:asset:DuctConnection;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:DuctConnection;1"
     }
   ],
   "displayName": {
     "en": "Terminal unit"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

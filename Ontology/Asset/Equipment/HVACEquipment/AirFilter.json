@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:AirFilter;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:AirFilter;1",
   "@type": "Interface",
   "contents": [
     {
@@ -8,12 +8,12 @@
         "en": "fan"
       },
       "name": "fan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     }
   ],
   "displayName": {
     "en": "Air filter"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

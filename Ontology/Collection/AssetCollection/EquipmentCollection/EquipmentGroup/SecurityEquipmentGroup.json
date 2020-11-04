@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:SecurityEquipmentGroup;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:SecurityEquipmentGroup;1",
   "@type": "Interface",
   "contents": [
     {
@@ -12,12 +12,12 @@
       },
       "minMultiplicity": 0,
       "name": "includes",
-      "target": "dtmi:org:w3id:rec:asset:SecurityEquipment;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:SecurityEquipment;1"
     }
   ],
   "displayName": {
     "en": "Security equipment group"
   },
-  "extends": "dtmi:org:w3id:rec:asset:EquipmentGroup;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:EquipmentGroup;1",
   "@context": "dtmi:dtdl:context;2"
 }

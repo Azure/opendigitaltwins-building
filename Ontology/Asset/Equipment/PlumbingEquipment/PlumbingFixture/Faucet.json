@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Faucet;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Faucet;1",
   "@type": "Interface",
   "contents": [
     {
@@ -48,12 +48,12 @@
         "en": "mounted on"
       },
       "name": "mountedOn",
-      "target": "dtmi:org:w3id:rec:asset:Sink;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:Sink;1"
     }
   ],
   "displayName": {
     "en": "Faucet"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingFixture;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
   "@context": "dtmi:dtdl:context;2"
 }

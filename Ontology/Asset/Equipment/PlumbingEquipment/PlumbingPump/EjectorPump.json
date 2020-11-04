@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:EjectorPump;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:EjectorPump;1",
   "@type": "Interface",
   "displayName": {
     "en": "Ejector pump"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingPump;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingPump;1",
   "@context": "dtmi:dtdl:context;2"
 }

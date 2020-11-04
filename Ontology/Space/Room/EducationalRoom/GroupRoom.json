@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:GroupRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:GroupRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "GroupRoom"
   },
-  "extends": "dtmi:org:w3id:rec:building:EducationalRoom;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:EducationalRoom;1",
   "@context": "dtmi:dtdl:context;2"
 }

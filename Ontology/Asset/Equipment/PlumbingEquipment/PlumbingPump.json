@@ -1,12 +1,12 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:PlumbingPump;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingPump;1",
   "@type": "Interface",
   "displayName": {
     "en": "Plumbing pump"
   },
   "extends": [
-    "dtmi:org:w3id:rec:asset:Pump;1",
-    "dtmi:org:w3id:rec:asset:PlumbingEquipment;1"
+    "dtmi:digitaltwins:rec_3_3:asset:Pump;1",
+    "dtmi:digitaltwins:rec_3_3:asset:PlumbingEquipment;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }

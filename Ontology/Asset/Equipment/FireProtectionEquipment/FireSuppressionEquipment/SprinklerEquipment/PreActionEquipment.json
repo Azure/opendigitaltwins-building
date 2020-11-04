@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:PreActionEquipment;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PreActionEquipment;1",
   "@type": "Interface",
   "displayName": {
     "en": "Pre-action equipment"
   },
-  "extends": "dtmi:org:w3id:rec:asset:SprinklerEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:SprinklerEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

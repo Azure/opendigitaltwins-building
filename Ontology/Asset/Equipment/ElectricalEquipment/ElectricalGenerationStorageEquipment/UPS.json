@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:UPS;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:UPS;1",
   "@type": "Interface",
   "contents": [
     {
@@ -111,6 +111,6 @@
   "displayName": {
     "en": "UPS"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ElectricalGenerationStorageEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalGenerationStorageEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

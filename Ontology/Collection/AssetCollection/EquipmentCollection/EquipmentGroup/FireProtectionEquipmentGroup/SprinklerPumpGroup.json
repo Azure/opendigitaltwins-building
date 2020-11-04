@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:SprinklerPumpGroup;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:SprinklerPumpGroup;1",
   "@type": "Interface",
   "displayName": {
     "en": "Pump group"
   },
-  "extends": "dtmi:org:w3id:rec:asset:FireProtectionEquipmentGroup;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:FireProtectionEquipmentGroup;1",
   "@context": "dtmi:dtdl:context;2"
 }

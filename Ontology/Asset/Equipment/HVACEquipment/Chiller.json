@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:Chiller;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Chiller;1",
   "@type": "Interface",
   "contents": [
     {
@@ -89,6 +89,6 @@
   "displayName": {
     "en": "Chiller"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

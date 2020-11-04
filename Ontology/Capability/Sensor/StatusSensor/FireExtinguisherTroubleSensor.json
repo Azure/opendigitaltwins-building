@@ -1,6 +1,6 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:FireExtinguisherTroubleSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:FireExtinguisherTroubleSensor;1",
   "@type": "Interface",
-  "extends": "dtmi:org:w3id:rec:core:StatusSensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:StatusSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

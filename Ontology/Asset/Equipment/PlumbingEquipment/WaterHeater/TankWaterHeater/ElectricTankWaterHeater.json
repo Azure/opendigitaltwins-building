@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ElectricTankWaterHeater;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ElectricTankWaterHeater;1",
   "@type": "Interface",
   "contents": [
     {
@@ -19,6 +19,6 @@
   "displayName": {
     "en": "Electric water heater with tank"
   },
-  "extends": "dtmi:org:w3id:rec:asset:TankWaterHeater;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:TankWaterHeater;1",
   "@context": "dtmi:dtdl:context;2"
 }

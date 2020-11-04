@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ITRack;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ITRack;1",
   "@type": "Interface",
   "contents": [
     {
@@ -63,6 +63,6 @@
   "displayName": {
     "en": "IT Rack"
   },
-  "extends": "dtmi:org:w3id:rec:asset:ICTEquipment;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
   "@context": "dtmi:dtdl:context;2"
 }

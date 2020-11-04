@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:CO2Setpoint;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:CO2Setpoint;1",
   "@type": "Interface",
   "contents": [
     {
@@ -21,6 +21,6 @@
   "displayName": {
     "en": "CO2 setpoint"
   },
-  "extends": "dtmi:org:w3id:rec:core:Setpoint;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Setpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

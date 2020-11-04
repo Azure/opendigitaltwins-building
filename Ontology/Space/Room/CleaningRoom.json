@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:CleaningRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:CleaningRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "CleaningRoom"
   },
-  "extends": "dtmi:org:w3id:rec:core:Room;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Room;1",
   "@context": "dtmi:dtdl:context;2"
 }

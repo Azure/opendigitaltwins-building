@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ConveyanceEquipmentGroup;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ConveyanceEquipmentGroup;1",
   "@type": "Interface",
   "contents": [
     {
@@ -12,12 +12,12 @@
       },
       "minMultiplicity": 0,
       "name": "includes",
-      "target": "dtmi:org:w3id:rec:asset:ConveyanceEquipment;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:ConveyanceEquipment;1"
     }
   ],
   "displayName": {
     "en": "Conveyance equipment group"
   },
-  "extends": "dtmi:org:w3id:rec:asset:EquipmentGroup;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:EquipmentGroup;1",
   "@context": "dtmi:dtdl:context;2"
 }

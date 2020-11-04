@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:TemperatureSetpoint;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:TemperatureSetpoint;1",
   "@type": "Interface",
   "contents": [
     {
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Temperature setpoint"
   },
-  "extends": "dtmi:org:w3id:rec:core:Setpoint;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Setpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

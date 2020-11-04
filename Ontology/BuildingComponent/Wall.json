@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:Wall;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:Wall;1",
   "@type": "Interface",
   "displayName": {
     "en": "Wall"
   },
-  "extends": "dtmi:org:w3id:rec:core:BuildingComponent;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:CO2Sensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:CO2Sensor;1",
   "@type": "Interface",
   "contents": [
     {
@@ -21,6 +21,6 @@
   "displayName": {
     "en": "CO2 sensor"
   },
-  "extends": "dtmi:org:w3id:rec:core:Sensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

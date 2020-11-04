@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FlushometerValve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FlushometerValve;1",
   "@type": "Interface",
   "contents": [
     {
@@ -66,6 +66,6 @@
   "displayName": {
     "en": "Flushometer-Valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:PlumbingFixture;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
   "@context": "dtmi:dtdl:context;2"
 }

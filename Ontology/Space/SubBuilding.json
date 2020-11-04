@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:SubBuilding;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:SubBuilding;1",
   "@type": "Interface",
   "contents": [
     {
@@ -28,6 +28,6 @@
   "displayName": {
     "en": "Sub-building"
   },
-  "extends": "dtmi:org:w3id:rec:core:Space;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Space;1",
   "@context": "dtmi:dtdl:context;2"
 }

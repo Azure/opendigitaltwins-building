@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HVACPumpGroup;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACPumpGroup;1",
   "@type": "Interface",
   "displayName": {
     "en": "Pump group"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACEquipmentGroup;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipmentGroup;1",
   "@context": "dtmi:dtdl:context;2"
 }

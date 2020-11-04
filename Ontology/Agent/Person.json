@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:agents:Person;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:agents:Person;1",
   "@type": "Interface",
   "contents": [
     {
@@ -83,7 +83,7 @@
         "en": "is member of"
       },
       "name": "isMemberOf",
-      "target": "dtmi:org:w3id:rec:agents:Organization;1"
+      "target": "dtmi:digitaltwins:rec_3_3:agents:Organization;1"
     }
   ],
   "description": {
@@ -92,6 +92,6 @@
   "displayName": {
     "en": "Person"
   },
-  "extends": "dtmi:org:w3id:rec:core:Agent;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Agent;1",
   "@context": "dtmi:dtdl:context;2"
 }

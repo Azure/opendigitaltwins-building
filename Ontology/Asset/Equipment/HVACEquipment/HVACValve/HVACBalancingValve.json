@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HVACBalancingValve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACBalancingValve;1",
   "@type": "Interface",
   "displayName": {
     "en": "Balancing valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACValve;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACValve;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Campus;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Campus;1",
   "@type": "Interface",
   "contents": [
     {
@@ -8,7 +8,7 @@
         "en": "operated by"
       },
       "name": "operatedBy",
-      "target": "dtmi:org:w3id:rec:core:Agent;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
     },
     {
       "@type": "Relationship",
@@ -20,7 +20,7 @@
       },
       "minMultiplicity": 0,
       "name": "includes",
-      "target": "dtmi:org:w3id:rec:core:Space;1"
+      "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
     }
   ],
   "description": {
@@ -29,6 +29,6 @@
   "displayName": {
     "en": "Campus"
   },
-  "extends": "dtmi:org:w3id:rec:core:SpaceCollection;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:SpaceCollection;1",
   "@context": "dtmi:dtdl:context;2"
 }

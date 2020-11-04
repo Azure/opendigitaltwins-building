@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FurnitureCollection;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FurnitureCollection;1",
   "@type": "Interface",
   "contents": [
     {
@@ -12,12 +12,12 @@
       },
       "minMultiplicity": 0,
       "name": "includes",
-      "target": "dtmi:org:w3id:rec:asset:Furniture;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:Furniture;1"
     }
   ],
   "displayName": {
     "en": "Furniture collection"
   },
-  "extends": "dtmi:org:w3id:rec:core:AssetCollection;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:AssetCollection;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:ICTEquipmentGroup;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipmentGroup;1",
   "@type": "Interface",
   "contents": [
     {
@@ -12,12 +12,12 @@
       },
       "minMultiplicity": 0,
       "name": "includes",
-      "target": "dtmi:org:w3id:rec:asset:ICTEquipment;1"
+      "target": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1"
     }
   ],
   "displayName": {
     "en": "ICT equipment group"
   },
-  "extends": "dtmi:org:w3id:rec:asset:EquipmentGroup;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:EquipmentGroup;1",
   "@context": "dtmi:dtdl:context;2"
 }

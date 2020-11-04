@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:ShelterGasLock;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:ShelterGasLock;1",
   "@type": "Interface",
   "displayName": {
     "en": "ShelterGasLock"
   },
-  "extends": "dtmi:org:w3id:rec:building:Shelter;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:Shelter;1",
   "@context": "dtmi:dtdl:context;2"
 }

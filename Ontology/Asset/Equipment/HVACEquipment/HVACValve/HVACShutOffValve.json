@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:HVACShutOffValve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACShutOffValve;1",
   "@type": "Interface",
   "contents": [
     {
@@ -32,6 +32,6 @@
   "displayName": {
     "en": "Shut-off valve"
   },
-  "extends": "dtmi:org:w3id:rec:asset:HVACValve;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACValve;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:org:w3id:rec:building:PhoneBooth;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:PhoneBooth;1",
   "@type": "Interface",
   "displayName": {
     "en": "PhoneBooth"
   },
-  "extends": "dtmi:org:w3id:rec:building:Office;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:Office;1",
   "@context": "dtmi:dtdl:context;2"
 }

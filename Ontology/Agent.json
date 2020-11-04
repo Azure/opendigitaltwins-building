@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:core:Agent;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Agent;1",
   "@type": "Interface",
   "contents": [
     {
@@ -30,7 +30,7 @@
         "en": "has role"
       },
       "name": "hasRole",
-      "target": "dtmi:org:w3id:rec:business:Role;1"
+      "target": "dtmi:digitaltwins:rec_3_3:business:Role;1"
     },
     {
       "@type": "Property",

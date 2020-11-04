@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:w3id:rec:asset:FanCoilUnit;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:FanCoilUnit;1",
   "@type": "Interface",
   "contents": [
     {
@@ -92,12 +92,12 @@
         "en": "fan"
       },
       "name": "fan",
-      "schema": "dtmi:org:w3id:rec:asset:Fan;1"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     }
   ],
   "displayName": {
     "en": "Fan coil unit"
   },
-  "extends": "dtmi:org:w3id:rec:asset:TerminalUnit;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:TerminalUnit;1",
   "@context": "dtmi:dtdl:context;2"
 }
