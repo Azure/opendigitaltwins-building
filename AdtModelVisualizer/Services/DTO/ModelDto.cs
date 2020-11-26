@@ -26,21 +26,21 @@ namespace AdtModelVisualizer.Services.DTO
         [JsonPropertyName("model")]
         public ModelDefinitionDto ModelDefinition { get; set; }
 
-        public static List<ModelDto> MapFromModelData(List<ModelData> models)
+        public static List<ModelDto> MapFromModelData(List<DigitalTwinsModelData> models)
         {
             return models?.Select(MapFromModelData).ToList();
         }
 
-        public static ModelDto MapFromModelData(ModelData model)
+        public static ModelDto MapFromModelData(DigitalTwinsModelData model)
         {
             return new ModelDto
             {
                 Decommissioned = model.Decommissioned,
-                Description = (model.Description == null || !model.Description.ContainsKey("en")) ? null : new ModelDescriptionDto { En = model.Description["en"] },
-                DisplayName = (model.DisplayName == null || !model.DisplayName.ContainsKey("en")) ? null : new ModelDisplayNameDto { En = model.DisplayName["en"] },
+                Description = (model.LanguageDescriptions == null || !model.LanguageDescriptions.ContainsKey("en")) ? null : new ModelDescriptionDto { En = model.LanguageDescriptions["en"] },
+                DisplayName = (model.LanguageDisplayNames == null || !model.LanguageDisplayNames.ContainsKey("en")) ? null : new ModelDisplayNameDto { En = model.LanguageDisplayNames["en"] },
                 Id = model.Id,
-                UploadTime = model.UploadTime,
-                ModelDefinition = ModelDefinitionDto.MapFromModelData(model.Model)
+                UploadTime = model.UploadedOn,
+                ModelDefinition = ModelDefinitionDto.MapFromModelData(model.DtdlModel)
             };
         }
     }
