@@ -182,6 +182,7 @@ The DTDL-based RealEstateCore ontology accelerates developers from the “blank 
 * [Azure Digital Twins IoT Show Public Preview](https://www.youtube.com/watch?v=D6kyhrRVdfc&feature=youtu.be)
 * [Azure Digital Twins Tech Deep Dive](https://www.youtube.com/watch?v=5Ku55g1GQG8&feature=youtu.be)
 * [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
+* [RealEstateCore blog and video](https://techcommunity.microsoft.com/t5/internet-of-things/realestatecore-a-smart-building-ontology-for-digital-twins-is/ba-p/1914794)
 
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
