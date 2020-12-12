@@ -2,7 +2,7 @@
   "profiles": {
     "ModelUploader": {
       "commandName": "Project",
-      "commandLineArgs": "-p C:\\Users\\karlh\\Scratch\\Git\\opendigitaltwins-building\\Ontology"
+      "commandLineArgs": "-p G:\\Work\\IoTWorkbench\\rec-extended-willowmodels\\Ontology\\REC\\ -d"
     }
   }
 }
