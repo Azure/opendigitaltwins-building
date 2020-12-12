@@ -23,14 +23,11 @@ namespace ModelUploader
 
         private static DigitalTwinsClient client;
         private static string modelPath;
-        private static bool deleteFirst;
 
         private class CliOptions
         {
             [Option('p', "path", Required = true, HelpText = "The path to the on-disk directory holding DTDL models.")]
             public string ModelPath { get; set; }
-            [Option('d', "deletefirst", Required = false, HelpText = "Specify if you want to delete the models first, by default is false")]
-            public bool DeleteFirst { get; set; }
         }
 
         static void Main(string[] args)
@@ -39,9 +36,7 @@ namespace ModelUploader
                    .WithParsed(o =>
                    {
                        modelPath = o.ModelPath;
-                       deleteFirst = o.DeleteFirst;
-                   }                   
-                   );
+                   });
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
@@ -99,91 +94,19 @@ namespace ModelUploader
             }
 
             Log.Ok($"Service client created – ready to go");
+
             try
             {
-                // Delete All Models first
-                if (deleteFirst)
-                    DeleteAllModels(1);                
-
                 EnumerationOptions options = new EnumerationOptions() { RecurseSubdirectories = true };
                 foreach (string file in Directory.EnumerateFiles(modelPath, "*.json", options))
                 {
                     StreamReader r = new StreamReader(file);
                     string dtdl = r.ReadToEnd();
                     r.Close();
-
-                    try
-                    {
-                        Response<ModelData[]> res = client.CreateModels(new List<string>() { dtdl });
-                        Log.Ok($"Model {file.Split("\\").Last()} created successfully!");
-                        foreach (ModelData md in res.Value)
-                            LogResponse(md.Model);
-                    }
-                    catch (RequestFailedException e)
-                    {
-                        switch (e.Status)
-                        {
-                            case 409:
-                                // 409 is when the Model already exists - so just skip this model
-                                Log.Ok($"Model {file.Split("\\").Last()} already exists, skipped!");
-                                break;
-                            case 400:
-                                // Model could not be uploaded because of a dependency
-
-                                // find the missing dependency Model in the message
-                                int missingInterfaceIndexStart = e.Message.IndexOf("dtmi:");
-                                int missingInterfaceIndexEnd = e.Message.IndexOf(";1", missingInterfaceIndexStart);
-                                string missingInterface = e.Message.Substring(missingInterfaceIndexStart, missingInterfaceIndexEnd - missingInterfaceIndexStart);
-                                int missingPartIndex = missingInterface.LastIndexOf(":");
-                                missingInterface = missingInterface.Substring(missingPartIndex + 1);
-
-                                string[] missingFile = Directory.GetFiles(modelPath, missingInterface + ".json*", SearchOption.AllDirectories);
-                                if (missingFile[0] == null || missingFile[0] == "") break;
-
-                                // Read the contents of the file
-                                StreamReader r1 = new StreamReader(missingFile[0]);
-                                string dtdlDependency = r1.ReadToEnd();
-                                r1.Close();
-
-                                try
-                                {
-                                    // Upload the dependency model 
-                                    Response<ModelData[]> res1 = client.CreateModels(new List<string>() { dtdlDependency });
-                                    Log.Ok($"Dependent Model {file.Split("\\").Last()} created successfully! Now proceeeding with the original model");
-                                    foreach (ModelData md1 in res1.Value)
-                                        LogResponse(md1.Model);
-                                }
-                                catch (RequestFailedException e1)
-                                {
-                                    // dependency file didnt work, bail
-                                    Log.Error($"Dependency Model {missingFile[0].Split("\\").Last()}");
-                                    Log.Error($"Response {e1.Status}: {e1.Message}");
-
-                                    Log.Error($"Original Model We were trying for {file.Split("\\").Last()}");
-                                    return;
-                                }
-
-                                // now try the original file back again
-                                try
-                                {
-                                    Response<ModelData[]> res = client.CreateModels(new List<string>() { dtdl });
-                                    Log.Ok($"Model {file.Split("\\").Last()} created successfully!");
-                                    foreach (ModelData md in res.Value)
-                                        LogResponse(md.Model);
-                                }
-                                catch (RequestFailedException e2)
-                                {
-                                    // didnt work again, bail
-                                    Log.Error($"Model {file.Split("\\").Last()}");
-                                    Log.Error($"Response {e2.Status}: {e2.Message}");
-                                    return;
-                                }
-
-                                break;
-                            default:
-                                break;
-                        }
-                    }
+                    Response<ModelData[]> res = client.CreateModels(new List<string>() { dtdl });
+                    Log.Ok($"Model {file.Split("\\").Last()} created successfully!");
+                    foreach (ModelData md in res.Value)
+                        LogResponse(md.Model);
                 }
             }
             catch (RequestFailedException e)
@@ -193,35 +116,6 @@ namespace ModelUploader
             catch (Exception ex)
             {
                 Log.Error($"Error: {ex.Message}");
-            }
-        }
-
-        private static void DeleteAllModels(int iteration)
-        {
-            IEnumerable<ModelData> ie = client.GetModels() as IEnumerable<ModelData>;
-            int count = ie.Count<ModelData>();
-
-            foreach (ModelData md in client.GetModels())
-            {
-                try {  
-                    client.DeleteModel(md.Id);
-                    Log.Ok("Successfully deleted Model {" + md.Id + "}. Attempt [" + iteration + "]");
-                }
-                catch (RequestFailedException e2)
-                {
-                    Log.Error("Failed to delete Model {" + md.Id + "}");
-                    //Log.Error(e2.Message);
-                    // skip this and go to the next one
-                }
-            }
-
-            try {
-                IEnumerable<ModelData> c = client.GetModels() as IEnumerable<ModelData>;
-                if (c.Count<ModelData>() > 0) DeleteAllModels(iteration + 1);
-            }
-            catch (Exception)
-            {
-                return;
             }
         }
 
