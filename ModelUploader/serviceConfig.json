@@ -1,5 +1,5 @@
 {
-  "tenantId": "<TenantIdHere>",
-  "clientId": "<ClientIdHere>",
-  "instanceUrl": "https://<ADT DNS here>"
+  "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+  "clientId": "f7400bff-2504-4e5f-8587-eda134e5a70d",
+  "instanceUrl": "https://adtspaceiqbim2adt.api.wus2.digitaltwins.azure.net"
 }
