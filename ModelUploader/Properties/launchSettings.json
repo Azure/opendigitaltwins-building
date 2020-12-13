@@ -2,7 +2,7 @@
   "profiles": {
     "ModelUploader": {
       "commandName": "Project",
-      "commandLineArgs": "-p G:\\Work\\IoTWorkbench\\rec-extended-willowmodels\\Ontology\\REC\\ -d"
+      "commandLineArgs": "-p C:\\Users\\akshayj\\Documents\\GitHub\\willow\\Willow\\  "
     }
   }
 }

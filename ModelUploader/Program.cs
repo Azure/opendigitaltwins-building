@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace ModelUploader
 {
@@ -40,7 +41,7 @@ namespace ModelUploader
                    {
                        modelPath = o.ModelPath;
                        deleteFirst = o.DeleteFirst;
-                   }                   
+                   }
                    );
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -99,91 +100,18 @@ namespace ModelUploader
             }
 
             Log.Ok($"Service client created – ready to go");
+
             try
             {
-                // Delete All Models first
+                // If -d Option specified Delete All Models first
                 if (deleteFirst)
-                    DeleteAllModels(1);                
+                    DeleteAllModels(1);
 
+                // Go over directories
                 EnumerationOptions options = new EnumerationOptions() { RecurseSubdirectories = true };
                 foreach (string file in Directory.EnumerateFiles(modelPath, "*.json", options))
                 {
-                    StreamReader r = new StreamReader(file);
-                    string dtdl = r.ReadToEnd();
-                    r.Close();
-
-                    try
-                    {
-                        Response<ModelData[]> res = client.CreateModels(new List<string>() { dtdl });
-                        Log.Ok($"Model {file.Split("\\").Last()} created successfully!");
-                        foreach (ModelData md in res.Value)
-                            LogResponse(md.Model);
-                    }
-                    catch (RequestFailedException e)
-                    {
-                        switch (e.Status)
-                        {
-                            case 409:
-                                // 409 is when the Model already exists - so just skip this model
-                                Log.Ok($"Model {file.Split("\\").Last()} already exists, skipped!");
-                                break;
-                            case 400:
-                                // Model could not be uploaded because of a dependency
-
-                                // find the missing dependency Model in the message
-                                int missingInterfaceIndexStart = e.Message.IndexOf("dtmi:");
-                                int missingInterfaceIndexEnd = e.Message.IndexOf(";1", missingInterfaceIndexStart);
-                                string missingInterface = e.Message.Substring(missingInterfaceIndexStart, missingInterfaceIndexEnd - missingInterfaceIndexStart);
-                                int missingPartIndex = missingInterface.LastIndexOf(":");
-                                missingInterface = missingInterface.Substring(missingPartIndex + 1);
-
-                                string[] missingFile = Directory.GetFiles(modelPath, missingInterface + ".json*", SearchOption.AllDirectories);
-                                if (missingFile[0] == null || missingFile[0] == "") break;
-
-                                // Read the contents of the file
-                                StreamReader r1 = new StreamReader(missingFile[0]);
-                                string dtdlDependency = r1.ReadToEnd();
-                                r1.Close();
-
-                                try
-                                {
-                                    // Upload the dependency model 
-                                    Response<ModelData[]> res1 = client.CreateModels(new List<string>() { dtdlDependency });
-                                    Log.Ok($"Dependent Model {file.Split("\\").Last()} created successfully! Now proceeeding with the original model");
-                                    foreach (ModelData md1 in res1.Value)
-                                        LogResponse(md1.Model);
-                                }
-                                catch (RequestFailedException e1)
-                                {
-                                    // dependency file didnt work, bail
-                                    Log.Error($"Dependency Model {missingFile[0].Split("\\").Last()}");
-                                    Log.Error($"Response {e1.Status}: {e1.Message}");
-
-                                    Log.Error($"Original Model We were trying for {file.Split("\\").Last()}");
-                                    return;
-                                }
-
-                                // now try the original file back again
-                                try
-                                {
-                                    Response<ModelData[]> res = client.CreateModels(new List<string>() { dtdl });
-                                    Log.Ok($"Model {file.Split("\\").Last()} created successfully!");
-                                    foreach (ModelData md in res.Value)
-                                        LogResponse(md.Model);
-                                }
-                                catch (RequestFailedException e2)
-                                {
-                                    // didnt work again, bail
-                                    Log.Error($"Model {file.Split("\\").Last()}");
-                                    Log.Error($"Response {e2.Status}: {e2.Message}");
-                                    return;
-                                }
-
-                                break;
-                            default:
-                                break;
-                        }
-                    }
+                    UploadModel(file);
                 }
             }
             catch (RequestFailedException e)
@@ -194,6 +122,142 @@ namespace ModelUploader
             {
                 Log.Error($"Error: {ex.Message}");
             }
+
+        }
+
+        private static bool UploadModel(string file)
+        {
+            bool exitProcess = false;
+            StreamReader r = new StreamReader(file);
+            string dtdl = r.ReadToEnd();
+            r.Close();
+
+            try
+            {
+                Response<ModelData[]> res = client.CreateModels(new List<string>() { dtdl });
+                Log.Ok($"Model {file.Split("\\").Last()} created successfully!");
+                foreach (ModelData md in res.Value)
+                    LogResponse(md.Model);
+            }
+            catch (RequestFailedException e)
+            {
+                switch (e.Status)
+                {
+                    case 409:
+                        // 409 is when the Model already exists - so just skip this model
+                        Log.Ok($"Model {file.Split("\\").Last()} already exists, skipped!");
+                        break;
+                    case 400:
+                        // Model could not be uploaded because of a dependency 
+
+                        // first inspect Extends Section
+                        exitProcess = ProcessExtendsSection(file, dtdl);
+                        if (exitProcess) return true;
+
+                        exitProcess = ProcessPropertiesSection(file, dtdl);
+                        if (exitProcess) return true;
+
+                        // now try the original file back again
+                        exitProcess = UploadModel(file);
+
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return exitProcess;
+        }
+
+        private static bool ProcessExtendsSection(string file, string dtdl)
+        {
+            bool exitProcess = false;
+            MatchCollection extendsSection = Regex.Matches(dtdl, "extends[\" :[\r\na-zA-Z0-9;_,]*]", RegexOptions.Singleline);
+            if (extendsSection.Count > 0)
+            {
+                string extendsSectionFull = extendsSection[0].Value;
+                MatchCollection dtmiExtends = Regex.Matches(extendsSectionFull, "dtmi:[ :[a-zA-Z0-9;_]*", RegexOptions.Singleline);
+
+                foreach (Match dtmiExtendsMatch in dtmiExtends)
+                {
+                    // find this model
+                    try
+                    {
+                        Response<ModelData> res = client.GetModel(dtmiExtendsMatch.Value);
+                        // model found! keep going
+                    }
+                    catch (RequestFailedException e)
+                    {
+                        // Model Not Found - find it in the directory and call Upload Model
+                        if (e.Status == 404)
+                        {
+                            string missingInterface = dtmiExtendsMatch.Value;
+                            int missingPartIndex = missingInterface.LastIndexOf(":");
+                            missingInterface = missingInterface.Substring(missingPartIndex + 1).Replace(";1", "");
+                            missingInterface = missingInterface.Replace(";", "");
+
+                            string[] missingFile = Directory.GetFiles(modelPath, missingInterface + ".json*", SearchOption.AllDirectories);
+                            if (missingFile.Count<string>() == 0)
+                            {
+                                // no file found, perhaps the definition of the schema is contained within the current file, lets try
+                                exitProcess = UploadModel(file);
+                                if (exitProcess == true)
+                                {
+                                    Log.Error($"Could not find a definition for Interace {" + missingInterface + "}");
+                                }
+                            }
+                            else {  
+                                // try to Upload the Model in the extends section
+                                exitProcess = UploadModel(missingFile[0]);
+                            }
+                        }
+                        else
+                        {
+                            Log.Error($"Error in extends section in Model {file.Split("\\").Last()}");
+                            Log.Error($"Response {e.Status}: {e.Message}");
+                            exitProcess = true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Log.Error($"extends section not found in Model {file.Split("\\").Last()}!");
+                exitProcess = true;
+            }
+            return exitProcess;
+        }
+
+        private static bool ProcessPropertiesSection(string file, string dtdl)
+        {
+            bool exitProcess = false;
+            // Model could not be uploaded because of a dependency
+            
+            MatchCollection matches = Regex.Matches(dtdl.Replace(" ", ""), "\"schema\":\"dtmi:.*;");            
+            // first find if there are multiple other references
+            foreach (Match match in matches)
+            {
+                // find the missing dependency Model in the message
+                string missingInterface = match.ToString();
+                int missingPartIndex = missingInterface.LastIndexOf(":");
+                missingInterface = missingInterface.Substring(missingPartIndex + 1).Replace(";", "");
+
+                string[] missingFile = Directory.GetFiles(modelPath, missingInterface + ".json*", SearchOption.AllDirectories);
+                if (missingFile.Count<string>() == 0)
+                {
+                    // no file found, perhaps the definition of the schema is contained within the current file, lets try
+                    exitProcess = UploadModel(file);
+                    if (exitProcess == true)
+                    {
+                        Log.Error($"Could not find a definition for Interace {" + missingInterface + "}");
+                    }
+                }
+                else
+                {
+                    // try to Upload the Model that is referred in the Properties section
+                    exitProcess = UploadModel(missingFile[0]);
+                }
+            }
+            return exitProcess;
         }
 
         private static void DeleteAllModels(int iteration)
@@ -203,7 +267,8 @@ namespace ModelUploader
 
             foreach (ModelData md in client.GetModels())
             {
-                try {  
+                try
+                {
                     client.DeleteModel(md.Id);
                     Log.Ok("Successfully deleted Model {" + md.Id + "}. Attempt [" + iteration + "]");
                 }
@@ -215,7 +280,8 @@ namespace ModelUploader
                 }
             }
 
-            try {
+            try
+            {
                 IEnumerable<ModelData> c = client.GetModels() as IEnumerable<ModelData>;
                 if (c.Count<ModelData>() > 0) DeleteAllModels(iteration + 1);
             }
