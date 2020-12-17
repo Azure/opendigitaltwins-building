@@ -253,7 +253,7 @@ namespace ModelUploader
                     exitProcess = UploadModel(file);
                     if (exitProcess == true)
                     {
-                        Log.Alert($"Could not find a definition for Interace {" + missingInterface + "}");
+                        Log.Error($"Could not find a definition for Interace {" + missingInterface + "}");
                     }
                 }
                 else
@@ -261,7 +261,7 @@ namespace ModelUploader
                     if (missingFile.Count<string>() > 1)
                     {
                         // More than one file was matched, log a warning
-                        Log.Error("More than one file matched the prefix " + missingInterface + ".json in the ModelPath directory. Processing only the first");
+                        Log.Alert("More than one file matched the prefix " + missingInterface + ".json in the ModelPath directory. Processing only the first");
                     }                    
                     // try to Upload the Model that is referred in the Properties section
                     exitProcess = UploadModel(missingFile[0]);
