@@ -205,7 +205,12 @@ namespace ModelUploader
                                     Log.Error($"Could not find a definition for Interace {" + missingInterface + "}");
                                 }
                             }
-                            else {  
+                            else {
+                                if (missingFile.Count<string>() > 1)
+                                {
+                                    // More than one file was matched, log a warning
+                                    Log.Error("More than one file matched the prefix " + missingInterface + ".json in the ModelPath directory. Processing only the first");
+                                }
                                 // try to Upload the Model in the extends section
                                 exitProcess = UploadModel(missingFile[0]);
                             }
@@ -253,6 +258,11 @@ namespace ModelUploader
                 }
                 else
                 {
+                    if (missingFile.Count<string>() > 1)
+                    {
+                        // More than one file was matched, log a warning
+                        Log.Error("More than one file matched the prefix " + missingInterface + ".json in the ModelPath directory. Processing only the first");
+                    }                    
                     // try to Upload the Model that is referred in the Properties section
                     exitProcess = UploadModel(missingFile[0]);
                 }
@@ -262,9 +272,6 @@ namespace ModelUploader
 
         private static void DeleteAllModels(int iteration)
         {
-            IEnumerable<ModelData> ie = client.GetModels() as IEnumerable<ModelData>;
-            int count = ie.Count<ModelData>();
-
             foreach (ModelData md in client.GetModels())
             {
                 try
