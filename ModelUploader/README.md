@@ -22,3 +22,18 @@ In order for this tool to operate, the user must:
 ## Example usage
 
 `./ModelUploader -p /Users/karl/DTDLModels/`
+
+## Example usage with Deleting All Models First
+
+The "-d" option recursively deletes ALL Models from ADT Instance. You cannot use the -d option alone in this version (a -p option must be specified)
+
+`./ModelUploader -p /Users/karl/DTDLModels/` -d
+
+## Example usage with Uploading more than one set of models
+
+In order for this to work, the user must separate the models  into multiple different directories:
+
+`./ModelUploader -p /Users/karl/DTDLModels/REC` 
+`./ModelUploader -p /Users/karl/DTDLModels/Willow` 
+`./ModelUploader -p /Users/karl/DTDLModels/FoaF` 
+...etc
