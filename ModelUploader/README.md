@@ -33,7 +33,10 @@ The "-d" option recursively deletes ALL Models from ADT Instance. You cannot use
 
 In order for this to work, the user must separate the models  into multiple different directories:
 
-`./ModelUploader -p /Users/karl/DTDLModels/REC` 
+`./ModelUploader -p /Users/karl/DTDLModels/REC`
+
 `./ModelUploader -p /Users/karl/DTDLModels/Willow` 
+
 `./ModelUploader -p /Users/karl/DTDLModels/FoaF` 
+
 ...etc
