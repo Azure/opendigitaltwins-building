@@ -63,28 +63,18 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "cooling method"
+        "en": "primary cooling method"
       },
-      "name": "coolingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "DX",
-            "name": "DX"
-          },
-          {
-            "enumValue": "ChilledWater",
-            "name": "ChilledWater"
-          }
-        ],
-        "valueSchema": "string"
+      "name": "primaryCoolingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "secondary cooling method"
       },
-      "writable": true
+      "name": "secondaryCoolingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
       "@type": "Component",

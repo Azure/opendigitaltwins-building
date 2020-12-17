@@ -5,58 +5,10 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "primary heating method"
-      },
-      "name": "primaryHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "primary cooling method"
       },
       "name": "primaryCoolingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "DX",
-            "name": "DX"
-          },
-          {
-            "enumValue": "ChilledWater",
-            "name": "ChilledWater"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
       "@type": "Property",
@@ -64,29 +16,15 @@
         "en": "pre-heating method"
       },
       "name": "preHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          }
-        ],
-        "valueSchema": "string"
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
+    },
+    {
+      "@type": "Component",
+      "name": "mixingBox",
+      "displayName": {
+        "en": "mixing box"
       },
-      "writable": true
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACMixingBox;1"
     },
     {
       "@type": "Property",
@@ -261,29 +199,7 @@
         "en": "re-heating method"
       },
       "name": "reHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
     },
     {
       "@type": "Property",
@@ -300,25 +216,7 @@
         "en": "secondary cooling method"
       },
       "name": "secondaryCoolingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "ChilledWater",
-            "name": "ChilledWater"
-          },
-          {
-            "enumValue": "DX",
-            "name": "DX"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
       "@type": "Property",

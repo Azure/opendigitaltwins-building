@@ -8,29 +8,7 @@
         "en": "re-heating method"
       },
       "name": "reHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
     }
   ],
   "displayName": {
