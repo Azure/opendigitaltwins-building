@@ -3,7 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "re-heating method"
       },

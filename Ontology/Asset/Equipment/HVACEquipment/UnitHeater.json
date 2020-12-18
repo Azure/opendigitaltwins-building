@@ -34,7 +34,7 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "heating method"
       },

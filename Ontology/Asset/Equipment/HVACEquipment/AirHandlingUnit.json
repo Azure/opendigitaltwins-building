@@ -3,7 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "primary cooling method"
       },
@@ -11,7 +11,7 @@
       "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "pre-heating method"
       },
@@ -194,7 +194,7 @@
       "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     },
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "re-heating method"
       },
@@ -202,7 +202,7 @@
       "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
     },
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "secondary cooling method"
       },

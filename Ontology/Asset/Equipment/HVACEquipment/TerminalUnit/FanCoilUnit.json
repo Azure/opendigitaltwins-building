@@ -52,7 +52,7 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "primary cooling method"
       },
@@ -60,7 +60,7 @@
       "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
         "en": "secondary cooling method"
       },
