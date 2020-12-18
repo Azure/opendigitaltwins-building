@@ -62,7 +62,7 @@
       "writable": true,
       "schema": "double",
       "comment": "inch or centimeter"
-    }
+    },
     {
       "@type": "Property",
       "name": "refrigerantType",
