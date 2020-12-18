@@ -49,33 +49,33 @@
     },
     {
       "@type": "Property",
-      "name": "rows",
+      "name": "coilRows",
       "displayName": {
-        "en": "Rows"
+        "en": "coil rows"
       },
       "writable": true,
       "schema": "integer",
-      "comment": "Coil row configuration"
+      "comment": "Quantity of rows"
     },
     {
       "@type": "Property",
-      "name": "finsPerInch",
+      "name": "coilFinDensity",
       "displayName": {
-        "en": "Fins per Inch"
+        "en": "coil fin density"
       },
       "writable": true,
       "schema": "integer",
-      "comment": "Fins per inch"
+      "comment": "Defines the quantity of fins per length of coil such as per centimeter or per inch"
     },
     {
       "@type": "Property",
-      "name": "outsideDiameter",
+      "name": "coilOutsideDiameter",
       "displayName": {
-        "en": "Outside Diameter"
+        "en": "coil outside diameter"
       },
       "writable": true,
       "schema": "double",
-      "comment": "inch"
+      "comment": "inch or centimeter"
     }
   ],
   "@context": "dtmi:dtdl:context;2"

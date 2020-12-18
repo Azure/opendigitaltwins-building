@@ -204,15 +204,6 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "refrigerant type"
-      },
-      "name": "refrigerentType",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "secondary cooling method"
       },
       "name": "secondaryCoolingMethod",
