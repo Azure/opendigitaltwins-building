@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "ModelUploader": {
-      "commandName": "Project",
-      "commandLineArgs": "-p C:\\Users\\akshayj\\Documents\\GitHub\\willow\\Willow\\  "
-    }
-  }
-}

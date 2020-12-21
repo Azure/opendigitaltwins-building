@@ -1,5 +1,0 @@
-{
-  "tenantId": "<TenantIdHere>",
-  "clientId": "<ClientIdHere>",
-  "instanceUrl": "https://<ADT DNS here>"
-}
