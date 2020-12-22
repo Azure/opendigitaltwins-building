@@ -18,66 +18,6 @@
           "@type": "Enum",
           "dtmi:dtdl:property:enumValues;2": [
             {
-              "enumValue": "Water",
-              "name": "Water"
-            },
-            {
-              "enumValue": "WasteVentDrainage",
-              "name": "WasteVentDrainage"
-            },
-            {
-              "enumValue": "TransferAir",
-              "name": "TransferAir"
-            },
-            {
-              "enumValue": "SupplyAir",
-              "name": "SupplyAir"
-            },
-            {
-              "enumValue": "StormDrainage",
-              "name": "StormDrainage"
-            },
-            {
-              "enumValue": "Steam",
-              "name": "Steam"
-            },
-            {
-              "enumValue": "SprinklerWater",
-              "name": "SprinklerWater"
-            },
-            {
-              "enumValue": "ReturnAir",
-              "name": "ReturnAir"
-            },
-            {
-              "enumValue": "Refrig",
-              "name": "Refrig"
-            },
-            {
-              "enumValue": "RecircHotDomesticWater",
-              "name": "RecircHotDomesticWater"
-            },
-            {
-              "enumValue": "Propane",
-              "name": "Propane"
-            },
-            {
-              "enumValue": "People",
-              "name": "People"
-            },
-            {
-              "enumValue": "OutsideAir",
-              "name": "OutsideAir"
-            },
-            {
-              "enumValue": "NonPotableDomesticWater",
-              "name": "NonPotableDomesticWater"
-            },
-            {
-              "enumValue": "NaturalGas",
-              "name": "NaturalGas"
-            },
-            {
               "enumValue": "MakeupWater",
               "name": "MakeupWater"
             },
@@ -160,6 +100,66 @@
             {
               "enumValue": "ACElec",
               "name": "ACElec"
+            },
+            {
+              "enumValue": "NaturalGas",
+              "name": "NaturalGas"
+            },
+            {
+              "enumValue": "NonPotableDomesticWater",
+              "name": "NonPotableDomesticWater"
+            },
+            {
+              "enumValue": "OutsideAir",
+              "name": "OutsideAir"
+            },
+            {
+              "enumValue": "People",
+              "name": "People"
+            },
+            {
+              "enumValue": "Propane",
+              "name": "Propane"
+            },
+            {
+              "enumValue": "RecircHotDomesticWater",
+              "name": "RecircHotDomesticWater"
+            },
+            {
+              "enumValue": "Refrig",
+              "name": "Refrig"
+            },
+            {
+              "enumValue": "ReturnAir",
+              "name": "ReturnAir"
+            },
+            {
+              "enumValue": "SprinklerWater",
+              "name": "SprinklerWater"
+            },
+            {
+              "enumValue": "Steam",
+              "name": "Steam"
+            },
+            {
+              "enumValue": "StormDrainage",
+              "name": "StormDrainage"
+            },
+            {
+              "enumValue": "SupplyAir",
+              "name": "SupplyAir"
+            },
+            {
+              "enumValue": "TransferAir",
+              "name": "TransferAir"
+            },
+            {
+              "enumValue": "WasteVentDrainage",
+              "name": "WasteVentDrainage"
+            },
+            {
+              "enumValue": "Water",
+              "name": "Water"
             }
           ],
           "valueSchema": "string"

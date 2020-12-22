@@ -99,6 +99,13 @@
     {
       "@type": "Relationship",
       "displayName": {
+        "en": "is location of"
+      },
+      "name": "isLocationOf"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
         "en": "constructed by"
       },
       "name": "constructedBy",

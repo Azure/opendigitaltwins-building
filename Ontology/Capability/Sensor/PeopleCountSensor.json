@@ -11,7 +11,7 @@
         "en": "has value"
       },
       "name": "hasValue",
-      "schema": "integer",
+      "schema": "double",
       "writable": true
     }
   ],

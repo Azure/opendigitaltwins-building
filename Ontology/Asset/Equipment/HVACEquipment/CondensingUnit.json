@@ -29,7 +29,7 @@
       "displayName": {
         "en": "refrigerant type"
       },
-      "name": "refrigerentType",
+      "name": "refrigerantType",
       "schema": "string",
       "writable": true
     },
