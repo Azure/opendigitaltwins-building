@@ -5,27 +5,23 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "primary heating method"
+        "en": "ventilation configuration"
       },
-      "name": "primaryHeatingMethod",
+      "name": "ventilationConfiguration",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "Electric",
-            "name": "Electric"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
+            "enumValue": "MixedAir",
+            "name": "MixedAir"
           },
           {
             "enumValue": "None",
             "name": "None"
+          },
+          {
+            "enumValue": "OA",
+            "name": "OA"
           }
         ],
         "valueSchema": "string"
@@ -35,57 +31,10 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "primary cooling method"
+        "en": "refrigerant type"
       },
-      "name": "primaryCoolingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "DX",
-            "name": "DX"
-          },
-          {
-            "enumValue": "ChilledWater",
-            "name": "ChilledWater"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "pre-heating method"
-      },
-      "name": "preHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          }
-        ],
-        "valueSchema": "string"
-      },
+      "name": "refrigerantType",
+      "schema": "string",
       "writable": true
     },
     {
@@ -242,6 +191,14 @@
     {
       "@type": "Component",
       "displayName": {
+        "en": "secondary cooling method"
+      },
+      "name": "secondaryCoolingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
         "en": "return fan"
       },
       "name": "returnFan",
@@ -250,101 +207,42 @@
     {
       "@type": "Component",
       "displayName": {
+        "en": "re-heating method"
+      },
+      "name": "reHeatingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "primary cooling method"
+      },
+      "name": "primaryCoolingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "pre-heating method"
+      },
+      "name": "preHeatingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "mixing box"
+      },
+      "name": "mixingBox",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACMixingBox;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
         "en": "exhaust fan"
       },
       "name": "exhaustFan",
       "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "re-heating method"
-      },
-      "name": "reHeatingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Electric",
-            "name": "Electric"
-          },
-          {
-            "enumValue": "Gas",
-            "name": "Gas"
-          },
-          {
-            "enumValue": "HotWater",
-            "name": "HotWater"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "refrigerant type"
-      },
-      "name": "refrigerentType",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "secondary cooling method"
-      },
-      "name": "secondaryCoolingMethod",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "ChilledWater",
-            "name": "ChilledWater"
-          },
-          {
-            "enumValue": "DX",
-            "name": "DX"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "ventilation configuration"
-      },
-      "name": "ventilationConfiguration",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "MixedAir",
-            "name": "MixedAir"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "OA",
-            "name": "OA"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
     },
     {
       "@type": "Property",
