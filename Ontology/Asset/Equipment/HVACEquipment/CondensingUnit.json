@@ -31,8 +31,7 @@
       },
       "name": "refrigerantType",
       "schema": "string",
-      "writable": true,
-      "comment": "For DX only"
+      "writable": true
     },
     {
       "@type": "Property",

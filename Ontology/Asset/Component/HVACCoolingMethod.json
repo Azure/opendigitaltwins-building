@@ -1,78 +1,51 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1",
   "@type": "Interface",
-  "displayName": {
-    "en": "Cooling Method"
-  },
   "contents": [
     {
       "@type": "Property",
-      "name": "type",
       "displayName": {
-        "en": "Type"
+        "en": "type"
       },
-      "writable": true,
-      "schema": {
+      "name": "type",
+      "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
-        "valueSchema": "string",
-        "enumValues": [
+        "dtmi:dtdl:property:enumValues;2": [
           {
-            "name": "DX",
-            "displayName": {
-              "en": "DX"
-            },
-            "enumValue": "DX"
+            "enumValue": "DX",
+            "name": "DX"
           },
           {
-            "name": "ChilledWater",
-            "displayName": {
-              "en": "Chilled Water"
-            },
-            "enumValue": "chilledWater"
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
           }
-        ]
-      }
-    },
-    {
-      "@type": "Property",
-      "name": "coilRows",
-      "displayName": {
-        "en": "coil rows"
+        ],
+        "valueSchema": "string"
       },
-      "writable": true,
-      "schema": "integer",
-      "comment": "Quantity of rows"
+      "writable": true
     },
     {
       "@type": "Property",
-      "name": "coilFinDensity",
       "displayName": {
-        "en": "coil fin density"
+        "en": "refrigerant type"
       },
-      "writable": true,
-      "schema": "integer",
-      "comment": "Defines the quantity of fins per length of coil such as per centimeter or per inch"
-    },
-    {
-      "@type": "Property",
-      "name": "coilOutsideDiameter",
-      "displayName": {
-        "en": "coil outside diameter"
-      },
-      "writable": true,
-      "schema": "double",
-      "comment": "inch or centimeter"
-    },
-    {
-      "@type": "Property",
       "name": "refrigerantType",
-      "displayName": {
-        "en": "Refrigerant Type"
-      },
-      "writable": true,
       "schema": "string",
-      "comment": "For DX only"
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "outside diameter"
+      },
+      "name": "outsideDiameter",
+      "schema": "double",
+      "writable": true
     }
   ],
+  "displayName": {
+    "en": "HVAC cooling method"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": "dtmi:dtdl:context;2"
 }

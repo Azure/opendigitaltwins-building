@@ -25,6 +25,9 @@
       "writable": true
     }
   ],
+  "description": {
+    "en": "A part of a larger building complex, e.g., a wing, a tower, or an interconnected (through walkways or other means) but largely free-standing building."
+  },
   "displayName": {
     "en": "Sub-building"
   },

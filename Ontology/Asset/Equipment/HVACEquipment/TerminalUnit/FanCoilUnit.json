@@ -27,6 +27,15 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "refrigerant type"
+      },
+      "name": "refrigerantType",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "nominal cooling capacity"
       },
       "name": "nominalCoolingCapacity",
@@ -54,17 +63,17 @@
     {
       "@type": "Component",
       "displayName": {
-        "en": "primary cooling method"
+        "en": "secondary cooling method"
       },
-      "name": "primaryCoolingMethod",
+      "name": "secondaryCoolingMethod",
       "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
       "@type": "Component",
       "displayName": {
-        "en": "secondary cooling method"
+        "en": "primary cooling method"
       },
-      "name": "secondaryCoolingMethod",
+      "name": "primaryCoolingMethod",
       "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {

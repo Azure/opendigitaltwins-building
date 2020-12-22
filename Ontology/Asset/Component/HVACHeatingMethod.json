@@ -1,82 +1,50 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1",
   "@type": "Interface",
-  "displayName": {
-    "en": "Heating Method"
-  },
   "contents": [
     {
       "@type": "Property",
+      "displayName": {
+        "en": "type"
+      },
       "name": "type",
-      "displayName": {
-        "en": "Type"
-      },
-      "writable": true,
-      "schema": {
+      "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
-        "valueSchema": "string",
-        "enumValues": [
+        "dtmi:dtdl:property:enumValues;2": [
           {
-            "name": "Electric",
-            "displayName": {
-              "en": "Electric"
-            },
-            "enumValue": "Electric"
+            "enumValue": "Steam",
+            "name": "Steam"
           },
           {
-            "name": "Gas",
-            "displayName": {
-              "en": "Gas"
-            },
-            "enumValue": "Gas"
+            "enumValue": "HotWater",
+            "name": "HotWater"
           },
           {
-            "name": "HotWater",
-            "displayName": {
-              "en": "Hot Water"
-            },
-            "enumValue": "HotWater"
+            "enumValue": "Gas",
+            "name": "Gas"
           },
           {
-            "name": "Steam",
-            "displayName": {
-              "en": "Steam"
-            },
-            "enumValue": "Steam"
+            "enumValue": "Electric",
+            "name": "Electric"
           }
-        ]
-      }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
     },
     {
       "@type": "Property",
-      "name": "coilRows",
       "displayName": {
-        "en": "coil rows"
+        "en": "outside diameter"
       },
-      "writable": true,
-      "schema": "integer",
-      "comment": "Quantity of rows"
-    },
-    {
-      "@type": "Property",
-      "name": "coilFinDensity",
-      "displayName": {
-        "en": "coil fin density"
-      },
-      "writable": true,
-      "schema": "integer",
-      "comment": "Defines the quantity of fins per length of coil such as per centimeter or per inch"
-    },
-    {
-      "@type": "Property",
-      "name": "coilOutsideDiameter",
-      "displayName": {
-        "en": "coil outside diameter"
-      },
-      "writable": true,
+      "name": "outsideDiameter",
       "schema": "double",
-      "comment": "inch or centimeter"
+      "writable": true
     }
   ],
+  "displayName": {
+    "en": "HVAC heating method"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -3,28 +3,39 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Component",
+      "@type": "Property",
       "displayName": {
-        "en": "primary cooling method"
+        "en": "ventilation configuration"
       },
-      "name": "primaryCoolingMethod",
-      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
+      "name": "ventilationConfiguration",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "MixedAir",
+            "name": "MixedAir"
+          },
+          {
+            "enumValue": "None",
+            "name": "None"
+          },
+          {
+            "enumValue": "OA",
+            "name": "OA"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
     },
     {
-      "@type": "Component",
+      "@type": "Property",
       "displayName": {
-        "en": "pre-heating method"
+        "en": "refrigerant type"
       },
-      "name": "preHeatingMethod",
-      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
-    },
-    {
-      "@type": "Component",
-      "name": "mixingBox",
-      "displayName": {
-        "en": "mixing box"
-      },
-      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACMixingBox;1"
+      "name": "refrigerantType",
+      "schema": "string",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -180,17 +191,17 @@
     {
       "@type": "Component",
       "displayName": {
-        "en": "return fan"
+        "en": "secondary cooling method"
       },
-      "name": "returnFan",
-      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
+      "name": "secondaryCoolingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
       "@type": "Component",
       "displayName": {
-        "en": "exhaust fan"
+        "en": "return fan"
       },
-      "name": "exhaustFan",
+      "name": "returnFan",
       "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     },
     {
@@ -204,36 +215,34 @@
     {
       "@type": "Component",
       "displayName": {
-        "en": "secondary cooling method"
+        "en": "primary cooling method"
       },
-      "name": "secondaryCoolingMethod",
+      "name": "primaryCoolingMethod",
       "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACCoolingMethod;1"
     },
     {
-      "@type": "Property",
+      "@type": "Component",
       "displayName": {
-        "en": "ventilation configuration"
+        "en": "pre-heating method"
       },
-      "name": "ventilationConfiguration",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "MixedAir",
-            "name": "MixedAir"
-          },
-          {
-            "enumValue": "None",
-            "name": "None"
-          },
-          {
-            "enumValue": "OA",
-            "name": "OA"
-          }
-        ],
-        "valueSchema": "string"
+      "name": "preHeatingMethod",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACHeatingMethod;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "mixing box"
       },
-      "writable": true
+      "name": "mixingBox",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:HVACMixingBox;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "exhaust fan"
+      },
+      "name": "exhaustFan",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
     },
     {
       "@type": "Property",
