@@ -94,8 +94,8 @@ SELECT VAV, Room
 ```
 To learn more on Azure Digital Twins queries, please refer to [Query the Azure Digital Twins twin graph](https://docs.microsoft.com/azure/digital-twins/how-to-query-graph) article.
 
-## Tools to use this Ontology
-The tools for this Ontology have been moved to this Github repository [Tools for Open Digital Twins Definition Language (DTDL) RealEstateCore Ontology](https://github.com/Azure/opendigitaltwins-building-tools).
+## Tools to use this (and other REC based) Ontology
+The tools for this Ontology have been moved to this Github repository [Tools for Digital Twins Definition Language (DTDL) based Ontologies](https://github.com/Azure/opendigitaltwins-tools).
 
 ## Extending the ontology
 This is the decision tree workflow we recommend for extending and contributing to this DTDL-based RealEstateCore ontology.
