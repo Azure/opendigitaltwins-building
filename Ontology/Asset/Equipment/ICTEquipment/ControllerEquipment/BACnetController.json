@@ -1,0 +1,23 @@
+{
+    "@id": "dtmi:digitaltwins:rec_3_3:asset:BACnetController;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "BACnet Controller"
+    },
+    "extends" : [
+      "dtmi:digitaltwins:rec_3_3:asset:ControllerEquipment;1"
+    ],
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "address",
+        "displayName": {
+          "en": "Address"
+        },
+        "writable": true,
+        "schema": "string",
+        "comment": "JSON encoded string "
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  }

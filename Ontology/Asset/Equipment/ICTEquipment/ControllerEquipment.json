@@ -1,0 +1,56 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ControllerEquipment;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Controller"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "registrationID",
+      "displayName": {
+        "en": "Registration ID"
+      },
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "registrationKey",
+      "displayName": {
+        "en": "Registration Key"
+      },
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "connectorID",
+      "displayName": {
+        "en": "Connector ID"
+      },
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "enabled",
+      "displayName": {
+        "en": "Is Enabled"
+      },
+      "writable": true,
+      "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "detected",
+      "displayName": {
+        "en": "Is Detected"
+      },
+      "writable": true,
+      "schema": "boolean"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

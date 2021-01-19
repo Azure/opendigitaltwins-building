@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:asset:Controller;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Controller"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
-}

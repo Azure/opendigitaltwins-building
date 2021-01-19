@@ -1,0 +1,30 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:SpaceCapacity;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Space Capacity"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "maxOccupancy",
+      "displayName": {
+        "en": "Maximum Occupancy"
+      },
+      "writable": true,
+      "schema": "integer",
+      "comment": "Building Code Occupancy"
+    },
+    {
+      "@type": "Property",
+      "name": "seatingCapacity",
+      "displayName": {
+        "en": "Seating Capacity"
+      },
+      "writable": true,
+      "schema": "integer",
+      "comment": "Count of seats"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
