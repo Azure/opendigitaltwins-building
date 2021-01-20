@@ -1,0 +1,55 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PointGrabCogniPointSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "PointGrab CogniPoint Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:asset:PeopleCountSensorEquipment;1"
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "height",
+      "displayName": "Height",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "geoPosition",
+      "displayName": "GeoPosition",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "connectionStatus",
+      "displayName": "Connection Status",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "attachmentState",
+      "displayName": "Attachment State",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "rotation",
+      "displayName": "Rotation",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "metricPosition",
+      "displayName": "Metric Position",
+      "writable": true,
+      "schema": "string"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
