@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:asset:ITHardware;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:ICTHardware;1",
   "@type": "Interface",
   "contents": [
     {
