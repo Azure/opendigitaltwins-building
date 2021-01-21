@@ -1,0 +1,90 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:SpaceOccupancy;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Space Occupancy"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "occupancy",
+      "displayName": {
+        "en": "Occupancy"
+      },
+      "writable": true,
+      "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "peopleCount",
+      "displayName": {
+        "en": "People Count"
+      },
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "inferredOccupancy",
+      "displayName": {
+        "en": "Inferred Occupancy"
+      },
+      "writable": true,
+      "schema": "boolean"
+    },
+    {
+      "@type": ["Property", "TimeSpan"],
+      "name": "dwellTimeAverage",
+      "displayName": {
+        "en": "Dwell Time Average"
+      },
+      "writable": true,
+      "schema": "double",
+      "unit": "second",
+      "comment": "Average time spent in the space by all individuals in the space"
+    },
+    {
+      "@type": ["Property", "TimeSpan"],
+      "name": "entranceDwellTime",
+      "displayName": {
+        "en": "Entrance Dwell Time"
+      },
+      "writable": true,
+      "schema": "double",
+      "unit": "second",
+      "comment": "Wait time to enter the space"
+    },
+    {
+      "@type": ["Property", "TimeSpan"],
+      "name": "exitDwellTime",
+      "displayName": {
+        "en": "Exit Dwell Time"
+      },
+      "writable": true,
+      "schema": "double",
+      "unit": "second",
+      "comment": "Wait time to exit the space"
+    },
+    {
+      "@type": "Property",
+      "name": "entranceRate",
+      "displayName": {
+        "en": "Entrance Rate"
+      },
+      "writable": true,
+      "schema": "double",
+      "comment": "e.g. people per second"
+    },
+    {
+      "@type": "Property",
+      "name": "exitRate",
+      "displayName": {
+        "en": "Exit Rate"
+      },
+      "writable": true,
+      "schema": "double",
+      "comment": "e.g. people per second"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

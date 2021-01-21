@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:SpaceTemperature;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Space Temperature"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "temperatureSensor",
+      "displayName": {
+        "en": "Temperature Sensor"
+      },
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "temperatureSetpoint",
+      "displayName": {
+        "en": "Temperature Setpoint"
+      },
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "temperatureDelta",
+      "displayName": {
+        "en": "Temperature Delta"
+      },
+      "writable": true,
+      "schema": "double"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
