@@ -30,6 +30,15 @@
       "name": "name",
       "schema": "string",
       "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "lastMeasuredTime",
+      "displayName": {
+        "en": "Time when Sensor/Actuator measures the value of the capability"
+      },
+      "writable": true,
+      "schema": "dateTime"
     }
   ],
   "description": {
