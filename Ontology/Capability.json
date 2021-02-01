@@ -35,7 +35,7 @@
       "@type": "Property",
       "name": "lastMeasuredTime",
       "displayName": {
-        "en": "Time when Sensor/Actuator captures the value of the capability"
+        "en": "Time when Sensor/Actuator measures the value of the capability"
       },
       "writable": true,
       "schema": "dateTime"
