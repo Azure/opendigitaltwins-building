@@ -7,9 +7,9 @@
   "contents": [
     {
       "@type": "Property",
-      "name": "occupancy",
+      "name": "isOccupied",
       "displayName": {
-        "en": "Occupancy"
+        "en": "Is Occupied"
       },
       "writable": true,
       "schema": "boolean"

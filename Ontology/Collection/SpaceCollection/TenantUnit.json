@@ -13,54 +13,6 @@
       "minMultiplicity": 0,
       "name": "includes",
       "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
-    },
-    {
-      "@type": "Component",
-      "name": "area",
-      "displayName": {
-        "en": "Area"
-      },
-      "schema": "dtmi:digitaltwins:rec_3_3:SpaceArea;1"
-    },
-    {
-      "@type": "Component",
-      "name": "capacity",
-      "displayName": {
-        "en": "Capacity"
-      },
-      "schema": "dtmi:digitaltwins:rec_3_3:SpaceCapacity;1"
-    },
-    {
-      "@type": "Component",
-      "name": "temperature",
-      "displayName": {
-        "en": "Temperature"
-      },
-      "schema": "dtmi:digitaltwins:rec_3_3:SpaceTemperature;1"
-    },
-    {
-      "@type": "Component",
-      "name": "humidity",
-      "displayName": {
-        "en": "Humidity Average"
-      },
-      "schema": "dtmi:digitaltwins:rec_3_3:SpaceHumidity;1"
-    },
-    {
-      "@type": "Component",
-      "name": "CO2",
-      "displayName": {
-        "en": "CO2"
-      },
-      "schema": "dtmi:digitaltwins:rec_3_3:SpaceCO2;1"
-    },
-    {
-      "@type": "Component",
-      "name": "occupancy",
-      "displayName": {
-        "en": "Occupancy"
-      },
-      "schema": "dtmi:digitaltwins:rec_3_3:SpaceOccupancy;1"
     }
   ],
   "description": {
