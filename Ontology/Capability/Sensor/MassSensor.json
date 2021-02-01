@@ -13,7 +13,7 @@
       "displayName": {
         "en": "has value"
       },
-      "name": "hasValue",
+      "name": "value",
       "schema": "double",
       "unit": "kilogram",
       "writable": true
