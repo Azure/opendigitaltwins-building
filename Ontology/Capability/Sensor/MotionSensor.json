@@ -10,7 +10,7 @@
       "displayName": {
         "en": "has value"
       },
-      "name": "value",
+      "name": "hasValue",
       "schema": "boolean",
       "writable": true
     }

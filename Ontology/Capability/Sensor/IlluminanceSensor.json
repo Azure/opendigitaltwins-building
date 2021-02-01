@@ -13,7 +13,7 @@
       "displayName": {
         "en": "has value"
       },
-      "name": "value",
+      "name": "hasValue",
       "schema": "double",
       "unit": "lux",
       "writable": true
