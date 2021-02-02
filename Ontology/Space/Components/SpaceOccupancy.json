@@ -25,9 +25,9 @@
     },
     {
       "@type": "Property",
-      "name": "inferredOccupancy",
+      "name": "hasInferredOccupancy",
       "displayName": {
-        "en": "Inferred Occupancy"
+        "en": "Inferred Occupancy based on activity in the Space"
       },
       "writable": true,
       "schema": "boolean"
