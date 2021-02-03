@@ -11,9 +11,9 @@
         "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
       },
       "displayName": {
-        "en": "Last Measured Value"
+        "en": "has value"
       },
-      "name": "lastMeasuredValue",
+      "name": "hasValue",
       "schema": "double",
       "unit": "kilowattHour",
       "writable": true
