@@ -8,9 +8,9 @@
         "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
       },
       "displayName": {
-        "en": "has value"
+        "en": "Last Reported Value"
       },
-      "name": "hasValue",
+      "name": "lastReportedValue",
       "schema": "boolean",
       "writable": true
     }
