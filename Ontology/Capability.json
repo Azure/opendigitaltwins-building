@@ -35,14 +35,14 @@
       "@type": "Property",
       "name": "lastReportedTime",
       "displayName": {
-        "en": "Time when Sensor/Actuator has last reported the value of the capability"
+        "en": "Last Reported Time"
       },
       "writable": true,
       "schema": "dateTime"
     }
   ],
   "description": {
-    "en": "A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point\". Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system."
+    "en": "A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point\". Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system. lastReportedTime is when Sensor/Actuator has last reported the value of the capability"
   },
   "displayName": {
     "en": "Capability"
