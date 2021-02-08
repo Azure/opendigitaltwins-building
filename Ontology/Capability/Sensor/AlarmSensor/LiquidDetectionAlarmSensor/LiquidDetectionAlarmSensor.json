@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:LiquidDetectionAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Liquid Detection Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

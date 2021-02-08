@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:BatteryVoltageSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Battery Voltage Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:VoltageSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

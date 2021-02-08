@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:DifferentialSpeedSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Differential Speed Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:SpeedSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

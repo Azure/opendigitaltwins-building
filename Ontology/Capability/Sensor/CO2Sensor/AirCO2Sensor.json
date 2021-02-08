@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:AirCO2Sensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Air CO2 Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:CO2Sensor;1"
+  ],
+  "contents": [
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

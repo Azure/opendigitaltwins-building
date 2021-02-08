@@ -1,0 +1,13 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:SupplyAirHumiditySensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Supply Air Humidity Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AirHumiditySensor;1"
+  ],
+  "contents": [
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

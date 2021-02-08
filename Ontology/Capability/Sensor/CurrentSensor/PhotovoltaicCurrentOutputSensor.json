@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:PhotovoltaicCurrentOutputSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Photovoltaic Current Output Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:CurrentSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

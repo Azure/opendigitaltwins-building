@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:LowReturnAirTemperatureAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Low Return Air Temperature Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:ReturnAirTemperatureAlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

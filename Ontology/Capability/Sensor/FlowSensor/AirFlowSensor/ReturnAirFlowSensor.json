@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:ReturnAirFlowSensor;1",
+  "@type": "Interface",
+  "displayName": "Return Air Flow Sensor",
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AirFlowSensor;1"
+  ],
+  "contents": [
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

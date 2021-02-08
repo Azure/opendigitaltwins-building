@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:AirDifferentialPressureSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Air Differential Pressure Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:DifferentialPressureSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

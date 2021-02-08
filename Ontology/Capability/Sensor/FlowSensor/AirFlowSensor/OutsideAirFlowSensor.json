@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:OutsideAirFlowSensor;1",
+  "@type": "Interface",
+  "displayName": "Outside Air Flow Sensor",
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AirFlowSensor;1"
+  ],
+  "contents": [
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,6 +1,15 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:core:FireExtinguisherRemovedSensor;1",
   "@type": "Interface",
-  "extends": "dtmi:digitaltwins:rec_3_3:core:StatusSensor;1",
+  "displayName": {
+    "en": "Fire Extinguisher Removed Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:StatusSensor;1",
+    "dtmi:digitaltwins:rec_3_3:core:FireExtinguisherRemovedSensor;1"
+  ],
+  "contents": [
+
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

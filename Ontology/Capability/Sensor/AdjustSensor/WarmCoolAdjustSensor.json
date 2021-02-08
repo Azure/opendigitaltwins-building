@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:WarmCoolAdjustSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Warm Cool Adjust Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AdjustSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

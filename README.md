@@ -74,9 +74,9 @@ SELECT Room, Sensor, Level
     AND IS_OF_MODEL(Building, 'dtmi:digitaltwins:rec_3_3:core:Building;1')
     AND IS_OF_MODEL(Sensor, 'dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1')
     AND Level.levelNumber = 1 
-    AND IS_DEFINED(Sensor.hasValue)
+    AND IS_DEFINED(Sensor.lastReportedValue)
     AND Building.$dtId = 'Building121'
-    AND Sensor.hasValue < 73
+    AND Sensor.lastReportedValue < 73
 ```
 
 Another query example on above subgraph is to find the rooms which are affected by VAVs with serialNumber 2561A5510 (because it's going to be replaced).

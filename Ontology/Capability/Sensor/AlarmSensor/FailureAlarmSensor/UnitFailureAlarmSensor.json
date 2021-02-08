@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:UnitFailureAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Unit Failure Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:FailureAlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

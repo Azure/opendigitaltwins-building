@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:AngularVelocitySensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Angular Velocity Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:VelocitySensor;1"
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
+      },
+      "displayName": {
+        "en": "Last Reported Value"
+      },
+      "name": "lastReportedValue",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:MotorTorqueSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Motor Torque Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:TorqueSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

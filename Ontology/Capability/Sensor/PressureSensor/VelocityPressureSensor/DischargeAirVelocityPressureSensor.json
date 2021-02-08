@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:DischargeAirVelocityPressureSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Delta Pressure Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:VelocityPressureSensor;1"
+  ],
+  "contents": [
+    
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

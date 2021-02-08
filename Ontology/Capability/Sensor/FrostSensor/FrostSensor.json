@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:FrostSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Frost Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

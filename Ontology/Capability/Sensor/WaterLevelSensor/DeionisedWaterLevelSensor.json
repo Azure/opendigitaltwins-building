@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:DeionisedWaterLevelSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Deionised Water Level Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:WaterLevelSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:OutsideAirDewpointSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Outside Air Dewpoint Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:DewpointSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

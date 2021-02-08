@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:WaterTemperatureAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Water Temperature Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:WaterAlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

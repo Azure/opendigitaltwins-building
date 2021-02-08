@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:OutputFrequencySensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Output Frequency Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:FrequencySensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

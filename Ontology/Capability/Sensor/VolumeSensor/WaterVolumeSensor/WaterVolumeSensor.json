@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:WaterVolumeSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Water Volume Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:VolumeSensor;1"
+  ],
+  "contents": [
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

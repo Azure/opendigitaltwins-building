@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:SmokeAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Smoke Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

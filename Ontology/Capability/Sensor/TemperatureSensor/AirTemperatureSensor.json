@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:core:AirTemperatureSensor;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Air temperature sensor"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1",
-  "@context": "dtmi:dtdl:context;2"
-}

@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:DischargeAirSmokeAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Discharge Air Smoke Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:SmokeDetectionAlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

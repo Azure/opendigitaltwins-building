@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:PeakPowerDemandSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Peak Power Demand Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:DemandSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

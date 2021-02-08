@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:ReturnAirDewpointSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Return Air Dewpoint Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:DewpointSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

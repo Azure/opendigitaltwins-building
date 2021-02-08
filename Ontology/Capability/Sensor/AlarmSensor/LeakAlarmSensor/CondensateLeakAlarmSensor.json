@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:CondensateLeakAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Condensate Leak Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:LeakAlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

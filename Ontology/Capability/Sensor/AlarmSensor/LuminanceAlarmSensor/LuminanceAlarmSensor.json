@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:LuminanceAlarmSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Luminance Alarm Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AlarmSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

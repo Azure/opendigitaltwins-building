@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:AccelerationSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Acceleration Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
+  ],
+  "contents": [
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

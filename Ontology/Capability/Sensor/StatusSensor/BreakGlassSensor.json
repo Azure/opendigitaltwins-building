@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:BreakGlassSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Break Glass Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:StatusSensor;1"
+  ],
+  "contents": [
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

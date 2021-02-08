@@ -1,0 +1,15 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:MassFlowSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Mass Flow Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:FlowSensor;1",
+    "dtmi:digitaltwins:rec_3_3:core:MassFlowSensor;1"
+  ],
+  "contents": [
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

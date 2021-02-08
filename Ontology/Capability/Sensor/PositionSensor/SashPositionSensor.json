@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:SashPositionSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Sash Position Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:PositionSensor;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

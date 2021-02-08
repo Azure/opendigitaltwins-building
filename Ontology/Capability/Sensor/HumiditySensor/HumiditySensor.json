@@ -1,0 +1,15 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:HumiditySensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Humidity Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
+    "dtmi:digitaltwins:rec_3_3:core:HumiditySensor;1"
+  ],
+  "contents": [
+   
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

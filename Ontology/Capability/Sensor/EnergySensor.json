@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:core:EnergySensor;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Energy sensor"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
-  "@context": "dtmi:dtdl:context;2"
-}

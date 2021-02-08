@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:VoltageSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Voltage Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
+  ],
+  "contents": [
+    {
+      "@type": ["Property", "Voltage"],
+      "description": {
+        "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
+      },
+      "displayName": {
+        "en": "Last Reported Value"
+      },
+      "name": "lastReportedValue",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

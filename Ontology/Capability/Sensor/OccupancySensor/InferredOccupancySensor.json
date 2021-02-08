@@ -4,6 +4,11 @@
   "displayName": {
     "en": "Inferred Occupancy Sensor"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:OccupancySensor;1",
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:OccupancySensor;1"
+  ],
+  "contents": [
+
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

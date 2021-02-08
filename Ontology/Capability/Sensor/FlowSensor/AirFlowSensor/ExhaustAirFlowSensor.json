@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:ExhaustAirFlowSensor;1",
+  "@type": "Interface",
+  "displayName": "Exhaust Air Flow Sensor",
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:AirFlowSensor;1"
+  ],
+  "contents": [
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

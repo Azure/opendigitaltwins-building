@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:AirTVOCSensor;1",
+  "@type": "Interface",
+  "displayName": "Air TVOCS ensor",
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:TVOCSensor;1"
+  ],
+  "contents": [
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

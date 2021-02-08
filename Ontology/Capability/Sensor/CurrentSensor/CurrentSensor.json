@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:CurrentSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Current Sensor"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
+  ],
+  "contents": [
+    {
+      "@type": ["Property", "Current"],
+      "description": {
+        "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
+      },
+      "displayName": {
+        "en": "Last Reported Value"
+      },
+      "name": "lastReportedValue",
+      "schema": "double",
+      "unit": "ampere",
+      "writable": true
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
