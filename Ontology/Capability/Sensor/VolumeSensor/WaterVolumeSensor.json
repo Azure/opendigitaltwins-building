@@ -7,8 +7,5 @@
   "extends" : [
     "dtmi:digitaltwins:rec_3_3:core:VolumeSensor;1"
   ],
-  "contents": [
-
-  ],
   "@context": "dtmi:dtdl:context;2"
 }

@@ -3,8 +3,7 @@
   "@type": "Interface",
   "displayName": "Air Flow Sensor",
   "extends" : [
-    "dtmi:digitaltwins:rec_3_3:core:FlowSensor;1",
-    "dtmi:digitaltwins:rec_3_3:core:AirFlowSensor;1"
+    "dtmi:digitaltwins:rec_3_3:core:FlowSensor;1"
   ],
   "contents": [
 

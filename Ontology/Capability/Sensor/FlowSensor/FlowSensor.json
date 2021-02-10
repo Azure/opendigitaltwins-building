@@ -5,8 +5,7 @@
     "en": "Flow Sensor"
   },
   "extends" : [
-    "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
-    "dtmi:digitaltwins:rec_3_3:core:FlowSensor;1"
+    "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
   ],
   "contents": [
 

@@ -5,8 +5,7 @@
     "en": "Energy sensor"
   },
   "extends" : [
-    "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
-    "dtmi:digitaltwins:rec_3_3:core:EnergySensor;1"
+    "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
   ],
   "contents": [
 

@@ -3,8 +3,7 @@
   "@type": "Interface",
   "displayName": "Electrical Power Sensor",
   "extends" : [
-    "dtmi:digitaltwins:rec_3_3:core:PowerSensor;1",
-    "dtmi:digitaltwins:rec_3_3:core:ElectricalPowerSensor;1"
+    "dtmi:digitaltwins:rec_3_3:core:PowerSensor;1"
   ],
   "contents": [
     

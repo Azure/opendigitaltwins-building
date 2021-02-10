@@ -5,7 +5,6 @@
     "en": "PIR Sensor"
   },
   "extends" : [
-    "dtmi:digitaltwins:rec_3_3:core:AdjustSensor;1",
     "dtmi:digitaltwins:rec_3_3:core:OccupancySensor;1"
   ],
   "@context": "dtmi:dtdl:context;2"

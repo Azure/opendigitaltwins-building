@@ -1,8 +1,8 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:AirGrainsSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:LevelSensor;1",
   "@type": "Interface",
   "displayName": {
-    "en": "Air Grains Sensor"
+    "en": "Level Sensor"
   },
   "extends" : [
     "dtmi:digitaltwins:rec_3_3:core:Sensor;1"

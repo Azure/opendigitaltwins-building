@@ -1,8 +1,8 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:WaterLevelSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:core:HumidityRatioSensor;1",
   "@type": "Interface",
   "displayName": {
-    "en": "Water Level Sensor"
+    "en": "Humidity Ratio Sensor"
   },
   "extends" : [
     "dtmi:digitaltwins:rec_3_3:core:Sensor;1"

@@ -5,8 +5,7 @@
     "en": "Thermal Power Sensor"
   },
   "extends" : [
-    "dtmi:digitaltwins:rec_3_3:core:PowerSensor;1",
-    "dtmi:digitaltwins:rec_3_3:core:ThermalPowerSensor;1"
+    "dtmi:digitaltwins:rec_3_3:core:PowerSensor;1"
   ],
   "contents": [
 

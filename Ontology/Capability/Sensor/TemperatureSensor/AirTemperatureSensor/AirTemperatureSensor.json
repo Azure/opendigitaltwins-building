@@ -5,8 +5,7 @@
     "en": "Air Temperature Sensor"
   },
   "extends" : [
-    "dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1",
-    "dtmi:digitaltwins:rec_3_3:core:AirTemperatureSensor;1"
+    "dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1"
   ],
   "contents": [
   ],
