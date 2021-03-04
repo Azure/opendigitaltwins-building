@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:InferredOccupancySensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:InferredOccupancySensor;1",
   "@type": "Interface",
   "displayName": {
-    "en": "Inferred Occupancy Sensor"
+    "en": "Inferred occupancy sensor"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:OccupancySensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:OccupancySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

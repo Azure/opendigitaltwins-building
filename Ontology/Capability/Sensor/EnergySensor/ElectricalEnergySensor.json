@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:ElectricalEnergySensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:ElectricalEnergySensor;1",
   "@type": "Interface",
   "contents": [
     {
@@ -8,12 +8,12 @@
         "Property"
       ],
       "description": {
-        "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
+        "en": "Most recently reported or set value of a core:Capability."
       },
       "displayName": {
-        "en": "Last Reported Value"
+        "en": "last value"
       },
-      "name": "lastReportedValue",
+      "name": "lastValue",
       "schema": "double",
       "unit": "kilowattHour",
       "writable": true
@@ -22,6 +22,6 @@
   "displayName": {
     "en": "Electrical energy sensor"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:EnergySensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:EnergySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

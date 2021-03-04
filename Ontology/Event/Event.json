@@ -1,0 +1,137 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Event;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has updated time"
+      },
+      "name": "hasUpdatedTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Cognitive clustering of time-related properties that can apply to time-indexed objects (i.e., events of various sorts).\n\nCertain time properties are given using xsd:DateTime, i.e., ISO8601 (see below), whereas others are given as ints or floats, depending on use case.\n\nTime format ISO8601:\n\nComplete date, hour, minutes, seconds, and decimal fraction of second\n\n      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)\n\nWhere:\n     YYYY = 4 numbers for year.\n     MM = 2 numbers for month (01=January, e"
+      },
+      "displayName": {
+        "en": "has time"
+      },
+      "name": "hasTime",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has stop time"
+      },
+      "name": "hasStopTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has start time"
+      },
+      "name": "hasStartTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has read time"
+      },
+      "name": "hasReadTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has point in time"
+      },
+      "name": "hasPointInTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has observation time"
+      },
+      "name": "hasObservationTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Measured in ms (milliseconds). Duration is defined as the length of time that something lasts."
+      },
+      "displayName": {
+        "en": "has duration"
+      },
+      "name": "hasDuration",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has deleted time"
+      },
+      "name": "hasDeletedTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "has created time"
+      },
+      "name": "hasCreatedTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive."
+  },
+  "displayName": {
+    "en": "Event"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,6 +1,9 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:LeakSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:LeakSensor;1",
   "@type": "Interface",
-  "extends": "dtmi:digitaltwins:rec_3_3:core:StatusSensor;1",
+  "displayName": {
+    "en": "Leak sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:StatusSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

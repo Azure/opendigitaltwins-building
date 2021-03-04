@@ -1,0 +1,73 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Capability;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Time when a core:Capability's value was last updated (see core:lastValue)."
+      },
+      "displayName": {
+        "en": "last value time"
+      },
+      "name": "lastValueTime",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset. Inverse of: servedBy"
+      },
+      "displayName": {
+        "en": "serves"
+      },
+      "name": "serves"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The entity (Asset, Space, LogicalDevice, etc.) that has this Capability. Inverse of: hasCapability"
+      },
+      "displayName": {
+        "en": "is capabilty of"
+      },
+      "name": "isCapabilityOf"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point\". Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system."
+  },
+  "displayName": {
+    "en": "Capability"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

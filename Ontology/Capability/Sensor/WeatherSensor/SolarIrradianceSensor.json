@@ -1,0 +1,23 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:SolarIrradianceSensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Solar irradiance sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:WeatherSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

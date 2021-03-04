@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:DisableCommand;1",
+  "@type": "Interface",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Actuator;1",
+  "@context": "dtmi:dtdl:context;2"
+}
