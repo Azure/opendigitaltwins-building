@@ -25,6 +25,17 @@
     },
     {
       "@type": "Relationship",
+      "description": {
+        "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:digitaltwins:rec_3_3:core:LogicalDevice;1"
+    },
+    {
+      "@type": "Relationship",
       "displayName": {
         "en": "has capability"
       },
