@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:CO2Sensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "CO2 sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:GasSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

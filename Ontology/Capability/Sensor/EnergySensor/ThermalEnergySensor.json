@@ -1,16 +1,16 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:ThermalEnergySensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:ThermalEnergySensor;1",
   "@type": "Interface",
   "contents": [
     {
       "@type": "Property",
       "description": {
-        "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
+        "en": "Most recently reported or set value of a core:Capability."
       },
       "displayName": {
-        "en": "Last Reported Value"
+        "en": "last value"
       },
-      "name": "lastReportedValue",
+      "name": "lastValue",
       "schema": "double",
       "writable": true
     }
@@ -18,6 +18,6 @@
   "displayName": {
     "en": "Thermal energy sensor"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:EnergySensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:EnergySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

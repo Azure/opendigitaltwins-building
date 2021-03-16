@@ -1,16 +1,16 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:HumiditySetpoint;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:HumiditySetpoint;1",
   "@type": "Interface",
   "contents": [
     {
       "@type": "Property",
       "description": {
-        "en": "REC entities may be associated with values (e.g., Sensors, Setpoints, etc)."
+        "en": "Most recently reported or set value of a core:Capability."
       },
       "displayName": {
-        "en": "Last Reported Value"
+        "en": "last value"
       },
-      "name": "lastReportedValue",
+      "name": "lastValue",
       "schema": "double",
       "writable": true
     }
