@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:OccupancyZone;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Occupancy Zone"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Zone;1",
+  "@context": "dtmi:dtdl:context;2"
+}
