@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:BinarySensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "boolean",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Grouping of sensors that return a single boolean value signal, e.g., fire sensors, level sensors, motion sensors, etc."
+  },
+  "displayName": {
+    "en": "Binary sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}
