@@ -15,6 +15,124 @@
       "writable": true
     },
     {
+      "@type": "Property",
+      "description": {
+        "en": "The (optional) substance that a capability measures or interacts with; e.g., a TemperatureSensor can measure air temperature or water temperature, a Flow Demand Setpoint can be configured to control steam demand or chilled water demand, etc."
+      },
+      "displayName": {
+        "en": "substance"
+      },
+      "name": "substance",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Water",
+            "name": "Water"
+          },
+          {
+            "enumValue": "Steam",
+            "name": "Steam"
+          },
+          {
+            "enumValue": "OutsideAir",
+            "name": "OutsideAir"
+          },
+          {
+            "enumValue": "MediumTemperatureHotWater",
+            "name": "MediumTemperatureHotWater"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "HighTemperatureHotWater",
+            "name": "HighTemperatureHotWater"
+          },
+          {
+            "enumValue": "DomesticHotWater",
+            "name": "DomesticHotWater"
+          },
+          {
+            "enumValue": "DeionisedWater",
+            "name": "DeionisedWater"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          },
+          {
+            "enumValue": "Air",
+            "name": "Air"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The (optional) capability position relative to the system or space that it interacts with. E.g., a water temperature sensor can be positioned on the supply or return flow, air humidity can be measured entering or leaving a system, etc."
+      },
+      "displayName": {
+        "en": "position"
+      },
+      "name": "position",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Underfloor",
+            "name": "Underfloor"
+          },
+          {
+            "enumValue": "Supply",
+            "name": "Supply"
+          },
+          {
+            "enumValue": "Return",
+            "name": "Return"
+          },
+          {
+            "enumValue": "Outside",
+            "name": "Outside"
+          },
+          {
+            "enumValue": "Output",
+            "name": "Output"
+          },
+          {
+            "enumValue": "Leaving",
+            "name": "Leaving"
+          },
+          {
+            "enumValue": "Exhaust",
+            "name": "Exhaust"
+          },
+          {
+            "enumValue": "Entering",
+            "name": "Entering"
+          },
+          {
+            "enumValue": "Discharge",
+            "name": "Discharge"
+          },
+          {
+            "enumValue": "Differential",
+            "name": "Differential"
+          },
+          {
+            "enumValue": "Bypass",
+            "name": "Bypass"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
       "@type": "Relationship",
       "description": {
         "en": "The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset. Inverse of: servedBy"
