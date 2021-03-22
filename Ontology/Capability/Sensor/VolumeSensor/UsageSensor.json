@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:UsageSensor;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Senses accumulated usage of some substance (see device:substance property) over time."
+  },
+  "displayName": {
+    "en": "Usage sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:VolumeSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}
