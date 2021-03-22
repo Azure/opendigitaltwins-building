@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:PositionSensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Measures current position of a component (e.g., a damper, a valve, etc.) in terms of a fraction of its full range of motion."
+  },
+  "displayName": {
+    "en": "Position sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}
