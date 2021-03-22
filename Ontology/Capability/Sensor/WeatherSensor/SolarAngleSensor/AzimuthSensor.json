@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:AzimuthSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Solar azimuth angle sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:SolarAngleSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

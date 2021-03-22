@@ -1,0 +1,109 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:BarrierAsset;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "width"
+      },
+      "name": "width",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "thickness"
+      },
+      "name": "thickness",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "service"
+      },
+      "name": "service",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Interior",
+            "name": "Interior"
+          },
+          {
+            "enumValue": "Exterior",
+            "name": "Exterior"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "material"
+      },
+      "name": "material",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "height"
+      },
+      "name": "height",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "frame material"
+      },
+      "name": "frameMaterial",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [
+        "TimeSpan",
+        "Property"
+      ],
+      "displayName": {
+        "en": "fire rating"
+      },
+      "name": "fireRating",
+      "schema": "double",
+      "unit": "hour",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "to space"
+      },
+      "minMultiplicity": 0,
+      "name": "toSpace",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "from space"
+      },
+      "minMultiplicity": 0,
+      "name": "fromSpace",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
+    }
+  ],
+  "displayName": {
+    "en": "Barrier asset"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ArchitecturalAsset;1",
+  "@context": "dtmi:dtdl:context;2"
+}

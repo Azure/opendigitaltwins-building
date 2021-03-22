@@ -1,0 +1,29 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Server;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "number of ports"
+      },
+      "name": "numberOfPorts",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "height (rack units)"
+      },
+      "name": "heightRUs",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Server"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTHardware;1",
+  "@context": "dtmi:dtdl:context;2"
+}

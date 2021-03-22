@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Actuator;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc. Inverse of: observes"
+      },
+      "displayName": {
+        "en": "observed by"
+      },
+      "name": "observedBy",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
+    }
+  ],
+  "description": {
+    "en": "An actuator takes some control input and executes some real-world action based on this input. Examples include setting dampers/valves in heating/cooling systems at certain configurations, opening or closing a smart lock, turning on or off an electric radiator, etc. REC does not provide semantics for every type of actuator you might find in a building; rather we here provide classes and properties that allows users to define their own actuator models, based on the systems they have, adhering to REC."
+  },
+  "displayName": {
+    "en": "Actuator"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Capability;1",
+  "@context": "dtmi:dtdl:context;2"
+}

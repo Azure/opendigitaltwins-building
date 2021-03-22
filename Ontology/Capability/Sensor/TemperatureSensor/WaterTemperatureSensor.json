@@ -1,9 +1,9 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:core:WaterTemperatureSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:WaterTemperatureSensor;1",
   "@type": "Interface",
   "displayName": {
     "en": "Water temperature sensor"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:TemperatureSensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:TemperatureSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }
