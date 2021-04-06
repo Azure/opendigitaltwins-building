@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:OpenCloseActuator;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Open/close actuator"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:BinaryActuator;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:FanRunSensor;1",
+  "@type": "Interface",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:RunSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

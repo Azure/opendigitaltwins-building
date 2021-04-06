@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:MassFlowSetpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "MassFlowRate",
+        "Property"
+      ],
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "unit": "kilogramPerHour",
+      "writable": true
+    }
+  ],
+  "extends": "dtmi:digitaltwins:rec_3_3:device:FlowSetpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

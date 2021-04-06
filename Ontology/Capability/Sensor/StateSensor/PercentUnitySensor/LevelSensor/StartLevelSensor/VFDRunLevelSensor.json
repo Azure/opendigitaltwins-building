@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:VFDRunLevelSensor;1",
+  "@type": "Interface",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:StartLevelSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}
