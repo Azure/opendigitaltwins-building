@@ -1,0 +1,27 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:MassSensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Mass",
+        "Property"
+      ],
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "unit": "kilogram",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Mass sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

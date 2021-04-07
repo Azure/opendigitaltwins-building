@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:WeatherSensor;1",
-  "@type": "Interface",
-  "extends": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
-  "@context": "dtmi:dtdl:context;2"
-}

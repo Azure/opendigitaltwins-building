@@ -3,18 +3,6 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
-      "description": {
-        "en": "Most recently reported or set value of a core:Capability."
-      },
-      "displayName": {
-        "en": "last value"
-      },
-      "name": "lastValue",
-      "schema": "string",
-      "writable": true
-    },
-    {
       "@type": "Relationship",
       "description": {
         "en": "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc. Inverse of: observes"

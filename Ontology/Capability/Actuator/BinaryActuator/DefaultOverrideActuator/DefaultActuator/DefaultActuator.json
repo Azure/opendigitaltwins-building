@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:DefaultActuator;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Default actuator"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:DefaultOverrideActuator;1",
+  "@context": "dtmi:dtdl:context;2"
+}
