@@ -155,7 +155,7 @@
             "name": "Condensate"
           },
           {
-            "enumValue": "Compressed Air",
+            "enumValue": "CompressedAir",
             "name": "CompressedAir"
           },
           {
