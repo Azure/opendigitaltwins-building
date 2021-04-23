@@ -1,6 +1,20 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:QuantitySetpoint;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "writable": true
+    }
+  ],
   "extends": "dtmi:digitaltwins:rec_3_3:core:Setpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

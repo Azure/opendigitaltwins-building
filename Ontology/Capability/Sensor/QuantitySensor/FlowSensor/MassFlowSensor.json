@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "MassFlowRate",
-        "Property"
-      ],
+      "@type": "Property",
       "description": {
         "en": "Most recently reported or set value of a core:Capability."
       },
@@ -15,13 +12,9 @@
       },
       "name": "lastValue",
       "schema": "double",
-      "unit": "kilogramPerHour",
       "writable": true
     }
   ],
-  "displayName": {
-    "en": "Mass flow sensor"
-  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:FlowSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

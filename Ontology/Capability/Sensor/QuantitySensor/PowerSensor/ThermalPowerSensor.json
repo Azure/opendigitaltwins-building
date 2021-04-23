@@ -1,9 +1,24 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:ThermalPowerSensor;1",
   "@type": "Interface",
-  "displayName": {
-    "en": "Thermal power sensor"
-  },
+  "contents": [
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    }
+  ],
   "extends": "dtmi:digitaltwins:rec_3_3:device:PowerSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

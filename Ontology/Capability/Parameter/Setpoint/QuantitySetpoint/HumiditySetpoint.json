@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:HumiditySetpoint;1",
-  "@type": "Interface",
-  "description": {
-    "en": "Relative humidity, measures in % RH."
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
-}

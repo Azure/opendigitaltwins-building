@@ -1,27 +1,6 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:PowerSensor;1",
   "@type": "Interface",
-  "contents": [
-    {
-      "@type": [
-        "Power",
-        "Property"
-      ],
-      "description": {
-        "en": "Most recently reported or set value of a core:Capability."
-      },
-      "displayName": {
-        "en": "last value"
-      },
-      "name": "lastValue",
-      "schema": "double",
-      "unit": "watt",
-      "writable": true
-    }
-  ],
-  "displayName": {
-    "en": "Power sensor"
-  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

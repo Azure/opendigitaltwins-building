@@ -1,0 +1,6 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:VelocityPressureSensor;1",
+  "@type": "Interface",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:PressureSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

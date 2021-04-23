@@ -15,9 +15,6 @@
       "writable": true
     }
   ],
-  "displayName": {
-    "en": "Torque sensor"
-  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }
