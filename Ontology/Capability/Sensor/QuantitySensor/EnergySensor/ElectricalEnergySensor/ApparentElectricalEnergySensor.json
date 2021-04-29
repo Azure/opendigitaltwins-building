@@ -15,6 +15,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Apparent electrical energy sensor"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalEnergySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

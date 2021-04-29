@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:VFDRunLevelActuator;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "VFD run level actuator"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:StartLevelActuator;1",
   "@context": "dtmi:dtdl:context;2"
 }

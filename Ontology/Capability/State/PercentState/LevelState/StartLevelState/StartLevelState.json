@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:StartLevelState;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Start level state"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:LevelState;1",
   "@context": "dtmi:dtdl:context;2"
 }

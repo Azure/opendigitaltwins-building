@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:NormalSetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Normal setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:NormalFaultSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

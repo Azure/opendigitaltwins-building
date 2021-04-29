@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:VFDRunLevelState;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "VFD run level state"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:StartLevelState;1",
   "@context": "dtmi:dtdl:context;2"
 }

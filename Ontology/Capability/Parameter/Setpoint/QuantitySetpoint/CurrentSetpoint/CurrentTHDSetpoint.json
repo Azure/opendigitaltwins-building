@@ -15,6 +15,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Current thd setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:CurrentSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

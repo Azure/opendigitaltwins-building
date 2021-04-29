@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:StaticPressureSetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Static pressure setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:PressureSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

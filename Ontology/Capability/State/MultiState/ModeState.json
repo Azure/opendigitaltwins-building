@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:ModeState;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Mode state"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:MultiState;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -19,6 +19,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Active electrical power sensor"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalPowerSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

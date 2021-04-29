@@ -19,6 +19,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Active electrical energy setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalEnergySetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

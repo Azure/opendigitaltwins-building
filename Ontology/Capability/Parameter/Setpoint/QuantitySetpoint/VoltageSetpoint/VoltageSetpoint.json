@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:VoltageSetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Voltage setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

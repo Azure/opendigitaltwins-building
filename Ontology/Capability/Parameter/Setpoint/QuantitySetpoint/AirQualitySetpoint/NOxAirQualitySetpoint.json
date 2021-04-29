@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:NOxAirQualitySetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "N ox air quality setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:AirQualitySetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:AirQualityIndexSetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Air quality index setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:AirQualitySetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

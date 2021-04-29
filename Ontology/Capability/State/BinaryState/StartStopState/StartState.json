@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:StartState;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Start state"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:StartStopState;1",
   "@context": "dtmi:dtdl:context;2"
 }

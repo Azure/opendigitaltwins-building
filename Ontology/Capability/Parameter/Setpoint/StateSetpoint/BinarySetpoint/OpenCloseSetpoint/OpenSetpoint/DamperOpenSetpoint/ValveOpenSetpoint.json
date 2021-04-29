@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:ValveOpenSetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Valve open setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:DamperOpenSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

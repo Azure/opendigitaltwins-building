@@ -19,6 +19,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Current magnitude sensor"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:CurrentSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

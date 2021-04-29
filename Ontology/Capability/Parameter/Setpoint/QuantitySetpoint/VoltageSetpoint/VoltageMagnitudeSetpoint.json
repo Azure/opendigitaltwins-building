@@ -19,6 +19,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Voltage magnitude setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:VoltageSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

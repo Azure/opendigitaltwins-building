@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:PM001AirQualitySetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "P air quality setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:AirQualitySetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

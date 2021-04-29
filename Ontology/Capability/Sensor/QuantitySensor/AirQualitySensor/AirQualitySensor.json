@@ -18,6 +18,9 @@
   "description": {
     "en": "Measurement unit: PPM"
   },
+  "displayName": {
+    "en": "Air quality sensor"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

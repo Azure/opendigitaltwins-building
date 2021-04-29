@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:StartSensor;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Start sensor"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:StartStopSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

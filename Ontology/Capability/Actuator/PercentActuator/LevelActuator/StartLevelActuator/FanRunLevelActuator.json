@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:FanRunLevelActuator;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Fan run level actuator"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:StartLevelActuator;1",
   "@context": "dtmi:dtdl:context;2"
 }

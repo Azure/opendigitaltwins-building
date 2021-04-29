@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:StateSetpoint;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "State setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Setpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

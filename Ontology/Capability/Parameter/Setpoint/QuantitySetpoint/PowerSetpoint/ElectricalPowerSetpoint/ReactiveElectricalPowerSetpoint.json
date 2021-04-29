@@ -15,6 +15,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Reactive electrical power setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalPowerSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }
