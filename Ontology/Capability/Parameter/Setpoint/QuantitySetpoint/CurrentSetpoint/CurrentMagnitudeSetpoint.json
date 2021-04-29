@@ -1,6 +1,24 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:CurrentMagnitudeSetpoint;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Current",
+        "Property"
+      ],
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "unit": "ampere",
+      "writable": true
+    }
+  ],
   "extends": "dtmi:digitaltwins:rec_3_3:device:CurrentSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }
