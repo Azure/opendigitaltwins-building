@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:WeatherConditionState;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Weather condition state"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:ConditionState;1",
+  "@context": "dtmi:dtdl:context;2"
+}

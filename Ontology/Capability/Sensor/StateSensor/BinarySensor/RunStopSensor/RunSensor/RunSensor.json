@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:RunSensor;1",
-  "@type": "Interface",
-  "extends": "dtmi:digitaltwins:rec_3_3:device:RunStopSensor;1",
-  "@context": "dtmi:dtdl:context;2"
-}

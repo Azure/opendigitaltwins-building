@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:AbsenceState;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Absence state"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:PresenceAbsenceState;1",
   "@context": "dtmi:dtdl:context;2"
 }

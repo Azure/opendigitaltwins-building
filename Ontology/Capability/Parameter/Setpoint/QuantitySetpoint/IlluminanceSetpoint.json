@@ -19,6 +19,9 @@
       "writable": true
     }
   ],
+  "displayName": {
+    "en": "Illuminance setpoint"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }

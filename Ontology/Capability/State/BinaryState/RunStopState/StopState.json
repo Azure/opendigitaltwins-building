@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:StopState;1",
-  "@type": "Interface",
-  "extends": "dtmi:digitaltwins:rec_3_3:device:RunStopState;1",
-  "@context": "dtmi:dtdl:context;2"
-}

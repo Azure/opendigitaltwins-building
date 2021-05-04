@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:WeatherSensor;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Weather sensor"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
-  "@context": "dtmi:dtdl:context;2"
-}

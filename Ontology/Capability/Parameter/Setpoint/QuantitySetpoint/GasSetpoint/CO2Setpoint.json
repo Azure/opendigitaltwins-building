@@ -1,6 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:CO2Setpoint;1",
-  "@type": "Interface",
-  "extends": "dtmi:digitaltwins:rec_3_3:device:GasSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
-}

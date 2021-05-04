@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:PositionSetpoint;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Position setpoint"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:PercentSetpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

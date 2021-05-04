@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:OperationalState;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Operational state"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:OperationalNonOperationalState;1",
+  "@context": "dtmi:dtdl:context;2"
+}

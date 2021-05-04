@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:OnLevelActuator;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "On level actuator"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:LevelActuator;1",
+  "@context": "dtmi:dtdl:context;2"
+}

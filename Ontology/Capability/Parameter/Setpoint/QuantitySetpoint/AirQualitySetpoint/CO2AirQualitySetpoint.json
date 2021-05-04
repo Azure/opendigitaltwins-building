@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:CO2AirQualitySetpoint;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "C air quality setpoint"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:AirQualitySetpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,6 +1,9 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:OverrideSensor;1",
   "@type": "Interface",
+  "displayName": {
+    "en": "Override sensor"
+  },
   "extends": "dtmi:digitaltwins:rec_3_3:device:DefaultOverrideSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }
