@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:ReheatLevelActuator;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Reheat level actuator"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:HeatingLevelActuator;1",
-  "@context": "dtmi:dtdl:context;2"
-}

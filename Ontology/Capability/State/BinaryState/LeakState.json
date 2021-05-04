@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:LeakState;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Leak state"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:BinaryState;1",
-  "@context": "dtmi:dtdl:context;2"
-}

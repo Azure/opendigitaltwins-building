@@ -11,7 +11,7 @@
         "en": "last value"
       },
       "name": "lastValue",
-      "schema": "double",
+      "schema": "dateTime",
       "writable": true
     }
   ],

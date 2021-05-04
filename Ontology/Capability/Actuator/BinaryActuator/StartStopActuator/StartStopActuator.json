@@ -2,7 +2,7 @@
   "@id": "dtmi:digitaltwins:rec_3_3:device:StartStopActuator;1",
   "@type": "Interface",
   "displayName": {
-    "en": "Run/stop actuator"
+    "en": "Start/stop actuator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:BinaryActuator;1",
   "@context": "dtmi:dtdl:context;2"

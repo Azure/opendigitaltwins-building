@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:RunLevelActuator;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Run level actuator"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:StartLevelActuator;1",
-  "@context": "dtmi:dtdl:context;2"
-}

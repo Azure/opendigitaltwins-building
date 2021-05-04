@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:device:PercentActuator;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:TimeSpanSensor;1",
   "@type": "Interface",
   "contents": [
     {
@@ -16,8 +16,8 @@
     }
   ],
   "displayName": {
-    "en": "Percent actuator"
+    "en": "Time span sensor"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:Actuator;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
   "@context": "dtmi:dtdl:context;2"
 }

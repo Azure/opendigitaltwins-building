@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:FanRunLevelSetpoint;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Fan run level setpoint"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:StartLevelSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
-}

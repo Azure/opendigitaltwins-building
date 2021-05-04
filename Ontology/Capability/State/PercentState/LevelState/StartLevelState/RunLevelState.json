@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:RunLevelState;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Run level state"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:StartLevelState;1",
-  "@context": "dtmi:dtdl:context;2"
-}
