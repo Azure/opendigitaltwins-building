@@ -5,6 +5,36 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "zone delivery"
+      },
+      "name": "zoneDelivery",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "VAVZone",
+            "name": "VAVZone"
+          },
+          {
+            "enumValue": "MultiZone",
+            "name": "MultiZone"
+          },
+          {
+            "enumValue": "DirectZone",
+            "name": "DirectZone"
+          },
+          {
+            "enumValue": "ChilledBeamZone",
+            "name": "ChilledBeamZone"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "ventilation strategy"
       },
       "name": "ventilationStrategy",
@@ -12,20 +42,20 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "Demand",
-            "name": "Demand"
-          },
-          {
-            "enumValue": "DemandEconomizing",
-            "name": "DemandEconomizing"
+            "enumValue": "None",
+            "name": "None"
           },
           {
             "enumValue": "Economizing",
             "name": "Economizing"
           },
           {
-            "enumValue": "None",
-            "name": "None"
+            "enumValue": "DemandEconomizing",
+            "name": "DemandEconomizing"
+          },
+          {
+            "enumValue": "Demand",
+            "name": "Demand"
           }
         ],
         "valueSchema": "string"
@@ -273,36 +303,6 @@
       },
       "name": "exhaustFan",
       "schema": "dtmi:digitaltwins:rec_3_3:asset:Fan;1"
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "zone delivery"
-      },
-      "name": "zoneDelivery",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "ChilledBeamZone",
-            "name": "ChilledBeamZone"
-          },
-          {
-            "enumValue": "DirectZone",
-            "name": "DirectZone"
-          },
-          {
-            "enumValue": "MultiZone",
-            "name": "MultiZone"
-          },
-          {
-            "enumValue": "VAVZone",
-            "name": "VAVZone"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
     }
   ],
   "displayName": {
