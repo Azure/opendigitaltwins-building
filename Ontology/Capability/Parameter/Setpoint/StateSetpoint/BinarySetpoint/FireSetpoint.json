@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:FireSetpoint;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Fire setpoint"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:BinarySetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
-}
