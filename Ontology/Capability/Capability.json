@@ -5,13 +5,218 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Time when a core:Capability's value was last updated (see core:lastValue)."
+        "en": "The phenomenon that a capability measures or interacts with; e.g., a TemperatureSensor can measure air temperature or water temperature, a Flow Demand Setpoint can be configured to control steam demand or chilled water demand, etc."
       },
       "displayName": {
-        "en": "last value time"
+        "en": "substance"
       },
-      "name": "lastValueTime",
-      "schema": "dateTime",
+      "name": "phenomenon",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "SnowPrecipitation",
+            "name": "SnowPrecipitation"
+          },
+          {
+            "enumValue": "SleetPrecipitation",
+            "name": "SleetPrecipitation"
+          },
+          {
+            "enumValue": "Refrigerant",
+            "name": "Refrigerant"
+          },
+          {
+            "enumValue": "RainPrecipitation",
+            "name": "RainPrecipitation"
+          },
+          {
+            "enumValue": "Precipitation",
+            "name": "Precipitation"
+          },
+          {
+            "enumValue": "People",
+            "name": "People"
+          },
+          {
+            "enumValue": "Object",
+            "name": "Object"
+          },
+          {
+            "enumValue": "NonPotableDomesticWater",
+            "name": "NonPotableDomesticWater"
+          },
+          {
+            "enumValue": "NaturalGasFuel",
+            "name": "NaturalGasFuel"
+          },
+          {
+            "enumValue": "MediumTemperatureHotWater",
+            "name": "MediumTemperatureHotWater"
+          },
+          {
+            "enumValue": "MakeupWater",
+            "name": "MakeupWater"
+          },
+          {
+            "enumValue": "LowTemperatureHotWater",
+            "name": "LowTemperatureHotWater"
+          },
+          {
+            "enumValue": "LiquidPropaneFuel",
+            "name": "LiquidPropaneFuel"
+          },
+          {
+            "enumValue": "Light",
+            "name": "Light"
+          },
+          {
+            "enumValue": "IrrigationWater",
+            "name": "IrrigationWater"
+          },
+          {
+            "enumValue": "Ice",
+            "name": "Ice"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "HotDomesticWater",
+            "name": "HotDomesticWater"
+          },
+          {
+            "enumValue": "HighTemperatureHotWater",
+            "name": "HighTemperatureHotWater"
+          },
+          {
+            "enumValue": "HailPrecipitation",
+            "name": "HailPrecipitation"
+          },
+          {
+            "enumValue": "GasolineFuel",
+            "name": "GasolineFuel"
+          },
+          {
+            "enumValue": "FuelOilFuel",
+            "name": "FuelOilFuel"
+          },
+          {
+            "enumValue": "Fuel",
+            "name": "Fuel"
+          },
+          {
+            "enumValue": "FrostIce",
+            "name": "FrostIce"
+          },
+          {
+            "enumValue": "FreezingRainPrecipitation",
+            "name": "FreezingRainPrecipitation"
+          },
+          {
+            "enumValue": "EthernetData",
+            "name": "EthernetData"
+          },
+          {
+            "enumValue": "Electricity",
+            "name": "Electricity"
+          },
+          {
+            "enumValue": "DriveElectricity",
+            "name": "DriveElectricity"
+          },
+          {
+            "enumValue": "Drainage",
+            "name": "Drainage"
+          },
+          {
+            "enumValue": "DieselFuel",
+            "name": "DieselFuel"
+          },
+          {
+            "enumValue": "DeionizedWater",
+            "name": "DeionizedWater"
+          },
+          {
+            "enumValue": "Data",
+            "name": "Data"
+          },
+          {
+            "enumValue": "DCElectricity",
+            "name": "DCElectricity"
+          },
+          {
+            "enumValue": "CondenserWater",
+            "name": "CondenserWater"
+          },
+          {
+            "enumValue": "Condensate",
+            "name": "Condensate"
+          },
+          {
+            "enumValue": "CompressedAir",
+            "name": "CompressedAir"
+          },
+          {
+            "enumValue": "ColdDomesticWater",
+            "name": "ColdDomesticWater"
+          },
+          {
+            "enumValue": "Cloudage",
+            "name": "Cloudage"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          },
+          {
+            "enumValue": "BlowdownWater",
+            "name": "BlowdownWater"
+          },
+          {
+            "enumValue": "Air",
+            "name": "Air"
+          },
+          {
+            "enumValue": "ACElectricity",
+            "name": "ACElectricity"
+          },
+          {
+            "enumValue": "Solar",
+            "name": "Solar"
+          },
+          {
+            "enumValue": "SprinklerWater",
+            "name": "SprinklerWater"
+          },
+          {
+            "enumValue": "Steam",
+            "name": "Steam"
+          },
+          {
+            "enumValue": "StormDrainage",
+            "name": "StormDrainage"
+          },
+          {
+            "enumValue": "WasteVentDrainage",
+            "name": "WasteVentDrainage"
+          },
+          {
+            "enumValue": "Water",
+            "name": "Water"
+          },
+          {
+            "enumValue": "WiFiData",
+            "name": "WiFiData"
+          },
+          {
+            "enumValue": "Wind",
+            "name": "Wind"
+          }
+        ],
+        "valueSchema": "string"
+      },
       "writable": true
     },
     {
@@ -60,6 +265,131 @@
       },
       "name": "name",
       "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The capability position relative to the system or space that it interacts with. E.g., a water temperature sensor can be positioned on the supply or return flow, air humidity can be measured entering or leaving a system, etc."
+      },
+      "displayName": {
+        "en": "position"
+      },
+      "name": "position",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Azimuth",
+            "name": "Azimuth"
+          },
+          {
+            "enumValue": "Bypass",
+            "name": "Bypass"
+          },
+          {
+            "enumValue": "Circulating",
+            "name": "Circulating"
+          },
+          {
+            "enumValue": "Delta",
+            "name": "Delta"
+          },
+          {
+            "enumValue": "Discharge",
+            "name": "Discharge"
+          },
+          {
+            "enumValue": "Download",
+            "name": "Download"
+          },
+          {
+            "enumValue": "Economizer",
+            "name": "Economizer"
+          },
+          {
+            "enumValue": "Entering",
+            "name": "Entering"
+          },
+          {
+            "enumValue": "Exhaust",
+            "name": "Exhaust"
+          },
+          {
+            "enumValue": "Export",
+            "name": "Export"
+          },
+          {
+            "enumValue": "Header",
+            "name": "Header"
+          },
+          {
+            "enumValue": "Import",
+            "name": "Import"
+          },
+          {
+            "enumValue": "Input",
+            "name": "Input"
+          },
+          {
+            "enumValue": "Leaving",
+            "name": "Leaving"
+          },
+          {
+            "enumValue": "Mixed",
+            "name": "Mixed"
+          },
+          {
+            "enumValue": "Net",
+            "name": "Net"
+          },
+          {
+            "enumValue": "Output",
+            "name": "Output"
+          },
+          {
+            "enumValue": "Outside",
+            "name": "Outside"
+          },
+          {
+            "enumValue": "Return",
+            "name": "Return"
+          },
+          {
+            "enumValue": "Supply",
+            "name": "Supply"
+          },
+          {
+            "enumValue": "Underfloor",
+            "name": "Underfloor"
+          },
+          {
+            "enumValue": "Upload",
+            "name": "Upload"
+          },
+          {
+            "enumValue": "Zenith",
+            "name": "Zenith"
+          },
+          {
+            "enumValue": "Zone",
+            "name": "Zone"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Time when a core:Capability's value was last updated (see core:lastValue)."
+      },
+      "displayName": {
+        "en": "last value time"
+      },
+      "name": "lastValueTime",
+      "schema": "dateTime",
       "writable": true
     }
   ],

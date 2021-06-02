@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:HumidityRatioSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Humidity ratio sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:HumiditySensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

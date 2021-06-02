@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:ResetSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Reset sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:DefaultSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

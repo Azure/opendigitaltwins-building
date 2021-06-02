@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:ModeSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Mode sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:MultiStateSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

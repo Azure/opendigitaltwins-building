@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:OffSetpoint;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Off setpoint"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:OnOffSetpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

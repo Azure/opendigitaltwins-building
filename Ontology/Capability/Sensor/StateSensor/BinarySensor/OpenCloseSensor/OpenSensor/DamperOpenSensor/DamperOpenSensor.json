@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:DamperOpenSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Damper open sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:OpenSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:PositionSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Position sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:PercentSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

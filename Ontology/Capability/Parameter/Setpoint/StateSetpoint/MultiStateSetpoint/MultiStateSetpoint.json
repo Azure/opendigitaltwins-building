@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:MultiStateSetpoint;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Multi state setpoint"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:StateSetpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

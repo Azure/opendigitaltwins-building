@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:LevelSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Level sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:PercentSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:StartLevelSetpoint;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Start level setpoint"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:LevelSetpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

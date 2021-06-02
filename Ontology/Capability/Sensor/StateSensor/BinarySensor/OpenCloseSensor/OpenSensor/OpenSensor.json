@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:OpenSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Open sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:OpenCloseSensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}

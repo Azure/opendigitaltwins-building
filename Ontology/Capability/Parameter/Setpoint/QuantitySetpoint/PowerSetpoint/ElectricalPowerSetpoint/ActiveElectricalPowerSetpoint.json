@@ -1,0 +1,27 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:ActiveElectricalPowerSetpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "description": {
+        "en": "Most recently reported or set value of a core:Capability."
+      },
+      "displayName": {
+        "en": "last value"
+      },
+      "name": "lastValue",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Active electrical power setpoint"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalPowerSetpoint;1",
+  "@context": "dtmi:dtdl:context;2"
+}

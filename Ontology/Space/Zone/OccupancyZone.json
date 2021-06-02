@@ -1,8 +1,11 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:core:OccupancyZone;1",
   "@type": "Interface",
+  "description": {
+    "en": "Occupancy Zone is a spatial area where devices are monitoring or reporting on the concept of Occupancy (motion sensors, people counters, cameras, etc.)"
+  },
   "displayName": {
-    "en": "Occupancy Zone"
+    "en": "Occupancy zone"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Zone;1",
   "@context": "dtmi:dtdl:context;2"
