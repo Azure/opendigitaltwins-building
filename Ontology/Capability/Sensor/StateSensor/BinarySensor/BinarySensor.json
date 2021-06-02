@@ -8,9 +8,12 @@
   "contents": [
     {
       "@type": "Property",
+      "description": {
+        "en": "Most recently reported or set value of a device:BinarySensor."
+      },
       "name": "lastValue",
       "displayName": {
-        "en": "Last Value"
+        "en": "last value"
       },
       "writable": true,
       "schema": "boolean"
