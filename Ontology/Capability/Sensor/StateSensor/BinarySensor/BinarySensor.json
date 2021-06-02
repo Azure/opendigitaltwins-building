@@ -5,5 +5,20 @@
     "en": "Binary sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:StateSensor;1",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Most recently reported or set value of a device:BinarySensor."
+      },
+      "name": "lastValue",
+      "displayName": {
+        "en": "last value"
+      },
+      "writable": true,
+      "schema": "boolean"
+    }
+    
+  ],
   "@context": "dtmi:dtdl:context;2"
 }
