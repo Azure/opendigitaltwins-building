@@ -1,24 +1,23 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:device:BinarySensor;1",
   "@type": "Interface",
-  "displayName": {
-    "en": "Binary sensor"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:StateSensor;1",
   "contents": [
     {
       "@type": "Property",
       "description": {
-        "en": "Most recently reported or set value of a device:BinarySensor."
+        "en": "Most recently reported or set value of a core:Capability."
       },
-      "name": "lastValue",
       "displayName": {
         "en": "last value"
       },
-      "writable": true,
-      "schema": "boolean"
+      "name": "lastValue",
+      "schema": "boolean",
+      "writable": true
     }
-    
   ],
+  "displayName": {
+    "en": "Binary sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:StateSensor;1",
   "@context": "dtmi:dtdl:context;2"
 }
