@@ -15,18 +15,6 @@
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
           {
-            "enumValue": "SnowPrecipitation",
-            "name": "SnowPrecipitation"
-          },
-          {
-            "enumValue": "SleetPrecipitation",
-            "name": "SleetPrecipitation"
-          },
-          {
-            "enumValue": "Refrigerant",
-            "name": "Refrigerant"
-          },
-          {
             "enumValue": "RainPrecipitation",
             "name": "RainPrecipitation"
           },
@@ -115,6 +103,10 @@
             "name": "FreezingRainPrecipitation"
           },
           {
+            "enumValue": "Fire",
+            "name": "Fire"
+          },
+          {
             "enumValue": "EthernetData",
             "name": "EthernetData"
           },
@@ -183,8 +175,28 @@
             "name": "ACElectricity"
           },
           {
+            "enumValue": "Refrigerant",
+            "name": "Refrigerant"
+          },
+          {
+            "enumValue": "SleetPrecipitation",
+            "name": "SleetPrecipitation"
+          },
+          {
+            "enumValue": "Smoke",
+            "name": "Smoke"
+          },
+          {
+            "enumValue": "SnowPrecipitation",
+            "name": "SnowPrecipitation"
+          },
+          {
             "enumValue": "Solar",
             "name": "Solar"
+          },
+          {
+            "enumValue": "Sound",
+            "name": "Sound"
           },
           {
             "enumValue": "SprinklerWater",
@@ -228,6 +240,14 @@
         "en": "serves"
       },
       "name": "serves"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "tags"
+      },
+      "name": "tags",
+      "schema": "dtmi:digitaltwins:rec_3_3:device:CapabilityTagSet;1"
     },
     {
       "@type": "Relationship",

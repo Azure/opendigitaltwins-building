@@ -1,0 +1,205 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityTagSet;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "capabilityAssetComponent",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Battery",
+            "name": "Battery"
+          },
+          {
+            "enumValue": "Coil",
+            "name": "Coil"
+          },
+          {
+            "enumValue": "Compressor",
+            "name": "Compressor"
+          },
+          {
+            "enumValue": "Condenser",
+            "name": "Condenser"
+          },
+          {
+            "enumValue": "CoolingCoil",
+            "name": "CoolingCoil"
+          },
+          {
+            "enumValue": "Damper",
+            "name": "Damper"
+          },
+          {
+            "enumValue": "Evaporator",
+            "name": "Evaporator"
+          },
+          {
+            "enumValue": "Fan",
+            "name": "Fan"
+          },
+          {
+            "enumValue": "Filter",
+            "name": "Filter"
+          },
+          {
+            "enumValue": "HeatingCoil",
+            "name": "HeatingCoil"
+          },
+          {
+            "enumValue": "Motor",
+            "name": "Motor"
+          },
+          {
+            "enumValue": "VFD",
+            "name": "VFD"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "capabilityElectricalPhase",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "A",
+            "name": "A"
+          },
+          {
+            "enumValue": "AB",
+            "name": "AB"
+          },
+          {
+            "enumValue": "B",
+            "name": "B"
+          },
+          {
+            "enumValue": "BC",
+            "name": "BC"
+          },
+          {
+            "enumValue": "C",
+            "name": "C"
+          },
+          {
+            "enumValue": "CA",
+            "name": "CA"
+          },
+          {
+            "enumValue": "N",
+            "name": "N"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "capabilityHVACMode",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Cooldown",
+            "name": "Cooldown"
+          },
+          {
+            "enumValue": "Cooling",
+            "name": "Cooling"
+          },
+          {
+            "enumValue": "Depressurize",
+            "name": "Depressurize"
+          },
+          {
+            "enumValue": "Economizing",
+            "name": "Economizing"
+          },
+          {
+            "enumValue": "Heating",
+            "name": "Heating"
+          },
+          {
+            "enumValue": "Manual",
+            "name": "Manual"
+          },
+          {
+            "enumValue": "Pressurize",
+            "name": "Pressurize"
+          },
+          {
+            "enumValue": "Purge",
+            "name": "Purge"
+          },
+          {
+            "enumValue": "Reheat",
+            "name": "Reheat"
+          },
+          {
+            "enumValue": "Warmup",
+            "name": "Warmup"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "capabilityLimit",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Maximum",
+            "name": "Maximum"
+          },
+          {
+            "enumValue": "Minimum",
+            "name": "Minimum"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "capabilityOccupancyMode",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Occupied",
+            "name": "Occupied"
+          },
+          {
+            "enumValue": "Standby",
+            "name": "Standby"
+          },
+          {
+            "enumValue": "Unoccupied",
+            "name": "Unoccupied"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Encapuslates a set of tags that may be applicable to Capability instances."
+  },
+  "displayName": {
+    "en": "Capability tag set"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:core:TagSet;1",
+  "@context": "dtmi:dtdl:context;2"
+}
