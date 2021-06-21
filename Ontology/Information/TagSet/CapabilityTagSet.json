@@ -4,105 +4,7 @@
   "contents": [
     {
       "@type": "Property",
-      "name": "capabilityAssetComponent",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "Battery",
-            "name": "Battery"
-          },
-          {
-            "enumValue": "Coil",
-            "name": "Coil"
-          },
-          {
-            "enumValue": "Compressor",
-            "name": "Compressor"
-          },
-          {
-            "enumValue": "Condenser",
-            "name": "Condenser"
-          },
-          {
-            "enumValue": "CoolingCoil",
-            "name": "CoolingCoil"
-          },
-          {
-            "enumValue": "Damper",
-            "name": "Damper"
-          },
-          {
-            "enumValue": "Evaporator",
-            "name": "Evaporator"
-          },
-          {
-            "enumValue": "Fan",
-            "name": "Fan"
-          },
-          {
-            "enumValue": "Filter",
-            "name": "Filter"
-          },
-          {
-            "enumValue": "HeatingCoil",
-            "name": "HeatingCoil"
-          },
-          {
-            "enumValue": "Motor",
-            "name": "Motor"
-          },
-          {
-            "enumValue": "VFD",
-            "name": "VFD"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "name": "capabilityElectricalPhase",
-      "dtmi:dtdl:property:schema;2": {
-        "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
-          {
-            "enumValue": "A",
-            "name": "A"
-          },
-          {
-            "enumValue": "AB",
-            "name": "AB"
-          },
-          {
-            "enumValue": "B",
-            "name": "B"
-          },
-          {
-            "enumValue": "BC",
-            "name": "BC"
-          },
-          {
-            "enumValue": "C",
-            "name": "C"
-          },
-          {
-            "enumValue": "CA",
-            "name": "CA"
-          },
-          {
-            "enumValue": "N",
-            "name": "N"
-          }
-        ],
-        "valueSchema": "string"
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "name": "capabilityHVACMode",
+      "name": "HVACMode",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
@@ -153,7 +55,64 @@
     },
     {
       "@type": "Property",
-      "name": "capabilityLimit",
+      "displayName": {
+        "en": "demand"
+      },
+      "name": "demand",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "effective"
+      },
+      "name": "effective",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "electricalPhase",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "A",
+            "name": "A"
+          },
+          {
+            "enumValue": "AB",
+            "name": "AB"
+          },
+          {
+            "enumValue": "B",
+            "name": "B"
+          },
+          {
+            "enumValue": "BC",
+            "name": "BC"
+          },
+          {
+            "enumValue": "C",
+            "name": "C"
+          },
+          {
+            "enumValue": "CA",
+            "name": "CA"
+          },
+          {
+            "enumValue": "N",
+            "name": "N"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "limit",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
@@ -172,7 +131,7 @@
     },
     {
       "@type": "Property",
-      "name": "capabilityOccupancyMode",
+      "name": "occupancyMode",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
@@ -191,6 +150,15 @@
         ],
         "valueSchema": "string"
       },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "stage"
+      },
+      "name": "stage",
+      "schema": "integer",
       "writable": true
     }
   ],
