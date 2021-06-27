@@ -1,0 +1,41 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:Information;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A generic catch-all superclass for all kinds of intangible REC types used in a broad variety of contexts, e.g., configurations, tags, data series, etc."
+  },
+  "displayName": {
+    "en": "Information"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}
