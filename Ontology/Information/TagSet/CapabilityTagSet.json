@@ -4,6 +4,12 @@
   "contents": [
     {
       "@type": "Property",
+      "description": {
+        "en": "Operational mode for HVAC equipment (Project Haystack)."
+      },
+      "displayName": {
+        "en": "HVAC mode"
+      },
       "name": "HVACMode",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
@@ -55,6 +61,9 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "Rate required for a process. For a setpoint, this sets the required rate for a process such as cooling, heating, air flow, or water flow. For a sensor, this measures the rate of a process over a given interval such as electrical power demand or cooling energy demand."
+      },
       "displayName": {
         "en": "demand"
       },
@@ -64,6 +73,9 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "Current control setpoint in effect taking into account other factors (Project Haystack)."
+      },
       "displayName": {
         "en": "effective"
       },
@@ -73,6 +85,12 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "Phase measurement in a three-phase electrical system (Project Haystack)."
+      },
+      "displayName": {
+        "en": "electrical phase"
+      },
       "name": "electricalPhase",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
@@ -112,6 +130,12 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "Parameter that places and upper (maximum) or lower (minimum) bound on permitted values of another capability."
+      },
+      "displayName": {
+        "en": "limit"
+      },
       "name": "limit",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
@@ -131,6 +155,12 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "Mode which defines how to control a space based on occupancy status."
+      },
+      "displayName": {
+        "en": "occupancy mode"
+      },
       "name": "occupancyMode",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
@@ -154,6 +184,351 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "The phenomenon that a capability measures or interacts with; e.g., a TemperatureSensor can measure air temperature or water temperature, a Flow Demand Setpoint can be configured to control steam demand or chilled water demand, etc."
+      },
+      "displayName": {
+        "en": "phenomenon"
+      },
+      "name": "phenomenon",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "ACElectricity",
+            "name": "ACElectricity"
+          },
+          {
+            "enumValue": "Air",
+            "name": "Air"
+          },
+          {
+            "enumValue": "BlowdownWater",
+            "name": "BlowdownWater"
+          },
+          {
+            "enumValue": "ChilledWater",
+            "name": "ChilledWater"
+          },
+          {
+            "enumValue": "Cloudage",
+            "name": "Cloudage"
+          },
+          {
+            "enumValue": "ColdDomesticWater",
+            "name": "ColdDomesticWater"
+          },
+          {
+            "enumValue": "CompressedAir",
+            "name": "CompressedAir"
+          },
+          {
+            "enumValue": "Condensate",
+            "name": "Condensate"
+          },
+          {
+            "enumValue": "CondenserWater",
+            "name": "CondenserWater"
+          },
+          {
+            "enumValue": "DCElectricity",
+            "name": "DCElectricity"
+          },
+          {
+            "enumValue": "Data",
+            "name": "Data"
+          },
+          {
+            "enumValue": "DeionizedWater",
+            "name": "DeionizedWater"
+          },
+          {
+            "enumValue": "DieselFuel",
+            "name": "DieselFuel"
+          },
+          {
+            "enumValue": "Drainage",
+            "name": "Drainage"
+          },
+          {
+            "enumValue": "DriveElectricity",
+            "name": "DriveElectricity"
+          },
+          {
+            "enumValue": "Electricity",
+            "name": "Electricity"
+          },
+          {
+            "enumValue": "EthernetData",
+            "name": "EthernetData"
+          },
+          {
+            "enumValue": "Fire",
+            "name": "Fire"
+          },
+          {
+            "enumValue": "FreezingRainPrecipitation",
+            "name": "FreezingRainPrecipitation"
+          },
+          {
+            "enumValue": "FrostIce",
+            "name": "FrostIce"
+          },
+          {
+            "enumValue": "Fuel",
+            "name": "Fuel"
+          },
+          {
+            "enumValue": "FuelOilFuel",
+            "name": "FuelOilFuel"
+          },
+          {
+            "enumValue": "GasolineFuel",
+            "name": "GasolineFuel"
+          },
+          {
+            "enumValue": "HailPrecipitation",
+            "name": "HailPrecipitation"
+          },
+          {
+            "enumValue": "HighTemperatureHotWater",
+            "name": "HighTemperatureHotWater"
+          },
+          {
+            "enumValue": "HotDomesticWater",
+            "name": "HotDomesticWater"
+          },
+          {
+            "enumValue": "HotWater",
+            "name": "HotWater"
+          },
+          {
+            "enumValue": "Ice",
+            "name": "Ice"
+          },
+          {
+            "enumValue": "IrrigationWater",
+            "name": "IrrigationWater"
+          },
+          {
+            "enumValue": "Light",
+            "name": "Light"
+          },
+          {
+            "enumValue": "LiquidPropaneFuel",
+            "name": "LiquidPropaneFuel"
+          },
+          {
+            "enumValue": "LowTemperatureHotWater",
+            "name": "LowTemperatureHotWater"
+          },
+          {
+            "enumValue": "MakeupWater",
+            "name": "MakeupWater"
+          },
+          {
+            "enumValue": "MediumTemperatureHotWater",
+            "name": "MediumTemperatureHotWater"
+          },
+          {
+            "enumValue": "NaturalGasFuel",
+            "name": "NaturalGasFuel"
+          },
+          {
+            "enumValue": "NonPotableDomesticWater",
+            "name": "NonPotableDomesticWater"
+          },
+          {
+            "enumValue": "Object",
+            "name": "Object"
+          },
+          {
+            "enumValue": "People",
+            "name": "People"
+          },
+          {
+            "enumValue": "Precipitation",
+            "name": "Precipitation"
+          },
+          {
+            "enumValue": "RainPrecipitation",
+            "name": "RainPrecipitation"
+          },
+          {
+            "enumValue": "Refrigerant",
+            "name": "Refrigerant"
+          },
+          {
+            "enumValue": "SleetPrecipitation",
+            "name": "SleetPrecipitation"
+          },
+          {
+            "enumValue": "Smoke",
+            "name": "Smoke"
+          },
+          {
+            "enumValue": "SnowPrecipitation",
+            "name": "SnowPrecipitation"
+          },
+          {
+            "enumValue": "Solar",
+            "name": "Solar"
+          },
+          {
+            "enumValue": "Sound",
+            "name": "Sound"
+          },
+          {
+            "enumValue": "SprinklerWater",
+            "name": "SprinklerWater"
+          },
+          {
+            "enumValue": "Steam",
+            "name": "Steam"
+          },
+          {
+            "enumValue": "StormDrainage",
+            "name": "StormDrainage"
+          },
+          {
+            "enumValue": "WasteVentDrainage",
+            "name": "WasteVentDrainage"
+          },
+          {
+            "enumValue": "Water",
+            "name": "Water"
+          },
+          {
+            "enumValue": "WiFiData",
+            "name": "WiFiData"
+          },
+          {
+            "enumValue": "Wind",
+            "name": "Wind"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The capability position relative to the system or space that it interacts with. E.g., a water temperature sensor can be positioned on the supply or return flow, air humidity can be measured entering or leaving a system, etc."
+      },
+      "displayName": {
+        "en": "position"
+      },
+      "name": "position",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Azimuth",
+            "name": "Azimuth"
+          },
+          {
+            "enumValue": "Bypass",
+            "name": "Bypass"
+          },
+          {
+            "enumValue": "Circulating",
+            "name": "Circulating"
+          },
+          {
+            "enumValue": "Delta",
+            "name": "Delta"
+          },
+          {
+            "enumValue": "Discharge",
+            "name": "Discharge"
+          },
+          {
+            "enumValue": "Download",
+            "name": "Download"
+          },
+          {
+            "enumValue": "Economizer",
+            "name": "Economizer"
+          },
+          {
+            "enumValue": "Entering",
+            "name": "Entering"
+          },
+          {
+            "enumValue": "Exhaust",
+            "name": "Exhaust"
+          },
+          {
+            "enumValue": "Export",
+            "name": "Export"
+          },
+          {
+            "enumValue": "Header",
+            "name": "Header"
+          },
+          {
+            "enumValue": "Import",
+            "name": "Import"
+          },
+          {
+            "enumValue": "Input",
+            "name": "Input"
+          },
+          {
+            "enumValue": "Leaving",
+            "name": "Leaving"
+          },
+          {
+            "enumValue": "Mixed",
+            "name": "Mixed"
+          },
+          {
+            "enumValue": "Net",
+            "name": "Net"
+          },
+          {
+            "enumValue": "Output",
+            "name": "Output"
+          },
+          {
+            "enumValue": "Outside",
+            "name": "Outside"
+          },
+          {
+            "enumValue": "Return",
+            "name": "Return"
+          },
+          {
+            "enumValue": "Supply",
+            "name": "Supply"
+          },
+          {
+            "enumValue": "Underfloor",
+            "name": "Underfloor"
+          },
+          {
+            "enumValue": "Upload",
+            "name": "Upload"
+          },
+          {
+            "enumValue": "Zenith",
+            "name": "Zenith"
+          },
+          {
+            "enumValue": "Zone",
+            "name": "Zone"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Stage number of a control loop for an equipment, equipment group, or system that is defined by the process controller. The first stage is 1, second stage 2, etc. (Project Haystack)."
+      },
       "displayName": {
         "en": "stage"
       },
