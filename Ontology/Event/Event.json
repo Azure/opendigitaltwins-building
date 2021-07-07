@@ -3,6 +3,16 @@
   "@type": "Interface",
   "contents": [
     {
+      "@type": "Relationship",
+      "description": {
+        "en": "The entity responsible for generating or producing the event."
+      },
+      "displayName": {
+        "en": "Produced By"
+      },
+      "name": "producedBy"
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "has updated time"
