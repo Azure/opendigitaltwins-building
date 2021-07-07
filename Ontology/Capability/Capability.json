@@ -83,6 +83,86 @@
       "name": "name",
       "schema": "string",
       "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "unit",
+      "displayName": {
+        "en": "Unit"
+      },
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "validValues",
+      "displayName": {
+        "en": "Valid Values"
+      },
+      "writable": true,
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "minimum",
+            "displayName": {
+              "en": "Minimum"
+            },
+            "schema": "double"
+          },
+          {
+            "name": "maximum",
+            "displayName": {
+              "en": "Maximum"
+            },
+            "schema": "double"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "interpolation",
+      "displayName": {
+        "en": "Interpolation"
+      },
+      "writable": true,
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "linear",
+            "displayName": {
+              "en": "linear"
+            },
+            "enumValue": "linear"
+          },
+          {
+            "name": "stepForward",
+            "displayName": {
+              "en": "Step Forward"
+            },
+            "enumValue": "stepForward"
+          },
+          {
+            "name": "stepBackward",
+            "displayName": {
+              "en": "Step Backward"
+            },
+            "enumValue": "stepBackward"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "totalized",
+      "displayName": {
+        "en": "Totalized"
+      },
+      "writable": true,
+      "schema": "boolean"
     }
   ],
   "description": {
