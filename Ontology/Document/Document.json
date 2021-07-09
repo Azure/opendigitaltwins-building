@@ -3,6 +3,21 @@
   "@type": "Interface",
   "contents": [
     {
+      "@type": "Relationship",
+      "name": "isDocumentOf",
+      "displayName": {
+        "en": "is document of"
+      }
+    },
+    {
+      "@type": "Relationship",
+      "name": "includedIn",
+      "displayName": {
+        "en": "included in"
+      },
+      "target": "dtmi:digitaltwins:rec_3_3:core:Collection;1"
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "URL"

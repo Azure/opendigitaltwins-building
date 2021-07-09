@@ -120,6 +120,14 @@
       "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
     },
     {
+      "@type": "Relationship",
+      "name": "hasDocument",
+      "displayName": {
+        "en": "has document"
+      },
+      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "External IDs"

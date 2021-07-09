@@ -43,6 +43,20 @@
       "name": "isCapabilityOf"
     },
     {
+      "@type": "Relationship",
+      "name": "hostedBy",
+      "displayName": {
+        "en": "hosted by"
+      }
+    },
+    {
+      "@type": "Relationship",
+      "name": "isControlledBy",
+      "displayName": {
+        "en": "is controlled by"
+      }
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "External IDs"
