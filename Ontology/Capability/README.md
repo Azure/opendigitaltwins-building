@@ -8,9 +8,9 @@ When the digital twin connects to a system or source of data, a capability twin 
 
 It's important to understand the difference between a `capability` and other entities such as an `asset`. A `capability` is a virtual concept while an `asset` is a physical object. For example, a physical asset of a `sensor equipment` may have one or more capabilities such as `occupancy sensor`, `temperature sensor`, and `illuminance sensor`.
 
-This guide will provide an understanding of how to become familiar with the capabiltiy data model, define capabilty twins and recommendations for how to best use the ontology.
+This guide will provide an understanding of how to become familiar with the capability data model, define capability twins and recommendations for how to best use the ontology.
 
-## Capabiltiy Models
+## Capability Models
 The `Capability` model class has been sub-classified in several ways that enable the implementer to give semantics to the type of data that the capability is referencing. The concept of using classification and model inheritance provides a few benefits over an alternative approach such as tagging:
 * Model classification promotes structure and consistancy compared to ad-hoc tags
 * Model classification promotes understanding over flexibility. A tag by itself only has context in terms of how it gets used with other tags.
@@ -55,10 +55,10 @@ Within the State Kind class, there are three sub-classes which are defined by th
 Each of the above State Kind classes are further sub-classed to give context to the type of State that is being sensed, actuated, configured, or maintained. The State Kind subclass names (i.e. OnOff, Mode, and Position) are common across each of the top-level Capability sub-classes of `Sensor`, `Actuator`, and `Parameter\Setpoint`. However, these top-level sub-classes do not use multiple inheritance of a common StateKind class. As such, clients can query across these top-level classes (i.e. TemperatureSensor and TemperatureSetpoint) by using a string match function such as `STARTSWITH`.
 
 ## Capability Properties
-The Capability models maintain several **properties** which allow additional metadata on the twin to provide context to 1) classificaiton 2) values and 3) communication configuration. The properties also maintain the latest value the twin received from the connected entity (`lastValue`) and the time at which it was sampled or reported by the connected entity (`lastValueTime`).
+The Capability models maintain several **properties** which allow additional metadata on the twin to provide context to 1) classification 2) values and 3) communication configuration. The properties also maintain the latest value the twin received from the connected entity (`lastValue`) and the time at which it was sampled or reported by the connected entity (`lastValueTime`).
 
 ### Tags Properties
-The Capabiltiy models described above provide a great means of classifying based on **function** and **kind** which brings consistency and inheritence to these two common means by which a Capability is defined and would be queried. However, most impelementations of a digital twin desire additional metadata context to query, analyze, and filter amongs twins of the same model. Because there are many ways in which a capability could be classified in the real world, there are too many combinations to pre-define models for every possible real-world scneario. The use of properties within the **tags** component allows the flexibility to add context to the base set of models which have been defined above.
+The Capability models described above provide a great means of classifying based on **function** and **kind** which brings consistency and inheritence to these two common means by which a Capability is defined and would be queried. However, most impelementations of a digital twin desire additional metadata context to query, analyze, and filter amongs twins of the same model. Because there are many ways in which a capability could be classified in the real world, there are too many combinations to pre-define models for every possible real-world scneario. The use of properties within the **tags** component allows the flexibility to add context to the base set of models which have been defined above.
 
 The following [**tags**](https://github.com/Azure/opendigitaltwins-building/blob/master/Ontology/Information/TagSet/CapabilityTagSet.json) allow the implementer to define that additional context upon creating a capability twin. These provide similar functionality of tags in that they add meaning to the type of capability; however, they differ in implementation. Because these are defined as Properties in the DTDL Capability model, the twin maintains a *key-value pair* which provides the context in the *key* as to why the *value* of the property has been set. Additionally, the properties have been defined as disjoint enumerations which provides additional structure to the ontology over a taging dictionary.
 
@@ -130,19 +130,19 @@ Because `lastValue` can have many different data schemas (i.e. boolean, number, 
 
 The `lastValueTime` property accompanies `lastValue` to record the timestamp in which the value is attributed. Because connected systems vary in how they present the timestamp, the meaning of this property can change slightly. For example, this time may represent when a sensor sampled the environment or it may represent when the gateway which the sensor sends data through requested the sampled value.
 
-#### Unit
+#### Unit (Proposed)
 The `unit` property should be defined for all of the `Quantity Kind` capabilities. At this time, it is a **string** data schema which allows the user to input any text value. However, it is recommended to align on a common dictionary of units such that unit conversations can be performed by client applications, analytics, and reporting.
 
 In the future, the `unit` property may be deprecated to take advantage of [DTDL Semantic Types](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md#semantic-types). Because DTDL semantic types require units to be defined in the DTDL models, this requires units to be normalized prior to twin creation and all time series data ingested to be transformed prior to being stored. Therefore, we have chosen not to adopt these in the DTDL ontology at this time in favor of storing the ingested data in the same units as its being produced by the connected system.
 
-#### Valid Values
+#### Valid Values (Proposed)
 The `validValues` property is an object which contains `minimum` and `maximum` properties. These define a valid range for the `lastValue` to be within. The `validValues` property is only applicable for numeric value schemas such as a **double** and not **boolean** or **string**.
 
 These properties are commonly set within the controller of a connected system as dedicated capabilities such as a `Minimum/Maximum Temperature Setpoint`. These properties may also be defined by the user directly in the digital twin.
 
 When defined on a `sensor` or `state`, this range represents the valid values reported in normal operation. If values are outside of the range, the sensor is considered in a fault state. When defined on an `actuator` or `setpoint`, this range represents valid values that a user or application can update or command the capability.
 
-#### Interpolation
+#### Interpolation (Proposed)
 The `interpolation` property defines how the time series data should be filled in between samples. This is required to understand how to interpret time series data that comes in at different intervals and aggregate it for analytics and reporting. Interpolation is a common process for signal reconstruction, time bucketing, and filling in gaps. This property is an enum which can be set to **linear**, **stepForward**, or **stepBackward** described as follows:
 
 | Interpolation | Description | Use Case |
@@ -151,7 +151,7 @@ The `interpolation` property defines how the time series data should be filled i
 | **stepForward** | Performs a forward fill of the previous value found in a time series | Data known to be reported as it changes value. |
 | **stepBackward** (Least common) | Performs a backward fill of the next value found in a time series | Data sampled that cannot be assumed continuous. |
 
-#### Totalized
+#### Totalized (Proposed)
 The `totalized` property is a boolean which defines a capability that is continuously counting upward. This is common in **metering**. In order to determine consumption within a desired time interval, the delta between two values must be calculated as an aggregate. This property is only applicable for numeric value schemas such as **double**.
 
 ## Capability Relationships
