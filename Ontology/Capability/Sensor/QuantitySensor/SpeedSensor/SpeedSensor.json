@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:device:SpeedSensor;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Speed sensor"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
+  "@context": "dtmi:dtdl:context;2"
+}
