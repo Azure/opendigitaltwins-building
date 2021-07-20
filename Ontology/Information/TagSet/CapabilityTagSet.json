@@ -421,6 +421,10 @@
             "name": "Ice"
           },
           {
+            "enumValue": "InfraredLight",
+            "name": "InfraredLight"
+          },
+          {
             "enumValue": "IrrigationWater",
             "name": "IrrigationWater"
           },
@@ -504,6 +508,10 @@
             "enumValue": "StormDrainage",
             "name": "StormDrainage"
           },
+          {
+            "enumValue": "UltravioletLight",
+            "name": "UltravioletLight"
+          },  
           {
             "enumValue": "Urea",
             "name": "Urea"
