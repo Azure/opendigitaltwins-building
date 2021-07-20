@@ -130,19 +130,19 @@ Because `lastValue` can have many different data schemas (i.e. boolean, number, 
 
 The `lastValueTime` property accompanies `lastValue` to record the timestamp in which the value is attributed. Because connected systems vary in how they present the timestamp, the meaning of this property can change slightly. For example, this time may represent when a sensor sampled the environment or it may represent when the gateway which the sensor sends data through requested the sampled value.
 
-#### Unit
+#### Unit (Proposed)
 The `unit` property should be defined for all of the `Quantity Kind` capabilities. At this time, it is a **string** data schema which allows the user to input any text value. However, it is recommended to align on a common dictionary of units such that unit conversations can be performed by client applications, analytics, and reporting.
 
 In the future, the `unit` property may be deprecated to take advantage of [DTDL Semantic Types](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md#semantic-types). Because DTDL semantic types require units to be defined in the DTDL models, this requires units to be normalized prior to twin creation and all time series data ingested to be transformed prior to being stored. Therefore, we have chosen not to adopt these in the DTDL ontology at this time in favor of storing the ingested data in the same units as its being produced by the connected system.
 
-#### Valid Values
+#### Valid Values (Proposed)
 The `validValues` property is an object which contains `minimum` and `maximum` properties. These define a valid range for the `lastValue` to be within. The `validValues` property is only applicable for numeric value schemas such as a **double** and not **boolean** or **string**.
 
 These properties are commonly set within the controller of a connected system as dedicated capabilities such as a `Minimum/Maximum Temperature Setpoint`. These properties may also be defined by the user directly in the digital twin.
 
 When defined on a `sensor` or `state`, this range represents the valid values reported in normal operation. If values are outside of the range, the sensor is considered in a fault state. When defined on an `actuator` or `setpoint`, this range represents valid values that a user or application can update or command the capability.
 
-#### Interpolation
+#### Interpolation (Proposed)
 The `interpolation` property defines how the time series data should be filled in between samples. This is required to understand how to interpret time series data that comes in at different intervals and aggregate it for analytics and reporting. Interpolation is a common process for signal reconstruction, time bucketing, and filling in gaps. This property is an enum which can be set to **linear**, **stepForward**, or **stepBackward** described as follows:
 
 | Interpolation | Description | Use Case |
@@ -151,7 +151,7 @@ The `interpolation` property defines how the time series data should be filled i
 | **stepForward** | Performs a forward fill of the previous value found in a time series | Data known to be reported as it changes value. |
 | **stepBackward** (Least common) | Performs a backward fill of the next value found in a time series | Data sampled that cannot be assumed continuous. |
 
-#### Totalized
+#### Totalized (Proposed)
 The `totalized` property is a boolean which defines a capability that is continuously counting upward. This is common in **metering**. In order to determine consumption within a desired time interval, the delta between two values must be calculated as an aggregate. This property is only applicable for numeric value schemas such as **double**.
 
 ## Capability Relationships
