@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:SafetyLighting;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Safety Lighting"
+  },
+  "extends" : [
+    "dtmi:digitaltwins:rec_3_3:asset:LightingEquipment;1"
+  ],
+  "contents": [
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

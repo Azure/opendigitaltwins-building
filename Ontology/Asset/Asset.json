@@ -50,6 +50,15 @@
       "writable": true
     },
     {
+      "@type": "Property",
+      "displayName": {
+        "en": "weight"
+      },
+      "name": "weight",
+      "schema": "double",
+      "writable": true
+    },
+    {
       "@type": "Relationship",
       "displayName": {
         "en": "installed by"

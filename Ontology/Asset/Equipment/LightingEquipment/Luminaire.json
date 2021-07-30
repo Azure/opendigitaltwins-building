@@ -5,6 +5,15 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "power input"
+      },
+      "name": "powerInput",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "type"
       },
       "name": "type",

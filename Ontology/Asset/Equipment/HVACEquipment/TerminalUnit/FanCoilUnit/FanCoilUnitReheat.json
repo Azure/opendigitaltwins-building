@@ -3,6 +3,15 @@
   "@type": "Interface",
   "contents": [
     {
+      "@type": "Property",
+      "displayName": {
+        "en": "nominal heating capacity"
+      },
+      "name": "nominalHeatingCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
       "@type": "Component",
       "displayName": {
         "en": "re-heating method"
