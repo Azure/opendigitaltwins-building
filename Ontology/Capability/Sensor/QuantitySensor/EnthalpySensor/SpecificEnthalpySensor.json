@@ -1,8 +1,8 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:device:SpecificEnthalpySensorSensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:SpecificEnthalpySensor;1",
   "@type": "Interface",
   "displayName": {
-    "en": "Specific enthalpy sensor sensor"
+    "en": "Specific enthalpy sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:EnthalpySensor;1",
   "@context": "dtmi:dtdl:context;2"

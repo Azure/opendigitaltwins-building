@@ -2,7 +2,7 @@
   "@id": "dtmi:digitaltwins:rec_3_3:device:O3AirQualitySensor;1",
   "@type": "Interface",
   "displayName": {
-    "en": "Air quality sensor"
+    "en": "O3 (ozone) air quality sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:AirQualitySensor;1",
   "@context": "dtmi:dtdl:context;2"

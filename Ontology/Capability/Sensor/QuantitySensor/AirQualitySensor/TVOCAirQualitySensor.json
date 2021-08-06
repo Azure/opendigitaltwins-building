@@ -2,7 +2,7 @@
   "@id": "dtmi:digitaltwins:rec_3_3:device:TVOCAirQualitySensor;1",
   "@type": "Interface",
   "displayName": {
-    "en": "TVOC air quality sensor"
+    "en": "TVOC (Total Volatile Organic Compound) air quality sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:AirQualitySensor;1",
   "@context": "dtmi:dtdl:context;2"
