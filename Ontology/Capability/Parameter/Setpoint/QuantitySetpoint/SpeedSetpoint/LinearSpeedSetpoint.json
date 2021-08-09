@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:device:BinarySensor;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:LinearSpeedSetpoint;1",
   "@type": "Interface",
   "contents": [
     {
@@ -11,13 +11,13 @@
         "en": "last value"
       },
       "name": "lastValue",
-      "schema": "boolean",
+      "schema": "double",
       "writable": true
     }
   ],
   "displayName": {
-    "en": "Binary sensor"
+    "en": "Linear speed setpoint"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:StateSensor;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:device:SpeedSetpoint;1",
   "@context": "dtmi:dtdl:context;2"
 }
