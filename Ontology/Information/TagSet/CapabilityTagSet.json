@@ -602,6 +602,10 @@
             "name": "Input"
           },
           {
+            "enumValue": "Inside",
+            "name": "Inside"
+          },
+          {
             "enumValue": "Leaving",
             "name": "Leaving"
           },
