@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:asset:Luminaire;1_1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Luminaire;2",
   "@type": "Interface",
   "contents": [
     {
