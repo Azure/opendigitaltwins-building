@@ -5,7 +5,7 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "type"
+        "en": "mounting type"
       },
       "name": "mountingType",
       "dtmi:dtdl:property:schema;2": {
