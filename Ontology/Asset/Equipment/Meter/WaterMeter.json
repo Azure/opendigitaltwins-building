@@ -5,18 +5,45 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "volume flow"
+        "en": "minimum volume flow rating"
       },
-      "name": "volumeFlow",
+      "name": "minVolumeFlowRating",
       "schema": "double",
       "writable": true
     },
     {
       "@type": "Property",
       "displayName": {
-        "en": "volume"
+        "en": "maximum volume flow rating"
       },
-      "name": "volume",
+      "name": "maxVolumeFlowRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "minimum temperature rating"
+      },
+      "name": "minTemperatureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum temperature rating"
+      },
+      "name": "maxTemperatureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum pressure rating"
+      },
+      "name": "maxPressureRating",
       "schema": "double",
       "writable": true
     },
@@ -27,15 +54,6 @@
       },
       "name": "type",
       "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "supply temp"
-      },
-      "name": "supplyTemp",
-      "schema": "double",
       "writable": true
     },
     {

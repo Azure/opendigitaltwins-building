@@ -5,18 +5,45 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "volume total"
+        "en": "minimum volume flow rating"
       },
-      "name": "volumeTotal",
+      "name": "minVolumeFlowRating",
       "schema": "double",
       "writable": true
     },
     {
       "@type": "Property",
       "displayName": {
-        "en": "volume flow"
+        "en": "maximum volume flow rating"
       },
-      "name": "volumeFlow",
+      "name": "maxVolumeFlowRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "minimum temperature rating"
+      },
+      "name": "minTemperatureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum temperature rating"
+      },
+      "name": "maxTemperatureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum pressure rating"
+      },
+      "name": "maxPressureRating",
       "schema": "double",
       "writable": true
     },
@@ -27,59 +54,6 @@
       },
       "name": "type",
       "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "supply temp"
-      },
-      "name": "supplyTemp",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "return temp"
-      },
-      "name": "returnTemp",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Energy",
-        "Property"
-      ],
-      "displayName": {
-        "en": "energy total"
-      },
-      "name": "energyTotal",
-      "schema": "double",
-      "unit": "kilowattHour",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Power",
-        "Property"
-      ],
-      "displayName": {
-        "en": "energy rate"
-      },
-      "name": "energyRate",
-      "schema": "double",
-      "unit": "kilowatt",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "delta temp"
-      },
-      "name": "deltaTemp",
-      "schema": "double",
       "writable": true
     },
     {
