@@ -5,9 +5,9 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "mounting type"
+        "en": "mounting"
       },
-      "name": "mountingType",
+      "name": "mounting",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [
