@@ -1,8 +1,8 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:building:HospitalRoom;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:building:HealthcareRoom;1",
   "@type": "Interface",
   "displayName": {
-    "en": "Hospital room"
+    "en": "Healthcare room"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Room;1",
   "@context": "dtmi:dtdl:context;2"

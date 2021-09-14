@@ -4,6 +4,6 @@
   "displayName": {
     "en": "Outpatient services room"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:building:HospitalRoom;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:building:HealthcareRoom;1",
   "@context": "dtmi:dtdl:context;2"
 }
