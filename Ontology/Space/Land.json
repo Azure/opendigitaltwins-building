@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:core:Land;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "has address"
+      },
+      "name": "hasAddress",
+      "schema": "dtmi:digitaltwins:rec_3_3:addressing:Address;1"
+    }
+  ],
   "description": {
     "en": "A piece of land upon which one or more buildings may be situated."
   },
