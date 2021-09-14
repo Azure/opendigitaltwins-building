@@ -5,9 +5,9 @@
     {
       "@type": "Component",
       "displayName": {
-        "en": "has address"
+        "en": "address"
       },
-      "name": "hasAddress",
+      "name": "address",
       "schema": "dtmi:digitaltwins:rec_3_3:addressing:Address;1"
     },
     {

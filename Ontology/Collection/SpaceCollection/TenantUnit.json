@@ -13,6 +13,14 @@
       "minMultiplicity": 0,
       "name": "includes",
       "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "address"
+      },
+      "name": "address",
+      "schema": "dtmi:digitaltwins:rec_3_3:addressing:Address;1"
     }
   ],
   "description": {
