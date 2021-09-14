@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:building:OutpatientServicesRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Outpatient services room"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:building:HospitalRoom;1",
+  "@context": "dtmi:dtdl:context;2"
+}
