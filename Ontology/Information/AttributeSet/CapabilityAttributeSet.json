@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityTagSet;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityAttributeSet;1",
   "@type": "Interface",
   "contents": [
     {
@@ -640,6 +640,6 @@
   "displayName": {
     "en": "Capability tag set"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:TagSet;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:AttributeSet;1",
   "@context": "dtmi:dtdl:context;2"
 }

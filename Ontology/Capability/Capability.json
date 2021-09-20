@@ -27,10 +27,10 @@
     {
       "@type": "Component",
       "displayName": {
-        "en": "tags"
+        "en": "categorization attributes"
       },
-      "name": "tags",
-      "schema": "dtmi:digitaltwins:rec_3_3:device:CapabilityTagSet;1"
+      "name": "categorizationAttributes",
+      "schema": "dtmi:digitaltwins:rec_3_3:device:CapabilityAttributeSet;1"
     },
     {
       "@type": "Relationship",
