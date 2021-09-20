@@ -1,0 +1,66 @@
+{
+    "@id": "dtmi:digitaltwins:rec_3_3:core:ElevatorTripEvent;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Elevator Trip Event"
+    },
+    "extends" : [
+      "dtmi:digitaltwins:rec_3_3:core:Event;1"
+    ],
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "startLevelId",
+        "displayName": {
+          "en": "Start Level Id"
+        },
+        "writable": true,
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "endLevelId",
+        "displayName": {
+          "en": "End Level Id"
+        },
+        "writable": true,
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "currentLevelId",
+        "displayName": {
+          "en": "Current Level Id"
+        },
+        "writable": true,
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "currentTripDirection",
+        "displayName": {
+          "en": "Current Trip Direction"
+        },
+        "writable": true,
+        "schema": {
+          "@id": "dtmi:digitaltwins:rec_3_3:core:ElevatorTripDirection;1",
+          "@type": "Enum",
+          "valueSchema": "string",
+          "enumValues": [
+            {
+              "name": "Up",
+              "displayName": "Up",
+              "enumValue": "Up"
+            },
+            {
+              "name": "Down",
+              "displayName": "Down",
+              "enumValue": "Down"
+            }
+          ]
+        }
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  }
+  
