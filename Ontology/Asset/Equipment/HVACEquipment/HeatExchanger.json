@@ -5,9 +5,27 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "primary flow capacity"
+        "en": "secondary maximum temperature"
       },
-      "name": "primaryflowCapacity",
+      "name": "secondaryMaxTemperature",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "secondary maximum pressure"
+      },
+      "name": "secondaryMaxPressure",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "secondary flow capacity"
+      },
+      "name": "secondaryFlowCapacity",
       "schema": "double",
       "writable": true
     },
@@ -32,27 +50,9 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "secondary flow capacity"
+        "en": "primary flow capacity"
       },
-      "name": "secondaryflowCapacity",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "secondary maximum temperature"
-      },
-      "name": "seconaryMaxTemperature",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "secondary maximum pressure"
-      },
-      "name": "seconaryMaxPressure",
+      "name": "primaryFlowCapacity",
       "schema": "double",
       "writable": true
     }

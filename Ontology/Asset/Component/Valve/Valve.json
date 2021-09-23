@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:asset:Valve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Valve;2",
   "@type": "Interface",
   "contents": [
     {
@@ -10,16 +10,6 @@
       "name": "pressureCapacity",
       "schema": "double",
       "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "pipe diameter"
-      },
-      "name": "pipeDiameter",
-      "schema": "double",
-      "writable": true,
-      "comment": "deprecate this property as it has been replaced by pipeInlet and pipeOutlet"
     },
     {
       "@type": "Property",
