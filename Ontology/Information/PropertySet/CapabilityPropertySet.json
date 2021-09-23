@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityAttributeSet;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityPropertySet;1",
   "@type": "Interface",
   "contents": [
     {
@@ -635,11 +635,11 @@
     }
   ],
   "description": {
-    "en": "Encapuslates a set of tags that may be applicable to Capability instances."
+    "en": "Encapuslates a set of categorization properties that may be applicable to Capability instances."
   },
   "displayName": {
-    "en": "Capability tag set"
+    "en": "Capability property set"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:AttributeSet;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:PropertySet;1",
   "@context": "dtmi:dtdl:context;2"
 }
