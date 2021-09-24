@@ -14,27 +14,18 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "minimum mass flow rating"
-      },
-      "name": "minMassFlowRating",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "maximum mass flow rating"
-      },
-      "name": "maxMassFlowRating",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "minimum temperature rating"
       },
       "name": "minTemperatureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "minimum mass flow rating"
+      },
+      "name": "minMassFlowRating",
       "schema": "double",
       "writable": true
     },
@@ -53,6 +44,15 @@
         "en": "maximum pressure rating"
       },
       "name": "maxPressureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum mass flow rating"
+      },
+      "name": "maxMassFlowRating",
       "schema": "double",
       "writable": true
     },

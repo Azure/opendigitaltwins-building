@@ -25,39 +25,55 @@
       "writable": true
     },
     {
-      "@type": "Property",
-      "displayName": {
-        "en": "minimum voltage rating"
-      },
-      "name": "minVoltageRating",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
       "displayName": {
         "en": "maximum voltage rating"
       },
-      "name": "maxVoltageRating",
+      "name": "minVoltageRating",
       "schema": "double",
+      "unit": "volt",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Current",
+        "Property"
+      ],
       "displayName": {
         "en": "minimum current rating"
       },
       "name": "minCurrentRating",
       "schema": "double",
+      "unit": "ampere",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": [
+        "Voltage",
+        "Property"
+      ],
+      "displayName": {
+        "en": "maximum voltage rating"
+      },
+      "name": "maxVoltageRating",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Current",
+        "Property"
+      ],
       "displayName": {
         "en": "maximum current rating"
       },
       "name": "maxCurrentRating",
       "schema": "double",
+      "unit": "ampere",
       "writable": true
     },
     {
