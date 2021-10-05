@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:building:PharmacyRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Pharmacy room"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:building:HealthcareRoom;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:building:RadiologyRoom;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Radiology room"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:building:HealthcareRoom;1",
+  "@context": "dtmi:dtdl:context;2"
+}

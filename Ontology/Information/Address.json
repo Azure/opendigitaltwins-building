@@ -1,0 +1,65 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:addressing:Address;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "region (state/province)"
+      },
+      "name": "region",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "postal code"
+      },
+      "name": "postalCode",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "country"
+      },
+      "name": "country",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "city"
+      },
+      "name": "city",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "address line 2"
+      },
+      "name": "addressLine2",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "address line 1"
+      },
+      "name": "addressLine1",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Address"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Information;1",
+  "@context": "dtmi:dtdl:context;2"
+}
