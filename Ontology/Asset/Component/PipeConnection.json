@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:PipeConnection;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "outside diameter"
+      },
+      "name": "outsideDiameter",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "nominal diameter"
+      },
+      "name": "nominalDiameter",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "inside diameter"
+      },
+      "name": "insideDiameter",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Pipe connection"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
+  "@context": "dtmi:dtdl:context;2"
+}

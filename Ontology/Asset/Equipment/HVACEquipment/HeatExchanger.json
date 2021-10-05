@@ -1,6 +1,62 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HeatExchanger;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "secondary maximum temperature"
+      },
+      "name": "secondaryMaxTemperature",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "secondary maximum pressure"
+      },
+      "name": "secondaryMaxPressure",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "secondary flow capacity"
+      },
+      "name": "secondaryFlowCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "primary maximum temperature"
+      },
+      "name": "primaryMaxTemperature",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "primary maximum pressure"
+      },
+      "name": "primaryMaxPressure",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "primary flow capacity"
+      },
+      "name": "primaryFlowCapacity",
+      "schema": "double",
+      "writable": true
+    }
+  ],
   "displayName": {
     "en": "Heat exchanger"
   },

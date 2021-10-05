@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:SmokeCarbonMonoxideDetector;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Smoke and Carbon Monoxide Detector"
+  },
+  "extends": [
+    "dtmi:digitaltwins:rec_3_3:asset:SmokeDetector;1",
+    "dtmi:digitaltwins:rec_3_3:asset:CarbonMonoxideDetector;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

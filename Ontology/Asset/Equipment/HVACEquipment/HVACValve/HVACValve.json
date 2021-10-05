@@ -5,7 +5,7 @@
     "en": "HVAC valve"
   },
   "extends": [
-    "dtmi:digitaltwins:rec_3_3:asset:Valve;1",
+    "dtmi:digitaltwins:rec_3_3:asset:Valve;2",
     "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1"
   ],
   "@context": "dtmi:dtdl:context;2"

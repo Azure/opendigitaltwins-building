@@ -54,6 +54,32 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "mounting"
+      },
+      "name": "mounting",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "wall",
+            "name": "wall"
+          },
+          {
+            "enumValue": "floor",
+            "name": "floor"
+          },
+          {
+            "enumValue": "ceiling",
+            "name": "ceiling"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "filter type"
       },
       "name": "filterType",

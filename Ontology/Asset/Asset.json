@@ -50,6 +50,15 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "weight"
+      },
+      "name": "weight",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "turnover date"
       },
       "name": "turnoverDate",

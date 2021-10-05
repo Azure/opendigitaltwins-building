@@ -26,80 +26,54 @@
     },
     {
       "@type": [
-        "Power",
+        "Voltage",
         "Property"
       ],
       "displayName": {
-        "en": "net power"
+        "en": "maximum voltage rating"
       },
-      "name": "netPower",
+      "name": "minVoltageRating",
       "schema": "double",
-      "unit": "watt",
+      "unit": "volt",
       "writable": true
     },
     {
       "@type": [
-        "Energy",
+        "Current",
         "Property"
       ],
       "displayName": {
-        "en": "net energy"
+        "en": "minimum current rating"
       },
-      "name": "netEnergy",
+      "name": "minCurrentRating",
       "schema": "double",
-      "unit": "kilowattHour",
+      "unit": "ampere",
       "writable": true
     },
     {
       "@type": [
-        "Power",
+        "Voltage",
         "Property"
       ],
       "displayName": {
-        "en": "import power"
+        "en": "maximum voltage rating"
       },
-      "name": "importPower",
+      "name": "maxVoltageRating",
       "schema": "double",
-      "unit": "watt",
+      "unit": "volt",
       "writable": true
     },
     {
       "@type": [
-        "Energy",
+        "Current",
         "Property"
       ],
       "displayName": {
-        "en": "import energy"
+        "en": "maximum current rating"
       },
-      "name": "importEnergy",
+      "name": "maxCurrentRating",
       "schema": "double",
-      "unit": "kilowattHour",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Power",
-        "Property"
-      ],
-      "displayName": {
-        "en": "export power"
-      },
-      "name": "exportPower",
-      "schema": "double",
-      "unit": "watt",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Energy",
-        "Property"
-      ],
-      "displayName": {
-        "en": "export energy"
-      },
-      "name": "exportEnergy",
-      "schema": "double",
-      "unit": "kilowattHour",
+      "unit": "ampere",
       "writable": true
     },
     {
