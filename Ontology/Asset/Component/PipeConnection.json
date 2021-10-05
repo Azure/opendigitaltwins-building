@@ -14,6 +14,15 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "nominal diameter"
+      },
+      "name": "nominalDiameter",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "inside diameter"
       },
       "name": "insideDiameter",
