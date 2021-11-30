@@ -14,23 +14,46 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "mass flow"
+        "en": "minimum temperature rating"
       },
-      "name": "massFlow",
+      "name": "minTemperatureRating",
       "schema": "double",
       "writable": true
     },
     {
-      "@type": [
-        "Mass",
-        "Property"
-      ],
+      "@type": "Property",
       "displayName": {
-        "en": "mass"
+        "en": "minimum mass flow rating"
       },
-      "name": "mass",
+      "name": "minMassFlowRating",
       "schema": "double",
-      "unit": "kilogram",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum temperature rating"
+      },
+      "name": "maxTemperatureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum pressure rating"
+      },
+      "name": "maxPressureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum mass flow rating"
+      },
+      "name": "maxMassFlowRating",
+      "schema": "double",
       "writable": true
     },
     {

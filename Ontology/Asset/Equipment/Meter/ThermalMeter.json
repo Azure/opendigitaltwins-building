@@ -5,24 +5,6 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "volume total"
-      },
-      "name": "volumeTotal",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "volume flow"
-      },
-      "name": "volumeFlow",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "type"
       },
       "name": "type",
@@ -32,53 +14,45 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "supply temp"
+        "en": "minimum volume flow rating"
       },
-      "name": "supplyTemp",
+      "name": "minVolumeFlowRating",
       "schema": "double",
       "writable": true
     },
     {
       "@type": "Property",
       "displayName": {
-        "en": "return temp"
+        "en": "minimum temperature rating"
       },
-      "name": "returnTemp",
+      "name": "minTemperatureRating",
       "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Energy",
-        "Property"
-      ],
-      "displayName": {
-        "en": "energy total"
-      },
-      "name": "energyTotal",
-      "schema": "double",
-      "unit": "kilowattHour",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Power",
-        "Property"
-      ],
-      "displayName": {
-        "en": "energy rate"
-      },
-      "name": "energyRate",
-      "schema": "double",
-      "unit": "kilowatt",
       "writable": true
     },
     {
       "@type": "Property",
       "displayName": {
-        "en": "delta temp"
+        "en": "maximum volume flow rating"
       },
-      "name": "deltaTemp",
+      "name": "maxVolumeFlowRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum temperature rating"
+      },
+      "name": "maxTemperatureRating",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "maximum pressure rating"
+      },
+      "name": "maxPressureRating",
       "schema": "double",
       "writable": true
     },

@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityTagSet;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityPropertySet;1",
   "@type": "Interface",
   "contents": [
     {
@@ -53,6 +53,83 @@
           {
             "enumValue": "Warmup",
             "name": "Warmup"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Notification of a condition which requires attention such as a threshold exceeded (Project Haystack). This differs from a Fault in that a Fault is used to identify a failure."
+      },
+      "displayName": {
+        "en": "alarm"
+      },
+      "name": "alarm",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The component that is part of an asset which the capability is associated with."
+      },
+      "displayName": {
+        "en": "asset component"
+      },
+      "name": "assetComponent",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Battery",
+            "name": "Battery"
+          },
+          {
+            "enumValue": "Coil",
+            "name": "Coil"
+          },
+          {
+            "enumValue": "Compressor",
+            "name": "Compressor"
+          },
+          {
+            "enumValue": "Condenser",
+            "name": "Condenser"
+          },
+          {
+            "enumValue": "Damper",
+            "name": "Damper"
+          },
+          {
+            "enumValue": "Evaporator",
+            "name": "Evaporator"
+          },
+          {
+            "enumValue": "Fan",
+            "name": "Fan"
+          },
+          {
+            "enumValue": "Filter",
+            "name": "Filter"
+          },
+          {
+            "enumValue": "Motor",
+            "name": "Motor"
+          },
+          {
+            "enumValue": "VFD",
+            "name": "VFD"
+          },
+          {
+            "enumValue": "coolingCoil",
+            "name": "coolingCoil"
+          },
+          {
+            "enumValue": "heatingCoil",
+            "name": "heatingCoil"
           }
         ],
         "valueSchema": "string"
@@ -263,6 +340,10 @@
             "name": "EthernetData"
           },
           {
+            "enumValue": "ExhaustGas",
+            "name": "ExhaustGas"
+          },
+          {
             "enumValue": "Fire",
             "name": "Fire"
           },
@@ -305,6 +386,10 @@
           {
             "enumValue": "Ice",
             "name": "Ice"
+          },
+          {
+            "enumValue": "InfraredLight",
+            "name": "InfraredLight"
           },
           {
             "enumValue": "IrrigationWater",
@@ -389,6 +474,14 @@
           {
             "enumValue": "StormDrainage",
             "name": "StormDrainage"
+          },
+          {
+            "enumValue": "UltravioletLight",
+            "name": "UltravioletLight"
+          },
+          {
+            "enumValue": "Urea",
+            "name": "Urea"
           },
           {
             "enumValue": "WasteVentDrainage",
@@ -476,6 +569,10 @@
             "name": "Input"
           },
           {
+            "enumValue": "Inside",
+            "name": "Inside"
+          },
+          {
             "enumValue": "Leaving",
             "name": "Leaving"
           },
@@ -538,11 +635,11 @@
     }
   ],
   "description": {
-    "en": "Encapuslates a set of tags that may be applicable to Capability instances."
+    "en": "Encapuslates a set of categorization properties that may be applicable to Capability instances."
   },
   "displayName": {
-    "en": "Capability tag set"
+    "en": "Capability property set"
   },
-  "extends": "dtmi:digitaltwins:rec_3_3:core:TagSet;1",
+  "extends": "dtmi:digitaltwins:rec_3_3:core:PropertySet;1",
   "@context": "dtmi:dtdl:context;2"
 }

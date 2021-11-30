@@ -23,6 +23,14 @@
         "valueSchema": "string"
       },
       "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "address"
+      },
+      "name": "address",
+      "schema": "dtmi:digitaltwins:rec_3_3:addressing:Address;1"
     }
   ],
   "description": {

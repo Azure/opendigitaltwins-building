@@ -1,13 +1,26 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:asset:Luminaire;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Luminaire;2",
   "@type": "Interface",
   "contents": [
     {
+      "@type": [
+        "Power",
+        "Property"
+      ],
+      "displayName": {
+        "en": "power input"
+      },
+      "name": "powerInput",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
       "@type": "Property",
       "displayName": {
-        "en": "type"
+        "en": "mounting"
       },
-      "name": "type",
+      "name": "mounting",
       "dtmi:dtdl:property:schema;2": {
         "@type": "Enum",
         "dtmi:dtdl:property:enumValues;2": [

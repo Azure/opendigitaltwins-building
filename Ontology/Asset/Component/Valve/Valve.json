@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:rec_3_3:asset:Valve;1",
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Valve;2",
   "@type": "Interface",
   "contents": [
     {
@@ -14,20 +14,27 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "pipe diameter"
-      },
-      "name": "pipeDiameter",
-      "schema": "double",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "flow capacity"
       },
       "name": "flowCapacity",
       "schema": "double",
       "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "pipe outlet"
+      },
+      "name": "pipeOutlet",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:PipeConnection;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "pipe inlet"
+      },
+      "name": "pipeInlet",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:PipeConnection;1"
     }
   ],
   "displayName": {

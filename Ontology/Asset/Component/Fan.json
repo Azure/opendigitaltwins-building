@@ -5,6 +5,15 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "nominal external static pressure"
+      },
+      "name": "nominalExternalStaticPressure",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "nominal airflow"
       },
       "name": "nominalAirflow",

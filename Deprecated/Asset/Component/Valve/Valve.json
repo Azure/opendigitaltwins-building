@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:asset:Valve;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "pressure capacity"
+      },
+      "name": "pressureCapacity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "pipe diameter"
+      },
+      "name": "pipeDiameter",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "flow capacity"
+      },
+      "name": "flowCapacity",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Valve"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
+  "@context": "dtmi:dtdl:context;2"
+}

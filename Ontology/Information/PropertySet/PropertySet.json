@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:rec_3_3:core:PropertySet;1",
+  "@type": "Interface",
+  "description": {
+    "en": "A set of categorization properties associated with a REC entity, complementing the subsumpion hierarchy and allowing orthogonal categorization without the use of multiple inheritance structures. Used for compatibility with legacy point- or tag-based systems."
+  },
+  "displayName": {
+    "en": "Property set"
+  },
+  "extends": "dtmi:digitaltwins:rec_3_3:core:Information;1",
+  "@context": "dtmi:dtdl:context;2"
+}

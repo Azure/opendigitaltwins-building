@@ -62,6 +62,22 @@
       "name": "flowCapacity",
       "schema": "double",
       "writable": true
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "pipe outlet"
+      },
+      "name": "pipeOutlet",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:PipeConnection;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "pipe inlet"
+      },
+      "name": "pipeInlet",
+      "schema": "dtmi:digitaltwins:rec_3_3:asset:PipeConnection;1"
     }
   ],
   "displayName": {
