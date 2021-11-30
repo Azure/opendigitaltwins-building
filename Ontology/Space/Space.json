@@ -91,6 +91,14 @@
     {
       "@type": "Relationship",
       "displayName": {
+        "en": "has document"
+      },
+      "name": "hasDocument",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
         "en": "has capability"
       },
       "name": "hasCapability",
@@ -102,6 +110,17 @@
         "en": "is location of"
       },
       "name": "isLocationOf"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Links a Space to a BuildingComponent that is either contained in, adjacent to or intersecting with the Space. Inverse of: isPartOfBuilding, componentOf"
+      },
+      "displayName": {
+        "en": "has building component"
+      },
+      "name": "hasBuildingComponent",
+      "target": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1"
     },
     {
       "@type": "Relationship",
@@ -118,14 +137,6 @@
       },
       "name": "architectedBy",
       "target": "dtmi:digitaltwins:rec_3_3:core:Agent;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "hasDocument",
-      "displayName": {
-        "en": "has document"
-      },
-      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
     },
     {
       "@type": "Property",
