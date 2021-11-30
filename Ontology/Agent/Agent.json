@@ -3,6 +3,27 @@
   "@type": "Interface",
   "contents": [
     {
+      "@type": "Relationship",
+      "description": {
+        "en": "A role that is held by some agent (e.g., a Person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role)."
+      },
+      "displayName": {
+        "en": "has role"
+      },
+      "name": "hasRole",
+      "target": "dtmi:digitaltwins:rec_3_3:business:Role;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates that an agent is the legal owner of a given entity, e.g., a Company owns some Real Estate. Inverse of: ownedBy"
+      },
+      "displayName": {
+        "en": "owns"
+      },
+      "name": "owns"
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "Custom Tags"
@@ -48,35 +69,6 @@
       "name": "name",
       "schema": "string",
       "writable": true
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Indicates that an agent is the legal owner of a given entity, e.g., a Company owns some Real Estate. Inverse of: ownedBy"
-      },
-      "displayName": {
-        "en": "owns"
-      },
-      "name": "owns"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "A role that is held by some agent (e.g., a Person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role)."
-      },
-      "displayName": {
-        "en": "has role"
-      },
-      "name": "hasRole",
-      "target": "dtmi:digitaltwins:rec_3_3:business:Role;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "hasDocument",
-      "displayName": {
-        "en": "has document"
-      },
-      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
     }
   ],
   "description": {
