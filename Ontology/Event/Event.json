@@ -111,6 +111,25 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "Custom Tags"
+      },
+      "name": "customTags",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "tagValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "External IDs"
       },
       "name": "externalIds",
