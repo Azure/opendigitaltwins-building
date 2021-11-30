@@ -4,19 +4,22 @@
   "contents": [
     {
       "@type": "Relationship",
-      "name": "hasDocument",
-      "displayName": {
-        "en": "has document"
+      "description": {
+        "en": "Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of: includes"
       },
-      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "includedIn",
       "displayName": {
         "en": "included in"
       },
+      "name": "includedIn",
       "target": "dtmi:digitaltwins:rec_3_3:core:Collection;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has document"
+      },
+      "name": "hasDocument",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
     },
     {
       "@type": "Property",
