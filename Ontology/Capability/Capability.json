@@ -50,13 +50,6 @@
       }
     },
     {
-      "@type": "Relationship",
-      "name": "isControlledBy",
-      "displayName": {
-        "en": "is controlled by"
-      }
-    },
-    {
       "@type": "Property",
       "displayName": {
         "en": "Custom Tags"

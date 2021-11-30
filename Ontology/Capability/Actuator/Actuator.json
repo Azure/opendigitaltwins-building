@@ -12,6 +12,14 @@
       },
       "name": "observedBy",
       "target": "dtmi:digitaltwins:rec_3_3:core:Sensor;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "controlled by"
+      },
+      "name": "controlledBy",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Capability;1"
     }
   ],
   "description": {
