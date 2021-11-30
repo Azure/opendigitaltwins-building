@@ -43,13 +43,6 @@
       "name": "isCapabilityOf"
     },
     {
-      "@type": "Relationship",
-      "name": "hostedBy",
-      "displayName": {
-        "en": "hosted by"
-      }
-    },
-    {
       "@type": "Property",
       "displayName": {
         "en": "Custom Tags"
