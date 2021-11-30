@@ -1,9 +1,0 @@
-{
-  "@id": "dtmi:digitaltwins:rec_3_3:device:ValveOpenSensor;1",
-  "@type": "Interface",
-  "displayName": {
-    "en": "Valve open sensor"
-  },
-  "extends": "dtmi:digitaltwins:rec_3_3:device:DamperOpenSensor;1",
-  "@context": "dtmi:dtdl:context;2"
-}
