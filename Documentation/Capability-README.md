@@ -57,10 +57,10 @@ Each of the above State Kind classes are further sub-classed to give context to 
 ## Capability Properties
 The Capability models maintain several **properties** which allow additional metadata on the twin to provide context to 1) classificaiton 2) values and 3) communication configuration. The properties also maintain the latest value the twin received from the connected entity (`lastValue`) and the time at which it was sampled or reported by the connected entity (`lastValueTime`).
 
-### Tags Properties
-The Capabiltiy models described above provide a great means of classifying based on **function** and **kind** which brings consistency and inheritence to these two common means by which a Capability is defined and would be queried. However, most impelementations of a digital twin desire additional metadata context to query, analyze, and filter amongs twins of the same model. Because there are many ways in which a capability could be classified in the real world, there are too many combinations to pre-define models for every possible real-world scneario. The use of properties within the **tags** component allows the flexibility to add context to the base set of models which have been defined above.
+### Categorization Properties
+The Capabiltiy models described above provide a great means of classifying based on **function** and **kind** which brings consistency and inheritence to these two common means by which a Capability is defined and would be queried. However, most impelementations of a digital twin desire additional metadata context to query, analyze, and filter amongs twins of the same model. Because there are many ways in which a capability could be classified in the real world, there are too many combinations to pre-define models for every possible real-world scneario. The use of properties within the **categorizationProperties** component allows the flexibility to add context to the base set of models which have been defined above.
 
-The following [**tags**](https://github.com/Azure/opendigitaltwins-building/blob/master/Ontology/Information/TagSet/CapabilityTagSet.json) allow the implementer to define that additional context upon creating a capability twin. These provide similar functionality of tags in that they add meaning to the type of capability; however, they differ in implementation. Because these are defined as Properties in the DTDL Capability model, the twin maintains a *key-value pair* which provides the context in the *key* as to why the *value* of the property has been set. Additionally, the properties have been defined as disjoint enumerations which provides additional structure to the ontology over a taging dictionary.
+The following [**categorization properties**](https://github.com/Azure/opendigitaltwins-building/blob/master/Ontology/Information/PropertySet/CapabilityPropertySet.json) allow the implementer to define that additional context upon creating a capability twin. These provide similar functionality of tags in that they add meaning to the type of capability; however, they differ in implementation. Because these are defined as Properties in the DTDL Capability model, the twin maintains a *key-value pair* which provides the context in the *key* as to why the *value* of the property has been set. Additionally, the properties have been defined as disjoint enumerations which provides additional structure to the ontology over a taging dictionary.
 
 #### Phenomenon
 A capability's `phenomenon` defines the aspect of scientific interest that it is measuring, actuating, or configuring. This is inspired by Project Haystack. It is the most common classification property that an implementer would define.
@@ -106,7 +106,7 @@ Here is a reference on how to select the proper `position` value:
 | People Counting | Entering, Leaving |
 
 
-#### Other Tags Properties
+#### Other Categorization Properties
 The following table includes the other capability classification properties which can be defined in addition to `phenomenon` and `position`:
 
 | Property | Description | Example |
@@ -164,3 +164,6 @@ Just as the capability models and properties are important to align on their usa
 | isCapabilityOf | Indicates that a Space, Asset or LogicalDevice has the ability to produce or ingest data. |
 | hostedBy | Indicates that a capability is hosted by another entity such as an asset. |
 | isControlledBy | Indicates that a capability's value or output is controlled by another capability. |
+
+## Capability Prototypes
+Refer to the list of [Capability Prototypes](https://github.com/Azure/opendigitaltwins-building/blob/master/Documentation/Capability-Prototypes.json) to learn more about how apply these ontology concepts to real world scenarios.
