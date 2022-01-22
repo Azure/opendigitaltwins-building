@@ -15,7 +15,7 @@ This is an open-source ontology definition which learns from, builds on, and use
 
 This DTDL ontology is implemented based on the domain ontology [RealEstateCore](https://doc.realestatecore.io/3.3/full.html).  RealEstateCore is a common language used to model and control buildings, simplifying the development of new services. The ontology is rich and complete, while providing simplicity and real-world applicability with proven industry solutions and partnerships. It has seen practical deployments across sizeable real estate portfolios over the past several years, and has gone through several revisions based on real-world feedback and learning. RealEstateCore specifically does not aim to be a new standard, but rather provides a common denominator and bridge with other building industry standards such as Brick Schema, Project Haystack, W3C Building Topology Ontology (W3C BOT), and more. Read more about our ontology [alignment with standards](#alignment-with-standards).
 
-The original RealEstateCore ontology is represented using the W3C Web Ontology Language (OWL) and it can be visualized [here](http://www.visualdataweb.de/webvowl/#iri=https://w3id.org/rec/full/3.3/). It has been converted into the DTDL syntax used in this repository using our universal [OWL2DTDL](https://github.com/Azure/opendigitaltwins-building-tools/tree/master/OWL2DTDL) tool.
+The original RealEstateCore ontology is represented using the W3C Web Ontology Language (OWL) and it can be visualized [here](https://service.tib.eu/webvowl/#iri=https://w3id.org/rec/full/3.3/). It has been converted into the DTDL syntax used in this repository using our universal [OWL2DTDL](https://github.com/Azure/opendigitaltwins-building-tools/tree/master/OWL2DTDL) tool.
 
 ## RealEstateCore structure
 
