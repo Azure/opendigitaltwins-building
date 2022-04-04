@@ -8,21 +8,21 @@ When the digital twin connects to a system or source of data, a capability twin 
 
 It's important to understand the difference between a `capability` and other entities such as an `asset`. A `capability` is a virtual concept while an `asset` is a physical object. For example, a physical asset of a `sensor equipment` may have one or more capabilities such as `occupancy sensor`, `temperature sensor`, and `illuminance sensor`.
 
-This guide will provide an understanding of how to become familiar with the capabiltiy data model, define capabilty twins and recommendations for how to best use the ontology.
+This guide will provide an understanding of how to become familiar with the capability data model, define capability twins and recommendations for how to best use the ontology.
 
-## Capabiltiy Models
+## Capability Models
 The `Capability` model class has been sub-classified in several ways that enable the implementer to give semantics to the type of data that the capability is referencing. The concept of using classification and model inheritance provides a few benefits over an alternative approach such as tagging:
-* Model classification promotes structure and consistancy compared to ad-hoc tags
+* Model classification promotes structure and consistency compared to ad-hoc tags
 * Model classification promotes understanding over flexibility. A tag by itself only has context in terms of how it gets used with other tags.
 
-In order to provide the highest fidelity digital twin, the implementer should strive to create twins that have the most specific classification, or deepest inheritance. For example, an `Active Electrical Energy Sensor` should be used over `Electrical Energy Sensor` when it is known that the sensor is measuring active or real power.
+In order to provide the highest fidelity digital twin, the implementer should strive to create twins that have the most specific classification or deepest inheritance. For example, an `Active Electrical Energy Sensor` should be used over `Electrical Energy Sensor` when it is known that the sensor is measuring active or real power.
 
 ### Capability Functions
 The first sub-classification of `Capability` is by **function**. The function describes the purpose or behavior of that capability in the context of its parent twin(s). The **function** sub-classes are the following:
 
 | Function | Description |
 | -------- | ----------- |
-| Sensor | Measures, detects, or harvests data from the real world. An `input` to a controller which is considered read-only. |
+| Sensor | Measures, detects or harvests data from the real world. An `input` to a controller which is considered read-only. |
 | Actuator | Executes some real-world action based on an input command. Often an `output` from a controller. |
 | Parameter | Any configuration setting used by a controller or system to guide its operation. |
 | Setpoint | A sub-classification to `Parameter` which is a configuration `input` to a controller defining the desired quantity or state of its parent entity. |
@@ -33,18 +33,18 @@ The second sub-classification of `Capability` is by **kind**. The kind describes
 
 | Kind | Description |
 | -------- | ----------- |
-| Quantity | A kind of quantity values defined by measurement units. Inspired by QUDT. |
+| Quantity | A kind of quantity values defined by measurement units. Inspired by [QUDT](http://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html). |
 | State | A kind of unitless values such as boolean, percent, and strings. |
 
-If the type of values and units of a Capability are known, the implementer can indentify which **kind** a capability should be classified as.
+If the type of values and units of a Capability are known, the implementer can identify which **kind** a capability should be classified as.
 
 #### Quantity Kind
-Within the Quantity Kind class, there are many sub-classes which are inspired by both the [DTDL Semantic types](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md#semantic-types) and [QUDT](http://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html). This buildings ontology focuses on applicable Quantity Kinds to the Building and Real Estate industry and has omitted many of the classes found in QUDT that are applicable to other scientific and physics-centric industries.
+Within the Quantity Kind class, there are many sub-classes that are inspired by both the [DTDL Semantic types](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md#semantic-types) and [QUDT](http://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html). This buildings ontology focuses on applicable Quantity Kinds to the Building and Real Estate industry and has omitted many of the classes found in QUDT that are applicable to other scientific and physics-centric industries.
 
 The Quantity Kind subclass names (i.e. Temperature, Power, and Flow) are common across each of the top-level Capability sub-classes of `Sensor`, `Actuator`, and `Parameter\Setpoint`. However, these top-level sub-classes do not use multiple inheritance of a common QuantityKind class. As such, clients can query across these top-level classes (i.e. TemperatureSensor and TemperatureSetpoint) by using a string match function such as `STARTSWITH`.
 
 #### State Kind
-Within the State Kind class, there are three sub-classes which are defined by their unitless value schema:
+Within the State Kind class, there are three sub-classes that are defined by their unitless value schema:
 
 | State Kind | Description |
 | ---------- | ----------- |
@@ -52,15 +52,15 @@ Within the State Kind class, there are three sub-classes which are defined by th
 | Percent | Number values between `0...1` |
 | Multi-State | `String` values often defined by an enumeration |
 
-Each of the above State Kind classes are further sub-classed to give context to the type of State that is being sensed, actuated, configured, or maintained. The State Kind subclass names (i.e. OnOff, Mode, and Position) are common across each of the top-level Capability sub-classes of `Sensor`, `Actuator`, and `Parameter\Setpoint`. However, these top-level sub-classes do not use multiple inheritance of a common StateKind class. As such, clients can query across these top-level classes (i.e. TemperatureSensor and TemperatureSetpoint) by using a string match function such as `STARTSWITH`.
+Each of the above State Kind classes is further sub-classed to give context to the type of State that is being sensed, actuated, configured, or maintained. The State Kind subclass names (i.e. OnOff, Mode, and Position) are common across each of the top-level Capability sub-classes of `Sensor`, `Actuator`, and `Parameter\Setpoint`. However, these top-level sub-classes do not use multiple inheritance of a common StateKind class. As such, clients can query across these top-level classes (i.e. TemperatureSensor and TemperatureSetpoint) by using a string match function such as `STARTSWITH`.
 
 ## Capability Properties
-The Capability models maintain several **properties** which allow additional metadata on the twin to provide context to 1) classificaiton 2) values and 3) communication configuration. The properties also maintain the latest value the twin received from the connected entity (`lastValue`) and the time at which it was sampled or reported by the connected entity (`lastValueTime`).
+The Capability models maintain several **properties** which allow additional metadata on the twin to provide context to 1) classification 2) values and 3) communication configuration. The properties also maintain the latest value the twin received from the connected entity (`lastValue`) and the time at which it was sampled or reported by the connected entity (`lastValueTime`).
 
 ### Tags Properties
-The Capabiltiy models described above provide a great means of classifying based on **function** and **kind** which brings consistency and inheritence to these two common means by which a Capability is defined and would be queried. However, most impelementations of a digital twin desire additional metadata context to query, analyze, and filter amongs twins of the same model. Because there are many ways in which a capability could be classified in the real world, there are too many combinations to pre-define models for every possible real-world scneario. The use of properties within the **tags** component allows the flexibility to add context to the base set of models which have been defined above.
+The Capability models described above provide a great means of classifying based on **function** and **kind** which brings consistency and inheritance to these two common means by which a Capability is defined and would be queried. However, most implementations of a digital twin desire additional metadata context to query, analyze, and filter amongst twins of the same model. Because there are many ways in which a capability could be classified in the real world, there are too many combinations to pre-define models for every possible real-world scenario. The use of properties within the **tags** component allows the flexibility to add context to the base set of models which have been defined above.
 
-The following [**tags**](https://github.com/Azure/opendigitaltwins-building/blob/master/Ontology/Information/TagSet/CapabilityTagSet.json) allow the implementer to define that additional context upon creating a capability twin. These provide similar functionality of tags in that they add meaning to the type of capability; however, they differ in implementation. Because these are defined as Properties in the DTDL Capability model, the twin maintains a *key-value pair* which provides the context in the *key* as to why the *value* of the property has been set. Additionally, the properties have been defined as disjoint enumerations which provides additional structure to the ontology over a taging dictionary.
+The following [**tags**](https://github.com/Azure/opendigitaltwins-building/blob/master/Ontology/Information/TagSet/CapabilityTagSet.json) allow the implementer to define that additional context upon creating a capability twin. These provide similar functionality as tags in that they add meaning to the type of capability; however, they differ in implementation. Because these are defined as Properties in the DTDL Capability model, the twin maintains a *key-value pair* which provides the context in the *key* as to why the *value* of the property has been set. Additionally, the properties have been defined as disjoint enumerations which provide additional structure to the ontology over a tagging dictionary.
 
 #### Phenomenon
 A capability's `phenomenon` defines the aspect of scientific interest that it is measuring, actuating, or configuring. This is inspired by Project Haystack. It is the most common classification property that an implementer would define.
@@ -83,7 +83,7 @@ The Quantity Kind defines the measurable property of a phenomenon. As such, ever
 
 ```
 Note:
-Because phenomemon is defined as a string enumeration, there is no inheritance as you would have from models that extend one another. For example, `Chilled Water`, `Hot Water`, and `Domestic Cold Water` are all considered types of `Water`. `Water` and `Air` are considered types of **fluids**. Similarly, `Precipitation` and `Wind` are considered types of **Weather**. At this time, it is recommended to query using `ENDSWITH` for the phenomenon which have a common inheritance such as `Hot Water` and `Domestic Cold Water`.
+Because phenomenon is defined as a string enumeration, there is no inheritance as you would have from models that extend one another. For example, `Chilled Water`, `Hot Water`, and `Domestic Cold Water` are all considered types of `Water`. `Water` and `Air` are considered types of **fluids**. Similarly, `Precipitation` and `Wind` are considered types of **Weather**. At this time, it is recommended to query using `ENDSWITH` for the phenomenon which has a common inheritance such as `Hot Water` and `Domestic Cold Water`.
 ```
 
 #### Position
@@ -115,13 +115,13 @@ The following table includes the other capability classification properties whic
 | HVAC Mode | Defines which HVAC mode the capability is associated with such as **heating**, **cooling**, or **economizing**. | HVAC **Terminal Unit** has a **Heating Temperature Setpoint** and a **Cooling Temperature Setpoint** to define a temperature band to control to. |
 | Occupancy Mode | Defines which occupancy state the capability is associated with such as **occupied**, **unoccupied**, or **standby**. | HVAC **Terminal Unit** has an **Occupied Temperature Setpoint** and an **Unoccupied Temperature Setpoint** to adjust behavior based on occupancy. |
 | Electrical Phase | Defines which phase(s) of a three-phase circuit the capability is associated with. This is required when measuring three-phase power because individual phases do not get their own twin identity. | **Electrical Circuit 3-Pole** has a **Voltage Sensor** measurement for each phase **A**, **B**, **C**, **AB**, **BC**, and **CA**. |
-| Limit | Parameter that places and upper (maximum) or lower (minimum) bound on permitted values of another capability. | HVAC **Terminal Unit** has a **Maximum Airflow Setpoint** and **Minimum Airflow Setpoint** to define a band the unit can operate within. |
-| Demand | Rate required for a process. For a setpoint, this sets the required rate for a process such as cooling, heating, air flow, or water flow. For a sensor, this measures the rate of a process over a given interval such as electrical power demand or cooling energy demand. | HVAC **Terminal Unit** has a **Cooling Demand Setpoint** which can be adjusted by a reset strategy. |
+| Limit | Parameter that places an upper (maximum) or lower (minimum) bound on permitted values of another capability. | HVAC **Terminal Unit** has a **Maximum Airflow Setpoint** and **Minimum Airflow Setpoint** to define a band the unit can operate within. |
+| Demand | Rate required for a process. For a setpoint, this sets the required rate for a process such as cooling, heating, airflow, or water flow. For a sensor, this measures the rate of a process over a given interval such as electrical power demand or cooling energy demand. | HVAC **Terminal Unit** has a **Cooling Demand Setpoint** which can be adjusted by a reset strategy. |
 | Effective | Current control setpoint in effect taking into account other factors (Project Haystack). | HVAC **Air Handling Unit** has an **Effective Discharge Air Temperature Setpoint** based on the current weather conditions, season, and building occupancy. |
 | Stage | Stage number of a control loop for an equipment, equipment group, or system that is defined by the process controller. The first stage is 1, second stage 2, etc. (Project Haystack). | Set of **Plumbing Pumps** have a **Stage 1 Start Actuator** and **Stage 2 Start Actuator**. |
 
 ### Value Properties
-The most important aspect of capabilities are the values themselves that are being reported and configured by the physical devices and the digital twin. The following properties provide the latest value and context of how to interpret the meaning of that value either by iteself or in a time series.
+The most important aspect of capabilities are the values themselves that are being reported and configured by the physical devices and the digital twin. The following properties provide the latest value and context of how to interpret the meaning of that value either by itself or in a time series.
 
 #### Last Value and Last Value Time
 The `lastValue` property maintains the most recent value reported by a device or gateway to the digital twin. This property is also historized in a time series.
@@ -133,7 +133,7 @@ The `lastValueTime` property accompanies `lastValue` to record the timestamp in 
 #### Unit (Proposed)
 The `unit` property should be defined for all of the `Quantity Kind` capabilities. At this time, it is a **string** data schema which allows the user to input any text value. However, it is recommended to align on a common dictionary of units such that unit conversations can be performed by client applications, analytics, and reporting.
 
-In the future, the `unit` property may be deprecated to take advantage of [DTDL Semantic Types](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md#semantic-types). Because DTDL semantic types require units to be defined in the DTDL models, this requires units to be normalized prior to twin creation and all time series data ingested to be transformed prior to being stored. Therefore, we have chosen not to adopt these in the DTDL ontology at this time in favor of storing the ingested data in the same units as its being produced by the connected system.
+In the future, the `unit` property may be deprecated to take advantage of [DTDL Semantic Types](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md#semantic-types). Because DTDL semantic types require units to be defined in the DTDL models, this requires units to be normalized prior to twin creation and all time series data ingested to be transformed prior to being stored. Therefore, we have chosen not to adopt these in the DTDL ontology at this time in favor of storing the ingested data in the same units as it being produced by the connected system.
 
 #### Valid Values (Proposed)
 The `validValues` property is an object which contains `minimum` and `maximum` properties. These define a valid range for the `lastValue` to be within. The `validValues` property is only applicable for numeric value schemas such as a **double** and not **boolean** or **string**.
@@ -155,7 +155,7 @@ The `interpolation` property defines how the time series data should be filled i
 The `totalized` property is a boolean which defines a capability that is continuously counting upward. This is common in **metering**. In order to determine consumption within a desired time interval, the delta between two values must be calculated as an aggregate. This property is only applicable for numeric value schemas such as **double**.
 
 ## Capability Relationships
-The capability models define several **relationships** which capability twins can have with other twins.
+The capability models define several **relationships** that capability twins can have with other twins.
 
 Just as the capability models and properties are important to align on their usage in the ontology, relationships should have consistent use by all users which implement and interpret the digital twin. Refer to the [Samples](https://github.com/WillowInc/opendigitaltwins-building/tree/main/Samples) for different scenarios of how to use these relationships.
 
