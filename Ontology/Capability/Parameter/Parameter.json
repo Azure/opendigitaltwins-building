@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:digitaltwins:rec_3_3:core:Parameter;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "controlled by"
+      },
+      "name": "controlledBy",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Capability;1"
+    }
+  ],
   "displayName": {
     "en": "Parameter"
   },

@@ -17,6 +17,17 @@
     {
       "@type": "Relationship",
       "description": {
+        "en": "Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of: includes"
+      },
+      "displayName": {
+        "en": "included in"
+      },
+      "name": "includedIn",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Collection;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
         "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
       },
       "displayName": {
@@ -27,8 +38,16 @@
     },
     {
       "@type": "Relationship",
+      "displayName": {
+        "en": "has document"
+      },
+      "name": "hasDocument",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
+    },
+    {
+      "@type": "Relationship",
       "description": {
-        "en": "Indicates which Building a certain Building Component is part of. Inverse of: hasBuildingComponent"
+        "en": "Indicates which Building a certain Building Component is part of."
       },
       "displayName": {
         "en": "component of building"
@@ -36,6 +55,17 @@
       "maxMultiplicity": 1,
       "name": "componentOfBuilding",
       "target": "dtmi:digitaltwins:rec_3_3:core:Building;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Links a Building Component to a Space, that the Building Component is either contained in, adjacent to or intersecting with. Inverse of: hasBuildingComponent"
+      },
+      "displayName": {
+        "en": "component of"
+      },
+      "name": "componentOf",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Space;1"
     },
     {
       "@type": "Property",

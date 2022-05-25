@@ -184,6 +184,14 @@
     {
       "@type": "Relationship",
       "displayName": {
+        "en": "has document"
+      },
+      "name": "hasDocument",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
         "en": "has capability"
       },
       "name": "hasCapability",

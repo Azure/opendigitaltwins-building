@@ -99,6 +99,16 @@
       "writable": true
     },
     {
+      "@type": "Relationship",
+      "description": {
+        "en": "The entity responsible for generating or producing the event. Inverse of: producedEvent"
+      },
+      "displayName": {
+        "en": "produced by"
+      },
+      "name": "producedBy"
+    },
+    {
       "@type": "Property",
       "displayName": {
         "en": "Custom Tags"

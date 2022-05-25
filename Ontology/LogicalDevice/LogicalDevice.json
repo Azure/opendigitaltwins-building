@@ -26,6 +26,17 @@
     {
       "@type": "Relationship",
       "description": {
+        "en": "Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment. Inverse of: includes"
+      },
+      "displayName": {
+        "en": "included in"
+      },
+      "name": "includedIn",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Collection;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
         "en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
       },
       "displayName": {
@@ -33,6 +44,14 @@
       },
       "name": "hasPart",
       "target": "dtmi:digitaltwins:rec_3_3:core:LogicalDevice;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has document"
+      },
+      "name": "hasDocument",
+      "target": "dtmi:digitaltwins:rec_3_3:core:Document;1"
     },
     {
       "@type": "Relationship",

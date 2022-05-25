@@ -9,17 +9,6 @@
       },
       "name": "address",
       "schema": "dtmi:digitaltwins:rec_3_3:addressing:Address;1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Parthood traversal property linking Buildings to the Building Components that they are made up of. Inverse of: isPartOfBuilding, componentOfBuilding"
-      },
-      "displayName": {
-        "en": "has building component"
-      },
-      "name": "hasBuildingComponent",
-      "target": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1"
     }
   ],
   "description": {
