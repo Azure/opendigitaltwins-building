@@ -255,7 +255,7 @@
         },
         "dtmi:dtdl:property:mapValue;2": {
           "name": "tagValue",
-          "schema": "string"
+          "schema": "boolean"
         }
       },
       "writable": true
