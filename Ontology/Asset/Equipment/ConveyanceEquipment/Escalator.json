@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Escalator;1",
   "@type": "Interface",
   "contents": [
@@ -47,5 +47,8 @@
     "en": "Escalator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ConveyanceEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:IntercomEntry;1",
   "@type": "Interface",
   "displayName": {
     "en": "Intercom entry"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:AccessControlEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

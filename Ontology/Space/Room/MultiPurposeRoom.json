@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:MultiPurposeRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "Multi-purpose room"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Room;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

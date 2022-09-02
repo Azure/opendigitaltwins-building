@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:DaylightSensorEquipment;1",
   "@type": "Interface",
   "displayName": {
     "en": "Daylight Sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:SensorEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

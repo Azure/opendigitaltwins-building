@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:MotionSensor;1",
   "@type": "Interface",
   "displayName": {
     "en": "Motion sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:BinarySensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

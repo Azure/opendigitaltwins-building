@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:WaterFeatureSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "Water feature system"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingWaterSystem;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

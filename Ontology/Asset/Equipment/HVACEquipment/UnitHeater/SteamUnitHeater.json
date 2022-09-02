@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:SteamUnitHeater;1",
   "@type": "Interface",
   "contents": [
@@ -16,5 +16,7 @@
     "en": "Steam unit heater"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:UnitHeater;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

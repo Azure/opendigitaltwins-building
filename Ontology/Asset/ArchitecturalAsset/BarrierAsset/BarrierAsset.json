@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:BarrierAsset;1",
   "@type": "Interface",
   "contents": [
@@ -26,9 +26,9 @@
         "en": "service"
       },
       "name": "service",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Interior",
             "name": "Interior"
@@ -105,5 +105,8 @@
     "en": "Barrier asset"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ArchitecturalAsset;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

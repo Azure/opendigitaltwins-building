@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:GasMeter;1",
   "@type": "Interface",
   "contents": [
@@ -76,5 +76,7 @@
     "en": "Gas meter"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Meter;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

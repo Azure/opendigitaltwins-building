@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:EquipmentGroup;1",
   "@type": "Interface",
   "displayName": {
     "en": "Equipment group"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:EquipmentCollection;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:DuctConnection;1",
   "@type": "Interface",
   "contents": [
@@ -17,9 +17,9 @@
         "en": "shape"
       },
       "name": "shape",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "round",
             "name": "round"
@@ -43,9 +43,9 @@
         "en": "configuration"
       },
       "name": "configuration",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "single",
             "name": "single"
@@ -64,5 +64,7 @@
     "en": "Duct connection"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

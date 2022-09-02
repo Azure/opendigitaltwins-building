@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FanCoilUnit;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "type"
       },
       "name": "type",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "vertical",
             "name": "vertical"
@@ -57,9 +57,9 @@
         "en": "mounting"
       },
       "name": "mounting",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "wall",
             "name": "wall"
@@ -115,5 +115,7 @@
     "en": "Fan coil unit"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:TerminalUnit;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

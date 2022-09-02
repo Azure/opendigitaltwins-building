@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:CleanAgentCabinet;1",
   "@type": "Interface",
   "displayName": {
     "en": "Clean agent cabinet"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:CleanAgentEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

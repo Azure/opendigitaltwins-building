@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:ArchitecturalAsset;1",
   "@type": "Interface",
   "displayName": {
     "en": "Architectural asset"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Asset;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

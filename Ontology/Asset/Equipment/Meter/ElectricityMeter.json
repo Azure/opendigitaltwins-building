@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:ElectricityMeter;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "type"
       },
       "name": "type",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "DC",
             "name": "DC"
@@ -89,5 +89,8 @@
     "en": "Electricity meter"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Meter;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

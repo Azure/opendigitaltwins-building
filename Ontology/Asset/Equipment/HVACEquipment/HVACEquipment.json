@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@type": "Interface",
   "displayName": {
     "en": "HVAC Equipment"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Equipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

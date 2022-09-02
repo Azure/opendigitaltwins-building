@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FanPoweredBoxReheat;1",
   "@type": "Interface",
   "contents": [
@@ -24,5 +24,7 @@
     "en": "Fan powered box with reheat"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:FanPoweredBox;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

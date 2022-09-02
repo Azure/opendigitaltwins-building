@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:System;1",
   "@type": "Interface",
   "contents": [
@@ -17,9 +17,9 @@
         "en": "service"
       },
       "name": "service",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Utility",
             "name": "Utility"
@@ -61,5 +61,7 @@
     "en": "System"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:EquipmentCollection;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

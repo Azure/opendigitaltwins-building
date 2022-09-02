@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:TransferSwitch;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "poles"
       },
       "name": "poles",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Three",
             "name": "Three"
@@ -42,5 +42,8 @@
     "en": "Transfer switch"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalDistributionEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

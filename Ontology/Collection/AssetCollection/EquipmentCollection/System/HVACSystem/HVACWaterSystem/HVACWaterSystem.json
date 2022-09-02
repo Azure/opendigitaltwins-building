@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACWaterSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "HVAC water system"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACSystem;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

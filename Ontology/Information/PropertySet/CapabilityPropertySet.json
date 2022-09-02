@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:CapabilityPropertySet;1",
   "@type": "Interface",
   "contents": [
@@ -11,9 +11,9 @@
         "en": "HVAC mode"
       },
       "name": "HVACMode",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Cooldown",
             "name": "Cooldown"
@@ -80,9 +80,9 @@
         "en": "asset component"
       },
       "name": "assetComponent",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Battery",
             "name": "Battery"
@@ -169,9 +169,9 @@
         "en": "electrical phase"
       },
       "name": "electricalPhase",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "A",
             "name": "A"
@@ -214,9 +214,9 @@
         "en": "limit"
       },
       "name": "limit",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Maximum",
             "name": "Maximum"
@@ -239,9 +239,9 @@
         "en": "occupancy mode"
       },
       "name": "occupancyMode",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Occupied",
             "name": "Occupied"
@@ -268,9 +268,9 @@
         "en": "phenomenon"
       },
       "name": "phenomenon",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "ACElectricity",
             "name": "ACElectricity"
@@ -513,9 +513,9 @@
         "en": "position"
       },
       "name": "position",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Azimuth",
             "name": "Azimuth"
@@ -641,5 +641,7 @@
     "en": "Capability property set"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:PropertySet;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

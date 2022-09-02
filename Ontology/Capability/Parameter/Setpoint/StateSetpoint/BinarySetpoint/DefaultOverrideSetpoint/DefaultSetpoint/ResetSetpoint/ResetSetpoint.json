@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ResetSetpoint;1",
   "@type": "Interface",
   "displayName": {
     "en": "Reset setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:DefaultSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

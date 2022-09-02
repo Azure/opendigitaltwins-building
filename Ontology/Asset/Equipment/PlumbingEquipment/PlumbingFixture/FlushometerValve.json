@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FlushometerValve;1",
   "@type": "Interface",
   "contents": [
@@ -17,9 +17,9 @@
         "en": "type"
       },
       "name": "type",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Touchless",
             "name": "Touchless"
@@ -39,9 +39,9 @@
         "en": "technology"
       },
       "name": "technology",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Piston",
             "name": "Piston"
@@ -67,5 +67,7 @@
     "en": "Flushometer-Valve"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

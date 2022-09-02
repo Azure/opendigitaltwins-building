@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:VirtualBuildingComponent;1",
   "@type": "Interface",
   "description": {
@@ -8,5 +8,7 @@
     "en": "Virtual building component"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

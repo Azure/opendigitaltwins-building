@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:AssetCollection;1",
   "@type": "Interface",
   "displayName": {
     "en": "Asset collection"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Collection;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

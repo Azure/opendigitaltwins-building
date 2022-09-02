@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ActiveElectricalEnergySensor;1",
   "@type": "Interface",
   "contents": [
@@ -23,5 +23,8 @@
     "en": "Active electrical energy sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalEnergySensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

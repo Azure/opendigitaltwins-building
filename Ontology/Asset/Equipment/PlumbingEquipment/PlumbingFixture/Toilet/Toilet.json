@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Toilet;1",
   "@type": "Interface",
   "contents": [
@@ -17,9 +17,9 @@
         "en": "installation type"
       },
       "name": "installationType",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "WallMounted",
             "name": "WallMounted"
@@ -38,5 +38,7 @@
     "en": "Toilet"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

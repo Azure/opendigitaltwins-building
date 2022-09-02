@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACMixingBox;1",
   "@type": "Interface",
   "contents": [
@@ -16,5 +16,7 @@
     "en": "HVAC mixing box"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

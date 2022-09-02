@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingTank;1",
   "@type": "Interface",
   "displayName": {
@@ -8,5 +8,7 @@
     "dtmi:digitaltwins:rec_3_3:asset:Tank;1",
     "dtmi:digitaltwins:rec_3_3:asset:PlumbingEquipment;1"
   ],
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:State;1",
   "@type": "Interface",
   "displayName": {
     "en": "State"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Capability;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

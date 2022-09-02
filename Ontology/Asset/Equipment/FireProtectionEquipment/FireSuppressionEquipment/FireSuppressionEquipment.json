@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FireSuppressionEquipment;1",
   "@type": "Interface",
   "displayName": {
     "en": "Fire Suppression Equipment"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:FireProtectionEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

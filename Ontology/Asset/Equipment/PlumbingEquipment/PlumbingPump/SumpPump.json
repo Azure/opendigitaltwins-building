@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:SumpPump;1",
   "@type": "Interface",
   "displayName": {
     "en": "Sump pump"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingPump;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

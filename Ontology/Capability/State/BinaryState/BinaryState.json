@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:BinaryState;1",
   "@type": "Interface",
   "displayName": {
@@ -16,5 +16,7 @@
       "schema": "boolean"
     }
   ],
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,6 +1,8 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Chair;1",
   "@type": "Interface",
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Furniture;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

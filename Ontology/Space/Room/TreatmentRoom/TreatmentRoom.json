@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:TreatmentRoom;1",
   "@type": "Interface",
   "description": {
@@ -8,5 +8,7 @@
     "en": "TreatmentRoom"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Room;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

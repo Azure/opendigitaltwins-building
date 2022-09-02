@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:ElectricalBus;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "material"
       },
       "name": "material",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Copper",
             "name": "Copper"
@@ -42,5 +42,8 @@
     "en": "Electrical bus"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:AutomaticTransferSwitch;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "transition type"
       },
       "name": "transitionType",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Open",
             "name": "Open"
@@ -30,9 +30,9 @@
         "en": "switching mechanism"
       },
       "name": "switchingMechanism",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Contactor",
             "name": "Contactor"
@@ -55,5 +55,7 @@
     "en": "Automatic transfer switch"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:TransferSwitch;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

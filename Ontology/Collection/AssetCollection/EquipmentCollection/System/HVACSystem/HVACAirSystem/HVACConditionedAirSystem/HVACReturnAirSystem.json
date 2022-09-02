@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACReturnAirSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "HVAC return air system"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACConditionedAirSystem;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

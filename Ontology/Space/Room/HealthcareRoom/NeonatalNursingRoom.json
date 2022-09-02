@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:NeonatalNursingRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "Neonatal nursing room"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:building:HealthcareRoom;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

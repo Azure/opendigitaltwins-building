@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ThermalPowerSetpoint;1",
   "@type": "Interface",
   "contents": [
@@ -23,5 +23,8 @@
     "en": "Thermal power setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:PowerSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ActiveElectricalPowerSetpoint;1",
   "@type": "Interface",
   "contents": [
@@ -23,5 +23,8 @@
     "en": "Active electrical power setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalPowerSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

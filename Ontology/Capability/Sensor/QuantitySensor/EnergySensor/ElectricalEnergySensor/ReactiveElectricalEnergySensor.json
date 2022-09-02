@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ReactiveElectricalEnergySensor;1",
   "@type": "Interface",
   "contents": [
@@ -19,5 +19,7 @@
     "en": "Reactive electrical energy sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:ElectricalEnergySensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

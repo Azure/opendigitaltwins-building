@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:SpaceOccupancy;1",
   "@type": "Interface",
   "displayName": {
@@ -33,7 +33,10 @@
       "schema": "boolean"
     },
     {
-      "@type": ["Property", "TimeSpan"],
+      "@type": [
+        "Property",
+        "TimeSpan"
+      ],
       "name": "dwellTimeAverage",
       "displayName": {
         "en": "Dwell Time Average"
@@ -44,7 +47,10 @@
       "comment": "Average time spent in the space by all individuals in the space"
     },
     {
-      "@type": ["Property", "TimeSpan"],
+      "@type": [
+        "Property",
+        "TimeSpan"
+      ],
       "name": "entranceDwellTime",
       "displayName": {
         "en": "Entrance Dwell Time"
@@ -55,7 +61,10 @@
       "comment": "Wait time to enter the space"
     },
     {
-      "@type": ["Property", "TimeSpan"],
+      "@type": [
+        "Property",
+        "TimeSpan"
+      ],
       "name": "exitDwellTime",
       "displayName": {
         "en": "Exit Dwell Time"
@@ -86,5 +95,8 @@
       "comment": "e.g. people per second"
     }
   ],
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

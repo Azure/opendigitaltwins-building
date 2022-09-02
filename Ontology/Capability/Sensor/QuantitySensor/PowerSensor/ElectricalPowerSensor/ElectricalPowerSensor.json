@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ElectricalPowerSensor;1",
   "@type": "Interface",
   "displayName": {
     "en": "Electrical power sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:PowerSensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

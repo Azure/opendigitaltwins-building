@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:SpaceCapacity;1",
   "@type": "Interface",
   "displayName": {
@@ -26,5 +26,7 @@
       "comment": "Count of seats"
     }
   ],
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

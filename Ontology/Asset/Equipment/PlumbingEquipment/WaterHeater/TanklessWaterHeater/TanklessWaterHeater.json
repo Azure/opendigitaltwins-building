@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:TanklessWaterHeater;1",
   "@type": "Interface",
   "displayName": {
     "en": "Tank-less water heater"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:WaterHeater;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

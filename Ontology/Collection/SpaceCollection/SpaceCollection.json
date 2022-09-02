@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:SpaceCollection;1",
   "@type": "Interface",
   "displayName": {
     "en": "Space collection"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Collection;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

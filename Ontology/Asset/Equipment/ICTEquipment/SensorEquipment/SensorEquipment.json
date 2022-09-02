@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:SensorEquipment;1",
   "@type": "Interface",
   "contents": [
@@ -25,5 +25,7 @@
     "en": "Sensor equipment"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:Land;1",
   "@type": "Interface",
   "contents": [
@@ -18,5 +18,7 @@
     "en": "Land"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Space;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FireProtectionSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "Fire protection system"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:System;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

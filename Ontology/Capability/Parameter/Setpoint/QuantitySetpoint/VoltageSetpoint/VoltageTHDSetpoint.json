@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:VoltageTHDSetpoint;1",
   "@type": "Interface",
   "contents": [
@@ -19,5 +19,7 @@
     "en": "Voltage thd setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:VoltageSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

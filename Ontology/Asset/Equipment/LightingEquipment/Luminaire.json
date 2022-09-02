@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Luminaire;2",
   "@type": "Interface",
   "contents": [
@@ -21,9 +21,9 @@
         "en": "mounting"
       },
       "name": "mounting",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "WallMount",
             "name": "WallMount"
@@ -46,5 +46,8 @@
     "en": "Luminaire"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:LightingEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

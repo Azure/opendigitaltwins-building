@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Equipment;1",
   "@type": "Interface",
   "contents": [
@@ -8,15 +8,15 @@
         "en": "is fed by"
       },
       "name": "isFedBy",
-      "dtmi:dtdl:property:properties;2": {
+      "properties": {
         "@type": "Property",
         "displayName": {
           "en": "substance"
         },
         "name": "substance",
-        "dtmi:dtdl:property:schema;2": {
+        "schema": {
           "@type": "Enum",
-          "dtmi:dtdl:property:enumValues;2": [
+          "enumValues": [
             {
               "enumValue": "Water",
               "name": "Water"
@@ -173,15 +173,15 @@
         "en": "feeds"
       },
       "name": "feeds",
-      "dtmi:dtdl:property:properties;2": {
+      "properties": {
         "@type": "Property",
         "displayName": {
           "en": "substance"
         },
         "name": "substance",
-        "dtmi:dtdl:property:schema;2": {
+        "schema": {
           "@type": "Enum",
-          "dtmi:dtdl:property:enumValues;2": [
+          "enumValues": [
             {
               "enumValue": "Water",
               "name": "Water"
@@ -340,5 +340,7 @@
     "en": "Equipment"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Asset;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

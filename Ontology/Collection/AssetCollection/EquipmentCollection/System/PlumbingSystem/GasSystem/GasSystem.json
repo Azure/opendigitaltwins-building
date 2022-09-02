@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:GasSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "Gas system"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingSystem;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

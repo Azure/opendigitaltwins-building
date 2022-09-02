@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:PercentSetpoint;1",
   "@type": "Interface",
   "displayName": {
     "en": "Percent setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:StateSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

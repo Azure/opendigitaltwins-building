@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:UnitHeater;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "type"
       },
       "name": "type",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "vertical",
             "name": "vertical"
@@ -54,5 +54,7 @@
     "en": "Unit heater"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

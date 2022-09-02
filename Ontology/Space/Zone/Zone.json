@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:Zone;1",
   "@type": "Interface",
   "description": {
@@ -8,5 +8,7 @@
     "en": "Zone"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Space;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

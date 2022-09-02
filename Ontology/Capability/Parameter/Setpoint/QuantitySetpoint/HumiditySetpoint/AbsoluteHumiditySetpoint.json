@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:AbsoluteHumiditySetpoint;1",
   "@type": "Interface",
   "displayName": {
     "en": "Absolute humidity setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:HumiditySetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

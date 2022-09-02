@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:LinearSpeedSensor;1",
   "@type": "Interface",
   "contents": [
@@ -19,5 +19,7 @@
     "en": "Linear speed sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:SpeedSensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

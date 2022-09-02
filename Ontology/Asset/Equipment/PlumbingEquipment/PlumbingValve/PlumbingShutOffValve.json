@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingShutOffValve;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "type"
       },
       "name": "type",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Gate",
             "name": "Gate"
@@ -33,5 +33,7 @@
     "en": "Shut-off valve"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingValve;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ElectricalEnergySetpoint;1",
   "@type": "Interface",
   "displayName": {
     "en": "Electrical energy setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:EnergySetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

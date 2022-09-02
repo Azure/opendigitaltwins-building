@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:ToiletTank;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "flushing type"
       },
       "name": "flushingType",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "PressureAssisted",
             "name": "PressureAssisted"
@@ -29,5 +29,7 @@
     "en": "Toilet with Tank"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Toilet;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }
