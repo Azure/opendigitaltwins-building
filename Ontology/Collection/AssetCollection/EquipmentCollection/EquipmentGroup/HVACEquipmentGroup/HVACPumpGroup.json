@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:HVACPumpGroup;1",
   "@type": "Interface",
   "displayName": {
     "en": "Pump group"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipmentGroup;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:StateSensor;1",
   "@type": "Interface",
   "displayName": {
     "en": "State sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

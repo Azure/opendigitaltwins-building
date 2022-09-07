@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:LevelActuator;1",
   "@type": "Interface",
   "displayName": {
     "en": "Level actuator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:PercentActuator;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

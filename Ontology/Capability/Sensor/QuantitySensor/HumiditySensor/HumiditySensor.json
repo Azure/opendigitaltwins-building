@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:HumiditySensor;1",
   "@type": "Interface",
   "contents": [
@@ -19,5 +19,7 @@
     "en": "Humidity sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

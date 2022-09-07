@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:LaboratoryWet;1",
   "@type": "Interface",
   "description": {
@@ -8,5 +8,7 @@
     "en": "LaboratoryWet"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:building:Laboratory;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

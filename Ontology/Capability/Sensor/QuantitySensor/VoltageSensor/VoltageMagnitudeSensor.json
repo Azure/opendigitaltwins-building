@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:VoltageMagnitudeSensor;1",
   "@type": "Interface",
   "contents": [
@@ -23,5 +23,8 @@
     "en": "Voltage magnitude sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:VoltageSensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

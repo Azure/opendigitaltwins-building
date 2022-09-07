@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:OPCUANetworkSystem;1",
   "@type": "Interface",
   "displayName": {
     "en": "OPC UA network system"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ControlsSystem;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

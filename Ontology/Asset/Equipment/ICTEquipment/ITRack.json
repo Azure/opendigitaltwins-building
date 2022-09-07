@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:ITRack;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "type"
       },
       "name": "type",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "TwoPost",
             "name": "TwoPost"
@@ -34,9 +34,9 @@
         "en": "mounting"
       },
       "name": "mounting",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Wall",
             "name": "Wall"
@@ -64,5 +64,7 @@
     "en": "IT Rack"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

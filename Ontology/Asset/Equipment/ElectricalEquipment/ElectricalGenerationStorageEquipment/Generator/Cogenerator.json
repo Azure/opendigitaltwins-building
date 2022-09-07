@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Cogenerator;1",
   "@type": "Interface",
   "displayName": {
     "en": "Cogenerator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Generator;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

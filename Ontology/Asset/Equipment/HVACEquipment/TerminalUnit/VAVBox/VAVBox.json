@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:VAVBox;1",
   "@type": "Interface",
   "displayName": {
     "en": "VAV box"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:TerminalUnit;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

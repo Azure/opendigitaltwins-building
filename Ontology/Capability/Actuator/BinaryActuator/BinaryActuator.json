@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:BinaryActuator;1",
   "@type": "Interface",
   "contents": [
@@ -19,5 +19,7 @@
     "en": "Binary actuator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Actuator;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

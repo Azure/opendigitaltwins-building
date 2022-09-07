@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Sink;1",
   "@type": "Interface",
   "displayName": {
     "en": "Sink"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

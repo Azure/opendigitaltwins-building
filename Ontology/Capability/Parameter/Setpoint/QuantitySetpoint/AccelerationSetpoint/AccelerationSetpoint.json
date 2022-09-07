@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:AccelerationSetpoint;1",
   "@type": "Interface",
   "displayName": {
     "en": "Acceleration setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:QuantitySetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

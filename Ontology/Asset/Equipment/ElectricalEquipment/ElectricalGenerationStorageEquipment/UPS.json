@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:UPS;1",
   "@type": "Interface",
   "contents": [
@@ -56,9 +56,9 @@
         "en": "output phases"
       },
       "name": "outputPhases",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Three",
             "name": "Three"
@@ -91,9 +91,9 @@
         "en": "input phases"
       },
       "name": "inputPhases",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Three",
             "name": "Three"
@@ -112,5 +112,8 @@
     "en": "UPS"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalGenerationStorageEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

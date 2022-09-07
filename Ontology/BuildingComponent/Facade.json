@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:Facade;1",
   "@type": "Interface",
   "displayName": {
     "en": "Facade"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:BuildingComponent;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

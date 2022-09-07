@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FanPoweredBox;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "configuration"
       },
       "name": "configuration",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "series",
             "name": "series"
@@ -37,5 +37,7 @@
     "en": "Fan powered box"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:VAVBox;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

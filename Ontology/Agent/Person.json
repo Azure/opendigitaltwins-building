@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:agents:Person;1",
   "@type": "Interface",
   "contents": [
@@ -93,5 +93,7 @@
     "en": "Person"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Agent;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

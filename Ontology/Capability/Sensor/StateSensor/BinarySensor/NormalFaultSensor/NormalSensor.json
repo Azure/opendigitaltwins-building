@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:NormalSensor;1",
   "@type": "Interface",
   "displayName": {
     "en": "Normal sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:NormalFaultSensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

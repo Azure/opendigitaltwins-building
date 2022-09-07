@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ModeActuator;1",
   "@type": "Interface",
   "displayName": {
     "en": "Mode actuator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:MultiStateActuator;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

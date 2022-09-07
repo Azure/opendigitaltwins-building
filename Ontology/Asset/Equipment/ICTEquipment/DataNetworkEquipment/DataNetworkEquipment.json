@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:DataNetworkEquipment;1",
   "@type": "Interface",
   "contents": [
@@ -8,7 +8,7 @@
         "en": "mounted in rack"
       },
       "name": "mountedInRack",
-      "dtmi:dtdl:property:properties;2": [
+      "properties": [
         {
           "@type": "Property",
           "displayName": {
@@ -35,5 +35,7 @@
     "en": "Data network equipment"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

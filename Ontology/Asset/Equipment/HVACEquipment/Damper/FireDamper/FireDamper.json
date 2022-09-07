@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FireDamper;1",
   "@type": "Interface",
   "contents": [
@@ -20,5 +20,8 @@
     "en": "Fire Damper"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Damper;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

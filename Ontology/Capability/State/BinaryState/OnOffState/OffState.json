@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:OffState;1",
   "@type": "Interface",
   "displayName": {
     "en": "Off state"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:OnOffState;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

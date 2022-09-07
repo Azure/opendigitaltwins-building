@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Generator;1",
   "@type": "Interface",
   "contents": [
@@ -21,9 +21,9 @@
         "en": "output phases"
       },
       "name": "outputPhases",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Three",
             "name": "Three"
@@ -134,5 +134,8 @@
     "en": "Generator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalGenerationStorageEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

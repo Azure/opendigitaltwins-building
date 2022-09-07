@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:FirePump;1",
   "@type": "Interface",
   "displayName": {
@@ -8,5 +8,7 @@
     "dtmi:digitaltwins:rec_3_3:asset:SprinklerEquipment;1",
     "dtmi:digitaltwins:rec_3_3:asset:Pump;1"
   ],
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:SpaceHumidity;1",
   "@type": "Interface",
   "displayName": {
@@ -6,7 +6,10 @@
   },
   "contents": [
     {
-      "@type": ["Property", "RelativeHumidity"],
+      "@type": [
+        "Property",
+        "RelativeHumidity"
+      ],
       "name": "humiditySensor",
       "displayName": {
         "en": "Humidity Sensor"
@@ -16,7 +19,10 @@
       "unit": "percent"
     },
     {
-      "@type": ["Property", "RelativeHumidity"],
+      "@type": [
+        "Property",
+        "RelativeHumidity"
+      ],
       "name": "humiditySetpoint",
       "displayName": {
         "en": "Humidity Setpoint"
@@ -26,7 +32,10 @@
       "unit": "percent"
     },
     {
-      "@type": ["Property", "RelativeHumidity"],
+      "@type": [
+        "Property",
+        "RelativeHumidity"
+      ],
       "name": "humidityDelta",
       "displayName": {
         "en": "Humidity Delta"
@@ -36,5 +45,8 @@
       "unit": "percent"
     }
   ],
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

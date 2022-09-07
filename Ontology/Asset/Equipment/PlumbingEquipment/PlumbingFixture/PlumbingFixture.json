@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
   "@type": "Interface",
   "displayName": {
     "en": "Plumbing fixture"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

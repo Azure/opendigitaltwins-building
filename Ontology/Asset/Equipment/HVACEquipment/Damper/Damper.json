@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Damper;1",
   "@type": "Interface",
   "contents": [
@@ -8,9 +8,9 @@
         "en": "service"
       },
       "name": "service",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Supply",
             "name": "Supply"
@@ -34,9 +34,9 @@
         "en": "leakage class"
       },
       "name": "leakageClass",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "III",
             "name": "III"
@@ -60,9 +60,9 @@
         "en": "blade type"
       },
       "name": "bladeType",
-      "dtmi:dtdl:property:schema;2": {
+      "schema": {
         "@type": "Enum",
-        "dtmi:dtdl:property:enumValues;2": [
+        "enumValues": [
           {
             "enumValue": "Vee",
             "name": "Vee"
@@ -93,5 +93,7 @@
     "en": "Damper"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

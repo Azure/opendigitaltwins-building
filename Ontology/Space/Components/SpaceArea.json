@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:SpaceArea;1",
   "@type": "Interface",
   "displayName": {
@@ -36,5 +36,7 @@
       "comment": "squareFoot"
     }
   ],
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

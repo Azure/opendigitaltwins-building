@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:OfficeLandscape;1",
   "@type": "Interface",
   "displayName": {
     "en": "OfficeLandscape"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:building:Office;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

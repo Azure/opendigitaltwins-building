@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:Campus;1",
   "@type": "Interface",
   "contents": [
@@ -30,5 +30,7 @@
     "en": "Campus"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:SpaceCollection;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:LogicalGateway;1",
   "@type": "Interface",
   "displayName": {
     "en": "Logical gateway"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:LogicalDevice;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

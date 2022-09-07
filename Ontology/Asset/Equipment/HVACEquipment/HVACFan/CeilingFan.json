@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:CeilingFan;1",
   "@type": "Interface",
   "contents": [
@@ -29,5 +29,8 @@
     "en": "Ceiling Fan"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACFan;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

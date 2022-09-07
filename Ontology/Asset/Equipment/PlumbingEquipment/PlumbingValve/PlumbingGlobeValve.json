@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:PlumbingGlobeValve;1",
   "@type": "Interface",
   "displayName": {
     "en": "Globe valve"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingValve;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:OnActuator;1",
   "@type": "Interface",
   "displayName": {
     "en": "On actuator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:OnOffActuator;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

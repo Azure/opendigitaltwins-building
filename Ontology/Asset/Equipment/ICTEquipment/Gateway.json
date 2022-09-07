@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Gateway;1",
   "@type": "Interface",
   "displayName": {
     "en": "Gateway"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ICTEquipment;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

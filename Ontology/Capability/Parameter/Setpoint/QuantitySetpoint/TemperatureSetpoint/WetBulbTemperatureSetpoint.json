@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:WetBulbTemperatureSetpoint;1",
   "@type": "Interface",
   "displayName": {
     "en": "Wet bulb temperature setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:TemperatureSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

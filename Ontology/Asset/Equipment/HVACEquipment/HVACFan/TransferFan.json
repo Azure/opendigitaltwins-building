@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:TransferFan;1",
   "@type": "Interface",
   "displayName": {
     "en": "Transfer Fan"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACFan;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

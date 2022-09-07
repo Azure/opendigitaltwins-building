@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:ThermalEnergySetpoint;1",
   "@type": "Interface",
   "contents": [
@@ -19,5 +19,7 @@
     "en": "Thermal energy setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:EnergySetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

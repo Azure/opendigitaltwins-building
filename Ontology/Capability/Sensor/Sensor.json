@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:core:Sensor;1",
   "@type": "Interface",
   "contents": [
@@ -20,5 +20,7 @@
     "en": "Sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Capability;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

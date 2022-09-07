@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:LoadShedOverrideSetpoint;1",
   "@type": "Interface",
   "displayName": {
     "en": "Load shed override setpoint"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:OverrideSetpoint;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

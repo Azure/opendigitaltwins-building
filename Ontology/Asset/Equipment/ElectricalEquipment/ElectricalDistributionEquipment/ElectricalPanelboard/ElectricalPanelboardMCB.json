@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:ElectricalPanelboardMCB;1",
   "@type": "Interface",
   "contents": [
@@ -20,5 +20,8 @@
     "en": "Electrical panelboard MCB"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ElectricalPanelboard;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ]
 }

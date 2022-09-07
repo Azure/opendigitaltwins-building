@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:asset:Valve;2",
   "@type": "Interface",
   "contents": [
@@ -41,5 +41,7 @@
     "en": "Valve"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

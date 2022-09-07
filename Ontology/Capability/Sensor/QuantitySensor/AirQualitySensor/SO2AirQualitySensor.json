@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:SO2AirQualitySensor;1",
   "@type": "Interface",
   "displayName": {
     "en": "SO2 (sulfur dioxide) air quality sensor"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:AirQualitySensor;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

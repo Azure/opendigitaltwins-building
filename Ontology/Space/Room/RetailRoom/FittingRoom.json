@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:building:FittingRoom;1",
   "@type": "Interface",
   "displayName": {
     "en": "FittingRoom"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:building:RetailRoom;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

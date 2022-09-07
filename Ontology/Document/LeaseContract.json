@@ -1,4 +1,4 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:business:LeaseContract;1",
   "@type": "Interface",
   "description": {
@@ -8,5 +8,7 @@
     "en": "Lease contract"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:core:Document;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }

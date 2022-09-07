@@ -1,9 +1,11 @@
-{
+﻿{
   "@id": "dtmi:digitaltwins:rec_3_3:device:LoadShedOverrideActuator;1",
   "@type": "Interface",
   "displayName": {
     "en": "Load shed override actuator"
   },
   "extends": "dtmi:digitaltwins:rec_3_3:device:OverrideActuator;1",
-  "@context": "dtmi:dtdl:context;2"
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
 }
