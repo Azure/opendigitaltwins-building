@@ -3,16 +3,24 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": ["Power", "Property"],
       "displayName": {
         "en": "power input"
       },
       "name": "powerInput",
       "schema": "double",
       "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "power input unit"
+      },
+      "name": "powerInputUnit",
+      "annotates": "powerInput",
+      "overrides": "unit",
+      "schema": "PowerUnit",
       "writable": true
     }
   ],

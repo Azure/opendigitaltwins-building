@@ -25,10 +25,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Current",
-        "Property"
-      ],
+      "@type": ["Current", "Property"],
       "displayName": {
         "en": "current rating"
       },

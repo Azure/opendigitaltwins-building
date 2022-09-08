@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "Mass",
-        "Property"
-      ],
+      "@type": ["Mass", "Property"],
       "displayName": {
         "en": "weight capacity"
       },
@@ -16,10 +13,18 @@
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "weight capacity unit"
+      },
+      "name": "weightCapacityUnit",
+      "annotates": "weightCapacity",
+      "overrides": "unit",
+      "schema": "MassUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Power", "Property"],
       "displayName": {
         "en": "motor power"
       },

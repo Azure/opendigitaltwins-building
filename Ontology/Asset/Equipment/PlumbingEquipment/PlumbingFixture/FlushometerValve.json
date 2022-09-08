@@ -3,12 +3,24 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Volume"],
       "displayName": {
         "en": "water per flush"
       },
       "name": "waterPerFlush",
       "schema": "double",
+      "unit": "litre",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "water per flush unit"
+      },
+      "name": "waterPerFlushUnit",
+      "annotates": "waterPerFlush",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
       "writable": true
     },
     {
@@ -68,6 +80,7 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

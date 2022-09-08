@@ -3,21 +3,45 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Volume"],
       "displayName": {
         "en": "tank capacity"
       },
       "name": "tankCapacity",
       "schema": "double",
+      "unit": "litre",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "tank capacity unit"
+      },
+      "name": "tankCapacityUnit",
+      "annotates": "tankCapacity",
+      "overrides": "unit",
+      "schema": "VolumeUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Pressure"],
       "displayName": {
         "en": "system pressure"
       },
       "name": "systemPressure",
       "schema": "double",
+      "unit": "bar",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "system pressure unit"
+      },
+      "name": "systemPressureUnit",
+      "annotates": "systemPressure",
+      "overrides": "unit",
+      "schema": "PressureUnit",
       "writable": true
     }
   ],
@@ -26,6 +50,7 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

@@ -3,37 +3,70 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "step width"
       },
       "name": "stepWidth",
       "schema": "double",
+      "unit": "millimetre",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "step width unit"
+      },
+      "name": "stepWidthUnit",
+      "annotates": "stepWidth",
+      "overrides": "unit",
+      "schema": "LengthUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Velocity"],
       "displayName": {
         "en": "maximum travel speed"
       },
       "name": "maxTravelSpeed",
       "schema": "double",
+      "unit": "metrePerSecond",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum travel speed unit"
+      },
+      "name": "maxTravelSpeedUnit",
+      "annotates": "maxTravelSpeed",
+      "overrides": "unit",
+      "schema": "VelocityUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "maximum length"
       },
       "name": "maxLength",
       "schema": "double",
+      "unit": "metre",
       "writable": true
     },
     {
-      "@type": [
-        "Angle",
-        "Property"
-      ],
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum length unit"
+      },
+      "name": "maxLengthUnit",
+      "annotates": "maxLength",
+      "overrides": "unit",
+      "schema": "LengthUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Angle", "Property"],
       "displayName": {
         "en": "inclination"
       },

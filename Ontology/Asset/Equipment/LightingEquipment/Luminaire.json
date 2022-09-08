@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": ["Power", "Property"],
       "displayName": {
         "en": "power input"
       },

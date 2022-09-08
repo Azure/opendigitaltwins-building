@@ -3,57 +3,129 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Temperature"],
       "displayName": {
         "en": "secondary maximum temperature"
       },
       "name": "secondaryMaxTemperature",
       "schema": "double",
+      "unit": "degreeCelsius",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "secondary maximum temperature unit"
+      },
+      "name": "secondaryMaxTemperatureUnit",
+      "annotates": "secondaryMaxTemperature",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Pressure"],
       "displayName": {
         "en": "secondary maximum pressure"
       },
       "name": "secondaryMaxPressure",
       "schema": "double",
+      "unit": "bar",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "secondary maximum pressure unit"
+      },
+      "name": "secondaryMaxPressureUnit",
+      "annotates": "secondaryMaxPressure",
+      "overrides": "unit",
+      "schema": "PressureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "VolumeFlowRate"],
       "displayName": {
         "en": "secondary flow capacity"
       },
       "name": "secondaryFlowCapacity",
       "schema": "double",
+      "unit": "litrePerSecond",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "secondary flow capacity unit"
+      },
+      "name": "secondaryFlowCapacityUnit",
+      "annotates": "secondaryFlowCapacity",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Temperature"],
       "displayName": {
         "en": "primary maximum temperature"
       },
       "name": "primaryMaxTemperature",
       "schema": "double",
+      "unit": "degreeCelsius",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "primary maximum temperature unit"
+      },
+      "name": "primaryMaxTemperatureUnit",
+      "annotates": "primaryMaxTemperature",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Pressure"],
       "displayName": {
         "en": "primary maximum pressure"
       },
       "name": "primaryMaxPressure",
       "schema": "double",
+      "unit": "bar",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "primary maximum pressure unit"
+      },
+      "name": "primaryMaxPressureUnit",
+      "annotates": "primaryMaxPressure",
+      "overrides": "unit",
+      "schema": "PressureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "VolumeFlowRate"],
       "displayName": {
         "en": "primary flow capacity"
       },
       "name": "primaryFlowCapacity",
       "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "primary flow capacity unit"
+      },
+      "name": "primaryFlowCapacityUnit",
+      "annotates": "primaryFlowCapacity",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
       "writable": true
     }
   ],
@@ -62,6 +134,7 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

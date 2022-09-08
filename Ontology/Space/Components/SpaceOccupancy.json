@@ -33,10 +33,7 @@
       "schema": "boolean"
     },
     {
-      "@type": [
-        "Property",
-        "TimeSpan"
-      ],
+      "@type": ["Property", "TimeSpan"],
       "name": "dwellTimeAverage",
       "displayName": {
         "en": "Dwell Time Average"
@@ -47,10 +44,7 @@
       "comment": "Average time spent in the space by all individuals in the space"
     },
     {
-      "@type": [
-        "Property",
-        "TimeSpan"
-      ],
+      "@type": ["Property", "TimeSpan"],
       "name": "entranceDwellTime",
       "displayName": {
         "en": "Entrance Dwell Time"
@@ -61,10 +55,7 @@
       "comment": "Wait time to enter the space"
     },
     {
-      "@type": [
-        "Property",
-        "TimeSpan"
-      ],
+      "@type": ["Property", "TimeSpan"],
       "name": "exitDwellTime",
       "displayName": {
         "en": "Exit Dwell Time"

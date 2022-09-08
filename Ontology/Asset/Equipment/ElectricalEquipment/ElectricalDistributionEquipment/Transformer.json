@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
+      "@type": ["Voltage", "Property"],
       "displayName": {
         "en": "secondary voltage"
       },
@@ -16,10 +13,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
+      "@type": ["Voltage", "Property"],
       "displayName": {
         "en": "primary voltage"
       },
@@ -38,12 +32,13 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ApparentPower"],
       "displayName": {
         "en": "size (KVA)"
       },
       "name": "sizeKVA",
       "schema": "integer",
+      "unit": "kilovoltAmpere",
       "writable": true
     },
     {

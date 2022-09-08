@@ -3,21 +3,45 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "width"
       },
       "name": "width",
       "schema": "double",
+      "unit": "millimetre",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "width unit"
+      },
+      "name": "widthUnit",
+      "annotates": "width",
+      "overrides": "unit",
+      "schema": "LengthUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "thickness"
       },
       "name": "thickness",
       "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "thickness unit"
+      },
+      "name": "thicknessUnit",
+      "annotates": "thickness",
+      "overrides": "unit",
+      "schema": "LengthUnit",
       "writable": true
     },
     {
@@ -52,12 +76,24 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "height"
       },
       "name": "height",
       "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "height unit"
+      },
+      "name": "heightUnit",
+      "annotates": "height",
+      "overrides": "unit",
+      "schema": "LengthUnit",
       "writable": true
     },
     {
@@ -70,10 +106,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "TimeSpan",
-        "Property"
-      ],
+      "@type": ["TimeSpan", "Property"],
       "displayName": {
         "en": "fire rating"
       },

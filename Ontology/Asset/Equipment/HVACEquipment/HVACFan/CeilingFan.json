@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "AngularVelocity",
-        "Property"
-      ],
+      "@type": ["AngularVelocity", "Property"],
       "displayName": {
         "en": "maximum rotation speed"
       },
@@ -16,12 +13,24 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "blade diameter"
       },
       "name": "bladeDiameter",
       "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "blade diameter unit"
+      },
+      "name": "bladeDiameterUnit",
+      "annotates": "bladeDiameter",
+      "overrides": "unit",
+      "schema": "LengthUnit",
       "writable": true
     }
   ],

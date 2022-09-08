@@ -25,12 +25,24 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "VolumeFlowRate"],
       "displayName": {
         "en": "maximum flow rate"
       },
       "name": "maxFlowRate",
       "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum flow rate unit"
+      },
+      "name": "maxFlowRateUnit",
+      "annotates": "maxFlowRate",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
       "writable": true
     },
     {
@@ -56,6 +68,7 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:PlumbingFixture;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

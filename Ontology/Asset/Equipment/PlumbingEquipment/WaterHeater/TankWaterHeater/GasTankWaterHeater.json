@@ -3,12 +3,24 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Power", "Property"],
       "displayName": {
         "en": "power input"
       },
       "name": "powerInput",
       "schema": "double",
+      "unit": "watt",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "power input unit"
+      },
+      "name": "powerInputUnit",
+      "annotates": "powerInput",
+      "overrides": "unit",
+      "schema": "PowerUnit",
       "writable": true
     }
   ],
@@ -17,6 +29,7 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:TankWaterHeater;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

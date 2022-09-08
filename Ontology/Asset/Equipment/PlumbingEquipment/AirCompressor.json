@@ -3,19 +3,28 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Pressure"],
       "displayName": {
         "en": "working pressure"
       },
       "name": "workingPressure",
       "schema": "double",
+      "unit": "bar",
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "working pressure unit"
+      },
+      "name": "workingPressureUnit",
+      "annotates": "workingPressure",
+      "overrides": "unit",
+      "schema": "PressureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Power", "Property"],
       "displayName": {
         "en": "motor power"
       },
@@ -25,12 +34,35 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "motor power unit"
+      },
+      "name": "motorPowerUnit",
+      "annotates": "motorPower",
+      "overrides": "unit",
+      "schema": "PowerUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "VolumeFlowRate"],
       "displayName": {
         "en": "free air delivery"
       },
       "name": "freeAirDelivery",
       "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "free air delivery unit"
+      },
+      "name": "freeAirDeliveryUnit",
+      "annotates": "freeAirDelivery",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
       "writable": true
     }
   ],

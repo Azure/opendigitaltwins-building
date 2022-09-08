@@ -12,48 +12,108 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "VolumeFlowRate"],
       "displayName": {
         "en": "minimum volume flow rating"
       },
       "name": "minVolumeFlowRating",
       "schema": "double",
+      "unit": "litrePerSecond",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "minimum volume flow rating unit"
+      },
+      "name": "minVolumeFlowRatingUnit",
+      "annotates": "minVolumeFlowRating",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Temperature"],
       "displayName": {
         "en": "minimum temperature rating"
       },
       "name": "minTemperatureRating",
       "schema": "double",
+      "unit": "degreeCelsius",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "minimum temperature rating unit"
+      },
+      "name": "minTemperatureRatingUnit",
+      "annotates": "minTemperatureRating",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "VolumeFlowRate"],
       "displayName": {
         "en": "maximum volume flow rating"
       },
       "name": "maxVolumeFlowRating",
       "schema": "double",
+      "unit": "litrePerSecond",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum volume flow rating unit"
+      },
+      "name": "maxVolumeFlowRatingUnit",
+      "annotates": "maxVolumeFlowRating",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Temperature"],
       "displayName": {
         "en": "maximum temperature rating"
       },
       "name": "maxTemperatureRating",
       "schema": "double",
+      "unit": "degreeCelsius",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum temperature rating unit"
+      },
+      "name": "maxTemperatureRatingUnit",
+      "annotates": "maxTemperatureRating",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Pressure"],
       "displayName": {
         "en": "maximum pressure rating"
       },
       "name": "maxPressureRating",
       "schema": "double",
+      "unit": "bar",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum pressure rating unit"
+      },
+      "name": "maxPressureRatingUnit",
+      "annotates": "maxPressureRating",
+      "overrides": "unit",
+      "schema": "PressureUnit",
       "writable": true
     },
     {
@@ -77,6 +137,7 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Meter;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

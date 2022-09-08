@@ -12,10 +12,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
+      "@type": ["Voltage", "Property"],
       "displayName": {
         "en": "input voltage"
       },

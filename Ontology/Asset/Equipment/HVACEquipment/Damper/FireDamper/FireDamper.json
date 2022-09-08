@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "TimeSpan",
-        "Property"
-      ],
+      "@type": ["TimeSpan", "Property"],
       "displayName": {
         "en": "fire rating"
       },
