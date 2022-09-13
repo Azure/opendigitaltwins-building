@@ -12,48 +12,108 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "Temperature"],
       "displayName": {
         "en": "minimum temperature rating"
       },
       "name": "minTemperatureRating",
       "schema": "double",
+      "unit": "degreeCelsius",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "minimum temperature rating unit"
+      },
+      "name": "minTemperatureRatingUnit",
+      "annotates": "minTemperatureRating",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "MassFlowRate"],
       "displayName": {
         "en": "minimum mass flow rating"
       },
       "name": "minMassFlowRating",
       "schema": "double",
+      "unit": "kilogramPerHour",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "minimum mass flow rating unit"
+      },
+      "name": "minMassFlowRatingUnit",
+      "annotates": "minMassFlowRating",
+      "overrides": "unit",
+      "schema": "MassFlowRateUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Temperature"],
       "displayName": {
         "en": "maximum temperature rating"
       },
       "name": "maxTemperatureRating",
       "schema": "double",
+      "unit": "degreeCelsius",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum temperature rating unit"
+      },
+      "name": "maxTemperatureRatingUnit",
+      "annotates": "maxTemperatureRating",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Pressure"],
       "displayName": {
         "en": "maximum pressure rating"
       },
       "name": "maxPressureRating",
       "schema": "double",
+      "unit": "bar",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum pressure rating unit"
+      },
+      "name": "maxPressureRatingUnit",
+      "annotates": "maxPressureRating",
+      "overrides": "unit",
+      "schema": "PressureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "MassFlowRate"],
       "displayName": {
         "en": "maximum mass flow rating"
       },
       "name": "maxMassFlowRating",
       "schema": "double",
+      "unit": "kilogramPerHour",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "maximum mass flow rating unit"
+      },
+      "name": "maxMassFlowRatingUnit",
+      "annotates": "maxMassFlowRating",
+      "overrides": "unit",
+      "schema": "MassFlowRateUnit",
       "writable": true
     },
     {
@@ -77,6 +137,9 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Meter;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

@@ -3,30 +3,66 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "outside diameter"
       },
       "name": "outsideDiameter",
       "schema": "double",
+      "unit": "millimetre",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "outside diameter unit"
+      },
+      "name": "outsideDiameterUnit",
+      "annotates": "outsideDiameter",
+      "overrides": "unit",
+      "schema": "LengthUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "nominal diameter"
       },
       "name": "nominalDiameter",
       "schema": "double",
+      "unit": "millimetre",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "nominal diameter unit"
+      },
+      "name": "nominalDiameterUnit",
+      "annotates": "nominalDiameter",
+      "overrides": "unit",
+      "schema": "LengthUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "inside diameter"
       },
       "name": "insideDiameter",
       "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "inside diameter unit"
+      },
+      "name": "insideDiameterUnit",
+      "annotates": "insideDiameter",
+      "overrides": "unit",
+      "schema": "LengthUnit",
       "writable": true
     }
   ],
@@ -35,6 +71,9 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

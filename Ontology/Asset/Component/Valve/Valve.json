@@ -3,21 +3,45 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Pressure"],
       "displayName": {
         "en": "pressure capacity"
       },
       "name": "pressureCapacity",
       "schema": "double",
+      "unit": "bar",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "pressure capacity unit"
+      },
+      "name": "pressureCapacityUnit",
+      "annotates": "pressureCapacity",
+      "overrides": "unit",
+      "schema": "PressureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "VolumeFlowRate"],
       "displayName": {
         "en": "flow capacity"
       },
       "name": "flowCapacity",
       "schema": "double",
+      "unit": "litrePerSecond",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "flow capacity unit"
+      },
+      "name": "flowCapacityUnit",
+      "annotates": "flowCapacity",
+      "overrides": "unit",
+      "schema": "VolumeFlowRateUnit",
       "writable": true
     },
     {
@@ -42,6 +66,9 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

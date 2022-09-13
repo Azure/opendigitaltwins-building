@@ -34,21 +34,45 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "EnergyRate"],
       "displayName": {
         "en": "nominal cooling capacity"
       },
       "name": "nominalCoolingCapacity",
       "schema": "double",
+      "unit": "britishThermalUnitPerHour",
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "nominal cooling capacity unit"
+      },
+      "name": "nominalCoolingCapacityUnit",
+      "annotates": "nominalCoolingCapacity",
+      "overrides": "unit",
+      "schema": "EnergyRateUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "EnergyRate"],
       "displayName": {
         "en": "net sensible cooling capacity"
       },
       "name": "netSensibleCoolingCapacity",
       "schema": "double",
+      "unit": "britishThermalUnitPerHour",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "net sensible cooling capacity unit"
+      },
+      "name": "netSensibleCoolingCapacityUnit",
+      "annotates": "netSensibleCoolingCapacity",
+      "overrides": "unit",
+      "schema": "EnergyRateUnit",
       "writable": true
     },
     {
@@ -91,6 +115,9 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACEquipment;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

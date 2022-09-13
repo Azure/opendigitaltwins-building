@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "TimeSpan",
-        "Property"
-      ],
+      "@type": ["TimeSpan", "Property"],
       "displayName": {
         "en": "runtime"
       },
@@ -16,19 +13,17 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ApparentPower"],
       "displayName": {
         "en": "power output (KVA)"
       },
       "name": "powerOutputKVA",
       "schema": "integer",
+      "unit": "kilovoltAmpere",
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": ["Power", "Property"],
       "displayName": {
         "en": "power output"
       },
@@ -38,10 +33,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
+      "@type": ["Voltage", "Property"],
       "displayName": {
         "en": "output voltage"
       },
@@ -73,10 +65,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
+      "@type": ["Voltage", "Property"],
       "displayName": {
         "en": "input voltage"
       },

@@ -6,34 +6,73 @@
   },
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Temperature"],
       "name": "temperatureSensor",
       "displayName": {
         "en": "Temperature Sensor"
       },
       "writable": true,
-      "schema": "double"
+      "schema": "double",
+      "unit": "degreeCelsius"
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "temperature sensor unit"
+      },
+      "name": "temperatureSensorUnit",
+      "annotates": "temperatureSensor",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Temperature"],
       "name": "temperatureSetpoint",
       "displayName": {
         "en": "Temperature Setpoint"
       },
       "writable": true,
-      "schema": "double"
+      "schema": "double",
+      "unit": "degreeCelsius"
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "temperature setpoint unit"
+      },
+      "name": "temperatureSetpointUnit",
+      "annotates": "temperatureSetpoint",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Temperature"],
       "name": "temperatureDelta",
       "displayName": {
         "en": "Temperature Delta"
       },
       "writable": true,
-      "schema": "double"
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "temperature delta unit"
+      },
+      "name": "temperatureDeltaUnit",
+      "annotates": "temperatureDelta",
+      "overrides": "unit",
+      "schema": "TemperatureUnit",
+      "writable": true
     }
   ],
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

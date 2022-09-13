@@ -25,10 +25,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
+      "@type": ["Voltage", "Property"],
       "displayName": {
         "en": "maximum voltage rating"
       },
@@ -38,10 +35,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Current",
-        "Property"
-      ],
+      "@type": ["Current", "Property"],
       "displayName": {
         "en": "minimum current rating"
       },
@@ -51,10 +45,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Voltage",
-        "Property"
-      ],
+      "@type": ["Voltage", "Property"],
       "displayName": {
         "en": "maximum voltage rating"
       },
@@ -64,10 +55,7 @@
       "writable": true
     },
     {
-      "@type": [
-        "Current",
-        "Property"
-      ],
+      "@type": ["Current", "Property"],
       "displayName": {
         "en": "maximum current rating"
       },

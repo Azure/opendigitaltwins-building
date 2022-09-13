@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "AngularVelocity",
-        "Property"
-      ],
+      "@type": ["AngularVelocity", "Property"],
       "displayName": {
         "en": "maximum rotation speed"
       },
@@ -16,12 +13,24 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "blade diameter"
       },
       "name": "bladeDiameter",
       "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "blade diameter unit"
+      },
+      "name": "bladeDiameterUnit",
+      "annotates": "bladeDiameter",
+      "overrides": "unit",
+      "schema": "LengthUnit",
       "writable": true
     }
   ],
@@ -31,6 +40,8 @@
   "extends": "dtmi:digitaltwins:rec_3_3:asset:HVACFan;1",
   "@context": [
     "dtmi:dtdl:context;3",
-    "dtmi:dtdl:extension:quantitativeTypes;1"
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

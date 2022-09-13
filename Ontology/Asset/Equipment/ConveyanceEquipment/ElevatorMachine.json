@@ -3,10 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": [
-        "Mass",
-        "Property"
-      ],
+      "@type": ["Mass", "Property"],
       "displayName": {
         "en": "weight capacity"
       },
@@ -16,10 +13,18 @@
       "writable": true
     },
     {
-      "@type": [
-        "Power",
-        "Property"
-      ],
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "weight capacity unit"
+      },
+      "name": "weightCapacityUnit",
+      "annotates": "weightCapacity",
+      "overrides": "unit",
+      "schema": "MassUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Power", "Property"],
       "displayName": {
         "en": "motor power"
       },
@@ -35,6 +40,8 @@
   "extends": "dtmi:digitaltwins:rec_3_3:asset:ConveyanceEquipment;1",
   "@context": [
     "dtmi:dtdl:context;3",
-    "dtmi:dtdl:extension:quantitativeTypes;1"
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

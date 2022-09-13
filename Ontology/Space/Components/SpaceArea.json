@@ -6,37 +6,73 @@
   },
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Area"],
       "name": "grossArea",
       "displayName": {
-        "en": "Gross Area"
+        "en": "gross area"
       },
       "writable": true,
       "schema": "double",
-      "comment": "squareFoot"
+      "unit": "squareMetre"
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "gross area unit"
+      },
+      "name": "grossAreaUnit",
+      "annotates": "grossArea",
+      "overrides": "unit",
+      "schema": "AreaUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Area"],
       "name": "usableArea",
       "displayName": {
-        "en": "Usable Area"
+        "en": "usable area"
       },
       "writable": true,
       "schema": "double",
-      "comment": "squareFoot"
+      "unit": "squareMetre"
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "usable area unit"
+      },
+      "name": "usableAreaUnit",
+      "annotates": "usableArea",
+      "overrides": "unit",
+      "schema": "AreaUnit",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "Area"],
       "name": "rentableArea",
       "displayName": {
         "en": "Rentable Area"
       },
       "writable": true,
       "schema": "double",
-      "comment": "squareFoot"
+      "unit": "squareMetre"
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "rentable area unit"
+      },
+      "name": "rentableAreaUnit",
+      "annotates": "rentableArea",
+      "overrides": "unit",
+      "schema": "AreaUnit",
+      "writable": true
     }
   ],
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

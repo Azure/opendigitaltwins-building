@@ -6,37 +6,38 @@
   },
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "RelativeDensity"],
       "name": "CO2Sensor",
       "displayName": {
         "en": "CO2 Sensor"
       },
       "writable": true,
       "schema": "double",
-      "comment": "ppm"
+      "unit": "partsPerMillion"
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "RelativeDensity"],
       "name": "CO2Setpoint",
       "displayName": {
         "en": "CO2 Setpoint"
       },
       "writable": true,
       "schema": "double",
-      "comment": "ppm"
+      "unit": "partsPerMillion"
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "RelativeDensity"],
       "name": "CO2Delta",
       "displayName": {
         "en": "CO2 Delta"
       },
       "writable": true,
       "schema": "double",
-      "comment": "ppm"
+      "unit": "partsPerMillion"
     }
   ],
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

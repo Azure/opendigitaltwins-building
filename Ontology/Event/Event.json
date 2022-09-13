@@ -69,7 +69,7 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "TimeSpan"],
       "description": {
         "en": "Measured in ms (milliseconds). Duration is defined as the length of time that something lasts."
       },
@@ -78,6 +78,7 @@
       },
       "name": "hasDuration",
       "schema": "double",
+      "unit": "millisecond",
       "writable": true
     },
     {
@@ -153,6 +154,7 @@
     "en": "Event"
   },
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }

@@ -6,10 +6,7 @@
   },
   "contents": [
     {
-      "@type": [
-        "Property",
-        "RelativeHumidity"
-      ],
+      "@type": ["Property", "RelativeHumidity"],
       "name": "humiditySensor",
       "displayName": {
         "en": "Humidity Sensor"
@@ -19,10 +16,7 @@
       "unit": "percent"
     },
     {
-      "@type": [
-        "Property",
-        "RelativeHumidity"
-      ],
+      "@type": ["Property", "RelativeHumidity"],
       "name": "humiditySetpoint",
       "displayName": {
         "en": "Humidity Setpoint"
@@ -32,10 +26,7 @@
       "unit": "percent"
     },
     {
-      "@type": [
-        "Property",
-        "RelativeHumidity"
-      ],
+      "@type": ["Property", "RelativeHumidity"],
       "name": "humidityDelta",
       "displayName": {
         "en": "Humidity Delta"

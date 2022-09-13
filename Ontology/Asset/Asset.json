@@ -48,12 +48,24 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "Mass"],
       "displayName": {
         "en": "weight"
       },
       "name": "weight",
       "schema": "double",
+      "unit": "kilogram",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "weight unit"
+      },
+      "name": "weightUnit",
+      "annotates": "weight",
+      "overrides": "unit",
+      "schema": "MassUnit",
       "writable": true
     },
     {
@@ -296,6 +308,9 @@
     "en": "Asset"
   },
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

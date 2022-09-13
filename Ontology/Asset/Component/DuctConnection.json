@@ -3,12 +3,24 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Property",
+      "@type": ["Property", "Length"],
       "displayName": {
         "en": "size"
       },
       "name": "size",
       "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": ["Property", "ValueAnnotation", "Override"],
+      "displayName": {
+        "en": "size unit"
+      },
+      "name": "sizeUnit",
+      "annotates": "size",
+      "overrides": "unit",
+      "schema": "LengthUnit",
       "writable": true
     },
     {
@@ -65,6 +77,9 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }

@@ -42,6 +42,7 @@
   },
   "extends": "dtmi:digitaltwins:rec_3_3:asset:Component;1",
   "@context": [
-    "dtmi:dtdl:context;3"
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
   ]
 }
