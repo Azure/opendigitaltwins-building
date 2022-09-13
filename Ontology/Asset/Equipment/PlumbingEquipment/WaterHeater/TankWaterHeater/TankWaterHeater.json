@@ -30,6 +30,8 @@
   "extends": "dtmi:digitaltwins:rec_3_3:asset:WaterHeater;1",
   "@context": [
     "dtmi:dtdl:context;3",
-    "dtmi:dtdl:extension:quantitativeTypes;1"
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:dtdl:extension:annotation;1",
+    "dtmi:dtdl:extension:overriding;1"
   ]
 }
