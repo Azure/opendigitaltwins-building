@@ -10,7 +10,7 @@ It's important to understand the difference between a `capability` and other ent
 
 This guide will provide an understanding of how to become familiar with the capabiltiy data model, define capabilty twins and recommendations for how to best use the ontology.
 
-## Capabiltiy Models
+## Capability Models
 The `Capability` model class has been sub-classified in several ways that enable the implementer to give semantics to the type of data that the capability is referencing. The concept of using classification and model inheritance provides a few benefits over an alternative approach such as tagging:
 * Model classification promotes structure and consistancy compared to ad-hoc tags
 * Model classification promotes understanding over flexibility. A tag by itself only has context in terms of how it gets used with other tags.
